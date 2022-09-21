@@ -170,7 +170,7 @@ a:focus-visible, button:focus-visible {
 	height: calc(2rem + 1vw);
 	opacity: 0.75;
 	background-color: transparent;
-	background-image: url('images/led-on.svg');
+	background-image: url('led-on.svg');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
@@ -182,7 +182,7 @@ a:focus-visible, button:focus-visible {
 
 .dark-mode #toggleBtn {
 	background-color: var(--info);
-	background-image: url('images/led-off.svg');
+	background-image: url('led-off.svg');
 	filter: invert(100%);
 }
 
@@ -193,10 +193,10 @@ a:focus-visible, button:focus-visible {
 	}
 	#toggleBtn:hover {
 		opacity: 0.75;
-		background-image: url('images/led-off.svg');
+		background-image: url('led-off.svg');
 	}
 	.dark-mode #toggleBtn:hover {
-		background-image: url('images/led-on.svg');
+		background-image: url('led-on.svg');
 	}
 }
 
@@ -394,7 +394,7 @@ img:not(.social, .logo) {
 	height: calc(100vh - 9px - 2 * var(--tabheight));
 	top: calc(2 * var(--tabheight) + 9px);
 }
-#gointro {top: calc(100vh - 10px - var(--tabheight))}
+#gointro {top: calc(100vh - 10px - (2 * var(--tabheight)))}
 #intro h2 {
 	right: 39%;
 	background-color: var(--intro);
@@ -422,7 +422,7 @@ img:not(.social, .logo) {
 	height: calc(100vh - 12px - 2 * var(--tabheight));
 	top: calc(2 * var(--tabheight) + 12px);
 }
-#gostuff {top: calc(200vh - 22px - (3 * var(--tabheight)))}
+#gostuff {top: calc(200vh - 22px - (4 * var(--tabheight)))}
 #stuff h2 {
 	right: 19.5%;
 	background-color: var(--stuff);
@@ -448,8 +448,8 @@ img:not(.social, .logo) {
 	text-transform: uppercase;
 	line-height: 3rem;
 	font-size: var(--h1);
-    font-weight: var(--heavy);
-    background-color: var(--hoverpop);
+	font-weight: var(--heavy);
+	background-color: var(--hoverpop);
 	opacity: 0.9;
 }
 .thumb:hover p {opacity:1}
@@ -483,7 +483,7 @@ img:not(.social, .logo) {
 	height: calc(100vh - 16px - 2 * var(--tabheight));
 	top: calc(2 * var(--tabheight) + 16px);
 }
-#gocontact {top: calc(300vh - 42px - (4 * var(--tabheight)))}
+#gocontact {top: calc(300vh - 42px - (5 * var(--tabheight)))}
 #contact h2 {
 	right: 0;
 	background-color: var(--contact);
