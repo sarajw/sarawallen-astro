@@ -1,0 +1,29 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<header>
+	<h2>
+		{SITE_TITLE}
+	</h2>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/portfolio">Portfolio</HeaderLink>
+		<HeaderLink href="/contact">Contact</HeaderLink>
+	</nav>
+</header>
+<style>
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		text-transform: lowercase;
+	}
+	h2 {
+		margin: 0.5em 0;
+	}
+</style>

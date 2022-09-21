@@ -1,0 +1,188 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<div class="header">
+				<div id="topstrip">
+					<nav>
+						<ul id="nav" class="menuitems">
+							<li><a href="#gointro">sara</a></li>
+							<li><a href="#gostuff">stuff</a></li>
+							<li><a href="#gocontact">social</a></li>
+						</ul>
+					</nav>
+				</div>
+		
+				<div id="hero">
+		
+					<div class="big heart" id="heart0"></div>
+					<div class="big heart" id="heart90"></div>
+					<div class="big heart" id="heart180"></div>
+					<div class="big heart" id="heart270"></div>
+					<div class="sml heart" id="heart45"></div>
+					<div class="sml heart" id="heart135"></div>
+					<div class="sml heart" id="heart225"></div>
+					<div class="sml heart" id="heart315"></div>
+		
+					<div class="sprig" id="sprig0"></div>
+					<div class="sprig" id="sprig90"></div>
+					<div class="sprig" id="sprig180"></div>
+					<div class="sprig" id="sprig270"></div>
+		
+					<div class="circle sml" id="circle0a"></div>
+					<div class="circle sml" id="circle90a"></div>
+					<div class="circle sml" id="circle180a"></div>
+					<div class="circle sml" id="circle270a"></div>
+		
+					<div class="circle wee" id="circle0b"></div>
+					<div class="circle wee" id="circle90b"></div>
+					<div class="circle wee" id="circle180b"></div>
+					<div class="circle wee" id="circle270b"></div>
+		
+					<div class="circle tiny" id="circle0c"></div>
+					<div class="circle tiny" id="circle90c"></div>
+					<div class="circle tiny" id="circle180c"></div>
+					<div class="circle tiny" id="circle270c"></div>
+		
+					<div class="yinyang long" id="yang0"></div>
+					<div class="yinyang short" id="yang1"></div>
+					<div class="yinyang long" id="yang2"></div>
+					<div class="yinyang short" id="yang3"></div>
+					<div class="yinyang long" id="yang4"></div>
+					<div class="yinyang short" id="yang5"></div>
+					<div class="yinyang long" id="yang6"></div>
+					<div class="yinyang short" id="yang7"></div>
+		
+					<div class="yinyang long" id="yin0"></div>
+					<div class="yinyang short" id="yin1"></div>
+					<div class="yinyang long" id="yin2"></div>
+					<div class="yinyang short" id="yin3"></div>
+					<div class="yinyang long" id="yin4"></div>
+					<div class="yinyang short" id="yin5"></div>
+					<div class="yinyang long" id="yin6"></div>
+					<div class="yinyang short" id="yin7"></div>
+		
+					<img class="scrollup" src="images/chevron-up.svg">
+		
+				</div>
+			</div>
+				
+			<button tabindex="0" id="toggleBtn" onclick="toggleMode()" title="Light/Dark Mode Toggle"></button>
+		
+			<div id="gointro" class="anchor"></div>
+			<div id="gostuff" class="anchor"></div>
+			<div id="gocontact" class="anchor"></div>
+		
+			<div class="main" id="content">
+				<section aria-label="Introduction" id="intro">
+					<h2><a href="#gointro">Sara</a></h2>
+					<article>
+						<h3>Hi! Welcome :)</h3>
+						<div class="welcome">
+							<div class="blurb">
+								<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt'.</p>
+								<p>This site is hand-coded in HTML & CSS (with JS for the light/dark mode <button id="inline-toggle" onclick="toggleMode()">toggle</button>).</p>
+								<p>I have also built and am slowly popu&shy;lating <a
+										href="https://blog.sarawallen.com/" target="_blank">blog.sarawallen.com</a> using
+									SvelteKit.
+								</p>
+							</div>
+							<img src="images/photo.png" alt="A picture of me!" loading="lazy">
+						</div>
+						<p class="signoff">~ Sara J. W.
+							<script>document.write(new Date().getFullYear());</script>
+						</p>
+					</article>
+				</section>
+				<section aria-label="Portfolio, Blog & Skills" id="stuff">
+					<h2><a href="#gostuff">Stuff</a></h2>
+					<article>
+						<div class="subdivision">
+							<h3>Output</h3>
+							<div class="portfolio">
+								<div class="thumb">
+									<a href="https://blog.sarawallen.com/portfolio" target="_blank"><img
+											src="images/portfolio.png" alt="portfolio thumbnail" loading="lazy">
+										<p>Portfolio</p>
+									</a>
+								</div>
+								<div class="thumb">
+									<a href="https://blog.sarawallen.com/blog" target="_blank"><img src="images/blog.png"
+											alt="blog thumbnail" loading="lazy">
+										<p>Blog</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h3>Skills</h3>
+							<div class="stack">
+								<img class="logo" src="images/html-5.svg" alt="HTML5" title="HTML5" loading="lazy">
+								<img class="logo" src="images/css-3.svg" alt="CSS3" title="CSS3" loading="lazy">
+								<img class="logo" src="images/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+								<img class="logo" src="images/typescript-icon.svg" alt="TypeScript" title="TypeScript" loading="lazy">
+								<img class="logo" src="images/php-alt.svg" alt="PHP" title="PHP" loading="lazy">
+								<img class="logo" src="images/react.svg" alt="React" title="React" loading="lazy">
+								<img class="logo" src="images/nextjs-icon.svg" alt="Next.js" title="Next.js" loading="lazy">
+								<img class="logo" src="images/svelte-icon.svg" alt="Svelte" title="Svelte" loading="lazy">
+								<img class="logo" src="images/prisma.svg" alt="Prisma" title="Prisma" loading="lazy">
+								<img class="logo" src="images/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
+								<img class="logo" src="images/git-icon.svg" alt="Git" title="Git" loading="lazy">
+								<img class="logo" src="images/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" loading="lazy">
+								<img class="logo" src="images/mysql-icon.svg" alt="MySQL" title="MySQL" loading="lazy">
+								<img class="logo" src="images/powershell.svg" alt="PowerShell" title="PowerShell" loading="lazy">
+								<img class="logo" src="images/bash-icon.svg" alt="Bash" title="Bash" loading="lazy">
+								<!-- <img class="logo" src="images/vba.png" alt="VBA" title="VBA" loading="lazy"> -->
+							</div>
+						</div>
+					</article>
+				</section>
+				<section aria-label="Contact" id="contact">
+					<h2><a href="#gocontact">Social</a></h2>
+					<article>
+						<h3>Find me on:</h3>
+						<ul>
+							<li>
+								<a class="img" href="https://twitter.com/sarajwallen" target="_blank"><img class="social"
+										src="images/twitter.svg" alt="Twitter" title="Twitter" loading="lazy">
+									<br>@sarajwallen</a></li>
+							<li>
+								<a class="img" href="https://github.com/sarajw" target="_blank"><img class="social"
+										src="images/github.svg" alt="GitHub" title="GitHub" loading="lazy">
+									<br>/sarajw</a></li>
+							<li>
+								<a class="img" href="https://codepen.io/sarajw" target="_blank"><img class="social"
+										src="images/codepen-icon.svg" alt="CodePen" title="CodePen" loading="lazy">
+									<br>/sarajw</a></li>
+							<li>
+								<a class="img" href="https://sarajw.hashnode.dev/" target="_blank"><img class="social"
+										src="images/hashnode-icon.svg" alt="hashnode" title="hashnode" loading="lazy">
+									<br>sarajw.</a></li>
+							<li>
+								<a class="img" href="https://www.linkedin.com/in/sarawallen/" target="_blank"><img
+										class="social" src="images/linkedin.svg" alt="LinkedIn" title="LinkedIn" loading="lazy">
+									<br>/sarawallen</a></li>
+							<li>
+								<a class="img" href="https://xing.to/sarajw" target="_blank"><img class="social"
+										src="images/xing.svg" alt="XING" title="XING" loading="lazy">
+									<br>xing.to/sarajw</a></li>
+						</ul>
+					</article>
+					<a href="#" class="backtotop" title="Back to top"><img src="images/chevron-up.svg" loading="lazy"></a>
+				</section>
+			</div>
+		</main>
+		<!-- <Footer /> -->
+	</body>
+</html>
