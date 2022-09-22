@@ -10,15 +10,12 @@
   
 }
 
-@media (prefers-color-scheme: dark) {
-
-	:root {
-    /* colours dark */
-    --lighter: hsl(var(--popcolourHS), 0%);
-    --light: hsl(var(--popcolourHS), 15%);
-    --lightmed: hsl(var(--popcolourHS), 25%);
-    --medium: hsl(var(--popcolourHS), 35%);
-  }
+:root.dark-mode {
+  /* colours dark */
+  --lighter: hsl(var(--popcolourHS), 0%);
+  --light: hsl(var(--popcolourHS), 15%);
+  --lightmed: hsl(var(--popcolourHS), 25%);
+  --medium: hsl(var(--popcolourHS), 35%);
 }
     
 

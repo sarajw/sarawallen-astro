@@ -47,26 +47,23 @@
     --gap: clamp(0.5rem, 3vmin, 0.7rem);
 }
 
-@media (prefers-color-scheme: dark) {
+:root.dark-mode {
 
-	:root {
+	/* Dark */
+	--background: hsl(var(--popcolourHS), 30%);
+	--hoverpop: hsl(var(--popcolourHS), 50%);
 	
-		/* Dark */
-		--background: hsl(var(--popcolourHS), 30%);
-		--hoverpop: hsl(var(--popcolourHS), 50%);
-		
-		--header: hsl(var(--bgcolourHS), 0%);
-		--intro: hsl(var(--bgcolourHS), 10%);
-		--stuff: hsl(var(--bgcolourHS), 17.5%);
-		--contact: hsl(var(--bgcolourHS), 25%);
-		
-		--scrollbar: hsl(var(--bgcolourHS), 40%);
-		--scrollhover: hsl(var(--bgcolourHS), 50%);
-		
-		/* fonts */
-		--normal: 300;
-		--heavy: 500;	
-	}
+	--header: hsl(var(--bgcolourHS), 0%);
+	--intro: hsl(var(--bgcolourHS), 10%);
+	--stuff: hsl(var(--bgcolourHS), 17.5%);
+	--contact: hsl(var(--bgcolourHS), 25%);
+	
+	--scrollbar: hsl(var(--bgcolourHS), 40%);
+	--scrollhover: hsl(var(--bgcolourHS), 50%);
+	
+	/* fonts */
+	--normal: 300;
+	--heavy: 500;	
 }
 
 * {
