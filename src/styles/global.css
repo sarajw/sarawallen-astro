@@ -10,8 +10,8 @@
 	font-weight: 200 800;
 	font-display: swap;
 	src:
-		url('fonts/karla.woff2') format('woff2 supports variations'),
-		url('fonts/karla.woff2') format('woff2-variations');
+		url('/fonts/karla.woff2') format('woff2 supports variations'),
+		url('/fonts/karla.woff2') format('woff2-variations');
 }
 
 :root {
@@ -170,7 +170,7 @@ a:focus-visible, button:focus-visible {
 	height: calc(2rem + 1vw);
 	opacity: 0.75;
 	background-color: transparent;
-	background-image: url('images/led-on.svg');
+	background-image: url('/images/led-on.svg');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
@@ -182,7 +182,7 @@ a:focus-visible, button:focus-visible {
 
 .dark-mode #toggleBtn {
 	background-color: var(--info);
-	background-image: url('images/led-off.svg');
+	background-image: url('/images/led-off.svg');
 	filter: invert(100%);
 }
 
@@ -193,10 +193,10 @@ a:focus-visible, button:focus-visible {
 	}
 	#toggleBtn:hover {
 		opacity: 0.75;
-		background-image: url('images/led-off.svg');
+		background-image: url('/images/led-off.svg');
 	}
 	.dark-mode #toggleBtn:hover {
-		background-image: url('images/led-on.svg');
+		background-image: url('/images/led-on.svg');
 	}
 }
 
