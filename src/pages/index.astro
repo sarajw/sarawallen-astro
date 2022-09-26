@@ -6,6 +6,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
 
 const today = new Date();
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <!DOCTYPE html>
@@ -15,7 +20,7 @@ const today = new Date();
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
+<!-- 		<main>
 			<div class="header">
 				<div id="topstrip">
 					<nav>
@@ -28,53 +33,6 @@ const today = new Date();
 				</div>
 		
 				<div id="hero">
-		
-					<div class="big heart" id="heart0"></div>
-					<div class="big heart" id="heart90"></div>
-					<div class="big heart" id="heart180"></div>
-					<div class="big heart" id="heart270"></div>
-					<div class="sml heart" id="heart45"></div>
-					<div class="sml heart" id="heart135"></div>
-					<div class="sml heart" id="heart225"></div>
-					<div class="sml heart" id="heart315"></div>
-		
-					<div class="sprig" id="sprig0"></div>
-					<div class="sprig" id="sprig90"></div>
-					<div class="sprig" id="sprig180"></div>
-					<div class="sprig" id="sprig270"></div>
-		
-					<div class="circle sml" id="circle0a"></div>
-					<div class="circle sml" id="circle90a"></div>
-					<div class="circle sml" id="circle180a"></div>
-					<div class="circle sml" id="circle270a"></div>
-		
-					<div class="circle wee" id="circle0b"></div>
-					<div class="circle wee" id="circle90b"></div>
-					<div class="circle wee" id="circle180b"></div>
-					<div class="circle wee" id="circle270b"></div>
-		
-					<div class="circle tiny" id="circle0c"></div>
-					<div class="circle tiny" id="circle90c"></div>
-					<div class="circle tiny" id="circle180c"></div>
-					<div class="circle tiny" id="circle270c"></div>
-		
-					<div class="yinyang long" id="yang0"></div>
-					<div class="yinyang short" id="yang1"></div>
-					<div class="yinyang long" id="yang2"></div>
-					<div class="yinyang short" id="yang3"></div>
-					<div class="yinyang long" id="yang4"></div>
-					<div class="yinyang short" id="yang5"></div>
-					<div class="yinyang long" id="yang6"></div>
-					<div class="yinyang short" id="yang7"></div>
-		
-					<div class="yinyang long" id="yin0"></div>
-					<div class="yinyang short" id="yin1"></div>
-					<div class="yinyang long" id="yin2"></div>
-					<div class="yinyang short" id="yin3"></div>
-					<div class="yinyang long" id="yin4"></div>
-					<div class="yinyang short" id="yin5"></div>
-					<div class="yinyang long" id="yin6"></div>
-					<div class="yinyang short" id="yin7"></div>
 		
 					<img class="scrollup" src="images/chevron-up.svg">
 		
@@ -127,7 +85,6 @@ const today = new Date();
 							<img class="logo" src="images/mysql-icon.svg" alt="MySQL" title="MySQL" loading="lazy">
 							<img class="logo" src="images/powershell.svg" alt="PowerShell" title="PowerShell" loading="lazy">
 							<img class="logo" src="images/bash-icon.svg" alt="Bash" title="Bash" loading="lazy">
-							<!-- <img class="logo" src="images/vba.png" alt="VBA" title="VBA" loading="lazy"> -->
 						</div>
 					</article>
 				</section>
@@ -165,7 +122,128 @@ const today = new Date();
 					<a href="#" class="backtotop" title="Back to top"><img src="images/chevron-up.svg" loading="lazy"></a>
 				</section>
 			</div>
+		</main> -->
+	
+		<section id="hero">
+			<div class="big heart" id="heart0"></div>
+			<div class="big heart" id="heart90"></div>
+			<div class="big heart" id="heart180"></div>
+			<div class="big heart" id="heart270"></div>
+			<div class="sml heart" id="heart45"></div>
+			<div class="sml heart" id="heart135"></div>
+			<div class="sml heart" id="heart225"></div>
+			<div class="sml heart" id="heart315"></div>
+
+			<div class="sprig" id="sprig0"></div>
+			<div class="sprig" id="sprig90"></div>
+			<div class="sprig" id="sprig180"></div>
+			<div class="sprig" id="sprig270"></div>
+
+			<div class="circle sml" id="circle0a"></div>
+			<div class="circle sml" id="circle90a"></div>
+			<div class="circle sml" id="circle180a"></div>
+			<div class="circle sml" id="circle270a"></div>
+
+			<div class="circle wee" id="circle0b"></div>
+			<div class="circle wee" id="circle90b"></div>
+			<div class="circle wee" id="circle180b"></div>
+			<div class="circle wee" id="circle270b"></div>
+
+			<div class="circle tiny" id="circle0c"></div>
+			<div class="circle tiny" id="circle90c"></div>
+			<div class="circle tiny" id="circle180c"></div>
+			<div class="circle tiny" id="circle270c"></div>
+
+			<div class="yinyang long" id="yang0"></div>
+			<div class="yinyang short" id="yang1"></div>
+			<div class="yinyang long" id="yang2"></div>
+			<div class="yinyang short" id="yang3"></div>
+			<div class="yinyang long" id="yang4"></div>
+			<div class="yinyang short" id="yang5"></div>
+			<div class="yinyang long" id="yang6"></div>
+			<div class="yinyang short" id="yang7"></div>
+
+			<div class="yinyang long" id="yin0"></div>
+			<div class="yinyang short" id="yin1"></div>
+			<div class="yinyang long" id="yin2"></div>
+			<div class="yinyang short" id="yin3"></div>
+			<div class="yinyang long" id="yin4"></div>
+			<div class="yinyang short" id="yin5"></div>
+			<div class="yinyang long" id="yin6"></div>
+			<div class="yinyang short" id="yin7"></div>
+		</section>
+		
+		<div id="gosara"></div>
+		
+		<main id="content">
+			<div class="tab sara"><h2><a href="#gosara">sara</a></h2></div>
+			<section id="sara">
+				<article>
+					<h3>Hi! Welcome :)</h3>
+					<div class="welcome">
+						<div class="blurb">
+							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt'.</p>
+							<p>This site is hand-coded in HTML & CSS (with JS for the light/dark mode <button id="inline-toggle" onclick="toggleMode()">toggle</button>).</p>
+							<p>I have also built and am slowly popu&shy;lating <a
+									href="https://blog.sarawallen.com/" target="_blank">blog.sarawallen.com</a> using
+								SvelteKit.
+							</p>
+						</div>
+						<img src="images/photo.png" alt="A picture of me!" loading="lazy">
+					</div>
+					<p class="signoff">~ Sara J. W. {today.getFullYear()}</p>
+				</article>
+			</section>
+			
+			<div class="tab work"><h2><a href="#work">work</a></h2></div>
+			<section id="work">
+				<article>
+					<div class="cardcontent">
+						<article>Stuff</article>
+						<article>In</article>
+						<article>Here</article>
+						<article>Stuff</article>
+						<article>In</article>
+						<article>Here</article>
+					</div>
+				</article>
+			</section>
+			
+			<div class="tab blog"><h2><a href="#blog">blog</a></h2></div>
+			<section id="blog">
+				<article>
+					<ul>
+						{posts.map((post) => (
+							<li>
+								<time datetime={post.frontmatter.pubDate}>
+									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+										year: 'numeric',
+										month: 'short',
+										day: 'numeric',
+									})}
+								</time>
+								<a href={post.url}>{post.frontmatter.title}</a>
+							</li>
+						))}
+					</ul>
+				</article>
+			</section>
+			
+			<div class="tab find"><h2><a href="#find">find</a></h2></div>
+			<section id="find">
+				<article>
+					<p>Where to find you, e.g.:</p>
+					<ul>
+						<li><a href="#" target="_blank">Twitter</a></li>
+						<li><a href="#" target="_blank">GitHub</a></li>
+						<li><a href="#" target="_blank">LinkedIn</a></li>
+						<li><a href="#" target="_blank">Xing</a></li>
+					</ul>
+				</article>
+				<a href="#" class="backtotop" title="Back to top">&uarr;</a>
+			</section>
 		</main>
+	
 		<!-- <Footer /> -->
 	</body>
 </html>

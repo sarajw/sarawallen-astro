@@ -1,21 +1,21 @@
 :root {
-	
-  --popcolourHS: 170,30%;
+
+  --pop: 170, 35%;
 
 	/* colours light */
-  --lighter: hsl(var(--popcolourHS), 100%);
-  --light: hsl(var(--popcolourHS), 85%);
-  --lightmed: hsl(var(--popcolourHS), 80%);
-  --medium: hsl(var(--popcolourHS), 75%);
+  --lighter: hsl(var(--pop), 100%);
+  --light: hsl(var(--pop), 90%);
+  --lightmed: hsl(var(--pop), 85%);
+  --medium: hsl(var(--pop), 80%);
   
 }
 
 :root.dark-mode {
   /* colours dark */
-  --lighter: hsl(var(--popcolourHS), 0%);
-  --light: hsl(var(--popcolourHS), 15%);
-  --lightmed: hsl(var(--popcolourHS), 25%);
-  --medium: hsl(var(--popcolourHS), 35%);
+  --lighter: hsl(var(--pop), 0%);
+  --light: hsl(var(--pop), 15%);
+  --lightmed: hsl(var(--pop), 25%);
+  --medium: hsl(var(--pop), 35%);
 }
     
 

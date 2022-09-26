@@ -4,26 +4,52 @@ import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
+	<h1>
+		<a href="#">{SITE_TITLE}</a>
+	</h1>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/portfolio">Portfolio</HeaderLink>
-		<HeaderLink href="/contact">Contact</HeaderLink>
+		<ul>
+			<li><a href="#gosara">sara</a></li>
+			<li><a href="#work">work</a></li>
+			<li><a href="#blog">blog</a></li>
+			<li><a href="#find">find</a></li>
+		</ul>
 	</nav>
 </header>
 <style>
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		position: sticky;
-		top: 0;
-		text-transform: lowercase;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
+header {
+	position: fixed;
+	top: 0;
+	height: calc(var(--tabheight) + 0.5rem);
+	background-color: var(--header);
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+
+h1, nav {
+	line-height: var(--tabheight);
+}
+
+h1 {
+	font-size: clamp(1rem, 4.75vw, 2rem);
+	text-transform: lowercase;
+}
+
+nav {
+	font-size: clamp(0.9rem, 4.5vw, 1.8rem);
+	text-align: right;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 0.5em;
+}
 </style>
