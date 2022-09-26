@@ -82,14 +82,13 @@ a:hover {
 
 .tab {
 	position: sticky;
-	margin-top: calc(-1 * (var(--tabheight) + 0.5rem));
-	top: 0;
+	top: 0.25rem;
 	pointer-events: none; 
 }
 .tab h2 {
-	width: 18%;
-	height: var(--tabheight);
-	line-height: var(--tabheight);
+	width: 16%;
+	height: calc(var(--tabheight) - 0.25rem);
+	line-height: calc(var(--tabheight) - 0.25rem);
 	padding: 0 0.25em;
 	margin: 0;
 	font-size: clamp(0.9rem, 5vw, 2.2rem);
@@ -114,6 +113,7 @@ section {
 	min-height: calc(100vh - 0.5rem - var(--tabheight));
 	padding: 0.5rem 1em calc(1.5 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
+	margin-bottom: calc(-1 * (var(--tabheight) + 0.5rem));
 }
 
 section > article {
@@ -187,23 +187,25 @@ a img {
 
 
 #hero {
-	top: 0;
+	z-index: 0;
+	top: calc(0.5 * var(--tabheight));
+	height: 100vh;
 	background-color: var(--header);
 	margin: 0 auto;
-	height: 100vh;
 	overflow: hidden;
+	font-size: calc(0.6rem + 1vmin);
 }
-
 #hero p {
+	font-size: 0.8rem;
+	margin-block: 2rem;
 	text-align: center;
-	line-height: 50vh;
 }
 
 .sara {
 	z-index: 11;
 }
 .sara h2 {
-	margin-inline: auto 45%;
+	margin-inline: auto 42%;
 	background-color: var(--sara);
 }
 .sara::after {
@@ -233,14 +235,14 @@ a img {
 #gosara {
 	height: 0;
 	position: absolute;
-	top: calc(100vh - 0.5rem - var(--tabheight));
+	top: calc(100vh + 1rem - var(--tabheight));
 }
 
 .work {
 	z-index: 12;
 }
 .work h2 {
-	margin-inline: auto 30%;
+	margin-inline: auto 28%;
 	background-color: var(--work);
 }
 .work::after {
@@ -256,7 +258,7 @@ a img {
 	z-index: 13;
 }
 .blog h2 {
-	margin-inline: auto 15%;
+	margin-inline: auto 14%;
 	background-color: var(--blog);
 }
 .blog::after {
@@ -266,7 +268,6 @@ a img {
 #blog {
 	z-index: 3;
 	background-color: var(--blog);
-	top: calc(var(--tabheight) + 1rem);
 }
 
 .find {
