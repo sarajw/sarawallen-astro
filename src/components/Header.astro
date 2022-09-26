@@ -4,34 +4,49 @@ import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h1>
-		<a href="#">{SITE_TITLE}</a>
-	</h1>
-	<nav>
-		<ul>
-			<li><a href="#gosara">sara</a></li>
-			<li><a href="#work">work</a></li>
-			<li><a href="#blog">blog</a></li>
-			<li><a href="#find">find</a></li>
-		</ul>
-	</nav>
+	<div>
+		<h1>
+			<a href="#">{SITE_TITLE}</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="#gosara">sara</a></li>
+				<li><a href="#work">work</a></li>
+				<li><a href="#blog">blog</a></li>
+				<li><a href="#find">find</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
+
+s
 <style>
 header {
 	position: fixed;
 	top: 0;
-	height: calc(var(--tabheight) + 0.5rem);
-	background-color: var(--header);
+	width: 100%;
+	height: calc(var(--tabheight));
+	background-color: var(--background);
 	z-index: 10;
+}
+
+header div {
+	position: fixed;
+	top: 0.25rem;
+	width: calc(100% - 0.5rem);
+	height: var(--tabheight);
+	background-color: var(--header);
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	align-items: center;
 	margin: 0 auto;
 	padding: 0 0.5em;
+	border-top-left-radius: calc(var(--border-radii) / 2);
+	border-top-right-radius: calc(var(--border-radii) / 2);
 }
 
 h1, nav {
-	line-height: var(--tabheight);
+	margin-bottom: 0.25em;
 }
 
 h1 {
