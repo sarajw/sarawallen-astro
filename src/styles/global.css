@@ -216,6 +216,11 @@ a img {
 	top: calc(var(--tabheight) + 1rem);
 	background-color: var(--sara);
 }
+#gosara {
+	height: 2px;
+	position: absolute;
+	top: calc(100vh - var(--tabheight));
+}
 
 .welcome {
 	display: flex;
@@ -231,11 +236,6 @@ a img {
 }
 .signoff {
 	text-align: right;
-}
-#gosara {
-	height: 2px;
-	position: absolute;
-	top: calc(100vh - var(--tabheight));
 }
 
 .work {
@@ -286,4 +286,8 @@ a img {
 	z-index: 14;
 	background-color: var(--find);
 }
-
+@supports(height: 100dvh) {
+	#find {
+		min-height: calc(100dvh - 0.5rem - var(--tabheight));
+	}
+}
