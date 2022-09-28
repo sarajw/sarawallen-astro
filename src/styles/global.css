@@ -88,7 +88,8 @@ a:hover {
 .tab {
 	position: sticky;
 	top: 0.25rem;
-	pointer-events: none; 
+	pointer-events: none;
+	margin-top: calc(-1 * var(--tabheight));
 }
 .tab h2 {
 	width: 16%;
@@ -113,41 +114,39 @@ a:hover {
 	border-top-right-radius: var(--border-radii);
 }
 
-section {
+main > section {
 	position: sticky;
 	min-height: calc(100vh - 0.5rem - var(--tabheight));
-	padding: 0.5rem 1em calc(1.5 * var(--tabheight));
+	padding: 3vmin calc(0.5rem + 3vmin) calc(1.5 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
-	margin-bottom: calc(-1 * (var(--tabheight) + 0.5rem));
 }
 
 section > article {
 	font-size: clamp(0.9rem, 3vw, 1.1rem);
-	width: calc(95% - 1rem);
-	overflow: auto;
+	overflow: visible;
 	margin-inline: auto;
 }
 
-article p, article ul {
+section > article p, section > article ul {
 	margin: 0.3rem auto 0.8rem;
 	max-width: 60ch;
 }
 
-article ul {
+section > article ul {
 	list-style-type: none;
 	text-align: center;
 }
 
-article ul li {
+section > article ul li {
 	line-height: 2.5rem;
 }
 
-article p b {
+section > article p b {
 	margin: 1rem auto 1rem;
 	font-weight: var(--heavy);
 }
 
-article > a {
+section > article > a {
 	display: block;
 	margin: 0 auto;
 	max-width: 60ch;
@@ -157,19 +156,6 @@ a img {
 	max-width: 100%;
 }
 
-.cardcontent {
-	height: calc(100% - 3.5rem);
-	width: 95%;
-	margin: 0 auto;
-	overflow: auto;
-}
-
-.cardcontent article {
-	width: 90%;
-	height: 200px;
-	background:dimgrey;
-	margin: 0.5rem;
-}
 
 .backtotop {
 	position: absolute;
@@ -227,6 +213,10 @@ a img {
 	top: calc(100vh - var(--tabheight));
 }
 
+#sara h3 {
+	margin-top: 0;
+}
+
 .welcome {
 	display: flex;
 	justify-content: space-between;
@@ -258,6 +248,118 @@ a img {
 	z-index: 2;
 	background-color: var(--work);
 }
+
+#work article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: calc(0.25rem + 0.5vmin);
+}
+
+#work .container {
+	width: calc(50% - (0.25rem + 0.5vmin) / 2);
+	max-width: max(800px, 100%/3);
+	aspect-ratio: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: calc(0.25rem + 0.5vmin);
+}
+
+#work .container > div,
+#work .container button {
+	border-radius: var(--border-radii);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	transition: transform 0.2s ease;
+	box-shadow: 2px 2px 10px -8px var(--shadow);
+}
+#work .container > button:hover,
+#work .container > button:focus,
+#work .container > div:hover,
+#work .container > div:focus {
+	background-color: var(--soprano2nd);
+	background-repeat: no-repeat;
+	background-size: 0;
+	transition: transform 0.1s ease;
+	transform: translate(1px, 1px);
+	box-shadow: 2px 2px 10px -9px var(--shadow);
+}
+#work .caption {
+	visibility: hidden;
+	display: grid;
+	place-content: center;
+	height: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: var(--heavy);
+}
+#work button:hover .caption,
+#work button:focus .caption {
+	visibility: visible;
+}
+
+#work .box1 {
+	grid-template-areas:
+		"bigrow bigrow bigrow"
+		"bigsq bigsq smsq1"
+		"bigsq bigsq smsq2";
+}
+
+#work .box2 {
+	grid-template-areas:
+		"smsq1 bigsq bigsq"
+		"smsq2 bigsq bigsq"
+		"bigrow bigrow bigrow";
+}
+
+#work .box3 {
+	grid-template-areas:
+		"bigsq bigsq smsq1"
+		"bigsq bigsq shcol"
+		"shrow shrow shcol";
+}
+
+#work .box4 {
+	grid-template-areas:
+		"shcol shrow shrow"
+		"shcol bigsq bigsq"
+		"smsq1 bigsq bigsq";
+}
+
+#work .bigsq {
+	grid-area: bigsq;
+	background-color: rgba(100, 100, 150, 0.25);
+}
+#work .bigrow {
+	grid-area: bigrow;
+	background-color: rgba(150, 100, 100, 0.25);
+}
+#work .shcol {
+	grid-area: shcol;
+	background-color: rgba(100, 150, 100, 0.25);
+}
+#work .shrow {
+	grid-area: shrow;
+	background-color: rgba(150, 150, 100, 0.25);
+}
+#work .smsq1 {
+	grid-area: smsq1;
+	background-color: rgba(100, 150, 150, 0.25);
+}
+#work .smsq2 {
+	grid-area: smsq2;
+	background-color: rgba(150, 100, 150, 0.25);
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+}
+
 
 .blog {
 	z-index: 13;

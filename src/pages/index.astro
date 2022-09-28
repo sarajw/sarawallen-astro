@@ -124,59 +124,60 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			</div>
 		</main> -->
 	
-		<section id="hero">
-			<p>scroll down!</p>
-			<div class="big heart" id="heart0"></div>
-			<div class="big heart" id="heart90"></div>
-			<div class="big heart" id="heart180"></div>
-			<div class="big heart" id="heart270"></div>
-			<div class="sml heart" id="heart45"></div>
-			<div class="sml heart" id="heart135"></div>
-			<div class="sml heart" id="heart225"></div>
-			<div class="sml heart" id="heart315"></div>
-
-			<div class="sprig" id="sprig0"></div>
-			<div class="sprig" id="sprig90"></div>
-			<div class="sprig" id="sprig180"></div>
-			<div class="sprig" id="sprig270"></div>
-
-			<div class="circle sml" id="circle0a"></div>
-			<div class="circle sml" id="circle90a"></div>
-			<div class="circle sml" id="circle180a"></div>
-			<div class="circle sml" id="circle270a"></div>
-
-			<div class="circle wee" id="circle0b"></div>
-			<div class="circle wee" id="circle90b"></div>
-			<div class="circle wee" id="circle180b"></div>
-			<div class="circle wee" id="circle270b"></div>
-
-			<div class="circle tiny" id="circle0c"></div>
-			<div class="circle tiny" id="circle90c"></div>
-			<div class="circle tiny" id="circle180c"></div>
-			<div class="circle tiny" id="circle270c"></div>
-
-			<div class="yinyang long" id="yang0"></div>
-			<div class="yinyang short" id="yang1"></div>
-			<div class="yinyang long" id="yang2"></div>
-			<div class="yinyang short" id="yang3"></div>
-			<div class="yinyang long" id="yang4"></div>
-			<div class="yinyang short" id="yang5"></div>
-			<div class="yinyang long" id="yang6"></div>
-			<div class="yinyang short" id="yang7"></div>
-
-			<div class="yinyang long" id="yin0"></div>
-			<div class="yinyang short" id="yin1"></div>
-			<div class="yinyang long" id="yin2"></div>
-			<div class="yinyang short" id="yin3"></div>
-			<div class="yinyang long" id="yin4"></div>
-			<div class="yinyang short" id="yin5"></div>
-			<div class="yinyang long" id="yin6"></div>
-			<div class="yinyang short" id="yin7"></div>
-		</section>
-		
-		<div id="gosara"></div>
 		
 		<main id="content">
+			<section id="hero">
+				<p>scroll down!</p>
+				<div class="big heart" id="heart0"></div>
+				<div class="big heart" id="heart90"></div>
+				<div class="big heart" id="heart180"></div>
+				<div class="big heart" id="heart270"></div>
+				<div class="sml heart" id="heart45"></div>
+				<div class="sml heart" id="heart135"></div>
+				<div class="sml heart" id="heart225"></div>
+				<div class="sml heart" id="heart315"></div>
+
+				<div class="sprig" id="sprig0"></div>
+				<div class="sprig" id="sprig90"></div>
+				<div class="sprig" id="sprig180"></div>
+				<div class="sprig" id="sprig270"></div>
+
+				<div class="circle sml" id="circle0a"></div>
+				<div class="circle sml" id="circle90a"></div>
+				<div class="circle sml" id="circle180a"></div>
+				<div class="circle sml" id="circle270a"></div>
+
+				<div class="circle wee" id="circle0b"></div>
+				<div class="circle wee" id="circle90b"></div>
+				<div class="circle wee" id="circle180b"></div>
+				<div class="circle wee" id="circle270b"></div>
+
+				<div class="circle tiny" id="circle0c"></div>
+				<div class="circle tiny" id="circle90c"></div>
+				<div class="circle tiny" id="circle180c"></div>
+				<div class="circle tiny" id="circle270c"></div>
+
+				<div class="yinyang long" id="yang0"></div>
+				<div class="yinyang short" id="yang1"></div>
+				<div class="yinyang long" id="yang2"></div>
+				<div class="yinyang short" id="yang3"></div>
+				<div class="yinyang long" id="yang4"></div>
+				<div class="yinyang short" id="yang5"></div>
+				<div class="yinyang long" id="yang6"></div>
+				<div class="yinyang short" id="yang7"></div>
+
+				<div class="yinyang long" id="yin0"></div>
+				<div class="yinyang short" id="yin1"></div>
+				<div class="yinyang long" id="yin2"></div>
+				<div class="yinyang short" id="yin3"></div>
+				<div class="yinyang long" id="yin4"></div>
+				<div class="yinyang short" id="yin5"></div>
+				<div class="yinyang long" id="yin6"></div>
+				<div class="yinyang short" id="yin7"></div>
+			</section>
+		
+		<div id="gosara"></div>
+
 			<div class="tab sara"><h2><a href="#gosara">sara</a></h2></div>
 			<section id="sara">
 				<article>
@@ -199,14 +200,42 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<div class="tab work"><h2><a href="#work">work</a></h2></div>
 			<section id="work">
 				<article>
-					<div class="cardcontent">
-						<article>Stuff</article>
-						<article>In</article>
-						<article>Here</article>
-						<article>Stuff</article>
-						<article>In</article>
-						<article>Here</article>
-					</div>
+				<section class="container box1">
+					<button class="bigrow" id="a1" style="background-image: url('/images/stuff/sarawallen_com.png')"><h1 class="caption">sara​wallen.com
+						</h1></button>
+					
+					<button class="bigsq" id="b1" style="background-image: url('/images/stuff/yasmin_sqthumb.png')"><h1 class="caption">Yasmin</h1></button>
+					
+					<div class="smsq1" id="c1"></div>
+					<div class="smsq2" id="d1"></div></section>
+			
+				<section class="container box2"><div class="smsq1" id="a2"></div>
+					<button class="bigsq" id="b2" style="background-image: url('/images/stuff/bendickson_sq.png')"><h1 class="caption">Benjamin Dickson
+						</h1></button>
+					
+					<button class="smsq2" id="c2" style="background-image: url('/images/stuff/ascii.png')" title="Open Ascii Art"><h1 class="caption">ASCII Art</h1></button>
+					
+					<button id="d2" class="bigrow" style="background-image: url('/images/stuff/binnenalster_small.jpg')"><h1 class="caption">Hamburg</h1></button>
+					</section>
+			
+				<section class="container box3"><div class="bigsq" id="a3"></div>
+					<button class="bigsq" id="a3" style="background-image: url('/images/stuff/blogolio_sq.png')"><h2 class="caption">Blogolio</h2></button>
+					
+					<button class="smsq1" id="b3" style="background-image: url('/images/stuff/mega-zine.png')" title="Open Mega-Zine"><h2 class="caption">Mega-zine</h2></button>
+					
+					<button class="shrow" id="c3" style="background-image: url('/images/stuff/tumblr_small.png')" title="Open Tumblr"><h1 class="caption">Tumblr</h1></button>
+					
+					<div class="shcol" id="d3"></div></section>
+			
+				<section class="container box4"><button class="shcol" id="a4" style="background-image: url('/images/stuff/cheeper_small.png')" title="Open Cheeper"><h1 class="caption">Chee​per</h1></button>
+					
+					<button class="shrow" id="b4" style="background-image: url('/images/stuff/mktimelapse_small.png')"><h1 class="caption">MK time­lapse
+						</h1></button>
+					
+					<button class="bigsq" id="c4" style="background-image: url('/images/stuff/lightdark.png')" title="Open Light/Dark Mode"><h2 class="caption">Light­/Dark Mode</h2></button>
+					
+					<button class="smsq1" id="d4" style="background-image: url('/images/stuff/blogger_small.png')" title="Open Blogger"><h1 class="caption">Blog​ger</h1></button>
+					</section>
 				</article>
 			</section>
 			
