@@ -238,6 +238,11 @@ a img {
 .signoff {
 	text-align: right;
 }
+@media (max-aspect-ratio: 1/2) {
+	.welcome {
+		flex-direction: column-reverse;
+	}
+}
 
 .work {
 	z-index: 12;
