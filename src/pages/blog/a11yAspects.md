@@ -1,8 +1,9 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: "A11y: Semantics, Contrast and... Anxiety?"
-date: "2022/06/07"
-exerpt: It's a lot. It's tempting to pretend we didn't read that very confronting article telling us we need to Do Better.
-image: a11yAspects.png
+date: "Jun 07 2022"
+description: "It's a lot. It's tempting to pretend we didn't read that very confronting article telling us we need to Do Better."
+image: "/images/blog/a11yAspects.png"
 caption: "Somewhat semantic HTML, fading from harsh colours to a more serene state."
 ---
 

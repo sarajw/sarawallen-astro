@@ -1,9 +1,10 @@
 ---
-title: Using html <details> tag as navigation
-date: "2022/03/27"
-exerpt: Natively right out of the box, HTML provides us with a way to open and close an element on a click. Beautiful.
-image: details.png
-caption: Screenshot of menu made using <details> tag
+layout: "../../layouts/BlogPost.astro"
+title: "Using html <details> tag as navigation"
+description: "Natively right out of the box, HTML provides us with a way to open and close an element on a click. Beautiful."
+pubDate: "Mar 27 2012"
+heroImage: "/images/blog/details.png"
+caption: "Screenshot of menu made using <details> tag"
 ---
 
 ## `<details>` ?

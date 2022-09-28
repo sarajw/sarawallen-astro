@@ -1,9 +1,10 @@
 ---
-title: Mechanical Watches
-date: "2021/08/24"
-exerpt: I have a thing about mechanical watches. I only wear one though, the engagement watch that my now husband gave me in 2014.
-image: hydroconquest.jpg
-caption: Longines Hydroconquest Mechanical Watch
+layout: "../../layouts/BlogPost.astro"
+title: "Mechanical Watches"
+description: "I have a thing about mechanical watches. I only wear one though, the engagement watch that my now husband gave me in 2014."
+pubDate: "Aug 24 2021"
+heroImage: "/images/blog/hydroconquest.jpg"
+caption: "Longines Hydroconquest Mechanical Watch"
 ---
 
 I have a thing about mechanical watches. I only wear one though, the engagement watch (I’m not into diamonds\*) that my now husband gave me in 2014.

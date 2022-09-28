@@ -1,8 +1,9 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: "Job Application Tips"
-date: "2022/09/09"
-exerpt: How to get the first interview, and smash it!
-image: passionfeet.jpg
+description: "How to get the first interview, and smash it!"
+pubDate: "Sep 09 2022"
+heroImage: "/images/blog/passionfeet.jpg"
 caption: "Two pairs of shoed feet standing on pavement slabs, on which the words PASSION LED US HERE are painted in red."
 ---
 

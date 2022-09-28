@@ -1,8 +1,9 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: "How We All Benefit from Accessibility"
-date: "2022/05/21"
-exerpt: A general musing on accessibility (a.k.a. a11y), online and offline.
-image: accessibility.png
+description: "A general musing on accessibility (a.k.a. a11y), online and offline."
+pubDate: "May 21 2022"
+heroImage: "/images/blog/accessibility.png"
 caption: "Accessibility/a11y icon: a stylised human body inside a circle"
 ---
 
