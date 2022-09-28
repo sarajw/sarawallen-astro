@@ -10,11 +10,12 @@ export interface Props {
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+		caption?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, updatedDate, heroImage, caption },
 } = Astro.props;
 ---
 
@@ -39,11 +40,11 @@ const {
 			<article>
 				{heroImage && (
 					<img
-						width={720}
-						height={360}
+						height={400}
 						src={heroImage}
-						alt=""
+						alt={caption}
 					/>
+					<p class="caption">{caption}</p>
 				)}
 				<h1 class="title">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}
@@ -55,3 +56,29 @@ const {
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		background-color: Canvas;
+		padding: 3vmin;
+		margin-top: var(--tabheight);
+	}
+	article {
+		max-width: 60ch;
+		margin: 0 auto;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		border-radius: var(--border-radii);
+	}
+	:global(p img) {
+		max-width: 60ch;
+	}
+	:global(.caption) {
+		text-align: center;
+		font-style: italic;
+		margin-bottom: 3vmin;
+	}
+</style>

@@ -63,6 +63,11 @@ html {
 	scroll-behavior: smooth;
 	background-color: var(--background);
 }
+@media (prefers-reduced-motion) {
+  html {
+		scroll-behavior: auto;
+  }
+}
 			
 body {
 	margin: 0 0.25rem 0;
@@ -91,7 +96,7 @@ a:hover {
 	line-height: calc(var(--tabheight) - 0.25rem);
 	padding: 0 0.25em;
 	margin: 0;
-	font-size: clamp(0.9rem, 5vw, 2.2rem);
+	font-size: clamp(0.9rem, 4.5vw, 2.5rem);
 	text-transform: uppercase;
 	text-align: center;
 	border-top-left-radius: var(--border-radii);
