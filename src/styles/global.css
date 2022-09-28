@@ -87,7 +87,7 @@ a:hover {
 
 .tab {
 	position: sticky;
-	top: 0.25rem;
+	top: 0.5rem;
 	pointer-events: none;
 	margin-top: calc(-1 * var(--tabheight));
 }
@@ -108,15 +108,21 @@ a:hover {
 .tab::after {
 	content: "";
 	display:block;
-	width:100%;
+	width: calc(100% - 0.5rem);
 	height: 1rem;
+	margin: 0 auto;
 	border-top-left-radius: var(--border-radii);
 	border-top-right-radius: var(--border-radii);
+}
+
+main {
+	background-color: Canvas;
 }
 
 main > section {
 	position: sticky;
 	min-height: calc(100vh - 0.5rem - var(--tabheight));
+	margin: 0 0.25rem;
 	padding: 3vmin calc(0.5rem + 3vmin) calc(1.5 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 0.5rem);
 }
@@ -354,8 +360,8 @@ a img {
 	background-color: rgba(150, 100, 150, 0.25);
 }
 
-@media only screen and (max-width: 600px) {
-	.container {
+@media only screen and (max-aspect-ratio: 3/4) {
+	#work .container {
 		width: 100%;
 	}
 }
@@ -381,7 +387,7 @@ a img {
 	z-index: 14;
 }
 .find h2 {
-	margin-inline: auto 0;
+	margin-inline: auto 0.25rem;
 	background-color: var(--find);
 }
 .find::after {
