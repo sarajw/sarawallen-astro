@@ -191,7 +191,7 @@ a img {
 	top: calc(0.5 * var(--tabheight));
 	height: 100vh;
 	background-color: var(--header);
-	margin: 0 auto;
+	margin: 0 auto -var(--tabheight);
 	overflow: hidden;
 	font-size: calc(0.6rem + 1vmin);
 }
@@ -233,9 +233,9 @@ a img {
 	text-align: right;
 }
 #gosara {
-	height: 0;
+	height: 2px;
 	position: absolute;
-	top: calc(100vh + 1rem - var(--tabheight));
+	top: calc(100vh - var(--tabheight));
 }
 
 .work {
