@@ -35,7 +35,7 @@
 	
 	/* fonts */
 	--normal: 300;
-	--heavy: 400;
+	--heavy: 500;
 }
 
 :root.dark-mode {
@@ -267,6 +267,59 @@ a img {
 	gap: calc(0.25rem + 0.5vmin);
 }
 
+.box1 {
+	grid-template-areas:
+		"bigrow bigrow bigrow"
+		"bigsq bigsq smsq1"
+		"bigsq bigsq smsq2";
+}
+
+.box2 {
+	grid-template-areas:
+		"smsq1 bigsq bigsq"
+		"smsq2 bigsq bigsq"
+		"bigrow bigrow bigrow";
+}
+
+.box3 {
+	grid-template-areas:
+		"bigsq bigsq smsq1"
+		"bigsq bigsq shcol"
+		"shrow shrow shcol";
+}
+
+.box4 {
+	grid-template-areas:
+		"shcol shrow shrow"
+		"shcol bigsq bigsq"
+		"smsq1 bigsq bigsq";
+}
+
+.bigsq {
+	grid-area: bigsq;
+	background-color: rgba(100, 100, 150, 0.25);
+}
+.bigrow {
+	grid-area: bigrow;
+	background-color: rgba(150, 100, 100, 0.25);
+}
+.shcol {
+	grid-area: shcol;
+	background-color: rgba(100, 150, 100, 0.25);
+}
+.shrow {
+	grid-area: shrow;
+	background-color: rgba(150, 150, 100, 0.25);
+}
+.smsq1 {
+	grid-area: smsq1;
+	background-color: rgba(100, 150, 150, 0.25);
+}
+.smsq2 {
+	grid-area: smsq2;
+	background-color: rgba(150, 100, 150, 0.25);
+}
+
 .container {
 	width: calc(50% - (0.25rem + 0.5vmin) / 2);
 	max-width: max(800px, 100%/3);
@@ -278,87 +331,38 @@ a img {
 }
 
 .container > :is(div, button) {
+	container-type: inline-size;
 	border-radius: var(--border-radii);
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
 	transition: transform 0.2s ease;
-	box-shadow: 2px 2px 10px -8px var(--shadow);
+	box-shadow: 2px 2px 10px -8px var(--text);
+	border: 0;
 }
+
 .container > :is(button:hover, button:focus, div:hover, div:focus-visible) {
-	background-color: var(--soprano2nd);
+	background-color: var(--background);
 	background-repeat: no-repeat;
 	background-size: 0;
 	transform: translate(1px, 1px);
 	transition: transform 0.1s ease;
-	box-shadow: 2px 2px 10px -9px var(--shadow);
+	box-shadow: 2px 2px 10px -9px var(--text);
 }
-#work .caption {
+#work h3 {
 	visibility: hidden;
 	display: grid;
 	place-content: center;
 	height: 100%;
+	margin: 0;
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
-	font-weight: var(--heavy);
+	font-size: clamp(1rem, calc(1rem + 10cqi), 1.8rem);
 }
 #work button:hover .caption,
 #work button:focus .caption {
 	visibility: visible;
-}
-
-#work .box1 {
-	grid-template-areas:
-		"bigrow bigrow bigrow"
-		"bigsq bigsq smsq1"
-		"bigsq bigsq smsq2";
-}
-
-#work .box2 {
-	grid-template-areas:
-		"smsq1 bigsq bigsq"
-		"smsq2 bigsq bigsq"
-		"bigrow bigrow bigrow";
-}
-
-#work .box3 {
-	grid-template-areas:
-		"bigsq bigsq smsq1"
-		"bigsq bigsq shcol"
-		"shrow shrow shcol";
-}
-
-#work .box4 {
-	grid-template-areas:
-		"shcol shrow shrow"
-		"shcol bigsq bigsq"
-		"smsq1 bigsq bigsq";
-}
-
-#work .bigsq {
-	grid-area: bigsq;
-	background-color: rgba(100, 100, 150, 0.25);
-}
-#work .bigrow {
-	grid-area: bigrow;
-	background-color: rgba(150, 100, 100, 0.25);
-}
-#work .shcol {
-	grid-area: shcol;
-	background-color: rgba(100, 150, 100, 0.25);
-}
-#work .shrow {
-	grid-area: shrow;
-	background-color: rgba(150, 150, 100, 0.25);
-}
-#work .smsq1 {
-	grid-area: smsq1;
-	background-color: rgba(100, 150, 150, 0.25);
-}
-#work .smsq2 {
-	grid-area: smsq2;
-	background-color: rgba(150, 100, 150, 0.25);
 }
 
 @media only screen and (max-aspect-ratio: 3/4) {

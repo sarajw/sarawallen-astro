@@ -37,7 +37,7 @@ const {
 	<body>
 		<Header />
 		<main>
-			<article>
+			<article class="blogpost">
 				{heroImage && (
 					<img
 						src={heroImage}
@@ -74,10 +74,10 @@ const {
 		aspect-ratio: 1/1;
 		border-radius: var(--border-radii);
 	}
-	:global(p img) {
+	.blogpost :global(p img) {
 		max-width: 60ch;
 	}
-	:global(.caption) {
+	.blogpost :global(.caption) {
 		text-align: center;
 		font-style: italic;
 		margin-bottom: 3vmin;
