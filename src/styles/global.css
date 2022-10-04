@@ -17,9 +17,10 @@
   --2nd: 325, 35%;
 
 	--background: hsl(var(--2nd), 50%);
-	--text: hsl(200, 15%, 20%);
-	--links: hsl(200, 15%, 20%);
-	--hover: hsl(200, 15%, 40%);
+	--text: hsl(var(--base), 20%);
+	--links: hsl(var(--base), 20%);
+	--hover: hsl(var(--base), 40%);
+	--backdrop: rgba(86,41,67, 0.75);
 
   --header: hsl(var(--base), 100%);
   --sara: hsl(var(--base), 90%);
@@ -27,7 +28,7 @@
   --blog: hsl(var(--base), 80%);
   --find: hsl(var(--base), 75%);
 
-	--b2top: hsl(200, 15%, 60%);
+	--b2top: hsl(var(--base), 60%);
 
 	/* scaling */
 	--tabheight: clamp(40px, 8vw, 60px);
@@ -42,9 +43,10 @@
 
 	/* colours */
 	--background: hsl(var(--2nd), 35%);
-	--text: hsl(200, 15%, 80%);
-	--links: hsl(200, 15%, 80%);
-	--hover: hsl(200, 15%, 600%);
+	--text: hsl(var(--base), 80%);
+	--links: hsl(var(--base), 80%);
+	--hover: hsl(var(--base), 600%);
+	--backdrop: rgba(214,169,195, 0.75);
 
   --header: hsl(var(--base), 0%);
   --sara: hsl(var(--base), 15%);
@@ -52,7 +54,7 @@
   --blog: hsl(var(--base), 25%);
   --find: hsl(var(--base), 30%);
 
-	--b2top: hsl(200, 15%, 40%);
+	--b2top: hsl(var(--base), 40%);
 }
 
 * {
@@ -222,7 +224,7 @@ a img {
 	top: calc(100vh - var(--tabheight));
 }
 
-#sara h3 {
+#sara h3, #find h3 {
 	margin-top: 0;
 }
 
@@ -352,7 +354,7 @@ a img {
 	transition: transform 0.1s ease;
 	box-shadow: 2px 2px 10px -9px var(--text);
 }
-#work h3 {
+.container h3 {
 	visibility: hidden;
 	display: grid;
 	place-content: center;
@@ -363,9 +365,53 @@ a img {
 	color: #fff;
 	font-size: clamp(1rem, calc(1rem + 10cqi), 1.8rem);
 }
-#work button:hover .caption,
-#work button:focus .caption {
+.container button:hover .caption,
+.container button:focus .caption {
 	visibility: visible;
+}
+
+dialog {
+	border: 0;
+	border-radius: var(--border-radii);
+	box-shadow: 0 0 2rem -2rem var(--text);
+}
+dialog p:last-child {
+	margin-bottom: 0;
+}
+dialog::backdrop {
+	background-color: rgba(41,86,79,0.8);
+}
+dialog button {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	font-size: 1rem;
+	aspect-ratio: 1;
+	background-color: var(--find);
+	border-radius: 50%;
+	border: 0;
+}
+dialog button:hover {
+	background-color: var(--background);
+	color: var(--header);
+}
+dialog::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+dialog::-webkit-scrollbar-track {
+	background: transparent;
+	width: 1rem;
+}
+dialog::-webkit-scrollbar-thumb {
+	background: var(--b2top);
+	border-radius: var(--border-radii);
+}
+dialog::-webkit-scrollbar-thumb:hover {
+	background: var(--find);
+}
+dialog::-webkit-scrollbar-corner {
+	background: transparent;
 }
 
 @media only screen and (max-aspect-ratio: 3/4) {
@@ -403,12 +449,12 @@ a img {
 	border-top-right-radius: 0;
 }
 #find {
-	top: calc(var(--tabheight) + 3vmin);
+	top: calc(var(--tabheight) + 5vmin);
 	z-index: 14;
 	background-color: var(--find);
 }
 @supports(height: 100dvh) {
 	#find {
-		min-height: calc(100dvh - 0.5rem - var(--tabheight));
+		min-height: calc(100dvh - 5vmin - var(--tabheight));
 	}
 }
