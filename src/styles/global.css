@@ -374,6 +374,7 @@ dialog {
 	border: 0;
 	border-radius: var(--border-radii);
 	box-shadow: 0 0 2rem -2rem var(--text);
+	max-width: 900px;
 }
 dialog p:last-child {
 	margin-bottom: 0;
