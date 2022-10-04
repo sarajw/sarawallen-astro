@@ -84,6 +84,7 @@ a:link, a:visited, a:active {
 a:hover {
 	color: var(--hover);
 }
+img {max-width: 100%;}
 
 .tab {
 	position: sticky;
@@ -109,7 +110,7 @@ a:hover {
 	content: "";
 	display:block;
 	width: calc(100% - 0.5rem);
-	height: 3vmin;
+	height: 5vmin;
 	margin: -0.1rem auto -0.1rem;
 	border-top-left-radius: var(--border-radii);
 	border-top-right-radius: var(--border-radii);
@@ -123,19 +124,21 @@ main > section {
 	position: sticky;
 	min-height: calc(100vh - 3vmin - var(--tabheight));
 	margin: 0 0.25rem;
-	padding: 0 calc(0.25rem + 3vmin) calc(1.5 * var(--tabheight));
-	scroll-margin-top: calc(var(--tabheight) + 3vmin);
+	padding: 0 5vmin calc(1.5 * var(--tabheight));
+	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
 main > section > article {
 	font-size: clamp(0.9rem, 3vw, 1.1rem);
 	overflow: visible;
-	margin-inline: auto;
+	margin: 0 auto;
 	padding: 0.5em 0;
 }
 
 section > article ul {
 	list-style-type: none;
+	margin-block: 0;
+	padding-inline-start: 0;
 }
 
 /* section > article p, section > article ul {
@@ -185,7 +188,7 @@ a img {
 
 #hero {
 	z-index: 0;
-	top: calc(0.5 * var(--tabheight));
+	top: var(--tabheight);
 	height: 100vh;
 	background-color: var(--header);
 	margin: 0 auto -var(--tabheight);
@@ -194,7 +197,7 @@ a img {
 }
 #hero p {
 	font-size: 0.8rem;
-	margin-block: 2rem;
+	margin-block: 1rem;
 	text-align: center;
 }
 
@@ -210,7 +213,7 @@ a img {
 }
 #sara {
 	z-index: 1;
-	top: calc(var(--tabheight) + 3vmin);
+	top: calc(var(--tabheight) + 5vmin);
 	background-color: var(--sara);
 }
 #gosara {
@@ -253,7 +256,7 @@ a img {
 }
 .work::after {
 	background-color: var(--work);
-	height: 3.1vmin;
+	height: 5.1vmin;
 }
 #work {
 	z-index: 2;
@@ -381,7 +384,7 @@ a img {
 }
 .blog::after {
 	background-color: var(--blog);
-	height: 3.2vmin;
+	height: 5.2vmin;
 }
 #blog {
 	z-index: 3;

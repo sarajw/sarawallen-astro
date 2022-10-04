@@ -197,8 +197,20 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<section id="work">
 				<article>
 					<section class="container box1">
-						<button class="bigrow" id="a1" style="background-image: url('/images/work/sarawallen_com.png')"><h3 class="caption">sara​wallen.com
-							</h3></button>
+						<button class="bigrow" id="a1" style="background-image: url('/images/work/sarawallen_com.png')" onclick="document.getElementById('modal-a1').showModal();">
+							<h3 class="caption">sara​wallen.com</h3>
+						</button>
+						<dialog id="modal-a1">
+						<img src="/images/work/sarawallen_com_large.png" alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: Hi! Welcome :) and STUFF: Web Development & Design tabs in view" />
+							<a href="sarawallen.com"><h2>sarawallen.com</h2></a>
+								<p>
+									I had an idea about using the behaviour of the CSS property
+									"position: sticky" to make a stack of cards that would land on top
+									of each other when scrolling. Well, I made it and immediately
+									applied it to my landing page :)
+								</p>
+								<p>Written in Notepad++ in HTML and CSS only!</p>
+							</dialog>
 						
 						<button class="bigsq" id="b1" style="background-image: url('/images/work/yasmin_sqthumb.png')"><h3 class="caption">Yasmin</h3></button>
 						
