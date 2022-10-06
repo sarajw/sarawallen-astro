@@ -231,22 +231,24 @@ a img {
 .welcome {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+@media (max-width: 600px) {
+	.welcome {
+		flex-direction: column;
+	}
 }
 .welcome .blurb {
 	flex: 3;
 }
 .welcome img {
-	height: 50vmin;
-	min-height: 122.5px;
+	max-height: 20rem;
 	margin: 0 auto;
+	border-radius: 50%;
 }
 .signoff {
 	text-align: right;
-}
-@media (max-aspect-ratio: 1/2) {
-	.welcome {
-		flex-direction: column-reverse;
-	}
 }
 
 .work {

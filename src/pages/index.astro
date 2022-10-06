@@ -183,11 +183,11 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				<article>
 					<h3>Hi! Welcome :)</h3>
 					<div class="welcome">
+						<img src="images/red_av.jpg" alt="A picture of me!" loading="lazy">
 						<div class="blurb">
 							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt'.</p>
 							<p>This site is built with vanilla HTML & CSS in Astro (with some JS just for the light/dark mode <button id="inline-toggle" onclick="toggleMode()">toggle</button>).</p>
 						</div>
-						<img src="images/photo.png" alt="A picture of me!" loading="lazy">
 					</div>
 					<p class="signoff">~ Sara J. W. {today.getFullYear()}</p>
 				</article>
