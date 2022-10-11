@@ -195,12 +195,20 @@ a img {
 	background-color: var(--header);
 	margin: 0 auto -var(--tabheight);
 	overflow: hidden;
-	font-size: calc(0.5rem + 1.25vmin);
+	font-size: 2.4vmin;
 }
 #hero p {
 	font-size: 0.8rem;
 	margin-block: 1rem;
 	text-align: center;
+}
+#hero div:hover, #hero div:hover::before, #hero div:hover::after {
+  opacity: 0.5;
+  transition: opacity ease 0.5s, box-shadow ease 0.5s;
+  box-shadow: 0 0 0.5em var(--text) inset;
+}
+#hero div {
+  transition: opacity ease 0.5s, box-shadow ease 0.5s;
 }
 
 .sara {
