@@ -163,13 +163,13 @@ section > article ul {
 	position: fixed;
 	right: min(5vw,3rem);
 	bottom: min(3vw,2rem);
-	z-index: 10;
+	z-index: 20;
 	width: calc(1.5rem + 0.75vw);
 	height: calc(2rem + 1vw);
 	opacity: 0.75;
 	border: 0;
 	background-color: transparent;
-	background-image: url('images/led-on.svg');
+	background-image: url('/images/led-on.svg');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
@@ -181,7 +181,7 @@ section > article ul {
 
 .dark-mode #toggleBtn {
 	background-color: var(--info);
-	background-image: url('images/led-off.svg');
+	background-image: url('/images/led-off.svg');
 	filter: invert(100%);
 }
 
