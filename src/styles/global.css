@@ -18,9 +18,10 @@
 
 	--background: hsl(var(--2nd), 50%);
 	--text: hsl(var(--base), 20%);
-	--links: hsl(var(--base), 20%);
-	--hover: hsl(var(--base), 40%);
-	--backdrop: rgba(86,41,67, 0.75);
+	--links: hsl(var(--pop), 35%);
+	--hover: hsl(var(--2nd), 40%);
+	--linkshadow: 0 -0.5em inset hsla(var(--2nd), 35%, 30%);
+	--linkshadowhover: 0 -0.5em inset hsla(var(--pop), 35%, 40%);
 
   --header: hsl(var(--base), 100%);
   --sara: hsl(var(--base), 90%);
@@ -44,9 +45,10 @@
 	/* colours */
 	--background: hsl(var(--2nd), 35%);
 	--text: hsl(var(--base), 80%);
-	--links: hsl(var(--base), 80%);
-	--hover: hsl(var(--base), 600%);
-	--backdrop: rgba(214,169,195, 0.75);
+	--links: hsl(var(--pop), 60%);
+	--hover: hsl(var(--2nd), 60%);
+	--linkshadow: 0 -0.5em inset hsla(var(--2nd), 35%, 50%);
+	--linkshadowhover: 0 -0.5em inset hsla(var(--pop), 35%, 50%);
 
   --header: hsl(var(--base), 0%);
   --sara: hsl(var(--base), 15%);
@@ -76,16 +78,30 @@ body {
 	color: var(--text);
 	background-color: var(--background);
 	font-family: Karla, 'Open Sans', sans-serif;
-	font-weight: var(--normal);
 }
-a:link, a:visited, a:active {
-	text-decoration: none;
+
+p, .welcome button {
+	font-size: clamp(0.9rem, 3vw, 1.1rem);
+}
+
+a, a:visited, .welcome button { 
 	color: var(--links);
 	font-weight: var(--heavy);
+	border-bottom: 2px solid var(--hover);
+	text-decoration: none;
+	/* text-decoration: underline var(--hover) 2px; */
 }
-a:hover {
+a:hover, a:active, a:focus, .welcome button:hover {
 	color: var(--hover);
+	border-bottom: 0;
+	text-decoration: underline wavy var(--links);
 }
+:is(header, footer, .tab) a {
+	text-decoration: none;
+	border-bottom: 0;
+	font-weight: unset;
+}
+
 img {max-width: 100%;}
 
 .tab {
@@ -124,14 +140,13 @@ main {
 
 main > section {
 	position: sticky;
-	min-height: calc(100vh - 3vmin - var(--tabheight));
+	min-height: calc(100vh - 5vmin - var(--tabheight));
 	margin: 0 0.25rem;
 	padding: 0 5vmin calc(1.5 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
 main > section > article {
-	font-size: clamp(0.9rem, 3vw, 1.1rem);
 	overflow: visible;
 	margin: 0 auto;
 	padding: 0.5em 0;
@@ -143,41 +158,58 @@ section > article ul {
 	padding-inline-start: 0;
 }
 
-/* section > article p, section > article ul {
-	margin: 0.3rem auto 0.8rem;
-	max-width: 60ch;
+
+#toggleBtn {
+	position: fixed;
+	right: min(5vw,3rem);
+	bottom: min(3vw,2rem);
+	z-index: 10;
+	width: calc(1.5rem + 0.75vw);
+	height: calc(2rem + 1vw);
+	opacity: 0.75;
+	border: 0;
+	background-color: transparent;
+	background-image: url('images/led-on.svg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
 }
 
-section > article ul li {
-	line-height: 2.5rem;
+#toggleBtn:focus-visible {
+	opacity: 1;
 }
 
-section > article p b {
-	margin: 1rem auto 1rem;
-	font-weight: var(--heavy);
+.dark-mode #toggleBtn {
+	background-color: var(--info);
+	background-image: url('images/led-off.svg');
+	filter: invert(100%);
 }
 
-section > article > a {
-	display: block;
-	margin: 0 auto;
-	max-width: 60ch;
+@media (hover: hover) {
+	#toggleBtn {
+		opacity: 0.50;
+		transition: opacity 0.25s, background-image 0.5s;
+	}
+	#toggleBtn:hover {
+		opacity: 0.75;
+		background-image: url('images/led-off.svg');
+	}
+	.dark-mode #toggleBtn:hover {
+		background-image: url('images/led-on.svg');
+	}
 }
-
-a img {
-	max-width: 100%;
-} */
 
 
 .backtotop {
 	position: absolute;
 	height: 2rem;
 	width: 2rem;
-	bottom: 1rem;
+	bottom: 2rem;
 	left: calc(50% - 1rem);
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: var(--normal);
-	line-height: 2rem;
+	line-height: 1.75rem;
 	border-radius: 50%;
 	background-color: var(--b2top);
 }
@@ -193,8 +225,8 @@ a img {
 	top: var(--tabheight);
 	height: 100vh;
 	background-color: var(--header);
-	margin: 0 auto -var(--tabheight);
-	overflow: hidden;
+	margin: 0 auto;
+	padding-bottom: var(--tabheight);
 	font-size: 2.4vmin;
 }
 #hero p {
@@ -202,13 +234,14 @@ a img {
 	margin-block: 1rem;
 	text-align: center;
 }
+#hero div:hover {
+	scale: 1.05;
+}
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-  opacity: 0.5;
-  transition: opacity ease 0.5s, box-shadow ease 0.5s;
-  box-shadow: 0 0 0.5em var(--text) inset;
+  box-shadow: 0 0 1em -0.25em var(--text);
 }
 #hero div {
-  transition: opacity ease 0.5s, box-shadow ease 0.5s;
+  transition: scale ease 0.25s, box-shadow ease 0.25s;
 }
 
 .sara {
@@ -229,7 +262,7 @@ a img {
 #gosara {
 	height: 2px;
 	position: absolute;
-	top: calc(100vh - var(--tabheight));
+	top: calc(100vh - var(--tabheight) - 0.5rem);
 }
 
 #sara h3, #find h3 {
@@ -254,6 +287,13 @@ a img {
 	max-height: 20rem;
 	margin: 0 auto;
 	border-radius: 50%;
+}
+.welcome button {
+	border-top: 0;
+	border-inline: 0;
+	padding: 0;
+	background-color: transparent;
+	font-family: Karla, 'Open Sans', sans-serif;
 }
 .signoff {
 	text-align: right;
@@ -381,30 +421,44 @@ a img {
 }
 
 dialog {
-	border: 0;
-	border-radius: var(--border-radii);
+	border: 1rem solid var(--header);
 	box-shadow: 0 0 2rem -2rem var(--text);
+	max-width: 900px;
+}
+dialog h2 {
+	display: inline;
+}
+dialog, dialog :is(p, img) {
+	border-radius: var(--border-radii);
+}
+dialog p {
 	max-width: 80ch;
+	margin-inline: auto;
 }
 dialog p:last-child {
 	margin-bottom: 0;
 }
 dialog::backdrop {
-	background-color: rgba(41,86,79,0.8);
+	/* background-color: rgba(41,86,79,0.8); */
+	backdrop-filter: blur(0.25rem);
+	overscroll-behavior: contain;
 }
 dialog button {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	font-size: 1rem;
+	width: calc(1.5rem + 1vw);
 	aspect-ratio: 1;
-	background-color: var(--find);
+	padding: 0;
+	line-height: calc(1.5rem + 1vw);
+	font-size: calc(1.5rem + 1vw);
+	color: var(--header);
+	background-color: var(--links);
 	border-radius: 50%;
 	border: 0;
 }
 dialog button:hover {
 	background-color: var(--background);
-	color: var(--header);
 }
 dialog::-webkit-scrollbar {
 	width: 0.5rem;
@@ -415,11 +469,11 @@ dialog::-webkit-scrollbar-track {
 	width: 1rem;
 }
 dialog::-webkit-scrollbar-thumb {
-	background: var(--b2top);
+	background: var(--find);
 	border-radius: var(--border-radii);
 }
 dialog::-webkit-scrollbar-thumb:hover {
-	background: var(--find);
+	background: var(--b2top);
 }
 dialog::-webkit-scrollbar-corner {
 	background: transparent;

@@ -127,7 +127,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		
 		<main id="content">
 			<section id="hero">
-				<p>scroll down!</p>
 				<div class="big heart" id="heart0"></div>
 				<div class="big heart" id="heart90"></div>
 				<div class="big heart" id="heart180"></div>
@@ -175,8 +174,10 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				<div class="yinyang long" id="yin6"></div>
 				<div class="yinyang short" id="yin7"></div>
 			</section>
-		
-		<div id="gosara"></div>
+
+			<button tabindex="0" id="toggleBtn" onclick="toggleMode()" title="Light/Dark Mode Toggle"></button>
+
+			<div id="gosara"></div>
 
 			<div class="tab sara"><h2><a href="#gosara">sara</a></h2></div>
 			<section id="sara">
@@ -201,19 +202,36 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 							<h3 class="caption">sara​wallen.com</h3>
 						</button>
 						<dialog id="modal-a1">
-						<button onclick="document.getElementById('modal-a1').close();" title="Close">X</button>
-						<img src="/images/work/sarawallen_com_large.png" alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: Hi! Welcome :) and STUFF: Web Development & Design tabs in view" />
-							<a href="sarawallen.com"><h2>sarawallen.com</h2></a>
-								<p>
-									I had an idea about using the behaviour of the CSS property
-									"position: sticky" to make a stack of cards that would land on top
-									of each other when scrolling. Well, I made it and immediately
-									applied it to my landing page :)
-								</p>
-								<p>First written in Notepad++ in HTML and CSS only!</p>
-							</dialog>
+							<button onclick="document.getElementById('modal-a1').close();" title="Close">×</button>
+							<img src="/images/work/sarawallen_com_large.png" alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: Hi! Welcome :) and STUFF: Web Development & Design tabs in view" />
+							<a href="https://sarawallen.com" target="_blank">
+								<h2>sarawallen.com</h2>
+							</a>
+							<p>
+								I had an idea about using the behaviour of the CSS property
+								"position: sticky" to make a stack of cards that would land on top
+								of each other when scrolling. Well, I made it and immediately
+								applied it to my landing page :)
+							</p>
+							<p>First written in Notepad++ in HTML and CSS only!</p>
+						</dialog>
 						
-						<button class="bigsq" id="b1" style="background-image: url('/images/work/yasmin_sqthumb.png')"><h3 class="caption">Yasmin</h3></button>
+						<button class="bigsq" id="b1" style="background-image: url('/images/work/yasmin_sqthumb.png')" onclick="document.getElementById('modal-b1').showModal();">
+							<h3 class="caption">Yasmin</h3>
+						</button>
+						<dialog id="modal-b1">
+							<button onclick="document.getElementById('modal-b1').close();" title="Close">×</button>
+							<img src="/images/work/yasmin_large.png" alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer." />
+								<a href="https://yasmin-brinkmann.de" target="_blank">
+									<h2>Yasmin Brinkmann</h2>
+								</a>
+								<p>
+									A friend from swing dancing needed a new landing page, and gracefully agreed to my coding it from scratch as a learning exercise.
+								</p>
+								<p>
+									Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
+								</p>
+							</dialog>
 						
 						<div class="smsq1" id="c1"></div>
 						<div class="smsq2" id="d1"></div>
