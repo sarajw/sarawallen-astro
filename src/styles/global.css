@@ -20,8 +20,6 @@
 	--text: hsl(var(--base), 20%);
 	--links: hsl(var(--pop), 35%);
 	--hover: hsl(var(--2nd), 40%);
-	--linkshadow: 0 -0.5em inset hsla(var(--2nd), 35%, 30%);
-	--linkshadowhover: 0 -0.5em inset hsla(var(--pop), 35%, 40%);
 
   --header: hsl(var(--base), 100%);
   --sara: hsl(var(--base), 90%);
