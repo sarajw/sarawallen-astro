@@ -1,7 +1,5 @@
 :root {
 
-  --pop: 170, 35%;
-
 	/* colours light */
   --lighter: hsl(var(--pop), 100%);
   --light: hsl(var(--pop), 90%);

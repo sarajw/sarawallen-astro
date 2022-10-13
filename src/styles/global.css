@@ -87,9 +87,9 @@ p, .welcome button {
 a, a:visited, .welcome button { 
 	color: var(--links);
 	font-weight: var(--heavy);
-	border-bottom: 2px solid var(--hover);
+	/* border-bottom: 2px solid var(--hover); */
 	text-decoration: none;
-	/* text-decoration: underline var(--hover) 2px; */
+	text-decoration: underline var(--hover) 2px;
 }
 a:hover, a:active, a:focus, .welcome button:hover {
 	color: var(--hover);
@@ -238,7 +238,7 @@ section > article ul {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-  box-shadow: 0 0 1em -0.25em var(--text);
+  box-shadow: 0 0 1em -0.25em var(--hover);
 }
 #hero div {
   transition: scale ease 0.25s, box-shadow ease 0.25s;
@@ -289,8 +289,7 @@ section > article ul {
 	border-radius: 50%;
 }
 .welcome button {
-	border-top: 0;
-	border-inline: 0;
+	border: 0;
 	padding: 0;
 	background-color: transparent;
 	font-family: Karla, 'Open Sans', sans-serif;
