@@ -165,6 +165,15 @@ section > article ul {
 	padding-inline-start: 0;
 }
 
+.anchor {
+	height: 0px;
+	position: relative;
+	top: calc(-1 * var(--tabheight) - 0.5rem);
+}
+/* #gosara {
+	top: calc(100vh - var(--tabheight) - 0.5rem);
+} */
+
 
 #toggleBtn {
 	position: fixed;
@@ -263,13 +272,8 @@ section > article ul {
 }
 #sara {
 	z-index: 1;
-	top: calc(var(--tabheight) + 5vmin);
+	/* top: calc(var(--tabheight) + 5vmin); */
 	background-color: var(--sara);
-}
-#gosara {
-	height: 2px;
-	position: absolute;
-	top: calc(100vh - var(--tabheight) - 0.5rem);
 }
 
 #sara h3, #find h3 {
