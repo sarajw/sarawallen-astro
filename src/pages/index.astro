@@ -247,14 +247,16 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<!-- <Footer /> -->
 	</body>
 
-	<script is:inline>
+	<script is:inline defer>
 		const sections = document.querySelectorAll("main > section:not(#hero)");
-		for (const section of sections) {
-			let sectionHeight = section.offsetHeight;
-			console.log(section.id);
-			console.log(sectionHeight);
-			section.style.top = `calc(100vh - ${sectionHeight}px)`;
-		}
+		window.addEventListener('DOMContentLoaded', (event) => {
+			for (const section of sections) {
+				let sectionHeight = section.offsetHeight;
+				console.log(section.id);
+				console.log(sectionHeight);
+				section.style.top = `calc(100vh - ${sectionHeight}px)`;
+			}
+		});
 	</script>
 
 </html>
