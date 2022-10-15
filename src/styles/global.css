@@ -104,7 +104,11 @@ a:hover, a:active, a:focus, .welcome button:hover {
 	font-weight: unset;
 }
 
-img {max-width: 100%;}
+img {max-width: 100%}
+
+img:is(.logo, .social) {
+	width: clamp(32px, 12vw, 64px);
+}
 
 main {
 	background-color: var(--header);
@@ -398,7 +402,7 @@ section > article ul {
 	background-position: center;
 	overflow: hidden;
 	transition: transform 0.2s ease;
-	box-shadow: 2px 2px 10px -8px var(--text);
+	box-shadow: 2px 2px 10px -8px black;
 	border: 0;
 }
 
@@ -407,7 +411,7 @@ section > article ul {
 	background-repeat: no-repeat;
 	background-size: 0;
 	transform: translate(1px, 1px);
-	box-shadow: 2px 2px 10px -9px var(--text);
+	box-shadow: 2px 2px 10px -9px black;
 }
 .container h3 {
 	visibility: hidden;
@@ -426,8 +430,7 @@ section > article ul {
 }
 
 dialog {
-	border: 1rem solid var(--header);
-	box-shadow: 0 0 2rem -2rem var(--text);
+	border: 1rem solid canvas;
 	max-width: 900px;
 }
 dialog h2 {
@@ -556,7 +559,6 @@ dialog::-webkit-scrollbar-corner {
 	border-top-right-radius: 0;
 }
 #find {
-	top: calc(var(--tabheight) + 5vmin);
 	z-index: 14;
 	background-color: var(--find);
 }

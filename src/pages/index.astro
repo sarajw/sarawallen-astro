@@ -11,6 +11,7 @@ const today = new Date();
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
+
 ---
 
 <!DOCTYPE html>
@@ -19,111 +20,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
-<!-- 		<main>
-			<div class="header">
-				<div id="topstrip">
-					<nav>
-						<ul id="nav" class="menuitems">
-							<li><a href="#gointro">sara</a></li>
-							<li><a href="#gostuff">stuff</a></li>
-							<li><a href="#gocontact">social</a></li>
-						</ul>
-					</nav>
-				</div>
-		
-				<div id="hero">
-		
-					<img class="scrollup" src="images/chevron-up.svg">
-		
-				</div>
-			</div>
-				
-			<button tabindex="0" id="toggleBtn" onclick="toggleMode()" title="Light/Dark Mode Toggle"></button>
-		
-			<div id="gointro" class="anchor"></div>
-			<div id="gostuff" class="anchor"></div>
-			<div id="gocontact" class="anchor"></div>
-		
-			<div class="main" id="content">
-				<section aria-label="Introduction" id="intro">
-					<h2><a href="#gointro">Sara</a></h2>
-					<article>
-						<h3>Hi! Welcome :)</h3>
-						<div class="welcome">
-							<div class="blurb">
-								<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt'.</p>
-								<p>This site is hand-coded in HTML & CSS (with JS for the light/dark mode <button id="inline-toggle" onclick="toggleMode()">toggle</button>).</p>
-								<p>I have also built and am slowly popu&shy;lating <a
-										href="https://blog.sarawallen.com/" target="_blank">blog.sarawallen.com</a> using
-									SvelteKit.
-								</p>
-							</div>
-							<img src="images/photo.png" alt="A picture of me!" loading="lazy">
-						</div>
-						<p class="signoff">~ Sara J. W. {today.getFullYear()}
-						</p>
-					</article>
-				</section>
-				<section aria-label="Portfolio, Blog & Skills" id="stuff">
-					<h2><a href="#gostuff">Stuff</a></h2>
-					<article>
-						<h3>Skills</h3>
-						<div class="stack">
-							<img class="logo" src="images/html-5.svg" alt="HTML5" title="HTML5" loading="lazy">
-							<img class="logo" src="images/css-3.svg" alt="CSS3" title="CSS3" loading="lazy">
-							<img class="logo" src="images/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
-							<img class="logo" src="images/typescript-icon.svg" alt="TypeScript" title="TypeScript" loading="lazy">
-							<img class="logo" src="images/php-alt.svg" alt="PHP" title="PHP" loading="lazy">
-							<img class="logo" src="images/react.svg" alt="React" title="React" loading="lazy">
-							<img class="logo" src="images/nextjs-icon.svg" alt="Next.js" title="Next.js" loading="lazy">
-							<img class="logo" src="images/svelte-icon.svg" alt="Svelte" title="Svelte" loading="lazy">
-							<img class="logo" src="images/prisma.svg" alt="Prisma" title="Prisma" loading="lazy">
-							<img class="logo" src="images/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
-							<img class="logo" src="images/git-icon.svg" alt="Git" title="Git" loading="lazy">
-							<img class="logo" src="images/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" loading="lazy">
-							<img class="logo" src="images/mysql-icon.svg" alt="MySQL" title="MySQL" loading="lazy">
-							<img class="logo" src="images/powershell.svg" alt="PowerShell" title="PowerShell" loading="lazy">
-							<img class="logo" src="images/bash-icon.svg" alt="Bash" title="Bash" loading="lazy">
-						</div>
-					</article>
-				</section>
-				<section aria-label="Contact" id="contact">
-					<h2><a href="#gocontact">Social</a></h2>
-					<article>
-						<h3>Find me on:</h3>
-						<ul>
-							<li>
-								<a class="img" href="https://twitter.com/sarajwallen" target="_blank"><img class="social"
-										src="images/twitter.svg" alt="Twitter" title="Twitter" loading="lazy">
-									<br>@sarajwallen</a></li>
-							<li>
-								<a class="img" href="https://github.com/sarajw" target="_blank"><img class="social"
-										src="images/github.svg" alt="GitHub" title="GitHub" loading="lazy">
-									<br>/sarajw</a></li>
-							<li>
-								<a class="img" href="https://codepen.io/sarajw" target="_blank"><img class="social"
-										src="images/codepen-icon.svg" alt="CodePen" title="CodePen" loading="lazy">
-									<br>/sarajw</a></li>
-							<li>
-								<a class="img" href="https://sarajw.hashnode.dev/" target="_blank"><img class="social"
-										src="images/hashnode-icon.svg" alt="hashnode" title="hashnode" loading="lazy">
-									<br>sarajw.</a></li>
-							<li>
-								<a class="img" href="https://www.linkedin.com/in/sarawallen/" target="_blank"><img
-										class="social" src="images/linkedin.svg" alt="LinkedIn" title="LinkedIn" loading="lazy">
-									<br>/sarawallen</a></li>
-							<li>
-								<a class="img" href="https://xing.to/sarajw" target="_blank"><img class="social"
-										src="images/xing.svg" alt="XING" title="XING" loading="lazy">
-									<br>xing.to/sarajw</a></li>
-						</ul>
-					</article>
-					<a href="#" class="backtotop" title="Back to top"><img src="images/chevron-up.svg" loading="lazy"></a>
-				</section>
-			</div>
-		</main> -->
-	
+		<Header title={SITE_TITLE} />	
 		
 		<main id="content">
 			<section id="hero">
@@ -191,6 +88,25 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						</div>
 					</div>
 					<p class="signoff">~ Sara J. W. {today.getFullYear()}</p>
+					
+					<h3>Skills</h3>
+					<div class="stack">
+						<img class="logo" src="images/icons/html-5.svg" alt="HTML5" title="HTML5" loading="lazy">
+						<img class="logo" src="images/icons/css-3.svg" alt="CSS3" title="CSS3" loading="lazy">
+						<img class="logo" src="images/icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+						<img class="logo" src="images/icons/typescript-icon.svg" alt="TypeScript" title="TypeScript" loading="lazy">
+						<img class="logo" src="images/icons/php-alt.svg" alt="PHP" title="PHP" loading="lazy">
+						<img class="logo" src="images/icons/react.svg" alt="React" title="React" loading="lazy">
+						<img class="logo" src="images/icons/nextjs-icon.svg" alt="Next.js" title="Next.js" loading="lazy">
+						<img class="logo" src="images/icons/svelte-icon.svg" alt="Svelte" title="Svelte" loading="lazy">
+						<img class="logo" src="images/icons/prisma.svg" alt="Prisma" title="Prisma" loading="lazy">
+						<img class="logo" src="images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
+						<img class="logo" src="images/icons/git-icon.svg" alt="Git" title="Git" loading="lazy">
+						<img class="logo" src="images/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" loading="lazy">
+						<img class="logo" src="images/icons/mysql-icon.svg" alt="MySQL" title="MySQL" loading="lazy">
+						<img class="logo" src="images/icons/powershell.svg" alt="PowerShell" title="PowerShell" loading="lazy">
+						<img class="logo" src="images/icons/bash-icon.svg" alt="Bash" title="Bash" loading="lazy">
+					</div>
 				</article>
 			</section>
 			
@@ -295,13 +211,33 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
 			<section id="find">
 				<article>
-					<h3>Where to find you, e.g.:</h3>
-					<ul>
-						<li><a href="#" target="_blank">Twitter</a></li>
-						<li><a href="#" target="_blank">GitHub</a></li>
-						<li><a href="#" target="_blank">LinkedIn</a></li>
-						<li><a href="#" target="_blank">Xing</a></li>
-					</ul>
+					<h3>Find me on:</h3>
+						<ul>
+							<li>
+								<a class="img" href="https://twitter.com/sarajwallen" target="_blank"><img class="social"
+										src="images/icons/twitter.svg" alt="Twitter" title="Twitter" loading="lazy">
+									<br>@sarajwallen</a></li>
+							<li>
+								<a class="img" href="https://github.com/sarajw" target="_blank"><img class="social"
+										src="images/icons/github.svg" alt="GitHub" title="GitHub" loading="lazy">
+									<br>/sarajw</a></li>
+							<li>
+								<a class="img" href="https://codepen.io/sarajw" target="_blank"><img class="social"
+										src="images/icons/codepen-icon.svg" alt="CodePen" title="CodePen" loading="lazy">
+									<br>/sarajw</a></li>
+							<li>
+								<a class="img" href="https://sarajw.hashnode.dev/" target="_blank"><img class="social"
+										src="images/icons/hashnode-icon.svg" alt="hashnode" title="hashnode" loading="lazy">
+									<br>sarajw.</a></li>
+							<li>
+								<a class="img" href="https://www.linkedin.com/in/sarawallen/" target="_blank"><img
+										class="social" src="images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" loading="lazy">
+									<br>/sarawallen</a></li>
+							<li>
+								<a class="img" href="https://xing.to/sarajw" target="_blank"><img class="social"
+										src="images/icons/xing.svg" alt="XING" title="XING" loading="lazy">
+									<br>xing.to/sarajw</a></li>
+						</ul>
 				</article>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
@@ -309,4 +245,15 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	
 		<!-- <Footer /> -->
 	</body>
+
+	<script is:inline>
+		const sections = document.querySelectorAll("main > section:not(#hero)");
+		for (const section of sections) {
+			let sectionHeight = section.offsetHeight;
+			console.log(section.id);
+			console.log(sectionHeight);
+			section.style.top = `calc(100vh - ${sectionHeight}px)`;
+		}
+	</script>
+
 </html>
