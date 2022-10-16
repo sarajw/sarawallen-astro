@@ -489,11 +489,6 @@ dialog::-webkit-scrollbar-corner {
 	background: transparent;
 }
 
-@media only screen and (max-aspect-ratio: 3/4) {
-	#work .container {
-		width: 100%;
-	}
-}
 
 
 .blog {
@@ -543,15 +538,6 @@ dialog::-webkit-scrollbar-corner {
 	font-size: var(--h3);
 	margin: 0;
 }
-@media (width < 640px) {
-	#blog li {
-		flex-direction: column;
-	}
-	#blog img {
-		aspect-ratio: 16/9;
-		max-width: 100%;
-	}
-}
 
 .find {
 	z-index: 14;
@@ -563,13 +549,39 @@ dialog::-webkit-scrollbar-corner {
 .find::after {
 	background-color: var(--find);
 	border-top-right-radius: 0;
+	height: 5.3vmin;
 }
 #find {
-	z-index: 14;
+	z-index: 4;
 	background-color: var(--find);
+}
+#find ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+#find li {
+	margin-top: 5vmin;
+	text-align: center;
 }
 @supports(height: 100dvh) {
 	#find {
 		min-height: calc(100dvh - 5vmin - var(--tabheight));
+	}
+}
+
+
+@media only screen and (max-aspect-ratio: 3/4) {
+	#work .container {
+		width: 100%;
+	}
+	#blog li {
+		flex-direction: column;
+	}
+	#blog img {
+		aspect-ratio: 16/9;
+		max-width: 100%;
+	}
+	#find ul {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
