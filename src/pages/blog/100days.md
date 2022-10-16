@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "#100DaysOfCode"
 description: "Copying and pasting my tweets on the matter as I slowly make my way non-consecutively through the 100 days."
 pubDate: "Sep 21 2022"
-heroImage: "/images/blog/twitter.png"
+heroImage: "/images/blog/twitter.jpg"
 caption: "Profile picture of my twitter account"
 ---
 

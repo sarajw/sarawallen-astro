@@ -301,7 +301,8 @@ section > article ul {
 	flex: 3;
 }
 .welcome img {
-	max-height: 20rem;
+	max-height: 16rem;
+	aspect-ratio: 1;
 	margin: 0 auto;
 	border-radius: 50%;
 	filter: brightness(1.2);
