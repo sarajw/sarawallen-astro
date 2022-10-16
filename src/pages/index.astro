@@ -38,6 +38,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		
 		<main id="content">
 			<section id="hero">
+				<article>
 				<div class="big heart" id="heart0"></div>
 				<div class="big heart" id="heart90"></div>
 				<div class="big heart" id="heart180"></div>
@@ -84,6 +85,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				<div class="yinyang short" id="yin5"></div>
 				<div class="yinyang long" id="yin6"></div>
 				<div class="yinyang short" id="yin7"></div>
+				</article>
 			</section>
 
 			<button tabindex="0" id="toggleBtn" onclick="toggleMode()" title="Light/Dark Mode Toggle"></button>
