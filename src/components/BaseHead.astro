@@ -9,7 +9,7 @@ export interface Props {
 	image?: string;
 }
 
-const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+const { title, description, image = 'images/photo.png' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -96,4 +96,5 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     }
   }
 });
+
 </script>

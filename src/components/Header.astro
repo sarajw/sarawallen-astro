@@ -1,29 +1,69 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/portfolio">Portfolio</HeaderLink>
-		<HeaderLink href="/contact">Contact</HeaderLink>
-	</nav>
+	<div>
+		<h1>
+			<a href="/#">{SITE_TITLE}</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="/#gosara">sara</a></li>
+				<li><a href="/#gowork">work</a></li>
+				<li><a href="/#goblog">blog</a></li>
+				<li><a href="/#find">find</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
+
 <style>
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		position: sticky;
-		top: 0;
-		text-transform: lowercase;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--tabheight);
+	background-color: var(--background);
+	z-index: 10;
+}
+
+header div {
+	position: fixed;
+	top: 0.25rem;
+	width: calc(100% - 0.5rem);
+	height: calc(var(--tabheight) + 0.25rem);
+	background-color: var(--header);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 0.75em;
+	border-top-left-radius: var(--border-radii);
+	border-top-right-radius: var(--border-radii);
+}
+
+h1, nav {
+	margin: -0.5em 0 0;
+}
+
+h1 {
+	font-size: clamp(1rem, 4.75vw, 2rem);
+	text-transform: lowercase;
+}
+
+nav {
+	font-size: clamp(0.9rem, 4.5vw, 1.8rem);
+	text-align: right;
+}
+
+nav ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 0.75em;
+}
 </style>

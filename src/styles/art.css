@@ -1,21 +1,19 @@
 :root {
-	
-  --popcolourHS: 170,30%;
 
 	/* colours light */
-  --lighter: hsl(var(--popcolourHS), 100%);
-  --light: hsl(var(--popcolourHS), 85%);
-  --lightmed: hsl(var(--popcolourHS), 80%);
-  --medium: hsl(var(--popcolourHS), 75%);
+  --lighter: hsl(var(--pop), 100%);
+  --light: hsl(var(--pop), 90%);
+  --lightmed: hsl(var(--pop), 85%);
+  --medium: hsl(var(--pop), 80%);
   
 }
 
 :root.dark-mode {
   /* colours dark */
-  --lighter: hsl(var(--popcolourHS), 0%);
-  --light: hsl(var(--popcolourHS), 15%);
-  --lightmed: hsl(var(--popcolourHS), 25%);
-  --medium: hsl(var(--popcolourHS), 35%);
+  --lighter: hsl(var(--pop), 0%);
+  --light: hsl(var(--pop), 15%);
+  --lightmed: hsl(var(--pop), 25%);
+  --medium: hsl(var(--pop), 35%);
 }
     
 
@@ -33,7 +31,7 @@
 }
 
 .heart.big {
-  transform: rotate(-45deg);
+  rotate: -45deg;
 }
 
 .heart.big, .heart.big::after, .heart.big::before {
@@ -189,41 +187,41 @@
 .sprig::before {  
   top: 4em;
   left: 0em;
-  transform: rotate(-60deg);
+  rotate: -60deg;
 }
 .sprig::after {  
   top: -1em;
   left: 5em;
-  transform: rotate(-30deg) scaleX(-1);
+  transform: rotateZ(-30deg) rotateY(180deg);
 }
 
 #sprig0 {
   top: calc(50% - 18em);
   left: calc(50% - 3em);
-  transform: rotate(45deg);
+  rotate: 45deg;
 }
 #sprig0::after {  
   top: -1em;
   left: 5em;
-  transform: rotate(-30deg) scaleX(-1);
+  transform: rotateZ(-30deg) rotateY(180deg);
 }
 
 #sprig90 {
   top: calc(50% - 4.5em);
   left: calc(50% + 10.5em);
-  transform: rotate(135deg);
+  rotate: 135deg;
 }
 
 #sprig180 {
   top: calc(50% + 9em);
   left: calc(50% - 3em);
-  transform: rotate(225deg);
+  rotate: 225deg;
 }
 
 #sprig270 {
   top: calc(50% - 4.5em);
   left: calc(50% - 16.5em);
-  transform: rotate(315deg);
+  rotate: 315deg;
 }
 
 .circle {
@@ -349,95 +347,103 @@
 #yang0 {
   top: calc(50% - 20em);
   left: calc(50% + 7.5em);
-  transform: rotate(50deg) scaleX(-1);
+  rotate: 50deg;
+  transform: rotateY(180deg);
 }
 
 #yang1 {
   top: calc(50% - 20em);
   left: calc(50% + 5em);
-  transform: rotate(0deg) scaleX(-1);
+  rotate: 0deg;
+  transform: rotateY(180deg);
 }
 
 #yang2 {
   top: calc(50% + 3em);
   left: calc(50% + 12.5em);
-  transform: rotate(140deg) scaleX(-1);
+  rotate: 140deg;
+  transform: rotateY(180deg);
 }
 
 #yang3 {
   top: calc(50% + 2em);
   left: calc(50% + 14em);
-  transform: rotate(90deg) scaleX(-1);
+  rotate: 90deg;
+  transform: rotateY(180deg);
 }
 
 #yang4 {
   top: calc(50% - 15em);
   left: calc(50% - 15.5em);
-  transform: rotate(-40deg) scaleX(-1);
+  rotate: -40deg;
+  transform: rotateY(180deg);
 }
 
 #yang5 {
   top: calc(50% + 11em);
   left: calc(50% - 8em);
-  transform: rotate(180deg) scaleX(-1);
+  rotate: 180deg;
+  transform: rotateY(180deg);
 }
 
 #yang6 {
   top: calc(50% + 8em);
   left: calc(50% - 10.5em);
-  transform: rotate(-130deg) scaleX(-1);
+  rotate: -130deg;
+  transform: rotateY(180deg);
 }
 
 #yang7 {
   top: calc(50% - 11em);
   left: calc(50% - 17em);
-  transform: rotate(-90deg) scaleX(-1);
+  rotate: -90deg;
+  transform: rotateY(180deg);
 }
 
 #yin0 {
   top: calc(50% - 15em);
   left: calc(50% + 12.5em);
-  transform: rotate(40deg);
+  rotate: 40deg;
 }
 
 #yin1 {
   top: calc(50% - 11em);
   left: calc(50% + 14em);
-  transform: rotate(90deg);
+  rotate: 90deg;
 }
 
 #yin2 {
   top: calc(50% + 8em);
   left: calc(50% + 7.5em);
-  transform: rotate(130deg);
+  rotate: 130deg;
 }
 
 #yin3 {
   top: calc(50% + 11em);
   left: calc(50% + 5em);
-  transform: rotate(180deg);
+  rotate: 180deg;
 }
 
 #yin4 {
   top: calc(50% + 3em);
   left: calc(50% - 15.5em);
-  transform: rotate(-140deg);
+  rotate: -140deg;
 }
 
 #yin5 {
   top: calc(50% + 2em);
   left: calc(50% - 17em);
-  transform: rotate(-90deg);
+  rotate: -90deg;
 }
 
 #yin6 {
   top: calc(50% - 20em);
   left: calc(50% - 10.5em);
-  transform: rotate(-50deg);
+  rotate: -50deg;
 }
 
 #yin7 {
   top: calc(50% - 20em);
   left: calc(50% - 8em);
-  transform: rotate(0deg);
+  rotate: 0deg;
 }
