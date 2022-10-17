@@ -20,17 +20,27 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
 		<script is:inline defer>
+
+		const tabTopSettingPlugin = ( () => {
+
+			const tabTopSetting = () => {
+				const sections = document.querySelectorAll("main > section:not(#hero)");
+				for (const section of sections) {
+					let sectionHeight = section.offsetHeight;
+					section.style.top = `calc(100vh - ${sectionHeight}px)`;
+				}		
+			}
+
 			document.onreadystatechange = () => {
 				if (document.readyState === 'complete') {
-					const sections = document.querySelectorAll("main > section:not(#hero)");
-					for (const section of sections) {
-						let sectionHeight = section.offsetHeight;
-						console.log(section.id);
-						console.log(sectionHeight);
-						section.style.top = `calc(100vh - ${sectionHeight}px)`;
-					}		
+					tabTopSetting();
 				}
 			}
+
+			window.addEventListener("resize", tabTopSetting);
+
+		})();
+
 		</script>
 	</head>
 	<body>
@@ -96,10 +106,12 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				<article>
 					<h3>Hi! Welcome :)</h3>
 					<div class="welcome">
-						<img src="images/photo.png" alt="A picture of me!">
+						<img src="images/photo.gif" alt="A picture of me!">
 						<div class="blurb">
-							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt'.</p>
-							<p>This site is built with vanilla HTML & CSS in Astro (with some JS just for the light/dark mode <button id="inline-toggle" onclick="toggleMode()">toggle</button>).</p>
+							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
+							<p>
+								This site is built with vanilla HTML, CSS and just a little JS in Astro.
+							</p>
 						</div>
 					</div>
 					<p class="signoff">~ Sara J. W. {today.getFullYear()}</p>
@@ -121,6 +133,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						<img class="logo" src="images/icons/mysql-icon.svg" alt="MySQL" title="MySQL">
 						<img class="logo" src="images/icons/powershell.svg" alt="PowerShell" title="PowerShell">
 						<img class="logo" src="images/icons/bash-icon.svg" alt="Bash" title="Bash">
+						<img class="logo" src="images/icons/vba.png" alt="VBA" title="VBA">
 					</div>
 				</article>
 			</section>
@@ -135,7 +148,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						</button>
 						<dialog id="modal-a1">
 							<button onclick="document.getElementById('modal-a1').close();" title="Close">×</button>
-							<img src="/images/work/sarawallen_com_large.png" alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: Hi! Welcome :) and STUFF: Web Development & Design tabs in view" />
+							<img src="/images/work/sarawallen_com_large.png" alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: Hi! Welcome :) and STUFF: Web Development & Design tabs in view" loading="lazy" />
 							<a href="https://sarawallen.com" target="_blank">
 								<h2>sarawallen.com</h2>
 							</a>
@@ -153,7 +166,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						</button>
 						<dialog id="modal-b1">
 							<button onclick="document.getElementById('modal-b1').close();" title="Close">×</button>
-							<img src="/images/work/yasmin_large.png" alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer." />
+							<img src="/images/work/yasmin_large.png" alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer." loading="lazy" />
 								<a href="https://yasmin-brinkmann.de" target="_blank">
 									<h2>Yasmin Brinkmann</h2>
 								</a>

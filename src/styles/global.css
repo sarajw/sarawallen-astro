@@ -34,6 +34,7 @@
 	--border-radii: 0.4rem;
 	--p: clamp(0.9rem, 3vw, 1.1rem);
 	--h3: clamp(1.25rem, 4vw, 1.75rem);
+	--icons: clamp(32px, 12vw, 64px);
 	
 	/* fonts */
 	--normal: 300;
@@ -107,7 +108,7 @@ a:hover, a:active, a:focus, .welcome button:hover {
 img {max-width: 100%}
 
 img:is(.logo, .social) {
-	width: clamp(32px, 12vw, 64px);
+	width: var(--icons);
 }
 
 main {
@@ -148,7 +149,7 @@ main > section {
 	position: sticky;
 	min-height: calc(100vh - 5vmin - var(--tabheight));
 	margin: 0 0.25rem;
-	padding: 0.25rem 5vmin calc(1.5 * var(--tabheight));
+	padding: 0.25rem 5vmin calc(2 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
@@ -305,10 +306,10 @@ section > article ul {
 	aspect-ratio: 1;
 	margin: 0 auto;
 	border-radius: 50%;
-	filter: brightness(1.2);
+	filter: brightness(1.2) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25));
 }
 .dark-mode .welcome img {
-	filter: brightness(0.8);
+	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5));;
 }
 .welcome button {
 	border: 0;
@@ -318,6 +319,17 @@ section > article ul {
 }
 .signoff {
 	text-align: right;
+}
+.stack {
+	display: grid;
+	margin-inline: auto;
+	padding-inline: 5vmin;
+	gap: 2vmin 3vmin;
+	grid-template-columns: repeat(auto-fit, minmax(var(--icons), 1fr));
+	place-items: center;
+	/* display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; */
 }
 
 .work {
@@ -441,8 +453,10 @@ section > article ul {
 }
 
 dialog {
-	border: 1rem solid canvas;
-	max-width: 900px;
+	background-color: var(--header);
+	border: 2vmin solid var(--header);
+	max-width: 1800px;
+	overscroll-behavior: contain;
 }
 dialog h2 {
 	display: inline;
@@ -460,7 +474,7 @@ dialog p:last-child {
 dialog::backdrop {
 	/* background-color: rgba(41,86,79,0.8); */
 	backdrop-filter: blur(0.25rem);
-	overscroll-behavior: contain;
+	-webkit-backdrop-filter: blur(0.25rem);
 }
 dialog button {
 	position: absolute;
@@ -588,6 +602,7 @@ dialog::-webkit-scrollbar-corner {
 	}
 	#blog img {
 		aspect-ratio: 16/9;
+		width: 100%;
 		max-width: 100%;
 	}
 	#find ul {
