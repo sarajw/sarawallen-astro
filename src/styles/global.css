@@ -453,9 +453,11 @@ section > article ul {
 }
 
 dialog {
+	color: var(--text);
 	background-color: var(--header);
 	border: 2vmin solid var(--header);
 	max-width: 1800px;
+	margin: 3vmin;
 	overscroll-behavior: contain;
 }
 dialog h2 {
