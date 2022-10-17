@@ -452,11 +452,13 @@ section > article ul {
 	visibility: visible;
 }
 
-dialog {
+dialog[open] {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 	color: var(--text);
 	background-color: var(--header);
-	border: 2vmin solid var(--header);
-	max-width: 1800px;
+	border: 1vmin solid var(--header);
 	overscroll-behavior: contain;
 }
 dialog h2 {
