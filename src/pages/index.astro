@@ -33,15 +33,15 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				}		
 			}
 
-			// document.onreadystatechange = () => {
-			// 	if (document.readyState === 'complete') {
-			// 		tabTopSetting();
-			// 	}
-			// }
+			document.onreadystatechange = () => {
+				if (document.readyState === 'complete') {
+					tabTopSetting();
+				}
+			}
 
-			window.addEventListener('DOMContentLoaded', (event) => {
-				tabTopSetting();
-			});
+			// window.addEventListener('DOMContentLoaded', (event) => {
+			// 	tabTopSetting();
+			// });
 
 			window.addEventListener("resize", tabTopSetting);
 
