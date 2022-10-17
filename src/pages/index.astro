@@ -27,15 +27,21 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				const sections = document.querySelectorAll("main > section:not(#hero)");
 				for (const section of sections) {
 					let sectionHeight = section.offsetHeight;
+				console.log(section.id);
+				console.log(sectionHeight);
 					section.style.top = `calc(100vh - ${sectionHeight}px)`;
 				}		
 			}
 
-			document.onreadystatechange = () => {
-				if (document.readyState === 'complete') {
-					tabTopSetting();
-				}
-			}
+			// document.onreadystatechange = () => {
+			// 	if (document.readyState === 'complete') {
+			// 		tabTopSetting();
+			// 	}
+			// }
+
+			window.addEventListener('DOMContentLoaded', (event) => {
+				tabTopSetting();
+			});
 
 			window.addEventListener("resize", tabTopSetting);
 
@@ -106,7 +112,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				<article>
 					<h3>Hi! Welcome :)</h3>
 					<div class="welcome">
-						<img src="images/photo.gif" alt="A picture of me!">
+						<img src="images/photo.gif" alt="A picture of me!" width="256" height="256">
 						<div class="blurb">
 							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
 							<p>
@@ -226,7 +232,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					<ul>
 						{posts.map((post) => (
 							<li>
-								<a href={post.url}><img src={post.frontmatter.heroImage?post.frontmatter.heroImage:"/images/blog/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"}></a>
+								<a href={post.url}><img src={post.frontmatter.heroImage?post.frontmatter.heroImage:"/images/blog/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"} width="320" height="320"></a>
 								<div>
 									<a href={post.url}><h3>{post.frontmatter.title}</h3></a>
 									{post.frontmatter.description && <p>{post.frontmatter.description}</p>}
