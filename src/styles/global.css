@@ -208,10 +208,10 @@ section > article ul {
 	}
 	#toggleBtn:hover {
 		opacity: 0.75;
-		background-image: url('images/led-off.svg');
+		background-image: url('/images/led-off.svg');
 	}
 	.dark-mode #toggleBtn:hover {
-		background-image: url('images/led-on.svg');
+		background-image: url('/images/led-on.svg');
 	}
 }
 
