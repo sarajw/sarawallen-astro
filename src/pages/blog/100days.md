@@ -386,7 +386,7 @@ Particularly playing with CSS colour-scheme at the moment, trying make light and
 Besides bootcamping I can never resist some messing with CSS - saw the cute animated underlines on the ProtonMail site menu and made my own (code in replies):
 
 Click to see the video on twitter:
-[![Animated underlines video thumbnail](/images/blog/animated_underlines.png)](https://twitter.com/i/status/1522676448800256000)
+[![Animated underlines video thumbnail](/images/blog/animated_underlines.jpg)](https://twitter.com/i/status/1522676448800256000)
 
 ### Day 47 continued:
 
