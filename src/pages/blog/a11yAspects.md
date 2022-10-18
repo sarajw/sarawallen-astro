@@ -141,11 +141,11 @@ Ravelry is [no stranger to (political) controversy](https://www.newyorker.com/ma
 
 Whether this is true or not, Ravelry did go from having soft, muted-grey 3D buttons and table borders, to a more [Neubrutalistic](https://hype4.academy/articles/design/neubrutalism-is-taking-over-web) style with dark, solid borders and solid black shadows on a white background:
 
-![Ravelry login screen, before and after redesign. The new login panel has a solid black border.](/images/blog/ravelryHeroOldNew.png)
+![Ravelry login screen, before and after redesign. The new login panel has a solid black border.](/images/blog/ravelryHeroOldNew.jpg)
 
 And when scrolling through hundreds of projects as one does when using Ravelry, we start to see that maybe all these hard black lines moving up the page might start to resemble a high-contrast drifting grating, as used in the migraine study:
 
-![A page on Ravelry showing many project 'cards' on screen, before and after the redesign. Every project, user icon and 'More' button now has a solid black border.](/images/blog/ravelryDbOldNew.png)
+![A page on Ravelry showing many project 'cards' on screen, before and after the redesign. Every project, user icon and 'More' button now has a solid black border.](/images/blog/ravelryDbOldNew.jpg)
 
 More before and after images can be seen [here on Imgur](https://imgur.com/a/QXXxsau).
 
