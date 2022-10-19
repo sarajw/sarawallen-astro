@@ -262,14 +262,10 @@ section > article ul {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-  /* box-shadow: 0 0 1em -0.25em var(--hover); */
-  box-shadow: -0.1em 0 var(--hover),
-							 0.1em 0 var(--hover),
-							 0 -0.1em var(--hover),
-							 0  0.1em var(--hover);
+	outline: 0.1em solid var(--hover);
 }
 #hero div {
-  transition: scale ease 0.25s, box-shadow ease 0.25s;
+  transition: scale ease 0.25s, outline ease 0.25s;
 }
 
 .sara {
@@ -554,8 +550,8 @@ dialog::-webkit-scrollbar-corner {
 }
 #blog img {
 	display: block;
-	max-width: 20rem;
-	aspect-ratio: 1;
+	max-width: 15rem;
+	max-height: 15rem;
 	object-fit: cover;
 }
 #blog li div {
@@ -600,7 +596,7 @@ dialog::-webkit-scrollbar-corner {
 }
 
 
-@media only screen and (max-aspect-ratio: 3/4) {
+@media only screen and (width < 800px) {
 	#work .container {
 		width: 100%;
 	}
@@ -608,7 +604,6 @@ dialog::-webkit-scrollbar-corner {
 		flex-direction: column;
 	}
 	#blog img {
-		aspect-ratio: 16/9;
 		width: 100%;
 		max-width: 100%;
 	}
