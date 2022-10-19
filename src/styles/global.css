@@ -262,7 +262,11 @@ section > article ul {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-  box-shadow: 0 0 1em -0.25em var(--hover);
+  /* box-shadow: 0 0 1em -0.25em var(--hover); */
+  box-shadow: -0.1em 0 var(--hover),
+							 0.1em 0 var(--hover),
+							 0 -0.1em var(--hover),
+							 0  0.1em var(--hover);
 }
 #hero div {
   transition: scale ease 0.25s, box-shadow ease 0.25s;
