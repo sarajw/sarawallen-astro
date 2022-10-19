@@ -258,14 +258,15 @@ section > article ul {
 	margin-block: 1rem;
 	text-align: center;
 }
+#hero div, #hero div::before, #hero div::after {
+	outline: 0 solid;
+  transition: scale ease 0.25s, outline ease 0.5s;
+}
 #hero div:hover {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-	outline: 0.1em solid var(--hover);
-}
-#hero div {
-  transition: scale ease 0.25s, outline ease 0.25s;
+	outline: 0.2em solid var(--hover);
 }
 
 .sara {
