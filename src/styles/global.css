@@ -80,7 +80,7 @@ body {
 	overscroll-behavior: none;
 }
 
-p, .welcome button {
+p {
 	font-size: var(--p);
 }
 h3 {
@@ -109,6 +109,9 @@ img {max-width: 100%}
 
 img:is(.logo, .social) {
 	width: var(--icons);
+}
+.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [title="Prisma"], [title="PowerShell"]) {
+	filter: invert(80%);
 }
 
 main {
@@ -311,12 +314,6 @@ section > article ul {
 }
 .dark-mode .welcome img {
 	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5));;
-}
-.welcome button {
-	border: 0;
-	padding: 0;
-	background-color: transparent;
-	font-family: Karla, 'Open Sans', sans-serif;
 }
 .signoff {
 	text-align: right;
@@ -597,7 +594,7 @@ dialog::-webkit-scrollbar-corner {
 }
 
 
-@media only screen and (width < 800px) {
+@media only screen and (max-width: 800px) {
 	#work .container {
 		width: 100%;
 	}
@@ -607,6 +604,7 @@ dialog::-webkit-scrollbar-corner {
 	#blog img {
 		width: 100%;
 		max-width: 100%;
+		height: 50vw;
 	}
 	#find ul {
 		grid-template-columns: repeat(2, 1fr);

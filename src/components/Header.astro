@@ -22,8 +22,8 @@ import { SITE_TITLE } from '../config';
 header {
 	position: fixed;
 	top: 0;
-	width: 100%;
-	height: var(--tabheight);
+	width: calc(100% - 0.5rem);
+	height: calc(var(--tabheight) + 0.25rem);
 	background-color: var(--background);
 	z-index: 10;
 }
@@ -32,19 +32,19 @@ header div {
 	position: fixed;
 	top: 0.25rem;
 	width: calc(100% - 0.5rem);
-	height: calc(var(--tabheight) + 0.25rem);
+	height: var(--tabheight);
 	background-color: var(--header);
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	margin: 0 auto;
-	padding: 0 0.75em;
+	padding: 0 1em;
 	border-top-left-radius: var(--border-radii);
 	border-top-right-radius: var(--border-radii);
 }
 
-h1, nav {
-	margin: -0.5em 0 0;
+h1, nav ul {
+	margin: 0;
+	align-self: center;
 }
 
 h1 {
@@ -53,6 +53,7 @@ h1 {
 }
 
 nav {
+	display: flex;
 	font-size: clamp(0.9rem, 4.5vw, 1.8rem);
 	text-align: right;
 }
