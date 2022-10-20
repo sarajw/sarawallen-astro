@@ -83,7 +83,10 @@ body {
 	overscroll-behavior: none;
 }
 
-p {font-size: var(--p)}
+p {
+	font-size: var(--p);
+	line-height: 1.4em;
+}
 h3 {font-size: var(--h3)}
 h2 {font-size: var(--h2)}
 h1 {font-size: var(--h1)}
@@ -286,7 +289,7 @@ section > article ul {
 	background-color: var(--sara);
 }
 
-#sara h3, #find h3 {
+:is(#sara, #find) h3:first-child {
 	margin-top: 0;
 }
 
@@ -414,6 +417,11 @@ section > article ul {
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: calc(0.25rem + 0.5vmin);
 }
+@media only screen and (max-aspect-ratio: 4/5) {
+	#work .container {
+		width: 100%;
+	}
+}
 
 .container > :is(div, button) {
 	container-type: inline-size;
@@ -473,8 +481,8 @@ dialog p:last-child {
 }
 dialog::backdrop {
 	/* background-color: rgba(41,86,79,0.8); */
-	backdrop-filter: blur(0.25rem);
 	-webkit-backdrop-filter: blur(0.25rem);
+					backdrop-filter: blur(0.25rem);
 }
 dialog button {
 	position: absolute;
@@ -581,11 +589,48 @@ dialog::-webkit-scrollbar-corner {
 #find ul {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	gap: 5vmin;
+	padding-block: 5vmin;
 }
 #find li {
-	margin-top: 5vmin;
 	text-align: center;
 }
+#find li a {
+	font-size: var(--sml);
+}
+
+form {
+	width: min-content;
+	margin: 0 auto;
+}
+input,
+textarea {
+	border: 1px solid var(--links);
+	background-color: var(--work);
+	border-radius: calc(var(--border-radii) / 2);
+	width: clamp(28ch, 60vw, 30rem);
+	padding: 0.25rem 0.5rem;
+}
+textarea {
+	height: 9.5rem;
+	resize: vertical;
+}
+button {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	border-radius: calc(var(--border-radii) / 2);
+	color: var(--header);
+	background-color: var(--links);
+	margin: 0 auto;
+}
+button:hover,
+button:focus,
+button:active {
+	background-color: var(--hover);
+}
+
+
 @supports(height: 100dvh) {
 	#find {
 		min-height: calc(100dvh - 5vmin - var(--tabheight));
@@ -593,10 +638,7 @@ dialog::-webkit-scrollbar-corner {
 }
 
 
-@media only screen and (max-width: 800px) {
-	#work .container {
-		width: 100%;
-	}
+@media only screen and (max-width: 700px) {
 	#blog li {
 		flex-direction: column;
 	}
@@ -604,8 +646,5 @@ dialog::-webkit-scrollbar-corner {
 		width: 100%;
 		max-width: 100%;
 		height: 50vw;
-	}
-	#find ul {
-		grid-template-columns: repeat(2, 1fr);
 	}
 }

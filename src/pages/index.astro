@@ -249,12 +249,12 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
 			<section id="find">
 				<article>
-					<h3>Find me on:</h3>
+					<h3>Find me on social media:</h3>
 						<ul>
 							<li>
-								<a class="img" href="https://twitter.com/sarajwallen" target="_blank"><img class="social"
+								<a class="img" href="https://twitter.com/sarajoydev" target="_blank"><img class="social"
 										src="images/icons/twitter.svg" alt="Twitter" title="Twitter">
-									<br>@sarajwallen</a></li>
+									<br>@sarajoydev</a></li>
 							<li>
 								<a class="img" href="https://github.com/sarajw" target="_blank"><img class="social"
 										src="images/icons/github.svg" alt="GitHub" title="GitHub">
@@ -274,8 +274,32 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 							<li>
 								<a class="img" href="https://xing.to/sarajw" target="_blank"><img class="social"
 										src="images/icons/xing.svg" alt="XING" title="XING">
-									<br>xing.to/sarajw</a></li>
+									<br>xing.to<wbr>/sarajw</a></li>
 						</ul>
+					<h3>Or email me:</h3>
+					
+						<form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+							<input type="hidden" name="form-name" value="contact" />
+							<p>
+								<label
+									>Name:
+									<br /><input type="text" name="name" /></label
+								>
+							</p>
+							<p>
+								<label
+									>Email address:
+									<br /><input type="email" name="email" /></label
+								>
+							</p>
+							<p>
+								<label class="message">Message:<br /><textarea name="message" /></label>
+							</p>
+							<p>
+								<button type="submit"><b>Send</b></button>
+							</p>
+						</form>
+						
 				</article>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>

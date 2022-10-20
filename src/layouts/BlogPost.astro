@@ -108,22 +108,24 @@ const {
     color: var(--hover);
   }
   .post :global(pre, .tweet) {
+		padding: 3vmin;
     border-radius: var(--border-radii);
     box-shadow: 1px 1px 15px -12px black;
 	}
   .post :global(pre) {
-    background-color: var(--sara);
-    margin: 0.5rem 0;
-    padding: 2ch;
+		font-size: var(--sml);
+		line-height: 1.25em;
+    background-color: var(--sara) !important;
     white-space: pre-wrap;
     max-width: 100%;
     overflow-x: auto;
   }
   .post :global(.tweet) {
     background-color: var(--work);
-		margin: 3vmin 0;
-		padding: 1px 1rem 1px;
+		margin: 5vmin 0;
   }
+  .post :global(.tweet > *:first-child) {margin-top: 0}
+  .post :global(.tweet > *:last-child) {margin-bottom: 0}
   .post :global(table) {
     margin-block: 1rem;
     font-size: var(--sml);
@@ -133,6 +135,45 @@ const {
   }
   .post :global(thead) {
     border: 2px solid black;
+  }
+
+	:root {
+    --pink: mediumvioletred;
+    --green: teal;
+    --blue: slateblue;
+    --yellow: darkgoldenrod;
+    --orange: orangered;
+  }
+
+	:root.dark-mode {
+		--pink: hotpink;
+		--green: springgreen;
+		--blue: cyan;
+		--yellow: gold;
+		--orange: lightsalmon;
+	}
+
+  .post :global(code .comment) {
+    color: var(--orange);
+  }
+  .post :global(code .tag),
+  .post :global(code .keyword),
+  .post :global(code .selector),
+  .post :global(code .operator) {
+    color: var(--blue);
+  }
+  .post :global(code .punctuation),
+  .post :global(code .parameter) {
+    color: var(--pink);
+  }
+  .post :global(code .attr-name),
+  .post :global(code .function) {
+    color: var(--yellow);
+  }
+  .post :global(code .attr-value),
+  .post :global(code .property),
+  .post :global(code .string) {
+    color: var(--green);
   }
 
 	a.back {

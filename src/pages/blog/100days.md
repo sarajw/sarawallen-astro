@@ -19,7 +19,7 @@ Want to see more? I post other stuff too: [@sarajwallen](https://twitter.com/sar
 
 <div class="tweet">
 
-## Day 79/#100DaysOfCode
+## Day 79<wbr>/#100DaysOfCode
 
 I want to get some work done to harmonise my homepage(s)!
 
@@ -37,7 +37,7 @@ Yeah, it's messy. Trying to make elements of both http://sarawallen.com and http
 
 </div><div class="tweet">
 
-## Day 78/#100DaysOfCode
+## Day 78<wbr>/#100DaysOfCode
 
 OK, I can refactor my home page to switch light/dark mode without JS, to a degree, but I can't switch the color-scheme of the root element this way.
 
@@ -47,13 +47,15 @@ Ideal :has() use case!
 ![see above](/images/blog/ideal-has.png)
 
 Code in image:
-<pre>:root:has(#toggle:checked) &lcub;
+```css
+:root:has(#toggle:checked) {
     color-scheme: dark;
-&rcub;</pre>
+}
+```
 
 </div><div class="tweet">
 
-## Day 77/#100DaysOfCode
+## Day 77<wbr>/#100DaysOfCode
 
 I'm refactoring http://sarawallen.com a little because it really should be using 'color-scheme: light dark' by now and, hm.
 
@@ -77,7 +79,7 @@ https://sarawallen.com
 
 </div><div class="tweet">
 
-## Day 76/#100DaysOfCode 
+## Day 76<wbr>/#100DaysOfCode 
 
 Been on hiatus, went on a family holiday, now I'm messing with PowerShell to try and get something working for my current company in the coming 2 weeks.
 
@@ -87,7 +89,7 @@ Often coding is just algebra, with each language having its own syntax..
 
 </div><div class="tweet">
 
-## Day 75/#100DaysOfCode (very-non-consecutive)
+## Day 75<wbr>/#100DaysOfCode (very-non-consecutive)
 
 I have clearly coded in the last 2 weeks but it's so normal now that I forget to log it :)
 
@@ -95,7 +97,7 @@ I have:<br>✨ (mostly) finished Ben's website<br>✨ been messing around with l
 
 </div><div class="tweet">
 
-## Day 74/#100DaysOfCode
+## Day 74<wbr>/#100DaysOfCode
 
 How many times am I going to have my @reactjs components go weird and unresponsive, before I learn to put the @emotioncss styled components outside of the export default function 🤦
 
@@ -103,7 +105,7 @@ Took me ages to figure it out this time. Hopefully I've learned my lesson!
 
 </div><div class="tweet">
 
-## Day 73/#100DaysOfCode 
+## Day 73<wbr>/#100DaysOfCode 
 
 No image ALT because writing it here:
 Screenshot of failed Vercel deployments because of TS errors. The top commit message is "TS is hard hahaha"
@@ -113,7 +115,7 @@ Ooof. I'm doing a timed task. This is taking tiiiime!
 
 </div><div class="tweet">
 
-## Day 72/#100DaysOfCode
+## Day 72<wbr>/#100DaysOfCode
 
 I often feel like I'm not doing it right when I'm staring blankly at docs or code feeling like I'll never get it.
 
@@ -123,7 +125,7 @@ Seems not all progress comes from activity - are my braincells rearranging thems
 
 </div><div class="tweet">
 
-## Day 71/#100DaysOfCode 
+## Day 71<wbr>/#100DaysOfCode 
 
 Stream (or scream!) of consciousness:
 
@@ -133,7 +135,7 @@ TypeScript errors, HTMLElement, document not defined, object is possibly 'null',
 
 </div><div class="tweet">
 
-## Day 70/#100DaysOfCode 
+## Day 70<wbr>/#100DaysOfCode 
 
 Separating out components on a friend's site in @astrodotbuild & getting lost in props & where to put various bits of JS and CSS - it's fun but some of those errors really aren't useful!
 
@@ -141,7 +143,7 @@ Learning things in one place and applying them in another is cool :)
 
 </div><div class="tweet">
 
-## Day 69(nice)/#100DaysOfCode 
+## Day 69(nice)<wbr>/#100DaysOfCode 
 
 Trying @emotioncss styled components in @nextjs.
 
@@ -151,13 +153,13 @@ I still know I KnOw NotHiNG, but I do know how to get started with new stuff!
 
 </div><div class="tweet">
 
-## Day 68/#100DaysOfCode
+## Day 68<wbr>/#100DaysOfCode
 
 I'm attempting the use of TypeScript ☠️ Wish me luck!
 
 </div><div class="tweet">
 
-## Day 67/#100DaysOfCode 
+## Day 67<wbr>/#100DaysOfCode 
 
 Urghhh, I just wasted an hour deep in if-elses, trying to be too clever.
 
@@ -167,7 +169,7 @@ Have commented the offending code instead of deleting, just in case...
 
 </div><div class="tweet">
 
-## Day 66/#100DaysOfCode 
+## Day 66<wbr>/#100DaysOfCode 
 
 Going to have to back off the #bootcampdev for a while to concentrate on another little project or two.
 
@@ -175,7 +177,7 @@ I'm sad not to be keeping up with the latest week, but I need to prioritise. The
 
 </div><div class="tweet">
 
-## Day 65/#100DaysOfCode
+## Day 65<wbr>/#100DaysOfCode
 
 I've been working on my friend @Beniswriting's new website. So far I've made a relatively simple one-page landing site, but I plan to throw it into @astrodotbuild so that it's easier to expand later on :)
 
@@ -183,7 +185,7 @@ Currently to be seen at ~~https://benjamin-dickson.netlify.app~~<br> _link no lo
 
 </div><div class="tweet">
 
-## Day 64/#100DaysOfCode 
+## Day 64<wbr>/#100DaysOfCode 
 
 Yes coding! Yes, I'm still doing it!
 
@@ -197,7 +199,7 @@ It definitely needs tweaks but I'm falling behind, so pushing on with the job bo
 
 </div><div class="tweet">
 
-## Day 63/#100DaysOfCode 
+## Day 63<wbr>/#100DaysOfCode 
 
 My twitter clone is almost fully working, I'm not sure of a lot of things in it, it's all very clever and I certainly can't imagine ever building such a thing by myself right now. It'll come in time I'm sure...
 
@@ -215,7 +217,7 @@ There's still some minor browsing possible without signing up :)
 
 </div><div class="tweet">
 
-## Day 62/#100DaysOfCode
+## Day 62<wbr>/#100DaysOfCode
 
 Twitter clone (mine's called 'Cheeper'!) progress, still very simple looking - only got this weekend before we start a new project next week, so we'll see how far I can take it...
 
@@ -227,7 +229,7 @@ Light & Dark modes, logged in and logged out:
 
 </div><div class="tweet">
 
-## Day 61/#100DaysOfCode
+## Day 61<wbr>/#100DaysOfCode
 
 For the twitter clone, a check on whether a username was already taken was left up to us to figure out.
 
@@ -246,7 +248,7 @@ Yes, it's like Twitter, but Cheeper...
 
 </div><div class="tweet">
 
-## Day 60/#100DaysOfCode
+## Day 60<wbr>/#100DaysOfCode
 
 My goodness there's a lot to take in. I'm glad we'll be doing project after project, in the hope more and more becomes familiar - right now I'm swimming in unfamiliar code!
 
@@ -256,7 +258,7 @@ I like it though. As usual I just want to get to the styling part 😎
 
 </div><div class="tweet">
 
-## Day 59/#100DaysOfCode*
+## Day 59<wbr>/#100DaysOfCode*
 
 #bootcampdev is spinning up a twitter clone this week!
 
@@ -266,7 +268,7 @@ I hope I manage to finish it and I hope even more that I manage to find some tim
 
 </div><div class="tweet">
 
-## Day 58/#100DaysOfCode 
+## Day 58<wbr>/#100DaysOfCode 
 
 The friend for whom I made a landing page as a learning exercise is now wanting to edit it without bothering me, which is fine - it was asked if it could be moved to WordPress, eep!
 
@@ -280,7 +282,7 @@ It's not complex enough to build into a CMS!
 
 </div><div class="tweet">
 
-## Day 57/#100DaysOfCode 
+## Day 57<wbr>/#100DaysOfCode 
 
 Oh my. Authentication is a Whole Thing, isn't it. #bootcampdev
 
@@ -298,7 +300,7 @@ Notes to self for a11y article 2:
 
 </div><div class="tweet">
 
-## Day 56/#100DaysOfCode
+## Day 56<wbr>/#100DaysOfCode
 
 #bootcampdev is back to forms, this time in React. I find it funny that we have to stop default behaviour to grab data.
 
@@ -308,7 +310,7 @@ Modern web development is wild...
 
 </div><div class="tweet">
 
-## Day 55/#100DaysOfCode 
+## Day 55<wbr>/#100DaysOfCode 
 
 API done. Honestly, I'm scratching my head at the syntax we're using to talk to Prisma and wondering why not skip the middleman and just write SQL, but I'm sure it'll make more sense the more JS gets comfy in my mental muscle memory.
 
@@ -322,7 +324,7 @@ So many things need fixing up and making shiny. Maybe after finishing #bootcampd
 
 </div><div class="tweet">
 
-## Day 54/#100DaysOfCode
+## Day 54<wbr>/#100DaysOfCode
 
 Me: Stop fannying about with the blog and get on with #bootcampdev!
 
@@ -333,7 +335,7 @@ Add blog title-picture captions to markdown frontmatter and use them as index im
 
 </div><div class="tweet">
 
-## Day 53/#100DaysOfCode
+## Day 53<wbr>/#100DaysOfCode
 
 Had what appeared to be a catastrophic failure in my SvelteKit blog.
 
@@ -343,13 +345,13 @@ Don't ignore warnings in the terminal, they might actually fix things for you �
 
 </div><div class="tweet">
 
-## Day 52/#100DaysOfCode
+## Day 52<wbr>/#100DaysOfCode
 
 #bootcampdev - using @prisma and @PostgreSQL to build an API
 
 </div><div class="tweet">
 
-## Day 51/#100DaysOfCode
+## Day 51<wbr>/#100DaysOfCode
 
 Learning more about APIs, specifically REST for the moment but I need to get @GraphQL on my radar too.
 
@@ -357,7 +359,7 @@ Learning more about APIs, specifically REST for the moment but I need to get @Gr
 
 </div><div class="tweet">
 
-## Day 50/#100DaysOfCode
+## Day 50<wbr>/#100DaysOfCode
 
 I just had a great video chat/screenshare with @grahamashton and @angstlotse to discuss elements of our bootcamp :)
 
@@ -365,7 +367,7 @@ Honestly I'm honoured to be able to chat with and receive (and hopefully one day
 
 </div><div class="tweet">
 
-## Day 49/#100DaysOfCode
+## Day 49<wbr>/#100DaysOfCode
 
 I'm revising SQL - I did once build a huge project with a whole load of updates and adds and inner joins and outer joins and all sorts of things in between with PHP - but that was many years ago now!
 
@@ -373,7 +375,7 @@ I'm revising SQL - I did once build a huge project with a whole load of updates 
 
 </div><div class="tweet">
 
-## Day 48/#100DaysOfCode
+## Day 48<wbr>/#100DaysOfCode
 
 I'm using [centering.netlify.app](https://centering.netlify.app) just to experiment really - the content is definitely incomplete!
 
@@ -381,7 +383,7 @@ Particularly playing with CSS colour-scheme at the moment, trying make light and
 
 </div><div class="tweet">
 
-## Day 47/#100DaysOfCode
+## Day 47<wbr>/#100DaysOfCode
 
 Besides bootcamping I can never resist some messing with CSS - saw the cute animated underlines on the ProtonMail site menu and made my own (code in replies):
 
@@ -390,18 +392,20 @@ Click to see the video on twitter:
 
 ### Day 47 continued:
 
-<pre>.hovertest::after &lcub;
+```css
+.hovertest::after {
     content: "";
     display: block;
     width: 16ch;
     border-top: 2px solid silver;
     transform: rotateY(90deg);
     transition: ease 0.5s;
-&rcub;
-.hovertest:hover::after &lcub;
+}
+.hovertest:hover::after {
     transform: rotateY(0deg);
     transition: ease 0.5s;
-&rcub;</pre>
+}
+```
 
 ### Day 47 continued-continued:
 
@@ -413,7 +417,7 @@ It might be that ::after isn't the best solution but some kind of nesting of DIV
 
 </div><div class="tweet">
 
-## Day 46/#100DaysOfCode
+## Day 46<wbr>/#100DaysOfCode
 
 Same as before, I'm busy with the #bootcampdev course - now we're getting into React, via @nextjs.
 
@@ -423,7 +427,7 @@ Bring it on 💪
 
 </div><div class="tweet">
 
-## Day 45/#100DaysOfCode
+## Day 45<wbr>/#100DaysOfCode
 
 It's really a few days mashed into one but I've only been able to work a little here and there:
 
@@ -433,7 +437,7 @@ Working on my centering page, I keep getting stuck playing with CSS as usual!
 
 </div><div class="tweet">
 
-## Day 44/#100DaysOfCode
+## Day 44<wbr>/#100DaysOfCode
 
 My little site about centering is coming along, but whyever did I choose to look at Flex first! I'll go back for the simpler bits like text-align and margin: 0 auto...
 
@@ -443,7 +447,7 @@ The structure is still working itself out, and I'm not convinced it'll remain 1-
 
 </div><div class="tweet">
 
-## Day 43/#100DaysOfCode
+## Day 43<wbr>/#100DaysOfCode
 
 Yes I've skipped a few days!
 
@@ -460,7 +464,7 @@ Getting stuff centered properly in CSS can be bewildering. I hope to help by dis
 
 </div><div class="tweet">
 
-## Day 42/#100DaysOfCode
+## Day 42<wbr>/#100DaysOfCode
 
 Finished the section of #bootcampdev that introduced @tailwindcss and used @astrodotbuild as the build tool.
 
@@ -471,7 +475,7 @@ Silly but did the trick:
 
 </div><div class="tweet">
 
-## Day 41/#100DaysOfCode
+## Day 41<wbr>/#100DaysOfCode
 
 So I was about to get all upset at @tailwindcss and how I was getting caught up in a bunch of breakpoints, until my CSS brain came back and said CALC! CLAMP!
 
@@ -480,7 +484,7 @@ Turns out you can use them inside tailwind too, for example:
 
 </div><div class="tweet">
 
-## Day 40/#100DaysOfCode
+## Day 40<wbr>/#100DaysOfCode
 
 Ahahaha. I suck at sticking to naming conventions:
 [github.com/sarajw?tab=repositories](https://github.com/sarajw?tab=repositories)
@@ -491,7 +495,7 @@ Also, I really need a product idea - my design feels just have nothing to riff o
 
 </div><div class="tweet">
 
-## Day 39/#100DaysOfCode
+## Day 39<wbr>/#100DaysOfCode
 
 Week 2 of @flaviocopes' #bootcampdev and now we're going to start building out a site for an imaginary product using @astrodotbuild - I'm excited!
 
@@ -499,7 +503,7 @@ But... I need an idea for said product 🤔
 
 </div><div class="tweet">
 
-## Day 38/#100DaysOfCode
+## Day 38<wbr>/#100DaysOfCode
 
 My first play with TailwindCSS, via @flaviocopes' 2022 bootcamp:
 [resonant-cajeta-3049be.netlify.app](https://resonant-cajeta-3049be.netlify.app)
@@ -508,7 +512,7 @@ Not gonna lie, I'm suspicious because I like vanilla CSS so much, but I can see 
 
 </div><div class="tweet">
 
-## Day 37/#100DaysOfCode
+## Day 37<wbr>/#100DaysOfCode
 
 Well, I've been working on a minisite that I can't make public - but still, I made a minisite! And whipped it up pretty fast too! No frameworks this time, as I do like a bit of doing-it-by-hand.
 
@@ -516,7 +520,7 @@ If it eventually bears fruit I will certainly post it up...
 
 </div><div class="tweet">
 
-## Day 36/#100DaysOfCode
+## Day 36<wbr>/#100DaysOfCode
 
 It's not big and clever, but it's mine! Eventually this will do more than just output strings, but I figure sorting out the maths is the first part...
 
@@ -526,7 +530,7 @@ P.S. The AEC Routemaster is the classic London Bus :)
 
 </div><div class="tweet">
 
-## Day 35/#100DaysOfCode
+## Day 35<wbr>/#100DaysOfCode
 
 So my little web app idea is nothing new, just a measurements converter - but - I want to make it generate pretty images of silly units like the ubiquitous London bus, blue whales, cups of coffee, whatever else of a standard size that I can draw :)
 
@@ -538,7 +542,7 @@ Drawing up fractions of those units could be fun esp if I make them some level o
 
 </div><div class="tweet">
 
-## Day 34/#100DaysOfCode
+## Day 34<wbr>/#100DaysOfCode
 
 - signed up to @flaviocopes' 2022 bootcamp
 - made some minor fixes on [blog.sarawallen.com](http://blog.sarawallen.com)
@@ -549,7 +553,7 @@ Nothing big and clever but still chugging along... :)
 
 </div><div class="tweet">
 
-## Day 33/#100DaysOfCode
+## Day 33<wbr>/#100DaysOfCode
 
 Well I just went to simply add my dev.to post to my own blog, both written in markdown so it should be easy, right?
 
@@ -563,7 +567,7 @@ So new blog post here - I've just had a bit of fun colouring the code: [blog.sar
 
 </div><div class="tweet">
 
-## Day 32/#100DaysOfCode
+## Day 32<wbr>/#100DaysOfCode
 
 Apparently if you transform:translate() an element, Firefox still gives it the space it would have taken up before it was moved. A bit like position: relative I suppose?
 
@@ -571,7 +575,7 @@ So now I know... but only after a good period spent scratching my head over it �
 
 </div><div class="tweet">
 
-## Day 31/#100DaysOfCode
+## Day 31<wbr>/#100DaysOfCode
 
 I was fiddling with the HTML `<details>` tag to try and trick it into becoming an elegant non-js navigation clicky menu.
 
@@ -581,7 +585,7 @@ Have a look: [details-nav.netlify.app](http://details-nav.netlify.app)
 
 </div><div class="tweet">
 
-## Day 30/#100DaysOfCode
+## Day 30<wbr>/#100DaysOfCode
 
 I am stuck in ever-decreasing circles of fiddling with stuff on my landing page and blog, I really need to get on with more learning!
 
@@ -590,7 +594,7 @@ Considering joining
 
 </div><div class="tweet">
 
-## Day 29/#100DaysOfCode
+## Day 29<wbr>/#100DaysOfCode
 
 - lose ugly drop shadows ✅
 - social icons white in dark mode ✅
@@ -608,7 +612,7 @@ First I was like boo, you can see how the shapes are constructed, and then I was
 
 </div><div class="tweet">
 
-## Day 28/#100DaysOfCode
+## Day 28<wbr>/#100DaysOfCode
 
 Things to fix on landing page:
 
@@ -624,7 +628,7 @@ Improvements:
 
 </div><div class="tweet">
 
-## Day 27/#100DaysOfCode
+## Day 27<wbr>/#100DaysOfCode
 
 The last couple of days, I
 
@@ -634,7 +638,7 @@ The last couple of days, I
 
 </div><div class="tweet">
 
-## Day 26/#100DaysOfCode
+## Day 26<wbr>/#100DaysOfCode
 
 Using PowerShell at work again, creating image lists for ffmpeg to turn into automated time-lapse videos.
 
@@ -642,7 +646,7 @@ Question for video types - is there a known good codec and compression level tha
 
 </div><div class="tweet">
 
-## Day 25/#100DaysOfCode (1/4 done!)
+## Day 25<wbr>/#100DaysOfCode (1/4 done!)
 
 - Fix index page for dark mode ✅
 - Investigate linear-gradient Safari issue [it was broken CSS] ✅
@@ -651,7 +655,7 @@ Question for video types - is there a known good codec and compression level tha
 
 </div><div class="tweet">
 
-## Day 24/#100DaysOfCode
+## Day 24<wbr>/#100DaysOfCode
 
 Fixed some things on [blog.sarawallen.com](http://blog.sarawallen.com) ... broken some other things, always the way 😅
 
@@ -667,7 +671,7 @@ Notes to self:
 
 </div><div class="tweet">
 
-## Day 23/#100DaysOfCode
+## Day 23<wbr>/#100DaysOfCode
 
 - Sort out contact form\* ✅
 - Make my sites function in mobile-landscape-mode 😵 - eeh, mostly ✅
@@ -678,7 +682,7 @@ Next up: Custom submission and error pages!
 
 </div><div class="tweet">
 
-## Day 22/#100DaysOfCode
+## Day 22<wbr>/#100DaysOfCode
 
 Unsure whether I want to merge [blog.sarawallen.com](http://blog.sarawallen.com) and [sarawallen.com](http://sarawallen.com) just yet.
 
@@ -688,7 +692,7 @@ I'm very pleased with the blog's navigation now, though.
 
 </div><div class="tweet">
 
-## Day 21/#100DaysOfCode
+## Day 21<wbr>/#100DaysOfCode
 
 I have been wrangling the tabs and colours in the navigation of my blog, definitely got some work to do to get tabs to come forward when active, but am slowly finding my way.
 
@@ -696,7 +700,7 @@ Also thank you Svelte for afterUpdate()! Took me a while to find it though...
 
 </div><div class="tweet">
 
-## Day 20/#100DaysOfCode
+## Day 20<wbr>/#100DaysOfCode
 
 Well, it's a start! This was the header from an old Channel 4 Teletext page I used to read avidly as a teen, Mega-zine:
 
@@ -710,7 +714,7 @@ Can now be found at [mega-zine.netlify.app](https://mega-zine.netlify.app)
 
 </div><div class="tweet">
 
-## ~~Day 18/#100DaysOfCode~~<br>Day 19/#100DaysOfCode
+## ~~Day 18<wbr>/#100DaysOfCode~~<br>Day 19<wbr>/#100DaysOfCode
 
 I dunno now, I did some things earlier but I've already forgotten what they were? Ukraine-related news and anxiety (rightly) overwhelms everything else.
 
@@ -718,7 +722,7 @@ I dunno now, I did some things earlier but I've already forgotten what they were
 
 ### Day 19 continued
 
-...this should have been Day 19/#100DaysOfCode
+...this should have been Day 19<wbr>/#100DaysOfCode
 
 Like I say, distracted.
 
@@ -726,7 +730,7 @@ I am planning stuff though, trying to find a niche of things to make - I am cons
 
 </div><div class="tweet">
 
-## Day 18/#100DaysOfCode
+## Day 18<wbr>/#100DaysOfCode
 
 Added a secondary pop colour. Not sure about them... And the light/dark modes also need a manual toggle.
 
@@ -734,7 +738,7 @@ My popups/modals have been made way better with JavaScript event.stopPropagation
 
 </div><div class="tweet">
 
-## Day 17/#100DaysOfCode
+## Day 17<wbr>/#100DaysOfCode
 
 So the focus highlighting is back. I've made the function of the popups a little better. The ascii-art is now somewhat more viewable on mobiles.
 
@@ -744,7 +748,7 @@ And [sarawallen.com](http://sarawallen.com) now has styling to match :)
 
 </div><div class="tweet">
 
-## Day 16/#100DaysOfCode
+## Day 16<wbr>/#100DaysOfCode
 
 Added a pop colour to my 'blogolio' amongst other little fixes. The front, stuff and contact pages need content.
 
@@ -762,7 +766,7 @@ Notes to self:
 
 </div><div class="tweet">
 
-## Day 15/#100DaysOfCode
+## Day 15<wbr>/#100DaysOfCode
 
 Battled windows command line, installing make, but failing to compile a TTF-WOFF2 converter. Never mind, I managed to get hold of the woff2 font file I wanted in the end!
 
@@ -770,7 +774,7 @@ Svelte blog also progressing, using CSS grid a bit more. Separating out componen
 
 </div><div class="tweet">
 
-## Day 14/#100DaysOfCode
+## Day 14<wbr>/#100DaysOfCode
 
 Got confused in svelte when a bit of simple JS wouldn't work, but then have found the native IF setup to be a much better solution thanks to the help from the discord!
 
@@ -790,7 +794,7 @@ Add content:
 
 </div><div class="tweet">
 
-## Day 13/#100DaysOfCode
+## Day 13<wbr>/#100DaysOfCode
 
 2nd attempt at the svelte static blog looks good, and now I'm trying to build out the portfolio/stuff section.
 
@@ -804,7 +808,7 @@ I'm so thankful for the communities around development 🙏♥️
 
 </div><div class="tweet">
 
-## Day 12/#100DaysOfCode
+## Day 12<wbr>/#100DaysOfCode
 
 Ooof:
 
@@ -821,7 +825,7 @@ Temporary URL: ~~hardcore-bose-029a18.netlify.app~~<br> _link no longer function
 
 </div><div class="tweet">
 
-## Day 11/#100DaysOfCode
+## Day 11<wbr>/#100DaysOfCode
 
 Arguing with some aspects of @sveltejs because it seems every which way of making a website involves some fudging, somewhere! Otherwise, I like it very much as a ‘modern’ way of building websites :)
 
@@ -829,7 +833,7 @@ Also still tussling with PowerShell at work…
 
 </div><div class="tweet">
 
-## Day 10/#100DaysOfCode
+## Day 10<wbr>/#100DaysOfCode
 
 Already 10% done?
 
@@ -841,7 +845,7 @@ With thanks to @jjcollinsworth :)
 
 </div><div class="tweet">
 
-## Day 9/#100DaysOfCode
+## Day 9<wbr>/#100DaysOfCode
 
 More PowerShell, more SvelteKit static blog building.
 
@@ -849,7 +853,7 @@ With the latter I really should finish the tutorial before messing with parts of
 
 </div><div class="tweet">
 
-## Day 8/#100DaysOfCode
+## Day 8<wbr>/#100DaysOfCode
 
 “Let’s learn SvelteKit by building a static Markdown blog from scratch”
 \- @jjcollinsworth
@@ -858,7 +862,7 @@ Wish me luck!
 
 </div><div class="tweet">
 
-## Day 7/#100DaysOfCode
+## Day 7<wbr>/#100DaysOfCode
 
 On the day job at @MKtimelapse - playing with PowerShell and using it to create a file list for ffmpeg to turn into an auto-generated time-lapse movie.
 
@@ -866,7 +870,7 @@ I did it a while ago so first I’m trying to understand my old code (🤦) befo
 
 </div><div class="tweet">
 
-## Day 6/#100DaysOfCode
+## Day 6<wbr>/#100DaysOfCode
 
 Oops. Opening a Svelte project in VSCode just closed the Next one. I guess now I know that happens, glad it prompted me to save before it went.
 
@@ -874,13 +878,13 @@ Also having a first peek at webflow, even if that’s in opposition to what I’
 
 </div><div class="tweet">
 
-## Day 5/#100DaysOfCode
+## Day 5<wbr>/#100DaysOfCode
 
 Managing to eke out an hour before I go to bed. I’m pausing the next.js tutorial because the svelte one is right in front of me and isn’t requiring me to look at a video right now - I much prefer text/interaction based stuff!
 
 </div><div class="tweet">
 
-## Day 4/#100DaysOfCode
+## Day 4<wbr>/#100DaysOfCode
 
 Still on @thenetninjauk’s Next.js tutorial - now we’re actually getting into more JavaScript!
 
@@ -888,7 +892,7 @@ I’m still stuck between “Ooo this is clever” and “All this abstraction f
 
 </div><div class="tweet">
 
-## Not-a-Day/#100DaysOfCode
+## Not-a-Day<wbr>/#100DaysOfCode
 
 Not managing to do one of the #100DaysOfCode today, but thinking about planning…
 
@@ -898,13 +902,13 @@ Next project goal: Make myself a blog site.
 
 </div><div class="tweet">
 
-## Day 3/#100DaysOfCode
+## Day 3<wbr>/#100DaysOfCode
 
 Continuing @thenetninjauk’s Next.js tutorial :ninja:
 
 </div><div class="tweet">
 
-## Day 2/#100DaysOfCode
+## Day 2<wbr>/#100DaysOfCode
 
 Edited some text in the landing page I made for my friend [yasmin-brinkmann.com](http://yasmin-brinkmann.com) :)
 
