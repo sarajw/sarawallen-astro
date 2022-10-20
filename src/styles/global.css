@@ -615,7 +615,7 @@ textarea {
 	height: 9.5rem;
 	resize: vertical;
 }
-button {
+form button {
 	display: block;
 	padding: 0.5rem 1rem;
 	border: 0;
@@ -624,9 +624,9 @@ button {
 	background-color: var(--links);
 	margin: 0 auto;
 }
-button:hover,
-button:focus,
-button:active {
+form button:hover,
+form button:focus,
+form button:active {
 	background-color: var(--hover);
 }
 
