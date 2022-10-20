@@ -46,12 +46,15 @@ const { title, description, image = 'images/photo.gif' } = Astro.props;
 // first, a useful variable to neaten things up:
 const htmlRoot = document.querySelector("html");
 const colorScheme = document.querySelector('meta[name="color-scheme"]');
+const mode = sessionStorage.getItem("mode");
+
+
+console.log(mode);
 
 //check for session preference
-if (sessionStorage.getItem("darkMode")) {
-    // ..add dark-mode class to html element
-    colorScheme.setAttribute("content", "dark");
-    htmlRoot.classList.add("dark-mode");
+if (mode) {
+  if (mode === "dark") {switchDark();}
+  else if (mode === "light") {switchLight();}
 }
 
 
@@ -68,13 +71,13 @@ if (colorScheme.content === "light dark") {
 function switchDark() {
   colorScheme.setAttribute("content", "dark");
   htmlRoot.classList.add("dark-mode");
-  sessionStorage.setItem("darkMode","true");
+  sessionStorage.setItem("mode","dark");
 }
 // set color-scheme to light
 function switchLight() {
   colorScheme.setAttribute("content", "light");
   htmlRoot.classList.remove("dark-mode");
-  sessionStorage.removeItem("darkMode");
+  sessionStorage.setItem("mode","light");
 }
 
 function toggleMode() {
