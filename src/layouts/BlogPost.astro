@@ -22,35 +22,30 @@ const {
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
-			<article class="blogpost">
-				{heroImage && (
-					<img
-						src={heroImage}
-						alt={caption}
-					/>
-					<p class="caption">{caption}</p>
-				)}
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-				<hr/>
-				<slot />
-			</article>
+			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
+			<div class="tab work"><h2><a href="/#gowork">work</a></h2></div>
+			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
+			<div class="post">
+				<article>
+					{heroImage && (
+						<img
+							src={heroImage}
+							alt={caption}
+						/>
+						<p class="caption">{caption}</p>
+					)}
+					<h1 class="title">{title}</h1>
+					{pubDate && <time>{pubDate}</time>}
+					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+					<slot />
+					<a class="back" href="/#goblog">back to blog index</a>
+				</article>
+			</div>
 		</main>
 	</body>
 </html>
@@ -58,23 +53,92 @@ const {
 <style>
 	main {
 		background-color: var(--header);
-		padding: 3vmin;
 		margin-top: var(--tabheight);
 	}
-	article {
-		max-width: 60ch;
-		margin: 0 auto;
+	.tab {
+		position: fixed !important;
+		top: 0.5rem;
+		pointer-events: none;
+		margin-top: 0 !important;
+		width: calc(100% - 0.5rem);
 	}
-	img {
+	.tab::after {
+	}
+	article {
+		max-width: 80ch;
+		margin: 0 auto;
+		padding: 5.5vmin;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+	time {
+		display: block;
+		width: fit-content;
+		margin: 0 0 3rem auto;
+	}
+	.post {
+		background-color: var(--blog);
+		margin: 0 0.25rem;
+	}
+  .post :global(img) {
 		display: block;
 		margin: 0 auto;
 		max-width: 100%;
 		max-height: 25rem;
 		border-radius: var(--border-radii);
+    box-shadow: 1px 1px 15px -12px black;
+  }
+	.post :global(p>img) {
+		margin-top: 0.5rem;
 	}
-	.blogpost :global(.caption) {
+	.post :global(.caption) {
 		text-align: center;
 		font-style: italic;
 		margin-bottom: 3vmin;
+	}
+  .post :global(li) {
+    font-size: var(--p);
+    line-height: var(--h3);
+  }
+  .post :global(h2) {
+    color: var(--links);
+  }
+  .post :global(h3), .post :global(h4), h1 {
+    color: var(--hover);
+  }
+  .post :global(pre, .tweet) {
+    border-radius: var(--border-radii);
+    box-shadow: 1px 1px 15px -12px black;
+	}
+  .post :global(pre) {
+    background-color: var(--sara);
+    margin: 0.5rem 0;
+    padding: 2ch;
+    white-space: pre-wrap;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .post :global(.tweet) {
+    background-color: var(--work);
+		margin: 3vmin 0;
+		padding: 1px 1rem 1px;
+  }
+  .post :global(table) {
+    margin-block: 1rem;
+    font-size: var(--sml);
+  }
+  .post :global(:is(td, th)) {
+    padding: 0.5ch 1ch;
+  }
+  .post :global(thead) {
+    border: 2px solid black;
+  }
+
+	a.back {
+		display: block;
+		width: fit-content;
+		margin: 3em auto 0;
+		font-weight: bold;
 	}
 </style>

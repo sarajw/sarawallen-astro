@@ -48,8 +48,18 @@ const htmlRoot = document.querySelector("html");
 const colorScheme = document.querySelector('meta[name="color-scheme"]');
 const mode = sessionStorage.getItem("mode");
 
-
-console.log(mode);
+// set color-scheme to dark
+function switchDark() {
+  colorScheme.setAttribute("content", "dark");
+  htmlRoot.classList.add("dark-mode");
+  sessionStorage.setItem("mode","dark");
+}
+// set color-scheme to light
+function switchLight() {
+  colorScheme.setAttribute("content", "light");
+  htmlRoot.classList.remove("dark-mode");
+  sessionStorage.setItem("mode","light");
+}
 
 //check for session preference
 if (mode) {
@@ -67,18 +77,7 @@ if (colorScheme.content === "light dark") {
   }
 }
 
-// set color-scheme to dark
-function switchDark() {
-  colorScheme.setAttribute("content", "dark");
-  htmlRoot.classList.add("dark-mode");
-  sessionStorage.setItem("mode","dark");
-}
-// set color-scheme to light
-function switchLight() {
-  colorScheme.setAttribute("content", "light");
-  htmlRoot.classList.remove("dark-mode");
-  sessionStorage.setItem("mode","light");
-}
+
 
 function toggleMode() {
   // check for color-scheme, if not set, then...

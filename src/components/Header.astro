@@ -4,9 +4,7 @@ import { SITE_TITLE } from '../config';
 
 <header>
 	<div>
-		<h1>
-			<a href="/#">{SITE_TITLE}</a>
-		</h1>
+		<a id="site-title" href="/#">{SITE_TITLE}</a>
 		<nav>
 			<ul>
 				<li><a href="/#gosara">sara</a></li>
@@ -25,7 +23,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: calc(100% - 0.5rem);
-	height: calc(var(--tabheight) + 0.25rem);
+	height: calc(var(--tabheight) + 0.5rem);
 	background-color: var(--background);
 	z-index: 10;
 }
@@ -34,7 +32,7 @@ header div {
 	position: fixed;
 	top: 0.25rem;
 	width: calc(100% - 0.5rem);
-	height: var(--tabheight);
+	height: calc(var(--tabheight) + 0.25rem);
 	background-color: var(--header);
 	display: flex;
 	justify-content: space-between;
@@ -44,13 +42,14 @@ header div {
 	border-top-right-radius: var(--border-radii);
 }
 
-h1, nav ul {
+#site-title, nav ul {
 	margin: 0;
 	align-self: center;
 }
 
-h1 {
+#site-title {
 	font-size: clamp(1rem, 4.75vw, 2rem);
+	font-weight: bold;
 	text-transform: lowercase;
 }
 
