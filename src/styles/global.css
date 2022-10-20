@@ -262,14 +262,14 @@ section > article ul {
 	text-align: center;
 }
 #hero div, #hero div::before, #hero div::after {
-	outline: 0 solid;
+	outline: 0 solid var(--background);
   transition: scale ease 0.25s, outline ease 0.5s;
 }
 #hero div:hover {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-	outline: 0.2em solid var(--hover);
+	outline: 0.2em solid var(--background);
 }
 
 .sara {
@@ -319,15 +319,15 @@ section > article ul {
 	text-align: right;
 }
 .stack {
-	display: grid;
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--icons), 1fr)); */
 	margin-inline: auto;
-	padding-inline: 5vmin;
+	padding-inline: 3vmin;
 	gap: 2vmin 3vmin;
-	grid-template-columns: repeat(auto-fit, minmax(var(--icons), 1fr));
 	place-items: center;
-	/* display: flex;
+	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around; */
+	justify-content: space-around;
 }
 
 .work {

@@ -47,6 +47,13 @@ const { title, description, image = 'images/photo.gif' } = Astro.props;
 const htmlRoot = document.querySelector("html");
 const colorScheme = document.querySelector('meta[name="color-scheme"]');
 
+//check for session preference
+if (sessionStorage.getItem("darkMode")) {
+    // ..add dark-mode class to html element
+    colorScheme.setAttribute("content", "dark");
+    htmlRoot.classList.add("dark-mode");
+}
+
 
 // check for color-scheme, if not set, then...
 if (colorScheme.content === "light dark") {
@@ -61,11 +68,13 @@ if (colorScheme.content === "light dark") {
 function switchDark() {
   colorScheme.setAttribute("content", "dark");
   htmlRoot.classList.add("dark-mode");
+  sessionStorage.setItem("darkMode","true");
 }
 // set color-scheme to light
 function switchLight() {
   colorScheme.setAttribute("content", "light");
   htmlRoot.classList.remove("dark-mode");
+  sessionStorage.removeItem("darkMode");
 }
 
 function toggleMode() {
