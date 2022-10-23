@@ -37,7 +37,7 @@
 	--h3: clamp(1.25rem, 4vw, 1.75rem);
 	--h2: clamp(1.5rem, 5vw, 2rem);
 	--h1: clamp(1.75rem, 6vw, 2.25rem);
-	--icons: clamp(32px, 12vw, 64px);
+	--icons: clamp(24px, 12vw, 64px);
 	
 	/* fonts */
 	--normal: 300;
@@ -94,20 +94,32 @@ h1 {font-size: var(--h1)}
 a, a:visited { 
 	color: var(--links);
 	font-weight: var(--heavy);
-	text-decoration: underline var(--hover) 2px;
+	text-decoration: underline var(--hover) 0.2ex;
+	text-underline-offset: 0.25ex;
 }
 a:hover, a:active, a:focus, .welcome button:hover {
 	color: var(--hover);
 	border-bottom: 0;
 	text-decoration: underline wavy var(--links);
+	text-underline-offset: 0.15ex;
 }
 :is(header, footer, .tab, .tabDummy) a {
 	text-decoration: none;
 	border-bottom: 0;
 	font-weight: unset;
 }
+:focus-visible {
+	outline: var(--links) solid;
+	outline-offset: 0.2rem;
+}
+a:focus-visible {
+	border-radius: var(--border-radii);
+}
 
-img {max-width: 100%}
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 img:is(.logo, .social) {
 	width: var(--icons);
