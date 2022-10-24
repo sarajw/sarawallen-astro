@@ -136,7 +136,6 @@ main {
 	position: sticky;
 	top: 0.5rem;
 	pointer-events: none;
-	margin-top: calc(-1 * var(--tabheight));
 }
 .tab h2 {
 	width: 16%;
@@ -185,7 +184,7 @@ section > article ul {
 .anchor {
 	height: 0px;
 	position: relative;
-	top: calc(-1 * var(--tabheight) - 0.5rem);
+	top: -0.5rem;
 }
 /* #gosara {
 	top: calc(100vh - var(--tabheight) - 0.5rem);
@@ -259,16 +258,16 @@ section > article ul {
 	place-items: center;
 	z-index: 0;
 	top: var(--tabheight);
-	height: 100vh;
+	height: calc(100vh - var(--tabheight));
 	background-color: var(--header);
 	margin: 0 auto;
-	padding-bottom: var(--tabheight);
-	font-size: 2vh;
+	padding-bottom: 0;
+	font-size: 2.2vh;
 	overflow: hidden;
 }
 #hero article {
 	position: relative;
-	top: calc(-0.5 * var(--tabheight));
+	top: calc(0.25 * var(--tabheight));
 }
 #hero p {
 	font-size: 0.8rem;
