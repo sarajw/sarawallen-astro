@@ -7,9 +7,9 @@ heroImage: "/images/blog/passionfeet.jpg"
 caption: "Two pairs of shoed feet standing on pavement slabs, on which the words PASSION LED US HERE are painted in red."
 ---
 
-_Photo by [Ian Schneider](https://unsplash.com/ja/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-application?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
+_(Photo by [Ian Schneider](https://unsplash.com/ja/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-application?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText))_
 
-This blog post has been created from two [twitter](https://twitter.com/sarajwallen) threads of mine, [here](https://twitter.com/sarajwallen/status/1552585642177183744) and [here](https://twitter.com/sarajwallen/status/1552977575756136449):
+This blog post has been created from two [twitter](https://twitter.com/sarajoydev) threads of mine, [here](https://twitter.com/sarajoydev/status/1552585642177183744) and [here](https://twitter.com/sarajoydev/status/1552977575756136449):
 
 ## How to score an interview:
 

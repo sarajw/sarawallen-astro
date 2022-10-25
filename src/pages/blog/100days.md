@@ -15,7 +15,7 @@ image: twitter.png
 caption: Profile picture of my twitter account
 --- -->
 
-Want to see more? I post other stuff too: [@sarajwallen](https://twitter.com/sarajwallen) :)
+Want to see more? I post other stuff too: [@sarajoydev](https://twitter.com/sarajoydev) :)
 
 <div class="tweet">
 
@@ -926,4 +926,4 @@ Day 1/100 - setting myself up to have a play with @nextjs
 
 Smart to skip over React entirely to play here first? Who knows! Don’t know until I try…
 
-</div><div class="tweet">
+</div>

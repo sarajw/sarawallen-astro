@@ -33,20 +33,23 @@ const {
 			<div class="post">
 				<article>
 					{heroImage && (
-						<img
-							src={heroImage}
-							alt={caption}
-						/>
-						<p class="caption">{caption}</p>
+						<figure>
+							<img
+								src={heroImage}
+								alt={caption}
+							/>
+							<figcaption class="caption">{caption}</figcaption>
+						</figure>
 					)}
 					<h1 class="title">{title}</h1>
 					{pubDate && <time>{pubDate}</time>}
 					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 					<slot />
-					<a class="back" href="/#goblog">back to blog index</a>
+					<a class="back" href="/#goblog">&larr; back to blog index</a>
 				</article>
 			</div>
 		</main>
+		<Footer />
 	</body>
 </html>
 
@@ -68,6 +71,10 @@ const {
 		max-width: 80ch;
 		margin: 0 auto;
 		padding: 5.5vmin;
+	}
+	figure {
+		margin-inline: auto;
+		margin-block: 0 3vmin;
 	}
 	h1 {
 		margin-bottom: 0;
@@ -94,8 +101,8 @@ const {
 	}
 	.post :global(.caption) {
 		text-align: center;
+		font-size: var(--sml);
 		font-style: italic;
-		margin-bottom: 3vmin;
 	}
   .post :global(li) {
     font-size: var(--p);
