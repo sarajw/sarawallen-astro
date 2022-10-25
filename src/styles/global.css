@@ -100,7 +100,7 @@ a, a:visited {
 a:hover, a:active, a:focus, .welcome button:hover {
 	color: var(--hover);
 	border-bottom: 0;
-	text-decoration: underline wavy var(--links);
+	text-decoration: underline wavy var(--links) 0.2ex;
 	text-underline-offset: 0.15ex;
 }
 :is(header, footer, .tab, .tabDummy) a {
