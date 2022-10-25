@@ -145,6 +145,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<section id="work">
 				<article>
 					<section class="container box1">
+
 						<button class="bigrow" id="a1" style="background-image: url('/images/work/sarawallen_com.png')" onclick="document.getElementById('modal-a1').showModal();">
 							<h3 class="caption">sara​wallen.com</h3>
 						</button>
@@ -192,12 +193,429 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				
 					<section class="container box2">
 						<div class="smsq1" id="a2"></div>
-						<button class="bigsq" id="b2" style="background-image: url('/images/work/bendickson_sq.jpg')"><h3 class="caption">Benjamin Dickson
-							</h3></button>
+
+						<button class="bigsq" id="b2" style="background-image: url('/images/work/bendickson_sq.jpg')" onclick="document.getElementById('modal-b2').showModal();">
+							<h3 class="caption">Benjamin Dickson</h3>
+						</button>
+						<dialog id="modal-b2">
+							<button onclick="document.getElementById('modal-b2').close();" title="Close">×</button>
+							<img src="/images/work/bendickson.jpg" alt="Benjamin Dickson, Comics Writer & Artist desktop website screenshot. His four most recent comic covers are displayed in a row under the title." loading="lazy" />
+							<div>
+								<a href="https://bendickson.co.uk/" target="_blank">
+									<h2>Benjamin Dickson</h2>
+								</a>
+								<p>
+									My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not responsive at all. I love building sites with such interesting content!
+								</p>
+								<p>
+									I built this site with the Astro framework.
+								</p>
+							</div>
+						</dialog>
 						
-						<button class="smsq2" id="c2" style="background-image: url('/images/work/ascii.png')" title="Open Ascii Art"><h3 class="caption">ASCII Art</h3></button>
+						<button class="smsq2" id="c2" style="background-image: url('/images/work/ascii.png')" onclick="document.getElementById('modal-c2').showModal();">
+							<h3 class="caption">ASCII Art</h3>
+						</button>
+						<dialog id="modal-c2">
+							<button onclick="document.getElementById('modal-c2').close();" title="Close">×</button>
+							<div>
+								<h2>ASCII Art</h2>
+								<p>
+									When I was 15 or so I frequented several USENET newsgroups,
+									<br>particularly alt.fan.eddie-izzard and alt.ascii-art.
+								</p>
+								<p>
+									If in dark mode, consider switching to <button onclick="toggleMode()">light mode</button> to look properly!
+								</p>
+								<pre class="ascii-art">
+                         ______
+                  _.-=,-&quot; _... &quot;&quot;&quot;-.,_
+                /&quot;  .- &quot;'-.,-- &quot; ' _  \
+              ,'  -  . -'&quot; _&quot;,- -&quot; . \ '.
+             / /   /  __ -&quot;  /)_)\ (\ '. \
+            / /  (  _(  \ )\/     )/ |/) \
+           (   -   _\   /'            /') )
+           / '  &quot;  )                    / /
+           | /  ( (                     ')(
+           \ |  / /    _.,,.      _,,._  /
+           \  - //  .:'`'_```'   '``_`''./
+           \ /&quot;\_:   /&lt;(8)_&gt;)    (&lt;(8)&gt;' |\
+            |/|\T:      &quot;.'/     `-_&quot;    ||
+            | LJ|'               |       ||
+            `\ *             .   `       /
+             &gt;\_,           (_    |      J
+              &lt;' \            `'/'       |
+               &lt;_\                      /
+                 &lt;\      `&lt;-':'-':'-    /
+               _/\|A        .,___,-    /
+              / / |'M.        ```     /
+          _.,/ &lt;  | ''M.             /\-.._
+      _/'`   | |  o . '''A.       _-`\ (   `-,
+     &quot;  sjw  / &gt;./o   ' '''''''''' |o \ \     '.
+             |  \  o      ' ' ' ' ' o ) \
+             \   \  o   '   '  '   o  /  )
+             |  / |   o           o .'   /
+             \ (   \     o  o  o  .&quot;.    /
+              \\  \ )            / _ \   /
+               &quot;\  (            / (:) ) /
+                    \          /      /&quot; Self-portrait!
+
+
+
+              \_/                    \\
+            --(_)--                 &lt; &quot;_)
+              / \     .--.-.--.     / /
+                          V        /#/
+                    ______________/(/
+      )\      _,--,/           .-/#/\
+      &quot;\&quot;-._.oo ' /             \)/_\\
+        &quot;-.___. ./____________________\
+             \__  | (  )  |__|  |__| |
+             ,-,\_|_|__|_____________|__,-,
+             | |________________________| |
+             L L________________________J J
+'._.'._.'._.'T T________________________P P_.'._.'._.'
+              \ \______________________/ /
+'._.'._.'._.'._\ \____________________/ /'._.'._.'._.'
+           sjw  &quot;,&quot;-.______________.-&quot;,&quot;
+                  &quot;-._&quot;&quot;--------&quot;&quot;_.-&quot;    Noah's Ark
+                      &quot;&quot;--------&quot;&quot;
+
+
+
+          \)       /\__/\       (/ 
+        _.-:-._   (&lt;|&gt;&lt;|&gt;)   _.-:-._
+    _.-'  / \  '-._'(VV)'_.-'  / \  '-._
+ .-'     /   \    .      .    /   \     '-.
+  '-.   /     \   .      .   /     \   .-'
+     \ /  _.._ \  .\    /.  / _.._  \ / 
+     |/.-`    `.\'  '))'  '/.'    '-.\|
+                '   ((     '
+ sjw                 ))  Cat-bat? Erm...
+                     &quot;
+
+
+
+                     __..-----')
+           ,.--._ .-'_..--...-'
+          '-&quot;'. _/_ /  ..--''&quot;&quot;'-.
+          _.--&quot;&quot;...:._:(_ ..:&quot;::. \
+       .-' ..::--&quot;&quot;_(##)#)&quot;':. \ \)    \ _|_ /
+      /_:-:'/  :__(##)##)    ): )   '-./'   '\.-'
+      &quot;  / |  :' :/&quot;&quot;\///)  /:.'    --(       )--
+        / :( :( :(   (#//)  &quot;       .-'\.___./'-.
+       / :/|\ :\_:\   \#//\            /  |  \
+       |:/ | &quot;&quot;--':\   (#//)              '
+       \/  \ :|  \ :\  (#//)
+            \:\   '.':. \#//\
+             ':|    &quot;--'(#///)
+                        (#///)
+                        (#///)
+                         \#///\
+                         (##///)
+                         (##///)
+                         (##///)
+                         (##///)     Mmm desert island...
+                          \##///\
+                          (###///)
+                          (sjw////)__...----....___
+                          (#/::'''                 &quot;&quot;--.._
+                     __..-'''                             &quot;-._
+            __...--&quot;&quot;                                         '._
+_____..--&quot;&quot;&quot;                                                     &quot;-.._______
+  (_ &quot;&quot;---....___                                          ___...--&quot;&quot; _)
+    &quot;&quot;&quot;--...   __&quot;&quot;&quot;&quot;&quot;----.......__________.......-----&quot;&quot;&quot;&quot;      --&quot;&quot;&quot;
+                 &quot;&quot;&quot;&quot;  ---.....                    ___....----
+
+
+
+   __________________________
+  |                          |
+  |    NO LIVE TURTLES OR    |   _,,.------..,
+  |                         _|-'`-``_//\/'/-_ `\
+  |    FROGS ARE TO LEAVE  ((_,.-,.-''      '`\|
+  |                        ||-''`               \
+  |        THE STORE.     /           / /        \.
+  |                      /           /)/&rbrace;T  /\     \_
+  |  ZXZXZHXHZXZHXZHXZHXH    | )    ) | &lbrace; ('( \(',- &lt;
+  |                     [    /|/)-')             |  |
+  |_____________________|    /                   |  )
+                        |   |  _,.,,_    .  .:'`: L (
+                        \  /  '`/(o)\`:   \/(o)&gt;\ L /
+                         \ |     --_'` :  |`'''`  |/
+                          ||                      Y|
+                           \          .    '.     |J
+                           |\         [* _-*/     |
+                           ',\           ||       |
+                             _L    `_.,::--::,.   |
+                           ,/ |        - ... -    /
+                        _,/   |\        _ _      :`'\
+                      ,/ / /'`|VA               /\   \,_
+                _sjw/~  / (   |:VAa.    ,, .   /| |\    `\
+             ,-'   /   (   \_-/\ ::OHAa.___,.-' | / \     `\
+            /     /     \       \ : :VHHHH: :' / \|  \\
+                 /       \-._ () \    : : :   /  :_    \
+                |         |  `'\  \         _/ _  /     \
+                /    __.. |     \   \.   _/'` '_,/       \
+               / _,-'    \ \     \ () \_/ _,.-'`
+               '`         \(      \    /-'`
+                           )       \ _/|   EDDIE IZZARD
+                          /        |   /
+                         /         |() |
+                        /          |   |
+                                   :.__:
+
+
+
+             _    __   __   _         __     _|_
+   .-&quot;&quot;-/   (o)    \\ (()) /| ()()  .&quot;__&quot;.  / | T
+  /     '   /\\    |\\ &quot;&quot; /|| Y--T / T__) \ \\|
+-||====\/  /__\\   | \\  / || |_.  | |\\  |  '|,
+  \    || /    \\  |  \\/  || | '  \ J \\ /   |\\
+   '-..-'/\     /\ /\  V   /\ L--J  &quot;.__.&quot;  L | /
+                               _       __    &quot;|&quot;__            _
+                         sjw  (o)    .&quot;  &quot;.   .&quot; _&quot;. ,|,  ,|, V  ()    () ()()
+                              /\\   / T // \ / // T \ ||  ||  \/ \\    \/ Y--T
+     &quot;GAMERS ARCHIVE&quot;        /__\\  | |//  | | ||   | ||==||- ||  \\   /  |_.
+                            /    \\ \ J__) / \ \\_. / ||  ||  ||   \\ /   | '
+                           /\     /\ &quot;.__.&quot;   &quot;.__.&quot;  /\  /\  /\    \/    L--J
+                                                                    ()
+
+
+
+                            _,..,_
+                           /::::::\
+                          /::::::::\
+                         /::::/\::::\
+                        /::::/  \::::\
+                       /::::/    \::::\
+                      /::::/      \::::\
+                     /::::/        \::::\
+                    /::::/          \::::\
+                   /::::/            \::::\
+                  /::::/              \::::\
+                 /::::/WW/ww/          \::::\
+                /::::/ _0000ooo,        \::::\
+               /::::/ C0000000000000000o \::::\
+              /::::/     V00000000000000  \::::\
+             /::::/        000000000000000o\::::\
+            /::::/         V000V&quot;&quot;&quot;&quot;000V&quot;00 \::::\
+           /::::/         A0  VA   oAV    00 \::::\
+          /::::/         AV    &quot;0oAV&quot;         \::::\
+         /::::/        oAV      o0&quot;Vo          \::::\
+        |::::/__________________________________\::::|
+        \::::::::::::::::::::::::::::::::::::::::::::/
+         '-;;;;;;;;;;;;;;;;;;sjw;;;;;;;;;;;;;;;;;;;-'
+                            |:.  |
+                            |:.  |   Warning, Moose!
+                            |:.  |   Se upp, älg!
+                            |:.  |
+                            |:.  |
+
+
+
+                             .ee._
+                    ,       /$$$$$$e.
+                     '.    /$$.$'$$$$$.
+                       \   |$/$$$$$$$$$\
+                  &quot;&quot;--._|_ |/$'$$$$$$\&quot;*'
+            .ee.   .-&quot; .  &quot;&quot;*$$$$$$)&quot;-'
+           /$$$$ee/ //\|'-/&quot;&quot;V&quot;\&quot;**'
+           |$$$$$/|/ ' e$*-    _\ \&quot;-.
+           /$$$$$|&quot;   $$.-   .&quot;\'\ \  '.
+           |$$$$$|\ (_$/  / /.-&quot;\ \ ),  \
+            \$A/\|&quot;-_&quot;' -&quot;  '\   \ |/    \
+                /-&quot;&quot; &quot;        \-&quot;| /      \
+             .-&quot;&quot;&quot;&quot;&quot;-          | ||        \
+          .-&quot;                  |_|/         \
+        .'     _.sjw.          |/ /        . \
+       /   .e$$$$$$$$)         | /         | \
+       | .e$$$$$$$$$$/     .-._/ |         |  \
+       \ \$$***$$/  )      \  /  /         /  \
+        \ '*(  \/ .&quot;__      \/ ,&quot;/        /   |
+        /&quot;-._)    &quot;&quot;  \   .-&quot;.&quot; /         /   |
+       /  -&quot;/__.   --./--&quot;.-&quot;   |        /    |
+       |      /../\  )--&quot;&quot;      |.  ,   /     /
+       \      &quot;&quot;/| &quot;-&quot; ,        /\ /||\/      /
+        &quot;-.__.-&quot; |     |         |\|  /-,     /
+                 /     |         \      )     /   /|
+                 |     |,        \ . --&quot;|    /   / /
+                 /     \\         '.'-.&quot;     /  / /
+                 ||     \\          &quot;&quot;      / .' /_
+                 |\ .     \        .       /.&quot;  &quot;.'
+                 |/\ \ .   \  .    /    .  / _.-'
+  MUTTLEY!!!     ' \ \ |\,    |,  /|/| /|,/__,7
+                    \|\|\\\   |\|/ | |/ &quot;V
+                   .-',' \ '-.\ V  / V
+                   &gt;-. &quot;-.\  |&quot;   /_..--.
+                   ( /&quot;.     |       .-._)
+                    V       _A     &quot;-.  \
+                     &quot;---&quot;&quot;&quot;  &quot;.     )_.&quot;
+                                '-..&quot;
+
+
+
+     __    __        __          __    __        __          __    __
+    (//    \\)    __(//   __    (//    \\)    __(//   __    (//    \\)  
+sjw /&quot;      / __  \\)&quot;    \\)_  /&quot;      / __  \\)&quot;    \\)_  /&quot;      / __
+  '|-..__..-''\_''-.\__..-''  '|-..__..-''\_''-.\__..-''  '|-..__..-''\
+  (\\  \_    _(\\      _/     (\\  \_    _(\\      _/     (\\  \_    //)
+   &quot;&quot;  (\\  //)&quot;&quot;     //)      &quot;&quot;  (\\  //)&quot;&quot;     //)      &quot;&quot;  (\\   &quot;&quot;
+        &quot;&quot;  &quot;&quot;        &quot;&quot;            &quot;&quot;  &quot;&quot;        &quot;&quot;            &quot;&quot;
+
+
+
+
+      _.._   *                .\_|_/.
+    */ /`     _._  *    _._  _-/   \-_
+    &lbrace;  |    *//`\\..-..//`\\  -\_ _/-
+     \_\._*  \\_   ` `   _//  `/ | \`
+   *   ``   __`|   |_|   |`__
+   ________/  \\__//  \__//  \sjw_____
+  |**-     \_|/   \___/   \|_/     -**|
+  |* Sara Joy Wallén, ICQ# 32690270  *|
+  ||         sara(a)wallen.as        ||
+  |____________/   \_/   \____________|
+               \\_\/ \/_//
+
+
+
+
+                         ___   ___
+                     _.-'   '/?  '-.
+                 _.-'   _ --\/ _ \  `'\
+                / _  -    _--\/  \  \  `\
+               / /           _L      \   |
+              | /      .,-'''  \     \    \
+             /    /   /         |         |.
+            /        ,'         '  |   \   |
+            |    |   |          :   |   |  \
+           /     |   |          |   |   |   |
+           /  /    | |          \    \  \  `|
+          J  /  /  | |           \       \_ |
+          |  |    /  ) _.,,.      \_  \     .&gt;
+          \        .:'`'_```'    /''\_ _  _-&gt;\
+           \   __.-` /&lt;808_&gt;|   |&lt;808&gt;`\`'  ,\
+            |/|\T        / /     `-_    |/ ||
+            | LJ|               |       || /
+            `\ *            .   `       /' 
+            &gt; \_,          (_    |     *J |
+           &lt;'`   \           `'/'      - |&lbrace;
+        _&lt;`'   &lt; \                    /|  |
+        _&gt;   &lt;    \     `&lt;-':'-':'-   / |  &rbrace;
+        _/\ &lt;   &lt; |A       .,___,-   /|  \/
+       /  &lt;   &lt;   |'M.       ```    /| |\|
+    _.,    &lt;   &lt;  | ''M.           / -'\_    old
+ /'` /      |/|  o . '''A.      _-`-/ \_ `-,   self
+    /         &gt;'/o   ' ''''''''' |      \   '.  portrait
+   /            \ o      ' ' ' 'o|           |
+   |         \_  \ o   '  '  '. o'  /        |
+ . /            \__\_o           o`|/        /    `\
+  |,._              \o         o  /       _/        \
+      \              |oo       o |`      /           |
+       \,._           \ oo    o  /      /            \
+  sjw      `'|_        \  oo o  /     _/              |
+               \        \   o   |    /                |
+
+
+
+
+ :::,
+ '::::'._
+   '.    '.                        __.,,.
+     '.    '.                _..-'''':::&quot;
+       \     \,.--&quot;&quot;&quot;&quot;--.,-''      _:'
+   /\   \  .               .    .-'
+  /  \   \                   ':'
+ /    \  :                     :
+/      \:                       :
+\       :                       :
+ \      :      ,--,         ,-,  :
+  \    :      |(_) |       |() | :
+   \   :     __'--'   __    '-'_  :
+    \  :    /  \      \/      / \ :
+     \  :  (    )             \_/ :
+  .-'' . :  \__/   '--''--'      :
+  \  . .-:'.                   .:
+   \' :| /  '-.__      ___...-' :
+    \::|:        ''''''          '.
+  .,:::'/  :                       '.
+   \::\:   :                         '._
+    \::    :     /             '-._     '.
+     \:    :    /              .   :-._ :-'
+      :    :   /               :   :  ''
+      :   .'   )'.             :   :
+ sjw   :  :  .'   '.          :   :
+        : '..'      :      _.' _.:
+         '._        :..---'\'''  _)
+            '':---''_)      '-'-'
+               '-'-'  PIKACHU!
+
+
+
+                              _,-&quot;&quot;--.__  ___
+                            /'  __      ''   '\_
+                          ,'          \   __    '\
+                         )           \    ___     (
+                       ,'  _.--._ \     __         \
+                      /   /      &quot; \_.-.___         )
+                      /  (               \,_        |
+                      \ /                / /\_      \
+                      // ,,_               ///      \
+                     /\    '=,              /\      /
+                     ||  \_  \      _.,,._   /)    (
+                     (|    &quot;&quot; )  / _     '&quot;   /   _/
+                      |       /     ',__.-    / ,/)
+                      |                      &quot;,/ /
+                      |     (     \          ' /,\
+                 _____\   ,  '-&quot;-'           .'   )
+             _,-&quot;     \  ' -.__     '  .   ,'      )
+          ,-'          \   \'-.&quot;-. )    ,-'   &lt;    )_
+         /              \   '-.-'      /      \  ,&quot;  &quot;-._
+        /               ''._       _,-|        '&lt;        &quot;-._
+      ,'                 '.__----:&quot;    \         '.          &quot;-.
+     /    /           |      &quot;&quot;&quot;'   /   |          '.
+    /    /            \          ,-'    |            '._
+   /    /              \             /  \               '-.
+  /     /                \         /    \                  '-,
+ /     /                         /       \                    '-
+/ sjw  |   an old boyfriend (eyes closed)             \
+
+
+
+                                _,-&quot;&quot;--.__  ___
+                              /'  __      ''   '\_
+                            ,'          \   __    '\
+                           )           \    ___     (
+                         ,'  _.--._ \     __         \
+                        /   /      &quot; \_.-.___         )
+                        /  (               \,_        |
+                        \ /                / /\_      \
+                        // ,,_               ///      \
+                       /\=.,._=,              /\      /
+                       || YMMMMM.   / .._,,._   /)    (
+                       (|  MMMMMM)=,_.,,..  '&quot;  /   _/
+                        |   `&quot;&quot;&quot;/    qMMMMML    /,,/)
+                        |             MMMMMM&gt;-&quot;&quot;',/ /
+                        |     (     \  '&quot;&quot;&quot;'   ' /,\
+                   _____\      '-&quot;-'           .'   )
+               _,-&quot;     \  -,-.__     '  .   ,'      )
+            ,-'          \   \'-.&quot;-. )    ,-'   &lt;    )_
+           /              \   '-.-'      /      \  ,&quot;  &quot;-._
+          /               ''._       _,-|        '&lt;        &quot;-._
+        ,'                 '.__----:&quot;    \         '.          &quot;-.
+       /    /           |      &quot;&quot;&quot;'   /   |          '.
+      /    /            \          ,-'    |            '._
+     /    /              \             /  \               '-.
+    /     /                \         /    \                  '-,
+   /     /                         /       \                    '-
+sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
+							</div>
+						</dialog>
 						
-						<button id="d2" class="bigrow" style="background-image: url('/images/work/binnenalster_small.jpg')"><h3 class="caption">Hamburg</h3></button>
+						<button id="d2" class="bigrow" style="background-image: url('/images/work/binnenalster_small.jpg')">
+							<h3 class="caption">Hamburg</h3>
+						</button>
 					</section>
 				
 					<section class="container box3">
