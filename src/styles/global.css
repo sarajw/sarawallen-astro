@@ -117,6 +117,7 @@ a:focus-visible {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto;
 }
@@ -450,7 +451,7 @@ section > article ul {
 	border: 0;
 }
 
-.container > :is(button:hover, button:focus, div:hover, div:focus-visible) {
+.container > :is(button:hover, button:focus-visible, div:hover, div:focus-visible) {
 	background-color: var(--background);
 	background-repeat: no-repeat;
 	background-size: 0;
@@ -469,24 +470,29 @@ section > article ul {
 	font-size: clamp(1rem, calc(1rem + 10cqi), 2rem);
 }
 .container button:hover .caption,
-.container button:focus .caption {
+.container button:focus-visible .caption {
 	visibility: visible;
 }
 
 dialog[open] {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
 	color: var(--text);
 	background-color: var(--header);
-	border: 1vmin solid var(--header);
 	overscroll-behavior: contain;
+	border: 0.25rem solid var(--header);
+	border-radius: var(--border-radii);
+	padding: 0;
+}
+dialog > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
 }
 dialog h2 {
 	display: inline;
 }
-dialog, dialog :is(p, img) {
-	border-radius: var(--border-radii);
+dialog img {
+	border-radius: calc(var(--border-radii) / 2);
 }
 dialog p {
 	max-width: 80ch;
@@ -496,11 +502,11 @@ dialog p:last-child {
 	margin-bottom: 0;
 }
 dialog::backdrop {
-	/* background-color: rgba(41,86,79,0.8); */
+	background-color: rgba(128,128,128,0.25);
 	-webkit-backdrop-filter: blur(0.25rem);
 					backdrop-filter: blur(0.25rem);
 }
-dialog > button {
+dialog button:not(.inline) {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
@@ -514,7 +520,7 @@ dialog > button {
 	border-radius: 50%;
 	border: 0;
 }
-dialog > button:hover {
+dialog button:not(.inline):hover {
 	background-color: var(--background);
 }
 dialog::-webkit-scrollbar {
@@ -537,7 +543,7 @@ dialog::-webkit-scrollbar-corner {
 }
 
 pre.ascii-art {
-	font-size: clamp(0.75rem, 1.5vw, 1.75rem);
+	font-size: clamp(0.5rem, 1.75vw, 1.5rem);
 	line-height: 1em;
 }
 

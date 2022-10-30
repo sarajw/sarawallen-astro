@@ -9,7 +9,7 @@ export interface Props {
 	image?: string;
 }
 
-const { title, description, image = '/images/social-card.png' } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -43,7 +43,7 @@ const { title, description, image = '/images/social-card.png' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <script is:inline>
-// first, a useful variable to neaten things up:
+// first, useful variables to neaten things up:
 const htmlRoot = document.querySelector("html");
 const colorScheme = document.querySelector('meta[name="color-scheme"]');
 const mode = sessionStorage.getItem("mode");
@@ -67,7 +67,6 @@ if (mode) {
   else if (mode === "light") {switchLight();}
 }
 
-
 // check for color-scheme, if not set, then...
 if (colorScheme.content === "light dark") {
   // ..if user OS is in dark mode...
@@ -76,8 +75,6 @@ if (colorScheme.content === "light dark") {
     htmlRoot.classList.add("dark-mode");
   }
 }
-
-
 
 function toggleMode() {
   // check for color-scheme, if not set, then...

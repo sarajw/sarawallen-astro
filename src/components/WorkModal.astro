@@ -1,0 +1,33 @@
+---
+const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.props;
+---
+
+<button class={buttonClass} style={`background-image: url("/images/work/${buttonImg}")`} onclick={`window.${modalId}.showModal()`}>
+  <h3 class="caption">{title}</h3>
+</button>
+<dialog id={modalId}>
+  <div>
+    <button title="Close" onclick={`window.${modalId}.close()`}>×</button>
+    {modalImg && <img src={'/images/work/'+modalImg} alt={alt} loading="lazy" />}
+    <div>
+      {url ?
+      <a href={url} target="_blank">
+        <h2>{title}</h2>
+      </a>
+      :
+      <h2>{title}</h2>
+      }
+      <slot />
+    </div>
+  </div>
+</dialog>
+
+<script is:inline define:vars={{ modalId }}>
+  const modal = document.getElementById(modalId);
+
+  window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      modal.close(); 
+    }
+  });
+</script>
