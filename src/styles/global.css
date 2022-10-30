@@ -37,7 +37,7 @@
 	--h3: clamp(1.25rem, 4vw, 1.75rem);
 	--h2: clamp(1.5rem, 5vw, 2rem);
 	--h1: clamp(1.75rem, 6vw, 2.25rem);
-	--icons: clamp(24px, 12vw, 64px);
+	--icons: clamp(32px, 10vw, 64px);
 	
 	/* fonts */
 	--normal: 300;
@@ -343,7 +343,7 @@ section > article ul {
 	grid-template-columns: repeat(auto-fit, minmax(var(--icons), 1fr)); */
 	margin-inline: auto;
 	padding-inline: 3vmin;
-	gap: 2vmin 3vmin;
+	gap: 2vmin;
 	place-items: center;
 	display: flex;
 	flex-wrap: wrap;
@@ -565,8 +565,9 @@ pre.ascii-art {
 	z-index: 3;
 	background-color: var(--blog);
 }
-#blog ul > * + * {
-	margin-top: 5vmin;
+#blog ul {
+	display: grid;
+	gap: 5vmin;
 }
 #blog li {
 	display: flex;
@@ -683,8 +684,7 @@ form button:active {
 
 @media only screen and (min-width: 2200px) {
 	#blog ul {
-		columns: 2;
-		column-gap: 5vmin;
+		grid-template-columns: 1fr 1fr;
 	}
 	
 	main > section#blog > article {
