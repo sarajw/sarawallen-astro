@@ -116,16 +116,17 @@ a:focus-visible {
 	border-radius: var(--border-radii);
 }
 
-img {
+img:not(.social) {
 	display: block;
 	max-width: 100%;
 	height: auto;
 }
 
 img:is(.logo, .social) {
-	width: var(--icons);
+	height: var(--icons);
+	max-width: calc(1.5 * var(--icons));
 }
-.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [title="Prisma"], [title="PowerShell"]) {
+.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
 	filter: invert(80%);
 }
 
