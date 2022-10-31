@@ -33,7 +33,7 @@
 	--tabheight: clamp(40px, 8vw, 60px);
 	--border-radii: 0.4rem;
 	--sml: clamp(0.8rem, 2.5vw, 1.0rem);
-	--p: clamp(0.9rem, 3vw, 1.1rem);
+	--p: clamp(1.0rem, 3vw, 1.25rem);
 	--h3: clamp(1.25rem, 4vw, 1.75rem);
 	--h2: clamp(1.5rem, 5vw, 2rem);
 	--h1: clamp(1.75rem, 6vw, 2.25rem);
