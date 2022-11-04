@@ -32,8 +32,8 @@
 	/* scaling */
 	--tabheight: clamp(40px, 8vw, 60px);
 	--border-radii: 0.4rem;
-	--sml: clamp(0.8rem, 2.5vw, 1.0rem);
-	--p: clamp(1.0rem, 3vw, 1.25rem);
+	--sml: clamp(0.8rem, 2vw, 1.0rem);
+	--p: clamp(1.0rem, 2vw, 1.25rem);
 	--h3: clamp(1.25rem, 4vw, 1.75rem);
 	--h2: clamp(1.5rem, 5vw, 2rem);
 	--h1: clamp(1.75rem, 6vw, 2.25rem);
@@ -240,21 +240,25 @@ section > article ul {
 
 
 .backtotop {
+	display: grid;
+	place-content: center;
+	place-items: center;
 	position: absolute;
 	height: 2rem;
 	width: 2rem;
+	padding-bottom: 0.2rem;
 	bottom: 2rem;
 	left: calc(50% - 1rem);
-	text-align: center;
-	font-size: 1.5rem;
-	font-weight: var(--normal);
-	line-height: 1.75rem;
 	border-radius: 50%;
 	background-color: var(--b2top);
+	transition: transform 0.2s ease;
+	box-shadow: 2px 2px 10px -8px black;
 }
 
 .backtotop:hover {
 	background-color: var(--background);
+	transform: translate(1px, 1px);
+	box-shadow: 2px 2px 10px -9px black;
 }
 
 
@@ -333,7 +337,7 @@ section > article ul {
 	filter: brightness(1.2) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25));
 }
 .dark-mode .welcome img {
-	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5));;
+	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5));
 }
 .signoff {
 	text-align: right;
@@ -348,6 +352,10 @@ section > article ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+.dark-mode .stack {
+	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.5));
 }
 
 .work {
@@ -489,9 +497,6 @@ dialog > div {
 	gap: 1rem;
 	padding: 1rem;
 }
-dialog h2 {
-	display: inline;
-}
 dialog img {
 	border-radius: calc(var(--border-radii) / 2);
 }
@@ -595,7 +600,7 @@ pre.ascii-art {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 3vmin;
+	padding: 1.5rem 2rem;
 }
 #blog h3 {
 	font-size: var(--h3);
@@ -629,6 +634,19 @@ pre.ascii-art {
 }
 #find li a {
 	font-size: var(--sml);
+}
+img.social {
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.25));
+	opacity: 0.8;
+}
+img.social:is(:hover,:active,:focus-visible) {
+	transform: translate(1px, 1px);
+	filter: drop-shadow(0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.25));
+	opacity: 0.6;
+}
+.dark-mode img.social:is(:hover,:active,:focus-visible) {
+	filter: invert(80%)
 }
 
 form {

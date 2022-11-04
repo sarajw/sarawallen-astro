@@ -644,7 +644,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 							<li>
 								<a href={post.url}><img src={post.frontmatter.heroImage?post.frontmatter.heroImage:"/images/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"}></a>
 								<div>
-									<a href={post.url}><h3>{post.frontmatter.title}</h3></a>
+									<h3><a href={post.url}>{post.frontmatter.title}</a></h3>
 									{post.frontmatter.description && <p>{post.frontmatter.description}</p>}
 									<time datetime={post.frontmatter.pubDate}>
 										{new Date(post.frontmatter.pubDate).toLocaleDateString('en-gb', {
@@ -670,7 +670,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 										src="images/icons/twitter.svg" alt="Twitter" title="Twitter">
 									<br>@sarajoydev</a></li>
 							<li>
-								<a class="img" href="https://mastodon.social/@sarajw" target="_blank"><img class="social"
+								<a class="img" rel="me" href="https://fosstodon.org/@sarajw" target="_blank"><img class="social"
 										src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon">
 									<br>@sarajw</a></li>
 							<li>
