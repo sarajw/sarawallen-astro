@@ -484,6 +484,7 @@ section > article ul {
 }
 
 dialog[open] {
+	container-type: block-size;
 	color: var(--text);
 	background-color: var(--header);
 	overscroll-behavior: contain;
@@ -496,6 +497,8 @@ dialog > div {
 	flex-direction: column;
 	gap: 1rem;
 	padding: 1rem;
+	height: calc(100cqb - 3rem);
+	overflow: auto;
 }
 dialog img {
 	border-radius: calc(var(--border-radii) / 2);
@@ -529,22 +532,22 @@ dialog button:not(.inline) {
 dialog button:not(.inline):hover {
 	background-color: var(--background);
 }
-dialog::-webkit-scrollbar {
+dialog > div::-webkit-scrollbar {
 	width: 0.5rem;
 	height: 0.5rem;
 }
-dialog::-webkit-scrollbar-track {
+dialog > div::-webkit-scrollbar-track {
 	background: transparent;
 	width: 1rem;
 }
-dialog::-webkit-scrollbar-thumb {
+dialog > div::-webkit-scrollbar-thumb {
 	background: var(--find);
 	border-radius: var(--border-radii);
 }
-dialog::-webkit-scrollbar-thumb:hover {
+dialog > div::-webkit-scrollbar-thumb:hover {
 	background: var(--b2top);
 }
-dialog::-webkit-scrollbar-corner {
+dialog > div::-webkit-scrollbar-corner {
 	background: transparent;
 }
 
