@@ -484,20 +484,20 @@ section > article ul {
 }
 
 dialog[open] {
-	container-type: block-size;
 	color: var(--text);
 	background-color: var(--header);
 	overscroll-behavior: contain;
 	border: 0.25rem solid var(--header);
 	border-radius: var(--border-radii);
 	padding: 0;
+	overflow: hidden;
 }
 dialog > div {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	padding: 1rem;
-	height: calc(100cqb - 3rem);
+	max-height: calc((100vh - 6px) - 3em);
 	overflow: auto;
 }
 dialog img {
