@@ -34,9 +34,9 @@
 	--border-radii: 0.4rem;
 	--sml: clamp(0.8rem, 2vw, 1.0rem);
 	--p: clamp(1.0rem, 2vw, 1.25rem);
-	--h3: clamp(1.25rem, 4vw, 1.75rem);
-	--h2: clamp(1.5rem, 5vw, 2rem);
-	--h1: clamp(1.75rem, 6vw, 2.25rem);
+	--h3: clamp(1.5rem, 4vw, 1.75rem);
+	--h2: clamp(1.75rem, 5vw, 2rem);
+	--h1: clamp(2rem, 6vw, 2.5rem);
 	--icons: clamp(32px, 10vw, 64px);
 	
 	/* fonts */
@@ -467,7 +467,7 @@ section > article ul {
 	transform: translate(1px, 1px);
 	box-shadow: 2px 2px 10px -9px black;
 }
-.container h3 {
+.container .caption {
 	visibility: hidden;
 	display: grid;
 	place-content: center;
@@ -495,7 +495,6 @@ dialog[open] {
 dialog > div {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	padding: 1rem;
 	max-height: calc((100vh - 6px) - 3em);
 	overflow: auto;
