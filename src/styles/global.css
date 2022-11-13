@@ -34,6 +34,7 @@
 	--border-radii: 0.4rem;
 	--sml: clamp(0.8rem, 2vw, 1.0rem);
 	--p: clamp(1.0rem, 2vw, 1.25rem);
+	--h4: clamp(1.25rem, 3vw, 1.5rem);
 	--h3: clamp(1.5rem, 4vw, 1.75rem);
 	--h2: clamp(1.75rem, 5vw, 2rem);
 	--h1: clamp(2rem, 6vw, 2.5rem);
@@ -599,6 +600,7 @@ pre.ascii-art {
 	object-fit: cover;
 }
 #blog li div {
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -607,6 +609,22 @@ pre.ascii-art {
 #blog h3 {
 	font-size: var(--h3);
 	margin: 0;
+}
+#blog time {
+	text-align: right;
+}
+#blog li:nth-child(n+4) img {
+	width: 10rem;
+	height: 10rem;
+}
+#blog li:nth-child(n+4) p {
+	margin-block: 0.5em;
+}
+#blog li:nth-child(n+4) div {
+	padding: 1rem 2rem;
+}
+#blog li:nth-child(n+4) h3 {
+	font-size: var(--h4);
 }
 
 .tab.find {
@@ -690,7 +708,7 @@ form button:active {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
 	#blog li {
 		flex-direction: column;
 	}
@@ -698,6 +716,18 @@ form button:active {
 		width: 100%;
 		max-width: 100%;
 		height: 50vw;
+	}
+	#blog li:nth-child(n+4) img {
+		object-position: 0 25%;
+		width: 100%;
+		max-width: 100%;
+		height: 25vw;
+	}
+	#blog li:nth-child(n+4) p {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
 	}
 }
 
