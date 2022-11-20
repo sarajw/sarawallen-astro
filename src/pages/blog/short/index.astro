@@ -23,7 +23,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 				<article>
 
 						{shorts.map((short) => (
-							<article>
+							<article class="short">
 								<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
 								<time datetime={short.frontmatter.pubDate}>
 									{new Date(short.frontmatter.pubDate).toLocaleDateString('en-gb', {
@@ -66,7 +66,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 		margin-inline: auto;
 		margin-block: 0 3vmin;
 	}
-	h1 {
+	h1, h3 {
 		margin-bottom: 0;
 	}
 	time {
@@ -101,77 +101,20 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
   .post :global(h2) {
     color: var(--links);
   }
-  .post :global(h3), .post :global(h4), h1 {
+  .post :global(h3), .post :global(h4) {
     color: var(--hover);
   }
-  .post :global(pre, .tweet) {
+  .post :global(.short) {
 		padding: 3vmin;
     border-radius: var(--border-radii);
     box-shadow: 1px 1px 15px -12px black;
 	}
-  .post :global(pre) {
-		font-size: var(--sml);
-		line-height: 1.25em;
-    background-color: var(--sara) !important;
-    white-space: pre-wrap;
-    max-width: 100%;
-    overflow-x: auto;
-  }
-  .post :global(.tweet) {
+  .post :global(.short) {
     background-color: var(--work);
 		margin: 5vmin 0;
   }
-  .post :global(.tweet > *:first-child) {margin-top: 0}
-  .post :global(.tweet > *:last-child) {margin-bottom: 0}
-  .post :global(table) {
-    margin-block: 1rem;
-    font-size: var(--sml);
-  }
-  .post :global(:is(td, th)) {
-    padding: 0.5ch 1ch;
-  }
-  .post :global(thead) {
-    border: 2px solid black;
-  }
-
-	:root {
-    --pink: mediumvioletred;
-    --green: teal;
-    --blue: slateblue;
-    --yellow: darkgoldenrod;
-    --orange: orangered;
-  }
-
-	:root.dark-mode {
-		--pink: hotpink;
-		--green: springgreen;
-		--blue: cyan;
-		--yellow: gold;
-		--orange: lightsalmon;
-	}
-
-  .post :global(code .comment) {
-    color: var(--orange);
-  }
-  .post :global(code .tag),
-  .post :global(code .keyword),
-  .post :global(code .selector),
-  .post :global(code .operator) {
-    color: var(--blue);
-  }
-  .post :global(code .punctuation),
-  .post :global(code .parameter) {
-    color: var(--pink);
-  }
-  .post :global(code .attr-name),
-  .post :global(code .function) {
-    color: var(--yellow);
-  }
-  .post :global(code .attr-value),
-  .post :global(code .property),
-  .post :global(code .string) {
-    color: var(--green);
-  }
+  .post :global(.short > *:first-child) {margin-top: 0}
+  .post :global(.short>div > *:last-child) {margin-bottom: 0}
 
 	a.back {
 		display: block;

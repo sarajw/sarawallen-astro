@@ -1,7 +1,9 @@
 ---
+short: true
 layout: "../../../layouts/BlogPost.astro"
-title: "Short thought"
-pubDate: "Sep 21 2022"
+title: "Short thought 2"
+heroImage: "/images/placeholder.png"
+pubDate: "Nov 20 2022"
 ---
 
 ## Hellooooooooo
