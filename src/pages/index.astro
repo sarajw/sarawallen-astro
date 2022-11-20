@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Toggle from '../components/Toggle.astro';
 import WorkModal from '../components/WorkModal.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
@@ -677,6 +677,14 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<section id="blog">
 				<article>
 					<ul>
+            <li>
+              <a href="blog/short"><img src="/images/placeholder.png" alt="blog post placeholder image"></a>
+              <div>
+                <h3><a href="blog/short">Short Thoughts (testing, WIP)</a></h3>
+                <p>A collection of shorter posts not big enough for their own article. Very likely also posted to <a href="https://front-end.social/@sarajw" target="_blank">Mastodon</a> or <a href="https://twitter.com/sarajoydev" target="_blank">Twitter</a>!</p>
+                <time datetime="2022">from 2022</time>
+              </div>
+            </li>
 						{posts.map((post) => (
 							<li>
 								<a href={post.url}><img src={post.frontmatter.heroImage?post.frontmatter.heroImage:"/images/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"}></a>
@@ -755,7 +763,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
 		</main>
-		<Footer />
+		<Toggle />
 	</body>
 
 </html>

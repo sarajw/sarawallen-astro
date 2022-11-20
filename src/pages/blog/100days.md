@@ -7,14 +7,6 @@ heroImage: "/images/blog/twitter.jpg"
 caption: "Profile picture of my twitter account"
 ---
 
-<!-- ---
-title: "#100DaysOfCode"
-date: "2022/09/21"
-exerpt: Copying and pasting my tweets on the matter as I slowly make my way non-consecutively through the 100 days.
-image: twitter.png
-caption: Profile picture of my twitter account
---- -->
-
 Want to see more? I post other stuff too: [@sarajoydev](https://twitter.com/sarajoydev) :)
 
 <div class="tweet">

@@ -164,6 +164,10 @@ main {
 	border-top-right-radius: var(--border-radii);
 }
 
+main, .post {
+	min-height: calc( 100vh - var(--tabheight));
+}
+
 main > section {
 	position: sticky;
 	min-height: calc(100vh - 5vmin - var(--tabheight));
@@ -613,17 +617,17 @@ pre.ascii-art {
 #blog time {
 	text-align: right;
 }
-#blog li:nth-child(n+4) img {
+#blog li:nth-child(n+5) img {
 	width: 10rem;
 	height: 10rem;
 }
-#blog li:nth-child(n+4) p {
+#blog li:nth-child(n+5) p {
 	margin-block: 0.5em;
 }
-#blog li:nth-child(n+4) div {
+#blog li:nth-child(n+5) div {
 	padding: 1rem 2rem;
 }
-#blog li:nth-child(n+4) h3 {
+#blog li:nth-child(n+5) h3 {
 	font-size: var(--h4);
 }
 

@@ -1,28 +1,16 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Toggle from "../components/Toggle.astro";
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import Toggle from "../../../components/Toggle.astro";
 
-export interface Props {
-	content: {
-		short?: boolean;
-		title: string;
-		description?: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
-		caption?: string;
-	};
-}
-
-const {
-	content: { short, title, description, pubDate, updatedDate, heroImage, caption },
-} = Astro.props;
+const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
+		<BaseHead title="Short Thoughts" description="Posts too small to be called articles" image="/images/placeholder.png" />
 	</head>
 
 	<body>
@@ -33,20 +21,21 @@ const {
 			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
 			<div class="post">
 				<article>
-					{heroImage && (
-						<figure>
-							<img
-								src={heroImage}
-								alt={caption}
-							/>
-							<figcaption class="caption">{caption}</figcaption>
-						</figure>
-					)}
-					<h1 class="title">{title}</h1>
-					{pubDate && <time>{pubDate}</time>}
-					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-					<slot />
-					{short ? <a class="back" href="index.html">&larr; back to shorts index</a>:<a class="back" href="/#goblog">&larr; back to blog index</a>}
+
+						{shorts.map((short) => (
+							<article>
+								<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
+								<time datetime={short.frontmatter.pubDate}>
+									{new Date(short.frontmatter.pubDate).toLocaleDateString('en-gb', {
+										year: 'numeric',
+										month: 'short',
+										day: 'numeric',
+									})}
+								</time>
+								<div set:html={short.compiledContent()}></div>
+							</article>
+						))}
+					<a class="back" href="/#goblog">&larr; back to blog index</a>
 				</article>
 			</div>
 		</main>
