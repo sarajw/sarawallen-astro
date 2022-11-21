@@ -46,7 +46,7 @@ const {
 					{pubDate && <time>{pubDate}</time>}
 					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 					<slot />
-					{short ? <a class="back" href="index.html">&larr; back to shorts index</a>:<a class="back" href="/#goblog">&larr; back to blog index</a>}
+					<a class="back" href="../{short ? "" : "#goblog"}">&larr; back to {short ? "shorts" : "blog"} index</a>
 				</article>
 			</div>
 		</main>
