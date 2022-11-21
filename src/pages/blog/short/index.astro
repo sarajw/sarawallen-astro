@@ -10,7 +10,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 
 <html lang="en">
 	<head>
-		<BaseHead title="Short Thoughts" description="Posts too small to be called articles" image="/images/placeholder.png" />
+		<BaseHead title="Short Thorts" description="Posts too small to be called articles" image="/images/placeholder.png" />
 	</head>
 
 	<body>
@@ -21,20 +21,19 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
 			<div class="post">
 				<article>
-
-						{shorts.map((short) => (
-							<article class="short">
-								<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
-								<time datetime={short.frontmatter.pubDate}>
-									{new Date(short.frontmatter.pubDate).toLocaleDateString('en-gb', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
-								</time>
-								<div set:html={short.compiledContent()}></div>
-							</article>
-						))}
+					{shorts.map((short) => (
+						<article class="short">
+							<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
+							<time datetime={short.frontmatter.pubDate}>
+								{new Date(short.frontmatter.pubDate).toLocaleDateString('en-gb', {
+									year: 'numeric',
+									month: 'short',
+									day: 'numeric',
+								})}
+							</time>
+							<div set:html={short.compiledContent()}></div>
+						</article>
+					))}
 					<a class="back" href="/#goblog">&larr; back to blog index</a>
 				</article>
 			</div>
