@@ -2,7 +2,6 @@
 short: true
 layout: "../../../layouts/BlogPost.astro"
 title: "Dungarees"
-heroImage: "/images/placeholder.png"
 pubDate: "Nov 22 2022"
 ---
 

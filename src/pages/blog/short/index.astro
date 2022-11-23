@@ -3,6 +3,11 @@ import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import Toggle from "../../../components/Toggle.astro";
 
+const image = "/images/blog/short-thorts.jpg";
+const alt = "Short Thorts in an informal font over a colourful paint splash background";
+const title = "Short Thorts";
+const description = "Shought Thoughts from the jelly between Sara's ears.";
+
 const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
@@ -10,7 +15,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 
 <html lang="en">
 	<head>
-		<BaseHead title="Short Thorts" description="Posts too small to be called articles" image="/images/blog/short-thorts.jpg" />
+		<BaseHead title={title} description={description} image={image} />
 	</head>
 
 	<body>
@@ -21,6 +26,12 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
 			<div class="post">
 				<article>
+					<img
+						src={image}
+						alt={alt}
+					/>
+					<h1>{title}</h1>
+					<p>{description}</p>
 					{shorts.map((short) => (
 						<article class="short">
 							<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
@@ -61,7 +72,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 		margin: 0 auto;
 		padding: 5.5vmin;
 	}
-	figure {
+	img {
 		margin-inline: auto;
 		margin-block: 0 3vmin;
 	}
@@ -71,54 +82,7 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 	time {
 		display: block;
 		width: fit-content;
-		margin: 0 0 3rem auto;
+		margin: 0 0 3vmin auto;
 	}
-	.post {
-		background-color: var(--blog);
-		margin: 0 0.25rem;
-	}
-  .post :global(img) {
-		display: block;
-		margin: 0 auto;
-		max-width: 100%;
-		max-height: 25rem;
-		border-radius: var(--border-radii);
-    box-shadow: 1px 1px 15px -12px black;
-  }
-	.post :global(p>img) {
-		margin-top: 0.5rem;
-	}
-	.post :global(.caption) {
-		text-align: center;
-		font-size: var(--sml);
-		font-style: italic;
-	}
-  .post :global(li) {
-    font-size: var(--p);
-    line-height: var(--h3);
-  }
-  .post :global(h2) {
-    color: var(--links);
-  }
-  .post :global(h3), .post :global(h4) {
-    color: var(--hover);
-  }
-  .post :global(.short) {
-		padding: 3vmin;
-    border-radius: var(--border-radii);
-    box-shadow: 1px 1px 15px -12px black;
-	}
-  .post :global(.short) {
-    background-color: var(--work);
-		margin: 5vmin 0;
-  }
-  .post :global(.short > *:first-child) {margin-top: 0}
-  .post :global(.short>div > *:last-child) {margin-bottom: 0}
 
-	a.back {
-		display: block;
-		width: fit-content;
-		margin: 3em auto 0;
-		font-weight: bold;
-	}
 </style>

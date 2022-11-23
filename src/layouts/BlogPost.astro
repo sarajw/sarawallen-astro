@@ -22,7 +22,7 @@ const {
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={short ? "/images/blog/short-thorts.jpg" : heroImage} />
+		<BaseHead title={title} description={short ? "Short thoughts from between Sara's ears" : description} image={short ? "/images/blog/short-thorts.jpg" : heroImage} />
 	</head>
 
 	<body>
@@ -85,41 +85,7 @@ const {
 		width: fit-content;
 		margin: 0 0 3rem auto;
 	}
-	.post {
-		background-color: var(--blog);
-		margin: 0 0.25rem;
-	}
-  .post :global(img) {
-		display: block;
-		margin: 0 auto;
-		max-width: 100%;
-		max-height: 25rem;
-		border-radius: var(--border-radii);
-    box-shadow: 1px 1px 15px -12px black;
-  }
-	.post :global(p>img) {
-		margin-top: 0.5rem;
-	}
-	.post :global(.caption) {
-		text-align: center;
-		font-size: var(--sml);
-		font-style: italic;
-	}
-  .post :global(li) {
-    font-size: var(--p);
-    line-height: var(--h3);
-  }
-  .post :global(h2) {
-    color: var(--links);
-  }
-  .post :global(h3), .post :global(h4), h1 {
-    color: var(--hover);
-  }
-  .post :global(pre, .tweet) {
-		padding: 3vmin;
-    border-radius: var(--border-radii);
-    box-shadow: 1px 1px 15px -12px black;
-	}
+	
   .post :global(pre) {
 		font-size: var(--sml);
 		line-height: 1.25em;
@@ -128,12 +94,7 @@ const {
     max-width: 100%;
     overflow-x: auto;
   }
-  .post :global(.tweet) {
-    background-color: var(--work);
-		margin: 5vmin 0;
-  }
-  .post :global(.tweet > *:first-child) {margin-top: 0}
-  .post :global(.tweet > *:last-child) {margin-bottom: 0}
+
   .post :global(table) {
     margin-block: 1rem;
     font-size: var(--sml);
