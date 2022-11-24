@@ -721,13 +721,13 @@ form button:active {
 		max-width: 100%;
 		height: 50vw;
 	}
-	#blog li:nth-child(n+4) img {
+	#blog li:nth-child(n+5) img {
 		object-position: 0 25%;
 		width: 100%;
 		max-width: 100%;
 		height: 25vw;
 	}
-	#blog li:nth-child(n+4) p {
+	#blog li:nth-child(n+5) p {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
