@@ -95,14 +95,14 @@ h1 {font-size: var(--h1)}
 a, a:visited { 
 	color: var(--links);
 	font-weight: var(--heavy);
-	text-decoration: underline var(--hover) 0.2ex;
-	text-underline-offset: 0.25ex;
+	text-decoration: underline var(--hover) 0.1em;
+	text-underline-offset: 0.125em;
 }
-a:hover, a:active, a:focus, .welcome button:hover {
+a:hover, a:active, a:focus {
 	color: var(--hover);
 	border-bottom: 0;
-	text-decoration: underline wavy var(--links) 0.2ex;
-	text-underline-offset: 0.15ex;
+	text-decoration: underline wavy var(--links) 0.1em;
+	text-underline-offset: 0.075em;
 }
 :is(header, footer, .tab, .tabDummy) a {
 	text-decoration: none;
@@ -127,7 +127,8 @@ img:is(.logo, .social) {
 	height: var(--icons);
 	max-width: calc(1.5 * var(--icons));
 }
-.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
+.dark-mode :is(.social, [title="PHP"], [title="Next.js"],
+[title="Astro"], [title="Prisma"], [title="PowerShell"]) {
 	filter: invert(80%);
 }
 
