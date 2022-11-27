@@ -188,9 +188,22 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                 Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
               </p>
             </WorkModal>
-						
-						<div class="smsq1" id="c1"></div>
-						<div class="smsq2" id="d1"></div>
+
+            <WorkModal
+              buttonClass="shcol"
+              buttonImg="card-small.jpg"
+              title="QR Code Card"
+              modalId="c1"
+              modalImg="card-back.png"
+              alt="A very simple web page with a round profile picture and links to twitter, email, website"
+              url="https://card.sarajoy.dev/">
+              <p>
+                I had an idea to make a digital business card, to use at my very first web-development conference.
+              </p>
+              <p>
+                In the end, it wasn't really used - but no matter, it was fun to make :)
+              </p>
+            </WorkModal>
 					</section>
 				
 					<section class="container box2">
@@ -658,7 +671,8 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						
 						<button class="shrow" id="c3" style="background-image: url('/images/work/tumblr_small.jpg')" title="Open Tumblr"><h3 class="caption">Tumblr</h3></button>
 						
-						<div class="shcol" id="d3"></div>
+						<div class="smsq2" id="d3"></div>
+						<div class="smsq3" id="e3"></div>
 					</section>
 				
 					<section class="container box4">

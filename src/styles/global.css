@@ -397,8 +397,8 @@ section > article ul {
 .box1 {
 	grid-template-areas:
 		"bigrow bigrow bigrow"
-		"bigsq bigsq smsq1"
-		"bigsq bigsq smsq2";
+		"bigsq bigsq shcol"
+		"bigsq bigsq shcol";
 }
 
 .box2 {
@@ -411,8 +411,8 @@ section > article ul {
 .box3 {
 	grid-template-areas:
 		"bigsq bigsq smsq1"
-		"bigsq bigsq shcol"
-		"shrow shrow shcol";
+		"bigsq bigsq smsq2"
+		"shrow shrow smsq3";
 }
 
 .box4 {
@@ -422,22 +422,10 @@ section > article ul {
 		"smsq1 bigsq bigsq";
 }
 
-.bigsq {
-	grid-area: bigsq;
-	background-color: rgba(100, 100, 150, 0.25);
-}
-.bigrow {
-	grid-area: bigrow;
-	background-color: rgba(150, 100, 100, 0.25);
-}
-.shcol {
-	grid-area: shcol;
-	background-color: rgba(100, 150, 100, 0.25);
-}
-.shrow {
-	grid-area: shrow;
-	background-color: rgba(150, 150, 100, 0.25);
-}
+.bigsq { grid-area: bigsq }
+.bigrow { grid-area: bigrow }
+.shcol { grid-area: shcol }
+.shrow { grid-area: shrow }
 .smsq1 {
 	grid-area: smsq1;
 	background-color: rgba(100, 150, 150, 0.25);
@@ -445,6 +433,10 @@ section > article ul {
 .smsq2 {
 	grid-area: smsq2;
 	background-color: rgba(150, 100, 150, 0.25);
+}
+.smsq3 {
+	grid-area: smsq3;
+	background-color: rgba(100, 150, 150, 0.25);
 }
 
 .container {
