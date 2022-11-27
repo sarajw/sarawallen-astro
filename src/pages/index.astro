@@ -6,8 +6,6 @@ import WorkModal from '../components/WorkModal.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
 
-const today = new Date();
-
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -37,10 +35,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					tabTopSetting();
 				}
 			}
-
-			// window.addEventListener('DOMContentLoaded', (event) => {
-			// 	tabTopSetting();
-			// });
 
 			window.addEventListener("resize", tabTopSetting);
 
@@ -119,7 +113,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 							<p>
 								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/" target="_blank">Astro</a>.
 							</p>
-							<p class="signoff">~ Sara {today.getFullYear()}</p>
 						</div>
 					</div>
 					

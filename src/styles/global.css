@@ -353,9 +353,6 @@ section > article ul {
 .dark-mode .welcome img {
 	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem var(--shadow));
 }
-.signoff {
-	text-align: right;
-}
 #sara h3:nth-of-type(2) {
 	margin-bottom: 0;
 }
