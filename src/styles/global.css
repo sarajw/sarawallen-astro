@@ -97,14 +97,16 @@ h1 {font-size: var(--h1)}
 a, a:visited { 
 	color: var(--links);
 	font-weight: var(--heavy);
-	text-decoration: underline var(--hover);
+	text-decoration-line: underline;
+	text-decoration-color: var(--hover);
 	text-decoration-thickness: 0.1em;
 	text-underline-offset: 0.125em;
 }
 a:hover, a:active, a:focus {
 	color: var(--hover);
 	border-bottom: 0;
-	text-decoration: underline wavy var(--links);
+	text-decoration-color: var(--links);
+	text-decoration-style: wavy;
 	text-underline-offset: 0.075em;
 }
 :is(header, footer, .tab, .tabDummy) a {
