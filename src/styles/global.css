@@ -8,7 +8,7 @@
 		url('/fonts/karla.woff2') format('woff2-variations');
 }
 
-:root {
+:root, ::backdrop {
 
 	/* colours */
 	
@@ -20,6 +20,7 @@
 	--text: hsl(var(--base), 20%);
 	--links: hsl(var(--pop), 35%);
 	--hover: hsl(var(--2nd), 40%);
+	--shadow: hsla(var(--base), 0%, 0.25);
 
   --header: hsl(var(--base), 100%);
   --sara: hsl(var(--base), 90%);
@@ -52,6 +53,7 @@
 	--text: hsl(var(--base), 80%);
 	--links: hsl(var(--pop), 60%);
 	--hover: hsl(var(--2nd), 60%);
+	--shadow: hsla(var(--base), 0%, 0.5);
 
   --header: hsl(var(--base), 0%);
   --sara: hsl(var(--base), 15%);
@@ -95,13 +97,14 @@ h1 {font-size: var(--h1)}
 a, a:visited { 
 	color: var(--links);
 	font-weight: var(--heavy);
-	text-decoration: underline var(--hover) 0.1em;
+	text-decoration: underline var(--hover);
+	text-decoration-thickness: 0.1em;
 	text-underline-offset: 0.125em;
 }
 a:hover, a:active, a:focus {
 	color: var(--hover);
 	border-bottom: 0;
-	text-decoration: underline wavy var(--links) 0.1em;
+	text-decoration: underline wavy var(--links);
 	text-underline-offset: 0.075em;
 }
 :is(header, footer, .tab, .tabDummy) a {
@@ -126,10 +129,11 @@ img:not(.social) {
 img:is(.logo, .social) {
 	height: var(--icons);
 	max-width: calc(1.5 * var(--icons));
+	filter: drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 .dark-mode :is(.social, [title="PHP"], [title="Next.js"],
 [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
-	filter: invert(80%);
+	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));;
 }
 
 main {
@@ -340,10 +344,10 @@ section > article ul {
 	aspect-ratio: 1;
 	margin: 0 auto;
 	border-radius: 50%;
-	filter: brightness(1.2) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25));
+	filter: brightness(1.2) drop-shadow(0.1rem 0.1rem 0.5rem var(--shadow));
 }
 .dark-mode .welcome img {
-	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5));
+	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem var(--shadow));
 }
 .signoff {
 	text-align: right;
@@ -358,10 +362,6 @@ section > article ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.25));
-}
-.dark-mode .stack {
-	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.5));
 }
 
 .work {
@@ -516,7 +516,7 @@ dialog p:last-child {
 	margin-bottom: 0;
 }
 dialog::backdrop {
-	background-color: rgba(128,128,128,0.25);
+	background-color: hsla(var(--base), 50%, 0.35);
 	-webkit-backdrop-filter: blur(0.25rem);
 					backdrop-filter: blur(0.25rem);
 }
@@ -662,16 +662,11 @@ pre.ascii-art {
 }
 img.social {
 	transition: opacity 0.2s ease, transform 0.2s ease;
-	filter: drop-shadow(0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.25));
 	opacity: 0.8;
 }
 img.social:is(:hover,:active,:focus-visible) {
 	transform: translate(1px, 1px);
-	filter: drop-shadow(0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.25));
 	opacity: 0.6;
-}
-.dark-mode img.social:is(:hover,:active,:focus-visible) {
-	filter: invert(80%)
 }
 
 form {
