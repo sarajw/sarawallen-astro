@@ -99,15 +99,15 @@ a, a:visited {
 	font-weight: var(--heavy);
 	text-decoration-line: underline;
 	text-decoration-color: var(--hover);
-	text-decoration-thickness: 0.1em;
-	text-underline-offset: 0.125em;
+	text-decoration-thickness: 0.2ex;
+	text-underline-offset: 0.25ex;
 }
 a:hover, a:active, a:focus {
 	color: var(--hover);
 	border-bottom: 0;
 	text-decoration-color: var(--links);
 	text-decoration-style: wavy;
-	text-underline-offset: 0.075em;
+	text-underline-offset: 0.15ex;
 }
 :is(header, footer, .tab, .tabDummy) a {
 	text-decoration: none;
@@ -332,6 +332,7 @@ section > article ul {
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
+	margin-bottom: 8vmin;
 }
 @media (max-width: 600px) {
 	.welcome {
@@ -342,6 +343,7 @@ section > article ul {
 	flex: 3;
 }
 .welcome img {
+	max-width: 80%;
 	max-height: 16rem;
 	aspect-ratio: 1;
 	margin: 0 auto;
@@ -353,6 +355,9 @@ section > article ul {
 }
 .signoff {
 	text-align: right;
+}
+#sara h3:nth-of-type(2) {
+	margin-bottom: 0;
 }
 .stack {
 	/* display: grid;
