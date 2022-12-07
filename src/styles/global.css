@@ -667,7 +667,7 @@ img.social:is(:hover,:active,:focus-visible) {
 
 form {
 	width: min-content;
-	margin: 0 auto;
+	margin: 0 auto 8vmin;
 }
 input,
 textarea {
