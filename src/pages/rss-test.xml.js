@@ -7,7 +7,7 @@ const posts = Object.values(postImportResult);
 
 export const get = () =>
 	rss({
-		title: SITE_TITLE+" | full content",
+		title: SITE_TITLE+" | short",
 		description: SITE_DESCRIPTION,
 		site: import.meta.env.SITE,
 		items: posts.map((post) => ({
