@@ -14,6 +14,6 @@ export const get = () =>
 			link: post.url,
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.pubDate,
-			description: post.frontmatter.short ? sanitizeHtml(post.compiledContent()) : post.frontmatter.description + " | Read more at " + post.url, 
+			description: post.frontmatter.short ? sanitizeHtml(post.compiledContent()) : post.frontmatter.description + " | Read more at " + import.meta.env.SITE + post.url, 
 		}))
 	});
