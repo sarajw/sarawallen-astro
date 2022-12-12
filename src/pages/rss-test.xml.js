@@ -14,7 +14,10 @@ export const get = () =>
 			link: post.url,
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.pubDate,
-			description: post.frontmatter.short ? "" : post.frontmatter.description,
-			content: post.frontmatter.short ? sanitizeHtml(post.compiledContent()) : "",
+			if (post.frontmatter.short) {
+				content: sanitizeHtml(post.compiledContent()),
+			} else {
+				description: post.frontmatter.description,
+			}
 		}))
 	});
