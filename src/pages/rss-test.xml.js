@@ -14,10 +14,6 @@ export const get = () =>
 			link: post.url,
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.pubDate,
-			if (post.frontmatter.short) {
-				content: sanitizeHtml(post.compiledContent()),
-			} else {
-				description: post.frontmatter.description,
-			}
+			post.frontmatter.short ? 'content: sanitizeHtml(post.compiledContent())' : 'description: post.frontmatter.description',
 		}))
 	});
