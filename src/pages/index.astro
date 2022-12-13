@@ -781,6 +781,17 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
 		</main>
+    <script is:inline>
+      function flipTheClaw() {
+        const webring = document.getElementById("theClaw");
+        if (htmlRoot.classList.contains("dark-mode")) {
+          webring.setAttribute("theme", "dark")
+        } else {
+          webring.setAttribute("theme", "light")
+        }
+      }
+      flipTheClaw();
+    </script>
 		<Toggle />
 	</body>
 

@@ -61,15 +61,6 @@ function switchLight() {
   sessionStorage.setItem("mode", "light");
 }
 
-function flipTheClaw() {
-  const webring = document.getElementById("theClaw");
-  if (htmlRoot.classList.contains("dark-mode")) {
-    webring.setAttribute("theme", "dark")
-  } else {
-    webring.setAttribute("theme", "light")
-  }
-}
-
 //check for session preference
 if (mode) {
   if (mode === "dark") {switchDark();}
