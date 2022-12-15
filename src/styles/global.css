@@ -122,7 +122,7 @@ a:focus-visible {
 	border-radius: var(--border-radii);
 }
 
-img:not(.social) {
+img:not(.social,.logo) {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -133,7 +133,7 @@ img:is(.logo, .social) {
 	max-width: calc(1.5 * var(--icons));
 	filter: drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
-.dark-mode :is(.social, [title="PHP"], [title="Next.js"],
+.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [alt="RSS"],
 [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
 	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));;
 }
@@ -578,7 +578,7 @@ pre.ascii-art {
 	display: grid;
 	gap: 5vmin;
 }
-#blog li {
+.posts {
 	display: flex;
 	overflow: hidden;
 	border-radius: var(--border-radii);
@@ -586,52 +586,52 @@ pre.ascii-art {
 	transition: transform 0.2s ease;
 	box-shadow: 2px 2px 10px -8px black;
 }
-#blog li:hover {
+.posts:hover {
 	background-color: hsla(var(--2nd), 50%, 25%);
 	transform: translate(1px, 1px);
 	box-shadow: 2px 2px 10px -9px black;
 }
-#blog li > a {
+.posts > a {
 	flex: none;
 }
-#blog img {
+.posts img {
 	display: block;
 	width: 15rem;
 	height: 15rem;
 	object-fit: cover;
 }
-#blog li div {
+.posts div {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 1.5rem 2rem;
 }
-#blog h3 {
+.posts h3 {
 	font-size: var(--h3);
 	margin: 0;
 }
-#blog time {
+.posts time {
 	text-align: right;
 }
-#blog li:nth-child(n+5) img {
+.posts:nth-child(n+5) img {
 	width: 10rem;
 	height: 10rem;
 }
-#blog li:nth-child(n+5) p {
+.posts:nth-child(n+5) p {
 	margin-block: 0.5em;
 }
-#blog li:nth-child(n+5) div {
+.posts:nth-child(n+5) div {
 	padding: 1rem 2rem;
 }
-#blog li:nth-child(n+5) h3 {
+.posts:nth-child(n+5) h3 {
 	font-size: var(--h4);
 }
-.feeds ul {
-	display: flex;
-	gap: 1em;
+.feeds {
+	width: fit-content;
+	margin: 5vmin auto;
+	text-align: center;
 }
-.feeds li {padding: 0.25em}
 
 .tab.find {
 	z-index: 14;
@@ -701,6 +701,15 @@ form button:active {
 	background-color: var(--hover);
 }
 
+#indieWeb {
+	font-size: var(--h4);
+	width: fit-content;
+	margin: 1.25em auto;
+}
+#indieWeb a:nth-child(odd) {
+	text-decoration: none;
+}
+
 
 @supports(height: 100dvh) {
 	#find {
@@ -710,21 +719,21 @@ form button:active {
 
 
 @media only screen and (max-width: 720px) {
-	#blog li {
+	.posts {
 		flex-direction: column;
 	}
-	#blog img {
+	.posts img {
 		width: 100%;
 		max-width: 100%;
 		height: 50vw;
 	}
-	#blog li:nth-child(n+5) img {
+	.posts:nth-child(n+5) img {
 		object-position: 0 25%;
 		width: 100%;
 		max-width: 100%;
 		height: 25vw;
 	}
-	#blog li:nth-child(n+5) p {
+	.posts:nth-child(n+5) p {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
