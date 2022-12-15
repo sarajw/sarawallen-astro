@@ -574,7 +574,7 @@ pre.ascii-art {
 	z-index: 3;
 	background-color: var(--blog);
 }
-#blog ul {
+#blog article > ul {
 	display: grid;
 	gap: 5vmin;
 }
@@ -627,6 +627,11 @@ pre.ascii-art {
 #blog li:nth-child(n+5) h3 {
 	font-size: var(--h4);
 }
+.feeds ul {
+	display: flex;
+	gap: 1em;
+}
+.feeds li {padding: 0.25em}
 
 .tab.find {
 	z-index: 14;

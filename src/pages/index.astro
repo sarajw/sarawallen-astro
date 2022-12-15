@@ -710,6 +710,13 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 							</li>
 						))}
 					</ul>
+          <div class="feeds">
+            <img src="images/icons/rss.svg" alt="RSS" title="RSS">
+            <ul>
+              <li><a href="rss-long.xml" title="entire articles">Full</a></li>
+              <li><a href="rss-short.xml" title="descriptions and short posts">Short</a></li>
+              <li><a href="rss.xml" title="links and descriptions only">Short</a></li>
+          </div>
 				</article>
 			</section>
 			
@@ -774,9 +781,8 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
           </form>
 
           <h3>Or, find others!</h3>
-            <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
-            <the-claw-webring-widget id="theClaw" />
-
+          <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
+          <the-claw-webring-widget id="theClaw" />
 				</article>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
@@ -785,7 +791,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
       function flipTheClaw() {
         const webring = document.getElementById("theClaw");
         if (htmlRoot.classList.contains("dark-mode")) {
-          webring.setAttribute("theme", "dark")
+          webring.removeAttribute("theme")
         } else {
           webring.setAttribute("theme", "light")
         }
