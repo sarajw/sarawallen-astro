@@ -627,8 +627,8 @@ pre.ascii-art {
 .posts:nth-child(n+5) h3 {
 	font-size: var(--h4);
 }
-.feeds {
-	width: fit-content;
+#feeds {
+	width: max-content;
 	margin: 5vmin auto;
 	text-align: center;
 }
@@ -702,7 +702,7 @@ form button:active {
 }
 
 #indieWeb {
-	font-size: var(--h4);
+	font-size: clamp(1rem, 3vw, 1.5rem);
 	width: fit-content;
 	margin: 1.25em auto;
 }
