@@ -701,11 +701,14 @@ form button:active {
 	background-color: var(--hover);
 }
 
-#indieWeb {
-	font-size: clamp(1rem, 3vw, 1.5rem);
-	width: fit-content;
-	margin: 1.25em auto;
+.links-out {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.25rem;
+	font-size: clamp(0.9rem, 5vw, 1.5rem);
 }
+
 #indieWeb a:nth-child(odd) {
 	text-decoration: none;
 }
