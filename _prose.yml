@@ -1,7 +1,7 @@
 prose:
-  rooturl: 'blog'
+  rooturl: 'src/pages/blog'
   metadata:
-    blog/short:
+    src/pages/blog/short:
       - name: "short"
         field:
           element: "hidden"
