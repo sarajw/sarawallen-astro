@@ -1,0 +1,23 @@
+prose:
+  rooturl: 'blog'
+  metadata:
+    blog/short:
+      - name: "short"
+        field:
+          element: "hidden"
+          value: true
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "../../../layouts/BlogPost.astro"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "pubDate"
+        field:
+          element: "text"
+          label: "Date published"
+          placeholder: "Jan 01 2023"
+          value: ""
