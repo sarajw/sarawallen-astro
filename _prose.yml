@@ -19,5 +19,4 @@ prose:
         field:
           element: "text"
           label: "Date published"
-          placeholder: "Jan 01 2023"
-          value: ""
+          value: CURRENT_DATETIME
