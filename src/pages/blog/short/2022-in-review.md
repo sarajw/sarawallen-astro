@@ -3,7 +3,7 @@ layout: ../../../layouts/BlogPost.astro
 short: true
 pubDate: '2023-01-01 21:50 +0100'
 published: false
-title: My 2022 in Review
+title: 2022 in Review
 ---
 I feel like it could either be a very long blog post, or a very short masto one.
 
