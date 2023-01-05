@@ -5,7 +5,7 @@ pubDate: '2023-01-01 21:50 +0100'
 published: false
 title: 2022 in Review
 ---
-I feel like it could either be a very long blog post, or a very short masto one.
+I feel like it could either be a very long blog post, or a very short one.
 
 Let's go with short:
 
