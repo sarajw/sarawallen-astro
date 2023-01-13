@@ -822,11 +822,11 @@ form button:active {
 	box-shadow: 1px 1px 15px -12px black;
 }
 .post .short, .post .tweet {
-	background-color: var(--work);
+	background-color: var(--sara);
 	margin: 5vmin 0;
 }
-.post :is(.short, .tweet) > *:first-child {margin-top: 0}
-.post :is(.short, .tweet) > div > *:last-child {margin-bottom: 0}
+:is(.tweet, .short) > *:first-child {margin-top: 0}
+:is(.tweet, .short > div) > *:last-child {margin-bottom: 0}
 
 .post a.back {
 	display: block;
