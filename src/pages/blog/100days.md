@@ -22,7 +22,7 @@ I always cheated! With small children and a day job, I just couldn't put aside t
 Since Day 93, I have:
 - joined @whitep4nth3r's & IndieWeb webrings
 - set up a full-content RSS feed on https://sarajoy.dev
-- written about `color-scheme` https://www.htmhell.dev/adventcalendar/2022/19/
+- written about `color-scheme` for [HTMHell's Advent Calendar](https://www.htmhell.dev/adventcalendar/2022/19/)
 
 ...amongst other stuff :)
 
