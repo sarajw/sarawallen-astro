@@ -2,14 +2,206 @@
 layout: "../../layouts/BlogPost.astro"
 title: "#100DaysOfCode"
 description: "Copying and pasting my tweets on the matter as I slowly make my way non-consecutively through the 100 days."
-pubDate: "Sep 21 2022"
+pubDate: "Jan 08 2023"
 heroImage: "/images/blog/twitter.jpg"
 caption: "Profile picture of my twitter account"
 ---
 
-Want to see more? I post other stuff too: [@sarajoydev](https://twitter.com/sarajoydev) :)
+Want to see more?  
+I posted other stuff too: [@sarajoydev](https://twitter.com/sarajoydev)  
+But I'm now active here: [@sarajw](https://front-end.social/@sarajw) :)
 
 <div class="tweet">
+
+## Day 94 - Day 100<wbr>/#100DaysOfCode 
+
+Yeah - I'm cheating! But I did #100DaysOfCode to get into the habit of regular coding to learn enough to pivot my career, and it worked :)
+
+I always cheated! With small children and a day job, I just couldn't put aside time *every* day. So I didn't.
+
+Since Day 93, I have:
+- joined @whitep4nth3r's & IndieWeb webrings
+- set up a full-content RSS feed on https://sarajoy.dev
+- written about `color-scheme` https://www.htmhell.dev/adventcalendar/2022/19/
+
+...amongst other stuff :)
+
+</div><div class="tweet">
+
+## Day 93<wbr>/#100DaysOfCode
+
+Lots of day job code happened in the mean time. So much React What even is HTML any more?
+
+Anyway, on the site I made for https://bendickson.co.uk (and to a lesser degree on my own site) I found that on iOS Safari CanvasText and Canvas were apparently not working properly as colors that change with color-scheme in webkit. Needs more research/testing.
+
+*[Edit - may have been something weirdly specific to the iPhone 7 I use for testing?]*
+
+Also have added my little digital QR code business card to my portfolio, and fixed my cute link underlines in Safari.
+
+</div><div class="tweet">
+
+## Day 92<wbr>/#100DaysOfCode
+
+Been digging into my site again - I've now added an extra page for shorter blog items, and will use it for saving the particularly genius (hahahha, right) things I post here, or post other 'Short Thorts' I might have, when I'm in the shower or whatever...
+
+https://sarajoy.dev/blog/short/
+
+These will also show up in the RSS feed, hopefully.
+
+To do:
+- give the Short Thorts index its own image, intro heading & blurb
+- add a link to the RSS feed
+- have some genius thorts...
+
+</div><div class="tweet">
+
+## Day 91<wbr>/#100DaysOfCode
+
+Been fiddling with styling on http://sarajoy.dev as always (hey, who needs content anyway?) and enjoying the CSS :nth-child() pseudo selector. I was about to start slicing up my blog index with JS, but realised I could make the changes in CSS instead.
+
+</div><div class="tweet">
+
+## Day 90<wbr>/#100DaysOfCode
+
+Honestly I can't really remember what I've been doing, just slowly fixing up the homepage bit by bit, @github knows, though:
+
+![GitHub commit logs, with amusing commit messages like "silly button" and "messing with underlines"](/images/blog/github-knows.png)
+
+</div><div class="tweet">
+
+## Day 89<wbr>/#100DaysOfCode
+
+More work on my little website:
+- got sessionStorage working to keep the right light/dark mode between pages
+- lots of formatting of blog posts to make them fit with the rest of the site
+- always finding little CSS bugs because am trying to be too clever 🥴
+
+</div><div class="tweet">
+
+## Day 88<wbr>/#100DaysOfCode
+
+Did a bunch of little things on my site:
+
+- made sure it didn't break on window resize
+- neatened up the skills icons
+- refactored a little bit of JS into functions
+- tested loading the site on Slow 3G throttling, disabling cache. Oh dear. Dear oh dear...
+
+### Day 88 continued:
+
+Notes to self:
+
+- optimize image file sizes, experiment with setting image width and height in HTML, and/or use a single placeholder image everywhere
+
+- experiment with session storage to keep the chosen light/dark mode when going into and out of blog posts
+
+</div><div class="tweet">
+
+## Day 87<wbr>/#100DaysOfCode
+
+I've been harbouring a little impostor syndrome (haven't we all). But I just sat down and figured out a little thing in JS, it was easier to figure out than expected, and I learned a couple of new things. Now I'm like squeee again!
+
+### Quote tweet:
+
+From some searching, I guess I can use JavaScript offsetHeight and then set top: to be the size of the viewport minus the element's height. Hm. Hm hm hm.
+
+### Followed by:
+
+w00t, so I did exactly that! With less complicated JS than I thought it would need, too! And I was able to iterate it over all the sections so they should all just do the thing when needed!
+
+I have other navigation problems now but eh, I think I can probably fix that too...
+
+</div><div class="tweet">
+
+## Day 86<wbr>/#100DaysOfCode
+
+I just spent too long fannying about with colours!
+
+I tried to make my website match the colour scheme I have here on my twitter profile picture and banner, but on a whole website it was a little too confronting IMO.
+
+Instead I decided to edit the image :)
+
+![Screenshot of sarajoy.dev - The profile picture I have on twitter has an orangey-red background, this is now a deeper mulberry-mauve-purple (describing colours is not my strong point) on my website.](/images/blog/blog-progress.jfif)
+
+</div><div class="tweet">
+
+## Day 85<wbr>/#100DaysOfCode
+
+That feeling when you think you're onto something cute, but you know it's actually not great to read and so somewhat inaccessible...
+
+I will find a good way through which is less of a headache to read - but it's fun to play on the way :)
+
+![A screenshot of Sara's new website in progress, the links are a sort of teal green with a purple inset shadow under/behind them. One of the placeholder blog links is being hovered, that has the colours reversed, purple text with a green shadow.](/images/blog/fat-translucent-underlines.png)
+
+</div><div class="tweet">
+
+## Day 84<wbr>/#100DaysOfCode
+
+I made myself a silly digital business card :)
+
+https://card.sarajoy.dev
+
+I don't even know if the use-case I have in mind for this is even likely!
+
+My thinking is if someone wants my details in a hurry at 
+@webdevconf, they can snap a picture of my phone screen and connect later.
+
+### Day 84 continued:
+
+There's now a QR code 'behind' the picture :)
+
+There's also some wackiness with the rainbow background occasionally pulling up from the bottom, but eh... I haven't time right not to learn how to properly sort that out, time to pack!
+
+</div><div class="tweet">
+
+## Day 83<wbr>/#100DaysOfCode
+
+I'm very slowly adding back functionality...
+
+Working on the modals in the work section, only the top one opens. Needs styling, a close button & click-away-close. Esc key works. Backdrop & scrolling behind modal also need sorting.
+
+</div><div class="tweet">
+
+## Day 82<wbr>/#100DaysOfCode
+
+Adding some of my blog posts to the newly merged site.
+
+Fiddled with some styles with regards the tabs - they're finicky!
+
+Got a load of styling still to do, and to build up the portfolio anew, but I'm satisfied with the progress :)
+
+</div><div class="tweet">
+
+## Day 81<wbr>/#100DaysOfCode
+
+Fixed a few UI niggles.
+
+Love CSS, starts so clean, but the cleverer you try to be, the hackier it gets. Wonderful.
+
+Plan:
+- port new tabs UI into Astro blog template
+- display existing .md blog post files
+- rebuild portfolio in Astro, using &lt;dialog&gt; modals
+
+</div><div class="tweet">
+
+## Day 80<wbr>/#100DaysOfCode
+
+I went back to my 1st experiment making sliding sticky cards: https://sticky-cards.netlify.app
+
+Also with folder tabs: https://sticky-cards.netlify.app/tabbed/
+
+Now I've fiiinally figured out how to make them work with pages longer than the viewport height: https://sticky-cards.netlify.app/longer/
+
+### Day 80 continued:
+
+The final one (longer) is a bit broken and ugly right now, as I'm still working on it.
+
+But now I know I can make these pages longer, I think I will use this as the basis for my new website after all - including blog and portfolio pages.
+
+I'm pretty excited that it could work! 🙌
+
+</div><div class="tweet">
 
 ## Day 79<wbr>/#100DaysOfCode
 

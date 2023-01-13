@@ -43,8 +43,16 @@ const {
 						</figure>
 					)}
 					<h1 class="title">{title}</h1>
-					{pubDate && <time>{pubDate}</time>}
-					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+					{pubDate && <time>{new Date(pubDate).toLocaleDateString('en-gb', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})}</time>}
+					{updatedDate && <div>Last updated on <time>{new Date(pubDate).toLocaleDateString('en-gb', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})}</time></div>}
 					<slot />
 					<a class="back" href={short ? "../" : "/#goblog"}>&larr; back to {short ? "shorts" : "blog"} index</a>
 				</article>
