@@ -178,8 +178,8 @@ main, .post {
 main > section {
 	position: sticky;
 	min-height: calc(100vh - 5vmin - var(--tabheight));
-	margin: 0 0.25rem;
-	padding: 0.25rem 5vmin calc(2 * var(--tabheight));
+	margin: 0 0.25rem calc(-1 * var(--tabheight));
+	padding: 0.25rem 5vmin calc(3 * var(--tabheight));
 	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
@@ -224,6 +224,7 @@ section > article ul {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
+	filter: drop-shadow(0 0 0.1rem var(--header));
 }
 
 #toggleBtn:focus-visible {
