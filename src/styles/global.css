@@ -75,7 +75,12 @@
 	--text: CanvasText;
 	--border: 0.2rem solid CanvasText;
 }
-.high-contrast main > section {
+
+* {
+		box-sizing: border-box;
+}
+
+.high-contrast :is(main > section, main .post, .shortIndex, .blogPost) {
 	border-inline: var(--border);
 }
 .high-contrast .tab h2, 
@@ -87,15 +92,20 @@
 .high-contrast .tab::after {
 	width: calc(100% - 0.9rem);
 }
+.high-contrast :is(.blogPost, .shortIndex) .tab {
+	width: calc(100% - 0.8rem);
+}
+.high-contrast :is(.blogPost, .shortIndex) .tab::after {
+	width: calc(100% - 0.55rem);
+}
+.high-contrast :is(.blogPost, .shortIndex) .post {
+	margin: 0 0.1rem;
+}
 .high-contrast .tab.find::after {
 	border-top-right-radius: var(--border-radii);
 }
 .high-contrast :is(.statuslol, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
 	border: var(--border);
-}
-
-* {
-		box-sizing: border-box;
 }
 
 html {
@@ -262,7 +272,7 @@ section > article ul {
 	width: calc(1.5rem + 0.75vw);
 	height: calc(1rem + 0.5vw);
 	right: min(5vw,2rem);
-	bottom: calc(min(3vw,2rem) + (2rem + 2vw));
+	bottom: calc(min(3vw,2rem) + (3rem + 1vw));
 	background-image: url('/images/contrast.svg');
 }
 
