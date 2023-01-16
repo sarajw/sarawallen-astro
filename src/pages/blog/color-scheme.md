@@ -116,7 +116,8 @@ Know what else is great? `color-scheme` takes the default UI elements with it. T
 
 ![A minimally-styled form in both dark and light modes](/images/blog/light-dark-form.png)
 
-Please feel free to fork and play with the Codepen: https://codepen.io/sarajw/pen/xxzyOMZ
+Please feel free to fork and play with the Codepen: [CodePen Home
+Color-scheme Tinkering](https://codepen.io/sarajw/pen/xxzyOMZ)
 
 ### Any other benefits?
 
@@ -142,7 +143,7 @@ Do check the dates on these! `color-scheme` is still relatively new, but it's mu
     
 *   [Jim Nielsen](https://www.jim-nielsen.com/) wrote about both `color-scheme` and system colors: https://blog.jim-nielsen.com/2021/css-system-colors/
     
-*   More on system colors from [Stefan Judis](https://front-end.social/@stefan): https://www.stefanjudis.com/today-i-learned/css-defines-color-values-that-follow-system-preferences/
+*   More on [CSS System Colors](https://www.stefanjudis.com/today-i-learned/css-defines-color-values-that-follow-system-preferences/) by [Stefan Judis](https://front-end.social/@stefan)
     
 
 Please [ping me a message on Mastodon](https://front-end.social/@sarajw) with any solutions you come up with that use `color-scheme` - I would love to see them!
