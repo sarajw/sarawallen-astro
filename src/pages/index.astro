@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Toggle from '../components/Toggle.astro';
-import WorkModal from '../components/WorkModal.astro';
+import StuffModal from '../components/StuffModal.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
 
@@ -138,13 +138,13 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				</article>
 			</section>
 			
-			<div class="anchor" id="gowork"></div>
-			<div class="tab work"><h2><a href="#gowork">work</a></h2></div>
-			<section id="work">
+			<div class="anchor" id="gostuff"></div>
+			<div class="tab stuff"><h2><a href="#gostuff">stuff</a></h2></div>
+			<section id="stuff">
 				<article>
 					<section class="container box1">
 
-            <WorkModal
+            <StuffModal
               buttonClass="bigrow"
               buttonImg="sarawallen_com.png"
               title="sara​wallen.com"
@@ -161,9 +161,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <p>
                 First written in Notepad++ in HTML and CSS only!
               </p>
-            </WorkModal>
+            </StuffModal>
             
-            <WorkModal
+            <StuffModal
               buttonClass="bigsq"
               buttonImg="yasmin_sqthumb.jpg"
               title="Yasmin Brinkmann"
@@ -177,9 +177,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <p>
                 Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
               </p>
-            </WorkModal>
+            </StuffModal>
 
-            <WorkModal
+            <StuffModal
               buttonClass="shcol"
               buttonImg="card-small.jpg"
               title="QR Code Card"
@@ -193,13 +193,13 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <p>
                 In the end, it wasn't really used - but no matter, it was fun to make :)
               </p>
-            </WorkModal>
+            </StuffModal>
 					</section>
 				
 					<section class="container box2">
 						<div class="smsq1" id="a2"></div>
             
-            <WorkModal
+            <StuffModal
               buttonClass="bigsq"
               buttonImg="bendickson_sq.jpg"
               title="Benjamin Dickson"
@@ -213,9 +213,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <p>
                 I built this site with the Astro framework.
               </p>
-            </WorkModal>
+            </StuffModal>
             
-            <WorkModal
+            <StuffModal
               buttonClass="smsq2"
               buttonImg="ascii.png"
               title="ASCII Art"
@@ -610,9 +610,9 @@ sjw   :  :  .'   '.          :   :
   /     /                \         /    \                  '-,
  /     /                         /       \                    '-
 sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
-            </WorkModal>
+            </StuffModal>
 						
-						<WorkModal
+						<StuffModal
               buttonClass="bigrow"
               buttonImg="binnenalster_small.jpg"
               title="Hamburg"
@@ -620,11 +620,11 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               modalImg="binnenalster.jpg"
               alt="A photo of the Hamburg Binnenalster, taken from the north-western corner.">
               <p>A nice photo I took :)</p>
-            </WorkModal>
+            </StuffModal>
 					</section>
 				
 					<section class="container box3">
-						<WorkModal
+						<StuffModal
               buttonClass="bigsq"
               buttonImg="blogolio_sq.jpg"
               title="Blogolio"
@@ -638,9 +638,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               <p>
                 I then spent lots of time making up the modal components in this portfolio, and I'm quite proud of it - however! Now using &lt;dialog&gt; elements makes this rather easier...
               </p>
-            </WorkModal>
+            </StuffModal>
 						
-            <WorkModal
+            <StuffModal
               buttonClass="smsq1"
               buttonImg="mega-zine-sml.png"
               title="Mega-Zine"
@@ -657,22 +657,22 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 and <a href="https://teletextart.tumblr.com/">teletext art</a> for the
                 great quality almost-source materials I could copy!
               </p>
-            </WorkModal>
+            </StuffModal>
 						
-						<button class="shrow" id="c3" style="background-image: url('/images/work/tumblr_small.jpg')" title="Open Tumblr"><h3 class="caption">Tumblr</h3></button>
+						<button class="shrow" id="c3" style="background-image: url('/images/stuff/tumblr_small.jpg')" title="Open Tumblr"><h3 class="caption">Tumblr</h3></button>
 						
 						<div class="smsq2" id="d3"></div>
 						<div class="smsq3" id="e3"></div>
 					</section>
 				
 					<section class="container box4">
-						<button class="shcol" id="a4" style="background-image: url('/images/work/cheeper_small.png')" title="Open Cheeper"><h3 class="caption">Chee​per</h3></button>
+						<button class="shcol" id="a4" style="background-image: url('/images/stuff/cheeper_small.png')" title="Open Cheeper"><h3 class="caption">Chee​per</h3></button>
 						
-						<button class="shrow" id="b4" style="background-image: url('/images/work/mktimelapse_small.jpg')"><h3 class="caption">MK time­lapse</h3></button>
+						<button class="shrow" id="b4" style="background-image: url('/images/stuff/mktimelapse_small.jpg')"><h3 class="caption">MK time­lapse</h3></button>
 						
-						<button class="bigsq" id="c4" style="background-image: url('/images/work/lightdark.png')" title="Open Light/Dark Mode"><h3 class="caption">Light­/Dark Mode</h3></button>
+						<button class="bigsq" id="c4" style="background-image: url('/images/stuff/lightdark.png')" title="Open Light/Dark Mode"><h3 class="caption">Light­/Dark Mode</h3></button>
 						
-						<button class="smsq1" id="d4" style="background-image: url('/images/work/blogger_small.jpg')" title="Open Blogger"><h3 class="caption">Blog​ger</h3></button>
+						<button class="smsq1" id="d4" style="background-image: url('/images/stuff/blogger_small.jpg')" title="Open Blogger"><h3 class="caption">Blog​ger</h3></button>
 					</section>
 				</article>
 			</section>

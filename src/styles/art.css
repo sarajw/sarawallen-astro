@@ -15,6 +15,13 @@
   --lightmed: hsl(var(--pop), 25%);
   --medium: hsl(var(--pop), 35%);
 }
+
+:root.high-contrast {
+  /* colours mid */
+  --light: hsl(var(--pop), 70%);
+  --lightmed: hsl(var(--pop), 50%);
+  --medium: hsl(var(--pop), 30%);
+}
     
 
 .heart {

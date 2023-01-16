@@ -24,7 +24,7 @@
 
   --header: hsl(var(--base), 100%);
   --sara: hsl(var(--base), 90%);
-  --work: hsl(var(--base), 85%);
+  --stuff: hsl(var(--base), 85%);
   --blog: hsl(var(--base), 80%);
   --find: hsl(var(--base), 75%);
 
@@ -57,11 +57,39 @@
 
   --header: hsl(var(--base), 0%);
   --sara: hsl(var(--base), 15%);
-  --work: hsl(var(--base), 20%);
+  --stuff: hsl(var(--base), 20%);
   --blog: hsl(var(--base), 25%);
   --find: hsl(var(--base), 30%);
 
 	--b2top: hsl(var(--base), 40%);
+}
+
+:root.high-contrast {
+  --header: Canvas;
+  --sara: Canvas;
+  --stuff: Canvas;
+  --blog: Canvas;
+  --find: Canvas;
+
+	--border: 0.2rem solid CanvasText;
+}
+.high-contrast main > section {
+	border-inline: var(--border);
+}
+.high-contrast .tab h2, 
+.high-contrast .tab::after, 
+.high-contrast header > div {
+	border-top: var(--border);
+	border-inline: var(--border);
+}
+.high-contrast .tab::after {
+	width: calc(100% - 0.9rem);
+}
+.high-contrast .tab.find::after {
+	border-top-right-radius: var(--border-radii);
+}
+.high-contrast :is(.statuslol, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
+	border: var(--border);
 }
 
 * {
@@ -183,12 +211,12 @@ main > section {
 	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
-main > section:not(#work) {
+main > section:not(#stuff) {
 	display: grid;
 	place-content: center;
 }
 
-main > section:not(#work) > article {
+main > section:not(#stuff) > article {
 	overflow: visible;
 	margin: 0 auto;
 	max-width: 900px;
@@ -210,44 +238,62 @@ section > article ul {
 } */
 
 
-#toggleBtn {
+.toggle {
 	position: fixed;
-	right: min(5vw,3rem);
-	bottom: min(3vw,2rem);
 	z-index: 20;
-	width: calc(1.5rem + 0.75vw);
-	height: calc(2rem + 1vw);
 	opacity: 0.75;
 	border: 0;
 	background-color: transparent;
-	background-image: url('/images/led-on.svg');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
 	filter: drop-shadow(0 0 0.1rem var(--header));
 }
+#toggleLED {
+	width: calc(1.5rem + 0.75vw);
+	height: calc(2rem + 1vw);
+	right: min(5vw,2rem);
+	bottom: min(3vw,2rem);
+	background-image: url('/images/led-on.svg');
+}
+#toggleContrast {
+	width: calc(1.5rem + 0.75vw);
+	height: calc(1rem + 0.5vw);
+	right: min(5vw,2rem);
+	bottom: calc(min(3vw,2rem) + (2rem + 2vw));
+	background-image: url('/images/contrast.svg');
+}
 
-#toggleBtn:focus-visible {
+.toggle:focus-visible {
 	opacity: 1;
 }
 
-.dark-mode #toggleBtn {
+.dark-mode .toggle {
 	background-color: var(--info);
-	background-image: url('/images/led-off.svg');
 	filter: invert(100%);
 }
 
+.dark-mode #toggleLED {
+	background-image: url('/images/led-off.svg');
+}
+
 @media (hover: hover) {
-	#toggleBtn {
+	.toggle {
 		opacity: 0.50;
 		transition: opacity 0.25s, background-image 0.5s;
 	}
-	#toggleBtn:hover {
+	.toggle:hover {
 		opacity: 0.75;
-		background-image: url('/images/led-off.svg');
 	}
-	.dark-mode #toggleBtn:hover {
+	.dark-mode #toggleLED:hover {
 		background-image: url('/images/led-on.svg');
+	}
+	#toggleLED {
+		opacity: 0.50;
+		transition: opacity 0.25s, background-image 0.5s;
+	}
+	#toggleLED:hover {
+		background-image: url('/images/led-off.svg');
 	}
 }
 
@@ -398,23 +444,23 @@ section > article ul {
 	justify-content: space-around;
 }
 
-.work {
+.stuff {
 	z-index: 12;
 }
-.work h2 {
+.stuff h2 {
 	margin-inline: auto 28%;
-	background-color: var(--work);
+	background-color: var(--stuff);
 }
-.work::after {
-	background-color: var(--work);
+.stuff::after {
+	background-color: var(--stuff);
 	height: 5.1vmin;
 }
-#work {
+#stuff {
 	z-index: 2;
-	background-color: var(--work);
+	background-color: var(--stuff);
 }
 
-#work article {
+#stuff article {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -476,7 +522,7 @@ section > article ul {
 	gap: calc(0.25rem + 0.5vmin);
 }
 @media only screen and (max-aspect-ratio: 4/5) {
-	#work .container {
+	#stuff .container {
 		width: 100%;
 	}
 }
@@ -707,7 +753,7 @@ form {
 input,
 textarea {
 	border: 1px solid var(--links);
-	background-color: var(--work);
+	background-color: var(--stuff);
 	border-radius: calc(var(--border-radii) / 2);
 	width: clamp(28ch, 60vw, 30rem);
 	padding: 0.25rem 0.5rem;
