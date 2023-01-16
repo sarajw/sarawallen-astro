@@ -548,10 +548,11 @@ section > article ul {
 	box-shadow: 2px 2px 10px -9px black;
 }
 .container .caption {
-	visibility: hidden;
+  height: 0px; 
+  width: 1px;
+  overflow: hidden;
 	display: grid;
 	place-content: center;
-	height: 100%;
 	margin: 0;
 	text-transform: uppercase;
 	text-align: center;
@@ -561,6 +562,9 @@ section > article ul {
 .container button:hover .caption,
 .container button:focus-visible .caption {
 	visibility: visible;
+	height: 100%;
+  width: auto;
+  overflow: auto;
 }
 
 dialog[open] {
