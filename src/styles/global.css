@@ -249,7 +249,7 @@ section > article ul {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain;
-	filter: drop-shadow(0 0 0.1rem var(--header));
+	filter: invert(0%) drop-shadow(0 0 0.1rem var(--header));
 }
 #toggleLED {
 	width: calc(1.5rem + 0.75vw);
@@ -289,10 +289,6 @@ section > article ul {
 	}
 	.dark-mode #toggleLED:hover {
 		background-image: url('/images/led-on.svg');
-	}
-	#toggleLED {
-		opacity: 0.50;
-		transition: opacity 0.25s, background-image 0.5s;
 	}
 	#toggleLED:hover {
 		background-image: url('/images/led-off.svg');
