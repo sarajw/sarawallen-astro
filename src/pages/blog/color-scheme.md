@@ -116,8 +116,7 @@ Know what else is great? `color-scheme` takes the default UI elements with it. T
 
 ![A minimally-styled form in both dark and light modes](/images/blog/light-dark-form.png)
 
-Please feel free to fork and play with the Codepen: [CodePen Home
-Color-scheme Tinkering](https://codepen.io/sarajw/pen/xxzyOMZ)
+Please feel free to fork and play with the Codepen: [Color-scheme Tinkering](https://codepen.io/sarajw/pen/xxzyOMZ)
 
 ### Any other benefits?
 
