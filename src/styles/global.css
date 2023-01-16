@@ -161,11 +161,11 @@ img:not(.social,.logo) {
 img:is(.logo, .social) {
 	height: var(--icons);
 	max-width: calc(1.5 * var(--icons));
-	filter: drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
+	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 .dark-mode :is(.social, [title="PHP"], [title="Next.js"], [alt="RSS"],
 [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
-	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));;
+	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 
 main {
@@ -278,11 +278,14 @@ section > article ul {
 .dark-mode #toggleLED {
 	background-image: url('/images/led-off.svg');
 }
+.high-contrast #toggleContrast {
+	rotate: 180deg;
+}
 
 @media (hover: hover) {
 	.toggle {
 		opacity: 0.50;
-		transition: opacity 0.25s, background-image 0.5s;
+		transition: opacity 0.25s, background-image 0.5s, rotate 1s;
 	}
 	.toggle:hover {
 		opacity: 0.75;
@@ -292,6 +295,12 @@ section > article ul {
 	}
 	#toggleLED:hover {
 		background-image: url('/images/led-off.svg');
+	}
+	.high-contrast #toggleContrast:hover {
+		rotate: 0deg;
+	}
+	#toggleContrast:hover {
+		rotate: 180deg;
 	}
 }
 
