@@ -65,12 +65,14 @@
 }
 
 :root.high-contrast {
+
   --header: Canvas;
   --sara: Canvas;
   --stuff: Canvas;
   --blog: Canvas;
   --find: Canvas;
 
+	--text: CanvasText;
 	--border: 0.2rem solid CanvasText;
 }
 .high-contrast main > section {
