@@ -130,6 +130,7 @@ p {
 	font-size: var(--p);
 	line-height: 1.4em;
 }
+h4 {font-size: var(--h4)}
 h3 {font-size: var(--h3)}
 h2 {font-size: var(--h2)}
 h1 {font-size: var(--h1)}
@@ -437,7 +438,7 @@ section > article ul {
   font-size: var(--sml);
 }
 #nowPage {
-  margin-bottom: 8vmin;
+  margin: 2vmin auto 8vmin;
 }
 @media (max-width: 600px) {
 	.welcome {
