@@ -17,29 +17,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
-
-		<script is:inline defer>
-
-		const tabTopSettingPlugin = ( () => {
-
-			const tabTopSetting = () => {
-				const sections = document.querySelectorAll("main > section:not(#hero)");
-				for (const section of sections) {
-					let sectionHeight = section.offsetHeight;
-					section.style.top = `calc(100vh - ${sectionHeight}px)`;
-				}		
-			}
-
-			document.onreadystatechange = () => {
-				if (document.readyState === 'complete') {
-					tabTopSetting();
-				}
-			}
-
-			window.addEventListener("resize", tabTopSetting);
-		})();
-
-		</script>
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />	
@@ -806,8 +783,28 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
         }
       }
       flipTheClaw();
-				
-	document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
+	    
+	
+	const tabTopSettingPlugin = ( () => {
+
+		const tabTopSetting = () => {
+			const sections = document.querySelectorAll("main > section:not(#hero)");
+			for (const section of sections) {
+				let sectionHeight = section.offsetHeight;
+				section.style.top = `calc(100vh - ${sectionHeight}px)`;
+			}		
+		}
+
+		document.onreadystatechange = () => {
+			if (document.readyState === 'complete') {
+				tabTopSetting();
+			}
+		}
+
+		window.addEventListener("resize", tabTopSetting);
+		document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
+	})();
+	    
     </script>
 		<Toggle />
 	</body>
