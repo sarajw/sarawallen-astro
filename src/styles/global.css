@@ -76,8 +76,8 @@
 	--border: 0.2rem solid CanvasText;
 }
 
-* {
-		box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .high-contrast :is(main > section, main .post, .shortIndex, .blogPost) {
@@ -89,20 +89,14 @@
 	border-top: var(--border);
 	border-inline: var(--border);
 }
-.high-contrast .tab::after {
-	width: calc(100% - 0.9rem);
-}
 .high-contrast :is(.blogPost, .shortIndex) .tab {
-	width: calc(100% - 0.8rem);
-}
-.high-contrast :is(.blogPost, .shortIndex) .tab::after {
-	width: calc(100% - 0.55rem);
+	width: calc(100% - 0.85rem);
 }
 .high-contrast :is(.blogPost, .shortIndex) .post {
 	margin: 0 0.1rem;
 }
-.high-contrast .tab.find::after {
-	border-top-right-radius: var(--border-radii);
+.high-contrast :is(.blogPost, .shortIndex) .tab::after {
+	width: calc(100% - 0.2rem);
 }
 .high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
 	border: var(--border);
