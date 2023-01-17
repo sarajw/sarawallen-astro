@@ -37,7 +37,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			}
 
 			window.addEventListener("resize", tabTopSetting);
-
+				
+			document.querySelector(#nowPage).addEventListener("toggle", tabTopSetting);
 		})();
 
 		</script>
@@ -110,9 +111,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/" target="_blank">Astro</a>.
 							</p>
 							<script is:inline src="https://status.lol/sara.js?time&link&fluent"></script>
-							<details>
-								<summary>My /now page</summary>
-								<script is:inline src="https://omgnow.rknight.me/now.js?a=sara&pretty"></script>
+							<details id="nowPage">
+								<summary>What's happening lately?</summary>
+								<script is:inline src="https://omgnow.rknight.me/now.js?a=sara"></script>
 							</details>
 						</div>
 					</div>
