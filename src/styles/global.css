@@ -104,8 +104,11 @@
 .high-contrast .tab.find::after {
 	border-top-right-radius: var(--border-radii);
 }
-.high-contrast :is(.statuslol, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
+.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
 	border: var(--border);
+}
+.high-contrast .posts {
+	background-color: transparent;
 }
 
 html {
@@ -422,8 +425,10 @@ section > article ul {
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 1rem;
   margin: 0;
+}
+.statuslol, .now_content {
+  padding: 1rem;
   background-color: var(--header);
   border-radius: var(--border-radii);
 	box-shadow: 0.1rem 0.1rem 0.5rem -0.25rem var(--shadow);
@@ -438,8 +443,19 @@ section > article ul {
   font-size: var(--sml);
 }
 #nowPage {
-  margin: 2vmin auto 8vmin;
+  margin: 1vmin auto 8vmin;
+	width: fit-content;
 }
+#nowPage summary {
+  margin: 0 auto 1vmin;
+	width: fit-content;
+}
+.now_after h4 {
+	margin-block: 1.25em 0.5em;
+}
+.now_after *:first-child { margin-top: 0;}
+.now_after *:last-child { margin-bottom: 0;}
+
 @media (max-width: 600px) {
 	.welcome {
 		flex-direction: column;
