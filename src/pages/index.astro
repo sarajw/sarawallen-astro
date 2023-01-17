@@ -37,8 +37,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			}
 
 			window.addEventListener("resize", tabTopSetting);
-				
-			document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
 		})();
 
 		</script>
@@ -808,6 +806,8 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
         }
       }
       flipTheClaw();
+				
+	document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
     </script>
 		<Toggle />
 	</body>
