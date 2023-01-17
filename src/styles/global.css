@@ -73,7 +73,7 @@
   --find: Canvas;
 
 	--text: CanvasText;
-	--border: 0.2rem solid CanvasText;
+	--border: 3px solid CanvasText;
 }
 
 *, *::before, *::after {
@@ -90,13 +90,13 @@
 	border-inline: var(--border);
 }
 .high-contrast :is(.blogPost, .shortIndex) .tab {
-	width: calc(100% - 0.85rem);
+	width: calc(100% - 13px);
 }
 .high-contrast :is(.blogPost, .shortIndex) .post {
-	margin: 0 0.1rem;
+	margin: 0 1.5px;
 }
 .high-contrast :is(.blogPost, .shortIndex) .tab::after {
-	width: calc(100% - 0.2rem);
+	width: calc(100% - 3px);
 }
 .high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
 	border: var(--border);
