@@ -232,7 +232,7 @@ main > section:not(#stuff) > article {
 	max-width: 900px;
 }
 
-section > article ul {
+section > article ul:not(.now_content ul) {
 	list-style-type: none;
 	margin-block: 0;
 	padding-inline-start: 0;
@@ -451,7 +451,6 @@ section > article ul {
 .now_after *:last-child { margin-bottom: 0;}
 .now_after li {
   font-size: var(--p);
-  list-style: disc inside;
 }
 
 @media (max-width: 600px) {
