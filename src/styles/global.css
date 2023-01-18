@@ -452,6 +452,7 @@ section > article ul:not(.now_content ul) {
 .now_after *:last-child { margin-bottom: 0;}
 .now_after li {
   font-size: var(--p);
+	margin-bottom: 0.4em;
 }
 
 @media (max-width: 600px) {
