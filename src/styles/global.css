@@ -445,10 +445,14 @@ section > article ul {
 	width: fit-content;
 }
 .now_after h4 {
-	margin-block: 1.25em 0.5em;
+  margin-block: 1.25em 0.5em;
 }
 .now_after *:first-child { margin-top: 0;}
 .now_after *:last-child { margin-bottom: 0;}
+.now_after li {
+  font-size: var(--p);
+  list-style: disc inside;
+}
 
 @media (max-width: 600px) {
 	.welcome {
