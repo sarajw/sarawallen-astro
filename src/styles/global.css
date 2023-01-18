@@ -444,6 +444,7 @@ section > article ul:not(.now_content ul) {
   margin: 0 auto 1vmin;
 	width: fit-content;
 }
+.now_before { display: none }
 .now_after h4 {
   margin-block: 1.25em 0.5em;
 }
