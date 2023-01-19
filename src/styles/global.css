@@ -98,7 +98,7 @@
 .high-contrast :is(.blogPost, .shortIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
-.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet) {
+.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .pre) {
 	border: var(--border);
 }
 .high-contrast .posts {
@@ -901,6 +901,11 @@ form button:active {
 .post h3, .post h4, .post h1 {
 	color: var(--hover);
 }
+.post p > code {
+  background-color: var(--stuff);
+  padding: 0 0.2em 0.1em;
+  border-radius: var(--border-radii);
+}
 .post :is(.short, .tweet, pre) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
@@ -912,6 +917,10 @@ form button:active {
 }
 :is(.tweet, .short) > *:first-child {margin-top: 0}
 :is(.tweet, .short > div) > *:last-child {margin-bottom: 0}
+
+.post :is(.tweet, .short) pre {
+  background-color: var(--header);
+}
 
 .post a.back {
 	display: block;

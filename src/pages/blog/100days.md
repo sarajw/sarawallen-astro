@@ -228,9 +228,7 @@ OK, I can refactor my home page to switch light/dark mode without JS, to a degre
 I really want color-scheme to do the heavy lifting here, as that's what it's for.
 
 Ideal :has() use case!
-![see above](/images/blog/ideal-has.png)
 
-Code in image:
 ```css
 :root:has(#toggle:checked) {
     color-scheme: dark;
