@@ -901,6 +901,30 @@ form button:active {
 .post h3, .post h4, .post h1 {
 	color: var(--hover);
 }
+.post :is(h2, h3, h4) {
+	scroll-margin-top: calc(2 * var(--tabheight));
+}
+#toc {
+	width: fit-content;
+	margin: 0 auto 5vmin;
+	padding: 0.25rem 0.75rem;
+	border-radius: var(--border-radii);
+	outline: 2px dashed var(--hover)
+}
+#toc h2 {
+	font-size: var(--h3);
+	margin-bottom: 0;
+	display:inline;
+}
+#toc ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+#toc .d3 {
+	font-size: var(--sml);
+	padding-inline-start: 1em;
+}
+
 .post p > code {
   background-color: var(--stuff);
   padding: 0 0.2em 0.1em;

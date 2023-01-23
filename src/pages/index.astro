@@ -672,7 +672,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </li>
 						{posts.map((post) => (
 							<li class="posts">
-								<a href={post.url}><img src={post.frontmatter.heroImage?post.frontmatter.heroImage:"/images/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"}></a>
+								<a href={post.url}><img src={post.frontmatter.heroImage??"/images/placeholder.png"} alt={post.frontmatter.caption?post.frontmatter.caption:"blog post placeholder image"}></a>
 								<div>
 									<h3><a href={post.url}>{post.frontmatter.title}</a></h3>
 									{post.frontmatter.description && <p>{post.frontmatter.description}</p>}

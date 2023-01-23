@@ -13,7 +13,7 @@ You're in good company if it's new to you - the [State of CSS 2022](https://2022
 
 You probably use `prefers-color-scheme` a lot within your CSS media queries, to make a dark or light theme for your sites and apps based on user preference. Maybe you also add a toggle so people can choose their color scheme, irrespective of their OS settings. Beautiful. But now there's more to play with!
 
-### What is color-scheme, then?
+## What is color-scheme, then?
 
 It's a CSS property all of its own, and can save you a bunch of styling work for dark mode.
 
@@ -41,7 +41,7 @@ Yep, just HTML. Without even touching your CSS. You can also place it inside the
 
 The order of modes `light dark` or `dark light` can make a difference - a user with no preference set will see the first mode. However, given that already most current OS (mobile and computer) versions ask you if you want light or dark mode, or even a mode that changes from one to the other automatically over the day, this may soon become less effective.
 
-### Why do I want to use it?
+## Why do I want to use it?
 
 Many websites leave a bunch of defaults as they are - usually light mode defaults. If they just want a white background then why declare that again? You can now do the same for dark mode.
 
@@ -55,7 +55,7 @@ Here's an example of this happening on the BBC News website, after I added a met
 
 Here you see they kept the main background default, but must have declared the text color - as the background darkens and renders the text almost invisible. In the "Most watched" and "Most read" sections, they've left both background and text default, and so they both flip.
 
-### How else can I use it?
+## How else can I use it?
 
 Of course you can use JavaScript to manipulate the content of the meta tag. Or just keep the property within a `*.css` file as with other CSS properties. The world's your oyster.
 
@@ -87,7 +87,7 @@ function darkMode() {
 
 It's really worth experimenting. You can add the CSS to `:root`, `html`, `body`, or indeed any other element, as maybe you only want parts of your site to do the flip (you might choose to keep the header and footer the same in both modes, as an example).
 
-### System colors
+## System colors
 
 When targeting elements you will also need to declare at least the `background-color`, as most elements are by default transparent. You can do this with system colors `Canvas` for the background and `CanvasText` for the default text color, as these both follow `color-scheme`.
 
@@ -108,7 +108,7 @@ section.dark {
 }
 ```
 
-### I've already styled everything for both modes.
+## I've already styled everything for both modes.
 
 Really, everything?
 
@@ -118,7 +118,7 @@ Know what else is great? `color-scheme` takes the default UI elements with it. T
 
 Please feel free to fork and play with the Codepen: [Color-scheme Tinkering](https://codepen.io/sarajw/pen/xxzyOMZ)
 
-### Any other benefits?
+## Any other benefits?
 
 If you're happy to forgo a mode toggle, and want to also save some CSS loading time? Put your dark mode and light mode styles into separate `*.css` files, and then use the prefers-color-scheme media queries in the `<link>` tags in your head to only load the relevant styles.
 
@@ -132,7 +132,7 @@ Once you start allowing scheme toggling outside of the user OS-set preference, t
 
 Have fun with it! You can thank me later ;)
 
-### Further reading:
+## Further reading:
 
 For some experimentation I did, feel free to check out https://color-scheme-light-dark.netlify.app/
 

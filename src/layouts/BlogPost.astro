@@ -13,10 +13,12 @@ export interface Props {
 		heroImage?: string;
 		caption?: string;
 	};
+	headings?: array;
 }
 
 const {
 	content: { short, title, description, pubDate, updatedDate, heroImage, caption },
+	headings,
 } = Astro.props;
 ---
 
@@ -48,6 +50,16 @@ const {
 						month: 'short',
 						day: 'numeric',
 					})}</time>}
+					{headings.length > 0 &&
+						<details id="toc">
+							<summary><h2>Table of Contents</h2></summary>
+							<ul>
+								{headings.map((heading) => (
+									<li class=`d${heading.depth}`><a href=`#${heading.slug}`>{heading.text}</a></li>
+								))}
+							</ul>
+						</details>
+					}
 					{updatedDate && <div>Last updated on <time>{new Date(pubDate).toLocaleDateString('en-gb', {
 						year: 'numeric',
 						month: 'short',
