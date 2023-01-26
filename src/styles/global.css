@@ -427,11 +427,17 @@ section > article ul:not(.now_content ul) {
   border-radius: var(--border-radii);
 	box-shadow: 0.1rem 0.1rem 0.5rem -0.25rem var(--shadow);
 }
+.statuslol_emoji_container {
+  flex: 1;
+}
+.statuslol_emoji{
+  margin: 0 auto;
+}
+.statuslol_content {
+  flex: 4;
+}
 .statuslol p {
   margin-block: 0 0.25em;
-}
-.statuslol img {
-  width: 3rem;
 }
 .statuslol_time {
   font-size: var(--sml);
