@@ -410,6 +410,9 @@ section > article ul:not(.now_content ul) {
 	filter: brightness(0.8) drop-shadow(0.1rem 0.1rem 0.5rem var(--shadow));
 }
 
+
+/* ============================= omg.lol stuff ============================= */
+
 .statuslol_container {
   width: fit-content;
   padding: 0;
@@ -437,6 +440,14 @@ section > article ul:not(.now_content ul) {
 .statuslol_time {
   font-size: var(--sml);
 }
+.statuslol_time a:last-child:hover::after {
+	content: "on";
+	position: absolute;
+	width: 2.5em;
+	height: 1.25em;
+	margin-inline: 0.25em;
+	background: right / contain no-repeat url("/images/icons/mastodon.svg");
+}
 #nowPage {
   margin: 1vmin auto 8vmin;
 	width: fit-content;
@@ -455,6 +466,9 @@ section > article ul:not(.now_content ul) {
   font-size: var(--p);
 	margin-bottom: 0.4em;
 }
+
+/* =========================== end omg.lol stuff =========================== */
+
 
 @media (max-width: 600px) {
 	.welcome {
@@ -475,8 +489,6 @@ section > article ul:not(.now_content ul) {
 	margin-bottom: 0;
 }
 .stack {
-	/* display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(var(--icons), 1fr)); */
 	margin-inline: auto;
 	padding-inline: 3vmin;
 	gap: 2vmin;
