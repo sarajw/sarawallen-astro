@@ -1,14 +1,13 @@
 ---
 async function getEntries() {
-  const response = await fetch(new Request('https://api.netlify.com/api/v1/forms/63d5a00e0765850008ec1d5a/submissions', {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
+  const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
 
   return response.json();
 }
-
 const entries = await getEntries();
-console.log(entries);
 ---
-<html>Hello, world
+<html>Hello, world - sign my guestbook!
+  <br>Don't expect instant update, new messages will only be added when I redeploy my site
 
   <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
