@@ -1,12 +1,12 @@
 ---
-// async function getEntries() {
-//   const response = await fetch(new Request('https://api.netlify.com/api/v1/sites/ID/submissions', {method: 'GET', headers: {'Authorization': 'Bearer SECRET'}, 'Accept':'application/json'}));
+async function getEntries() {
+  const response = await fetch(new Request('https://api.netlify.com/api/v1/forms/63d5a00e0765850008ec1d5a/submissions', {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
 
-//   return response.json();
-// }
+  return response.json();
+}
 
-// const entries = await getEntries();
-// console.log(entries);
+const entries = await getEntries();
+console.log(entries);
 ---
 <html>Hello, world
 
@@ -31,7 +31,15 @@
       <button type="submit"><b>Send</b></button>
     </p>
   </form>
-  <!-- {entries.map((entry) =>(
-    <p>{entry.name}</p>
-  ))} -->
+  {entries.map((entry) =>(
+    <article>
+      <p>{entry.name}</p>
+      <p>{entry.body}</p>
+      <p>{new Date(entry.created_at).toLocaleDateString('en-gb', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      })}</p>
+    </article>
+  ))}
 </html>
