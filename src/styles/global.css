@@ -440,13 +440,14 @@ section > article ul:not(.now_content ul) {
 .statuslol_time {
   font-size: var(--sml);
 }
-.statuslol_time a:last-child:hover::after {
+.statuslol_time a:last-child::after {
 	content: "on";
 	position: absolute;
-	width: 2.5em;
+	width: 2.4em;
 	height: 1.25em;
 	margin-inline: 0.25em;
 	background: right / contain no-repeat url("/images/icons/mastodon.svg");
+	filter: invert(0.5);
 }
 #nowPage {
   margin: 1vmin auto 8vmin;
