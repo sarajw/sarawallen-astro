@@ -1,0 +1,37 @@
+---
+// async function getEntries() {
+//   const response = await fetch(new Request('https://api.netlify.com/api/v1/sites/87cbaeee-f157-4f3b-b557-5dcd00164139/submissions', {method: 'GET', headers: {'Authorization': 'Bearer GRz302NtuHV_aMgB8zwbYWqbLBMQDDAiQOxng9-CUXg'}, 'Accept':'application/json'}));
+
+//   return response.json();
+// }
+
+// const entries = await getEntries();
+// console.log(entries);
+---
+<html>Hello, world
+
+  <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+    <input type="hidden" name="form-name" value="guestbook" />
+    <p>
+      <label
+        >Name:
+        <br /><input type="text" name="name" /></label
+      >
+    </p>
+    <p>
+      <label
+        >Email address:
+        <br /><input type="email" name="email" /></label
+      >
+    </p>
+    <p>
+      <label class="message">Message:<br /><textarea name="message" /></label>
+    </p>
+    <p>
+      <button type="submit"><b>Send</b></button>
+    </p>
+  </form>
+  <!-- {entries.map((entry) =>(
+    <p>{entry.name}</p>
+  ))} -->
+</html>
