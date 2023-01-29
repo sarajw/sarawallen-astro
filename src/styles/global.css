@@ -226,7 +226,7 @@ main > section:not(#stuff) {
 	place-content: center;
 }
 
-main > section:not(#stuff) > article {
+main > section:is(#sara, #blog) > article {
 	overflow: visible;
 	margin: 0 auto;
 	max-width: 900px;
@@ -783,6 +783,10 @@ pre.ascii-art {
 #find {
 	z-index: 4;
 	background-color: var(--find);
+	margin-bottom: 0;
+}
+#find > article {
+	max-width: 80ch;
 }
 #find ul {
 	display: grid;
@@ -807,7 +811,7 @@ img.social:is(:hover,:active,:focus-visible) {
 
 form {
 	width: min-content;
-	margin: 0 auto 8vmin;
+	margin: 0 auto 5vmin;
 }
 input,
 textarea {

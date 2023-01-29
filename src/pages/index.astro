@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Toggle from '../components/Toggle.astro';
 import StuffModal from '../components/StuffModal.astro';
+import PrivacyPolicy from '../components/PrivacyPolicy.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
 
@@ -698,8 +699,14 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
 			<section id="find">
 				<article>
-          <h3>New! <a href="/guestbook">Sign my Guestbook!</a></h3>
-          <br>
+          <h3>Sign my <a href="/guestbook">Guestbook</a>!</h3>
+          <p>
+            In the spirit of a (welcome, and overdue!) resurgence of nostalgia for the old, decentralised web, where many of us bashed out our own personal homepages and filled them with whimsical, social stuff not only intended to make us look good for prospective clients or employers, I've built myself a little <a href="/guestbook">guestbook</a>.
+          </p>
+          <p>
+            I'm not tracking, running analytics, or feeding anyone cookies - I don't need to know a lot of data about my visitors. But for those of you wanting to tell me something about this website, please feel free to <a href="/guestbook">sign it</a>!
+            <br><br>
+          </p>
 					<h3>Find me elsewhere:</h3>
 						<ul>
 							<li>
@@ -771,6 +778,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </div>
             <a href="https://personalsit.es/">PERSONALSIT.ES</a>
           </div>
+          <PrivacyPolicy />
 				</article>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
