@@ -65,6 +65,7 @@ const {
 						month: 'short',
 						day: 'numeric',
 					})}</time></div>}
+				  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					<slot />
 					<a class="back" href={short ? "../" : "/#goblog"}>&larr; back to {short ? "shorts" : "blog"} index</a>
 				</article>
@@ -104,6 +105,11 @@ const {
 		display: block;
 		width: fit-content;
 		margin: 0 0 3rem auto;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
 	}
 	
   .post :global(pre) {
