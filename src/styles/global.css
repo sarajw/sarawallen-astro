@@ -80,7 +80,7 @@
   box-sizing: border-box;
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .blogPost) {
+.high-contrast :is(main > section, main .post, .shortIndex, .blogPost, .guestbookIndex) {
 	border-inline: var(--border);
 }
 .high-contrast .tab h2, 
@@ -89,16 +89,16 @@
 	border-top: var(--border);
 	border-inline: var(--border);
 }
-.high-contrast :is(.blogPost, .shortIndex) .tab {
+.high-contrast :is(.blogPost, .shortIndex, .guestbookIndex) .tab {
 	width: calc(100% - 0.85rem);
 }
-.high-contrast :is(.blogPost, .shortIndex) .post {
+.high-contrast :is(.blogPost, .shortIndex .guestbookIndex) .post {
 	margin: 0 0.1rem;
 }
-.high-contrast :is(.blogPost, .shortIndex) .tab::after {
+.high-contrast :is(.blogPost, .shortIndex .guestbookIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
-.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, pre) {
+.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .entry, pre) {
 	border: var(--border);
 }
 .high-contrast .posts {
@@ -788,7 +788,7 @@ pre.ascii-art {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 5vmin;
-	padding-block: 5vmin;
+	padding-block-end: 5vmin;
 }
 #find li {
 	text-align: center;
@@ -950,7 +950,7 @@ form button:active {
   padding: 0 0.2em 0.1em;
   border-radius: var(--border-radii);
 }
-.post :is(.short, .tweet, pre) {
+.post :is(.short, .tweet, .entry, pre) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
@@ -959,8 +959,8 @@ form button:active {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
-:is(.tweet, .short) > *:first-child {margin-top: 0}
-:is(.tweet, .short > div) > *:last-child {margin-bottom: 0}
+:is(.tweet, .short, .entry) > *:first-child {margin-top: 0}
+:is(.tweet, .short > div, .entry) > *:last-child {margin-bottom: 0}
 
 .post :is(.tweet, .short) pre {
   background-color: var(--header);
