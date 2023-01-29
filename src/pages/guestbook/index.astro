@@ -24,6 +24,7 @@ async function getGuestEntries() {
   return response.json();
 }
 const entries = await getGuestEntries();
+console.log(entries)
 ---
 
 <html lang="en">
@@ -52,24 +53,24 @@ const entries = await getGuestEntries();
 						<input type="hidden" name="form-name" value="guestbook" />
 						<p>
 							<label
-								>Name:
+								>Name
 								<br /><input type="text" name="name" required /></label
 							>
 						</p>
 						<p>
 							<label
-								>Email address:
-								<br /><input type="email" name="email" placeholder="place@holder.com" required /></label
+								>Email <small>(optional, not published)</small>
+								<br /><input type="email" name="email" placeholder="place@holder.com" /></label
 							>
 						</p>
 						<p>
 							<label
-								>URL:
+								>URL <small>(optional, linked from your Name)</small>
 								<br /><input type="url" name="url" placeholder="https://example.com" pattern="https://.*" /></label
 							>
 						</p>
 						<p>
-							<label class="message">Message:<br /><textarea name="message" required /></label>
+							<label class="message">Message<br /><textarea name="message" required /></label>
 						</p>
 						<p>
 							<button type="submit"><b>Send</b></button>
@@ -80,7 +81,7 @@ const entries = await getGuestEntries();
 					}
 					{entries.map((entry) =>(
 						<article class="entry">
-							<h2>{entry.name}</h2>
+							<h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>
 							<p>{entry.body}</p>
 							<time>{new Date(entry.created_at).toLocaleDateString('en-gb', {
 								year: 'numeric',
