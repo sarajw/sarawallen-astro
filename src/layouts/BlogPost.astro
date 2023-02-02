@@ -3,21 +3,8 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Toggle from "../components/Toggle.astro";
 
-export interface Props {
-	content: {
-		short?: boolean;
-		title: string;
-		description?: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
-		caption?: string;
-	};
-	headings?: array;
-}
-
 const {
-	content: { short, title, description, pubDate, updatedDate, heroImage, caption },
+	frontmatter: { short, title, description, pubDate, updatedDate, heroImage, caption },
 	headings,
 } = Astro.props;
 ---

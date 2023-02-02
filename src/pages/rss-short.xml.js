@@ -15,6 +15,6 @@ export const get = () =>
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.pubDate,
 			content: post.frontmatter.short ? sanitizeHtml(post.compiledContent()) : "",
-			description: post.frontmatter.description ? post.frontmatter.description : "",
+			description: post.frontmatter.description ?? "",
 		}))
 	});
