@@ -192,7 +192,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                 My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not responsive at all. I love building sites with such interesting content!
               </p>
               <p>
-                I built this site with the Astro framework.
+                I built this site with <a href="https://astro.build">Astro</a>.
               </p>
             </StuffModal>
             
@@ -640,20 +640,34 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               </p>
             </StuffModal>
 						
-						<button class="shrow" id="c3" style="background-image: url('/images/stuff/tumblr_small.jpg')" title="Open Tumblr"><h3 class="caption">Tumblr</h3></button>
+            <StuffModal
+              buttonClass="shrow"
+              buttonImg="tumblr_small.jpg"
+              title="Swing​tänzerin"
+              modalId="c3"
+              modalImg="tumblr.jpg"
+              alt="A wall with stickers reading DER HUSTLE IST HART and DER STRUGGLE SO REAL"
+              url="https://swingtanzerin.tumblr.com">
+              <p>
+                There is a lot of stuff on this old tumblr of mine:
+              </p>
+              <p>
+                Swing dance DJ sets, lindy-hop discussion, photography and crochet projects. Enjoy!
+              </p>
+            </StuffModal>
 						
 						<div class="smsq2" id="d3"></div>
 						<div class="smsq3" id="e3"></div>
 					</section>
 				
 					<section class="container box4">
-						<button class="shcol" id="a4" style="background-image: url('/images/stuff/cheeper_small.png')" title="Open Cheeper"><h3 class="caption">Chee​per</h3></button>
+						<button class="shcol" id="a4" style="background-image: url('/images/stuff/cheeper_small.png')" title="Open Cheeper"><span class="caption">Chee​per</span></button>
 						
-						<button class="shrow" id="b4" style="background-image: url('/images/stuff/mktimelapse_small.jpg')"><h3 class="caption">MK time­lapse</h3></button>
+						<button class="shrow" id="b4" style="background-image: url('/images/stuff/mktimelapse_small.jpg')"><span class="caption">MK time­lapse</span></button>
 						
-						<button class="bigsq" id="c4" style="background-image: url('/images/stuff/lightdark.png')" title="Open Light/Dark Mode"><h3 class="caption">Light­/Dark Mode</h3></button>
+						<button class="bigsq" id="c4" style="background-image: url('/images/stuff/lightdark.png')" title="Open Light/Dark Mode"><span class="caption">Light­/Dark Mode</span></button>
 						
-						<button class="smsq1" id="d4" style="background-image: url('/images/stuff/blogger_small.jpg')" title="Open Blogger"><h3 class="caption">Blog​ger</h3></button>
+						<button class="smsq1" id="d4" style="background-image: url('/images/stuff/blogger_small.jpg')" title="Open Blogger"><span class="caption">Blog​ger</span></button>
 					</section>
 				</article>
 			</section>

@@ -3,7 +3,7 @@ const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.pro
 ---
 
 <button class={buttonClass} style={`background-image: url("/images/stuff/${buttonImg}")`} onclick={`window.${modalId}.showModal()`}>
-  <h3 class="caption">{title}</h3>
+  <span class="caption">{title}</span>
 </button>
 <dialog id={modalId}>
   <button title="Close" onclick={`window.${modalId}.close()`}>×</button>

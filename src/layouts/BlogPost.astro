@@ -42,7 +42,7 @@ const {
 							<summary><h2>Table of Contents</h2></summary>
 							<ul>
 								{headings.map((heading) => (
-									<li class=`d${heading.depth}`><a href=`#${heading.slug}`>{heading.text}</a></li>
+									<li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
 								))}
 							</ul>
 						</details>
