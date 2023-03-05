@@ -83,6 +83,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						<img src="images/photo.png" alt="A picture of me!" width="256" height="256">
 						<div class="blurb">
 							<p>I am a techy person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
+							<p>Being employed as a Front-End Developer and having two small children, I am not contractually or physically available to build sites outside of my fiddling with this one.</p>
 							<p>
 								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/" target="_blank">Astro</a>.
 							</p>
@@ -661,9 +662,33 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 					</section>
 				
 					<section class="container box4">
-						<button class="shcol" id="a4" style="background-image: url('/images/stuff/cheeper_small.png')" title="Open Cheeper"><span class="caption">Chee​per</span></button>
 						
-						<button class="shrow" id="b4" style="background-image: url('/images/stuff/mktimelapse_small.jpg')"><span class="caption">MK time­lapse</span></button>
+            <StuffModal
+              buttonClass="shcol"
+              buttonImg="cheeper_small.png"
+              title="Cheeper"
+              modalId="a4"
+              modalImg="cheeper_large.png"
+              alt="A simple monochrome front page of Cheeper, with an image of a chick in half a hatched egg, 'Welcome to Cheeper' text, and a sample of 'cheeps'."
+              url="https://twitter-clone-sarajw.vercel.app/">
+              <p>One of the projects made during Flavio Copes' 2022 Bootcamp.</p>
+              <p>Sometimes this is up, sometimes down - feel free to go play :)</p>
+            </StuffModal>
+
+            <StuffModal
+              buttonClass="shrow"
+              buttonImg="mktimelapse_small.jpg"
+              title="MK time­lapse"
+              modalId="b4"
+              modalImg="mktimelapse_large.jpg"
+              alt="MK timelapse GmbH desktop website screenshot. The hero image is a skyscraper under construction."
+              url="https://www.mktimelapse.com/">
+              <p>
+                I worked for MK timelapse GmbH, which in 2019 really needed an updated
+                website. I hopped on to Wix, chose a template and then modified it
+                heavily to reflect the feel of the new (at the time) MK logo.
+              </p>
+            </StuffModal>
 						
 						<button class="bigsq" id="c4" style="background-image: url('/images/stuff/lightdark.png')" title="Open Light/Dark Mode"><span class="caption">Light­/Dark Mode</span></button>
 						
@@ -714,9 +739,6 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<section id="find">
 				<article>
           <h3>Sign my <a href="/guestbook">Guestbook</a>!</h3>
-          <p>
-            In the spirit of a (welcome, and overdue!) resurgence of nostalgia for the old, decentralised web, where many of us bashed out our own personal homepages and filled them with whimsical, social stuff not only intended to make us look good for prospective clients or employers, I've built myself a little <a href="/guestbook">guestbook</a>.
-          </p>
           <p>
             I'm not tracking, running analytics, or feeding anyone cookies - I don't need to know a lot of data about my visitors. But for those of you wanting to tell me something about this website, please feel free to <a href="/guestbook">sign it</a>!
             <br><br>
