@@ -420,7 +420,6 @@ section > article ul:not(.now_content ul) {
 }
 .statuslol {
   display: flex;
-	min-width: 19rem;
   gap: 1rem;
   align-items: center;
   margin: 0;
@@ -440,6 +439,7 @@ section > article ul:not(.now_content ul) {
 }
 .statuslol_time {
   font-size: var(--sml);
+	margin-right: 2.5em;
 }
 .statuslol_time a:last-child::after {
 	content: "on";
