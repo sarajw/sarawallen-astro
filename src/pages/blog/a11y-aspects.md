@@ -21,14 +21,14 @@ I mean, yes, we do. But also, remember how we learn to code - step by step - man
 
 <p id="TOC">This article is intended to be only a brief overview that covers a11y issues with:</p>
 
-- [Page structure](#heading-structure)
-- [Contrast levels](#heading-contrast)
-- [Anxiety-inducing design](#heading-anxiety)
+- [Page structure](#page-structure)
+- [Contrast levels](#contrast-levels)
+- [Anxiety-inducing design](#anxiety-inducing-design)
 
 ...this is not at all an exhaustive list, but it's a good start. Let's go:
 
 
-## Page structure <a href="#TOC" id="heading-structure">#</a>
+## Page structure
 
 Do you use Word? If yes, do you remember when you discovered the automatic headings and styles, with automatic numbering at various heading depths, from which you could just wave a magic wand and create a Table of Contents of your whole essay or report? I like to think that a well structured page on a website would also make a sensible ToC after scraping the page's HTML.
 
@@ -104,7 +104,7 @@ Hopefully you've already designed your page to work well on mobile devices, so c
 
 How about on a smaller device? Do you allow zooming? And if you change the mobile browser font size to 200%, how does that change your pages? What about flipping the phone into landscape mode?
 
-## Contrast levels <a href="#TOC" id="heading-contrast">#</a>
+## Contrast levels
 
 Generally we only hear about contrast levels in terms of a 'high contrast mode' for people with visual impairments, who sometimes need it to see elements and text more clearly. But, this is really only a very small part of the whole story.
 
@@ -153,7 +153,7 @@ The intention may have been to use such a high-contrast on purpose for those wit
 
 I've mentioned Neubrutalism or Neo-Brutalism in web design - [a quick google](https://www.google.com/search?q=neo-brutalism+web+design&tbm=isch) will show you lots of eye-popping design! There's definitely a place for pushing the boundaries, as long as people are *given the choice* not to have their eyes popped, and to be able to view the content without discomfort or pain. Methods for how to offer this choice is something I'll come to later in this series of articles.
 
-## Anxiety-inducing design <a href="#TOC" id="heading-anxiety">#</a>
+## Anxiety-inducing design
 
 We come to the last aspect of accessibility I intend to cover in this article, which while new to me is at the same time so very unsurprising:
 
