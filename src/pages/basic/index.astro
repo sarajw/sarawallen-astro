@@ -1,0 +1,38 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Toggle from '../../components/Toggle.astro';
+import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
+import '../../styles/basic.css';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+// const posts = (await Astro.glob('./../blog/*.{md,mdx}')).sort(
+// 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// );
+
+// doing the above imports... the blogpost layout? which then imports associated css? head aspin
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
+	</head>
+	<body>
+    <header>
+      <div>
+        <a id="site-title" href="/#">{SITE_TITLE}</a>
+        <nav>
+          <ul>
+            <li><a href="">navi</a></li>
+            <li><a href="">gation</a></li>
+            <li><a href="">place</a></li>
+            <li><a href="">holder</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main></main>
+    <footer><Toggle /></footer>
+  </body>
+</html>
