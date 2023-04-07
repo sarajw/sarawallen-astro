@@ -1,0 +1,102 @@
+@font-face {
+	font-family: 'Karla';
+	font-weight: 200 800;
+	font-display: swap;
+	src:
+		url('/fonts/karla.woff2') format('woff2 supports variations'),
+		url('/fonts/karla.woff2') format('woff2-variations');
+}
+
+:root {
+	/* colours */
+	
+  --base: 0, 0%;
+  --pop: 170, 35%;
+  --pop2: 325, 35%;
+
+  --text: hsl(var(--base), 15%);
+  --background: hsl(var(--pop), 85%);
+}
+:root.dark-mode {
+  --text: hsl(var(--base), 85%);
+  --background: hsl(var(--pop2), 15%);
+}
+:root.high-contrast {
+  --text: hsl(var(--base), 5%);
+  --background: hsl(var(--base), 95%);
+}
+:root.dark-mode.high-contrast {
+  --text: hsl(var(--base), 95%);
+  --background: hsl(var(--base), 5%);
+}
+
+body {
+  font-family: Karla, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+
+/* ---------- toggle styles ---------- */
+.toggle {
+	position: fixed;
+	z-index: 20;
+	opacity: 0.75;
+	border: 0;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+	filter: invert(0%);
+}
+#toggleLED {
+	width: calc(1.5rem + 0.75vw);
+	height: calc(2rem + 1vw);
+	right: min(5vw,2rem);
+	bottom: min(3vw,2rem);
+	background-image: url('../images/led-on.svg');
+}
+#toggleContrast {
+	width: calc(1.5rem + 0.75vw);
+	height: calc(1rem + 0.5vw);
+	right: min(5vw,2rem);
+	bottom: calc(min(3vw,2rem) + (3rem + 1vw));
+	background-image: url('../images/contrast.svg');
+}
+
+.toggle:focus-visible {
+	opacity: 1;
+}
+
+.dark-mode .toggle {
+	filter: invert(100%);
+}
+
+.dark-mode #toggleLED {
+	background-image: url('../images/led-off.svg');
+}
+.high-contrast #toggleContrast {
+	rotate: 180deg;
+}
+
+@media (hover: hover) {
+	.toggle {
+		opacity: 0.50;
+		transition: opacity 0.25s, background-image 0.5s, rotate 1s;
+	}
+	.toggle:hover {
+		opacity: 0.75;
+	}
+	.dark-mode #toggleLED:hover {
+		background-image: url('../images/led-on.svg');
+	}
+	#toggleLED:hover {
+		background-image: url('../images/led-off.svg');
+	}
+	.high-contrast #toggleContrast:hover {
+		rotate: 0deg;
+	}
+	#toggleContrast:hover {
+		rotate: 180deg;
+	}
+}
