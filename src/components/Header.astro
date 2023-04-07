@@ -8,6 +8,7 @@ import '../styles/global.css';
 
 <header>
 	<div>
+		<a id="skiplink" href="#gosara">Skip to Content</a>
 		<a id="site-title" href="/#">{SITE_TITLE}</a>
 		<nav>
 			<ul>
@@ -44,7 +45,7 @@ header div {
 	border-top-right-radius: var(--border-radii);
 }
 
-#site-title, nav ul {
+#site-title, #skiplink, nav ul {
 	margin: 0;
 	align-self: center;
 }
@@ -53,6 +54,18 @@ header div {
 	font-size: clamp(1rem, 4.75vw, 2rem);
 	font-weight: bold;
 	text-transform: lowercase;
+}
+
+#skiplink {
+	position: absolute;
+	font-size: clamp(0.75rem, 4vw, 1.5rem);
+	padding: 0.25em;
+	scale: 0;
+	background-color: var(--header);
+}
+#skiplink:focus-visible {
+	scale: 1;
+	transition: scale 0.25s ease;
 }
 
 nav {
