@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+# layout: "../../layouts/BlogPost.astro"
 title: "A11y: Semantics, Contrast and... Anxiety?"
 description: "It's a lot. It's tempting to pretend we didn't read that very confronting article telling us we need to Do Better."
 pubDate: "Jun 07 2022"

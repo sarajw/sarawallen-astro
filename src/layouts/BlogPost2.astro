@@ -1,0 +1,166 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+
+const {
+	frontmatter, headings
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={frontmatter.title} description={frontmatter.short ? "Short thoughts from between Sara's ears" : frontmatter.description} image={frontmatter.short ? "/images/blog/short-thorts.jpg" : frontmatter.heroImage} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="blogPost">
+			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
+			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
+			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
+			<div class="post">
+				<article>
+					{!frontmatter.short && frontmatter.heroImage && (
+						<figure>
+							<img
+								src={frontmatter.heroImage}
+								alt={frontmatter.caption}
+							/>
+							<figcaption class="caption">{frontmatter.caption}</figcaption>
+						</figure>
+					)}
+					<h1 class="title">{frontmatter.title}</h1>
+					{frontmatter.pubDate && <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})}</time>}
+					{headings.length > 0 &&
+						<details id="toc">
+							<summary><h2>Table of Contents</h2></summary>
+							<ul>
+								{headings.map((heading) => (
+									<li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
+								))}
+							</ul>
+						</details>
+					}
+					{updatedDate && <div>Last updated on <time>{new Date(pubDate).toLocaleDateString('en-gb', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})}</time></div>}
+				  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+					<slot />
+					<a class="back" href={short ? "../" : "/#goblog"}>&larr; back to {short ? "shorts" : "blog"} index</a>
+				</article>
+			</div>
+		</main>
+		<Toggle />
+	</body>
+</html>
+
+<style>
+	main {
+		background-color: var(--header);
+		margin-top: var(--tabheight);
+	}
+	.tab {
+		position: fixed !important;
+		top: 0.5rem;
+		pointer-events: none;
+		margin-top: 0 !important;
+		width: calc(100% - 0.5rem);
+	}
+	.tab::after {
+	}
+	article {
+		max-width: 80ch;
+		margin: 0 auto;
+		padding: 5.5vmin;
+	}
+	figure {
+		margin-inline: auto;
+		margin-block: 0 3vmin;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+	time {
+		display: block;
+		width: fit-content;
+		margin: 0 0 3rem auto;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+	}
+	
+  .post :global(pre) {
+		font-size: var(--sml);
+		line-height: 1.25em;
+    background-color: var(--sara);
+    white-space: pre-wrap;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .post :global(table) {
+    margin-block: 1rem;
+    font-size: var(--sml);
+  }
+  .post :global(:is(td, th)) {
+    padding: 0.5ch 1ch;
+  }
+  .post :global(thead) {
+    border: 2px solid black;
+  }
+
+	:root {
+    --pink: mediumvioletred;
+    --green: teal;
+    --blue: slateblue;
+    --yellow: darkgoldenrod;
+    --orange: orangered;
+  }
+
+	:root.dark-mode {
+		--pink: hotpink;
+		--green: springgreen;
+		--blue: cyan;
+		--yellow: gold;
+		--orange: lightsalmon;
+	}
+
+  .post :global(code .comment) {
+    color: var(--orange);
+  }
+  .post :global(code .tag),
+  .post :global(code .keyword),
+  .post :global(code .selector),
+  .post :global(code .operator) {
+    color: var(--blue);
+  }
+  .post :global(code .punctuation),
+  .post :global(code .parameter) {
+    color: var(--pink);
+  }
+  .post :global(code .attr-name),
+  .post :global(code .function) {
+    color: var(--yellow);
+  }
+  .post :global(code .attr-value),
+  .post :global(code .property),
+  .post :global(code .string) {
+    color: var(--green);
+  }
+
+	a.back {
+		display: block;
+		width: fit-content;
+		margin: 3em auto 0;
+		font-weight: bold;
+	}
+</style>

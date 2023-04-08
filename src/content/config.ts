@@ -5,7 +5,7 @@ const postsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.date(),
+    pubDate: z.string(),
     heroImage: z.string(),
     caption: z.string()
   })
@@ -14,9 +14,8 @@ const shortCollection = defineCollection({
     schema: z.object({
       title: z.string(),
       short: z.boolean(),
-      pubDate: z.date(),
-      heroImage: z.string(),
-      caption: z.string()
+      pubDate: z.string(),
+      published: z.boolean().optional(),
     })
 });
 // Export a single `collections` object to register your collection(s)
