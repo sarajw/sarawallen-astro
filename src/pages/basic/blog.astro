@@ -21,7 +21,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
         {
           allPosts.map((post) => (
             <li>
-              <a href={"posts/" + post.slug}>{post.data.title}</a>
+              <a href={"/basic/posts/" + post.slug}>{post.data.title}</a>
             </li>
           ))
         }
