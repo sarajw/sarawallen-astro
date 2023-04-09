@@ -37,6 +37,7 @@ body {
 }
 
 
+
 /* ---------- toggle styles ---------- */
 .toggle {
 	position: fixed;
@@ -54,14 +55,14 @@ body {
 	height: calc(2rem + 1vw);
 	right: min(5vw,2rem);
 	bottom: min(3vw,2rem);
-	background-image: url('../images/led-on.svg');
+	background-image: url('/images/led-on.svg');
 }
 #toggleContrast {
 	width: calc(1.5rem + 0.75vw);
 	height: calc(1rem + 0.5vw);
 	right: min(5vw,2rem);
 	bottom: calc(min(3vw,2rem) + (3rem + 1vw));
-	background-image: url('../images/contrast.svg');
+	background-image: url('/images/contrast.svg');
 }
 
 .toggle:focus-visible {
@@ -73,7 +74,7 @@ body {
 }
 
 .dark-mode #toggleLED {
-	background-image: url('../images/led-off.svg');
+	background-image: url('/images/led-off.svg');
 }
 .high-contrast #toggleContrast {
 	rotate: 180deg;
@@ -88,10 +89,10 @@ body {
 		opacity: 0.75;
 	}
 	.dark-mode #toggleLED:hover {
-		background-image: url('../images/led-on.svg');
+		background-image: url('/images/led-on.svg');
 	}
 	#toggleLED:hover {
-		background-image: url('../images/led-off.svg');
+		background-image: url('/images/led-off.svg');
 	}
 	.high-contrast #toggleContrast:hover {
 		rotate: 0deg;

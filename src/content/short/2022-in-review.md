@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/BlogPost.astro
 short: true
 pubDate: '2023-01-01 21:50 +0100'
 published: false

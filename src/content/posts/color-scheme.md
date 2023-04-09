@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Do you know color-scheme?"
 description: "It will certainly look familiar, as prefers-color-scheme has been around for longer and is clearly related."
 pubDate: "Jan 14 2023"

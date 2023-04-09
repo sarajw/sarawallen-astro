@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Mechanical Watches"
 description: "I have a thing about mechanical watches. I only wear one though, the engagement watch that my now husband gave me in 2014."
 pubDate: "Aug 24 2021"

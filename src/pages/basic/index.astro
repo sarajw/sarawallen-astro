@@ -1,16 +1,9 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
+import BasicHeader from '../../components/BasicHeader.astro';
 import Toggle from '../../components/Toggle.astro';
-import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+// import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
-import '../../styles/basic.css';
-
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-// const posts = (await Astro.glob('./../blog/*.{md,mdx}')).sort(
-// 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-// );
-
-// doing the above imports... the blogpostlayout? which then imports associated css? head aspin
 ---
 
 <!DOCTYPE html>
@@ -19,19 +12,7 @@ import '../../styles/basic.css';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
 	</head>
 	<body>
-    <header>
-      <div>
-        <a id="site-title" href="/#">{SITE_TITLE}</a>
-        <nav>
-          <ul>
-            <li><a href="">navi</a></li>
-            <li><a href="">gation</a></li>
-            <li><a href="">place</a></li>
-            <li><a href="">holder</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <BasicHeader />
     <main>
       <h2>Here's some sample text!</h2>
       <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.</p>

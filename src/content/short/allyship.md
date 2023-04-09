@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Allyship"
 pubDate: "Nov 23 2022"
 ---

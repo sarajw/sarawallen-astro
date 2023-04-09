@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Developing Developer"
 pubDate: "Oct 21 2022"
 ---

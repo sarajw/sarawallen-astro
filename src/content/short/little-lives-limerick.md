@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Little Lives Limerick"
 pubDate: "Sept 22 2022"
 ---

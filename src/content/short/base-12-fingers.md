@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Base-12 Fingers"
 pubDate: "Oct 23 2022"
 ---

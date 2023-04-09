@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "How 'Senior Generalist' Sara Side-Stepped"
 description: "from Childhood to Techy Generalist to Mother to Front End Developer"
 pubDate: "Jan 20 2023"

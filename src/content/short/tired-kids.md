@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Tired Kids"
 pubDate: "Nov 25 2022"
 ---

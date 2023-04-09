@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Why I Dance, Nov 2012"
 description: "I began dancing in January 2007 (first, leroc, then I discovered swing/lindy about 5 months later) - I was looking for a hobby."
 pubDate: "Nov 28 2012"

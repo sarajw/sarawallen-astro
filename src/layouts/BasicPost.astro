@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import BasicHeader from "../components/BasicHeader.astro";
 import Header from "../components/Header.astro";
 import Toggle from "../components/Toggle.astro";
 
@@ -10,18 +11,15 @@ const {
 
 <html lang="en">
 	<head>
-		<BaseHead title={frontmatter.title} description={frontmatter.short ? "Short thoughts from between Sara's ears" : frontmatter.description} image={frontmatter.short ? "/images/blog/short-thorts.jpg" : frontmatter.heroImage} />
+		<BaseHead title={frontmatter.title} description={frontmatter.description} image={frontmatter.heroImage} />
 	</head>
 
 	<body>
-		<Header />
-		<main class="blogPost">
-			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
-			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
-			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
+    <BasicHeader />
+		<main class="basicPost">
 			<div class="post">
 				<article>
-					{!frontmatter.short && frontmatter.heroImage && (
+					{frontmatter.heroImage && (
 						<figure>
 							<img
 								src={frontmatter.heroImage}
@@ -36,9 +34,14 @@ const {
 						month: 'short',
 						day: 'numeric',
 					})}</time>}
+					{frontmatter.updatedDate && <div>Last updated on <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})}</time></div>}
 					{headings.length > 0 &&
 						<details id="toc">
-							<summary><h2>Table of Contents</h2></summary>
+							<summary><b>Table of Contents</b></summary>
 							<ul>
 								{headings.map((heading) => (
 									<li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
@@ -46,14 +49,9 @@ const {
 							</ul>
 						</details>
 					}
-					{frontmatter.updatedDate && <div>Last updated on <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
-						year: 'numeric',
-						month: 'short',
-						day: 'numeric',
-					})}</time></div>}
 				  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					<slot />
-					<a class="back" href={frontmatter.short ? "../" : "/#goblog"}>&larr; back to {frontmatter.short ? "shorts" : "blog"} index</a>
+					<a class="back" href="../blog">&larr; back to {"blog"} index</a>
 				</article>
 			</div>
 		</main>
@@ -161,6 +159,6 @@ const {
 		display: block;
 		width: fit-content;
 		margin: 3em auto 0;
-		font-weight: bold;
+		/* font-weight: bold; */
 	}
 </style>

@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+
+import BaseHead from '../../components/BaseHead.astro';
+import BasicHeader from '../../components/BasicHeader.astro';
+import Toggle from '../../components/Toggle.astro';
+// import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
+	</head>
+	<body>
+    <BasicHeader />
+    <main>
+      <ul>
+        {
+          allPosts.map((post) => (
+            <li>
+              <a href={"posts/" + post.slug}>{post.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+    <footer><Toggle /></footer>
+  </body>
+</html>

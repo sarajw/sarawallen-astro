@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "#100DaysOfCode"
 description: "Copying and pasting my tweets on the matter as I slowly make my way non-consecutively through the 100 days."
 pubDate: "Jan 08 2023"

@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "What-Ifs"
 pubDate: "Oct 7 2022"
 ---

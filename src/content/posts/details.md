@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Using html <details> tag as navigation"
 description: "Natively right out of the box, HTML provides us with a way to open and close an element on a click. Beautiful."
 pubDate: "Mar 27 2022"

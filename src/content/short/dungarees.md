@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Dungarees"
 pubDate: "Nov 22 2022"
 ---

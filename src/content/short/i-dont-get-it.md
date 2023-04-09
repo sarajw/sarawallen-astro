@@ -1,6 +1,5 @@
 ---
 short: true
-layout: "../../../layouts/BlogPost.astro"
 title: "Coding"
 pubDate: "Dec 7 2022"
 ---

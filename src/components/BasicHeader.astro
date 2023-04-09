@@ -1,0 +1,21 @@
+---
+import { SITE_TITLE } from '../config';
+
+// Import the global.css file here so that it is included on
+// all pages through the use of the <Header /> component.
+import '../styles/basic.css';
+---
+
+<header>
+	<div>
+		<!-- <a id="skiplink" href="#gosara">Skip to Content</a> -->
+		<a id="site-title" href="/basic/">{SITE_TITLE}</a>
+		<nav>
+			<ul>
+				<li><a href="/basic/">home</a></li>
+				<li><a href="/basic/blog">blog</a></li>
+				<li><a href="/basic/short">short</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>

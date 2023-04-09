@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Job Application Tips"
 description: "How to get the first interview, and smash it!"
 pubDate: "Sep 09 2022"

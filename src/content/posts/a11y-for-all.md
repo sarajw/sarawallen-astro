@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "How We All Benefit from Accessibility"
 description: "A general musing on accessibility (a.k.a. a11y), online and offline."
 pubDate: "May 21 2022"
