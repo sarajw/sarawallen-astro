@@ -22,7 +22,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
         {
           allPosts.map((thort) => (
             <li>
-              <a href={"short/" + thort.slug}>{thort.data.title}</a>
+              <a href={"/basic/short/" + thort.slug}>{thort.data.title}</a>
               <p style="white-space: pre; max-width: 80ch;">{thort.body}</p>
             </li>
           ))
