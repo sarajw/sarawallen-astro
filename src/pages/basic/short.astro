@@ -12,18 +12,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/photo.png' />
 	</head>
 	<body>
     <BasicHeader />
-    <main>
-      <p>Short Thorts / Shought Thoughts</p>
+    <main class="short">
+      <h1 class="fancy">Short Thorts</h1>
       <ul>
         {
           allPosts.map((thort) => (
             <li>
-              <a href={"/basic/short/" + thort.slug}>{thort.data.title}</a>
-              <p style="white-space: pre; max-width: 80ch;">{thort.body}</p>
+              <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
+              <p>{thort.body}</p>
             </li>
           ))
         }

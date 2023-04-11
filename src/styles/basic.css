@@ -7,7 +7,19 @@
 		url('/fonts/karla.woff2') format('woff2-variations');
 }
 
+@font-face {
+	font-family: 'Urbanist';
+	font-weight: 100;
+	font-display: swap;
+	src:
+		url('/fonts/urbanist.woff2') format('woff2 supports variations'),
+		url('/fonts/urbanist.woff2') format('woff2-variations');
+}
+
 :root {
+	
+	color-scheme: dark light;
+
 	/* colours */
 	
   --base: 0, 0%;
@@ -32,10 +44,53 @@
 
 body {
   font-family: Karla, sans-serif;
+	font-size: 18px;
   color: var(--text);
   background-color: var(--background);
 }
 
+header {
+	display: flex;
+	gap: 1em;
+	justify-content: space-between;
+}
+
+nav ul {
+	display: flex;
+	gap: 1em;
+	margin: 0;
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+.fancy {
+	margin: 0;
+	font-family: Urbanist, sans-serif;
+	font-weight: 200;
+	font-size: min(20rem, 20vw);
+	letter-spacing: -0.1em;
+	text-align: center;
+}
+.home .fancy {font-size: min(30rem, 30vw)}
+/* .short .fancy {font-size: min(20rem, 20vw)}
+.blog .fancy {font-size: min(30rem, 30vw)} */
+
+.now_before {
+	display: none;
+}
+
+/* ---------- short styles ---------- */
+main.short ul {
+	max-width: 60ch;
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+main.short li {
+	margin-block: 2em;
+}
+main.short li p {
+	white-space: pre-line;
+}
 
 
 /* ---------- toggle styles ---------- */

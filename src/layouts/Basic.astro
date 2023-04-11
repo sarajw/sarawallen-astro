@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import BasicHeader from "../components/BasicHeader.astro";
+import Toggle from "../components/Toggle.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+const {
+	title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/images/photo.png", page
+} = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead {title} {description} {image} />
+	</head>
+	<body>
+    <BasicHeader />
+    <main class={page}>
+      <h1 class="fancy">{title}</h1>
+
+      <slot />
+
+    </main>
+    <footer><Toggle /></footer>
+  </body>
+</html>

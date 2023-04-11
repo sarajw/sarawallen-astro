@@ -1,32 +1,20 @@
 ---
 import { getCollection } from "astro:content";
-const allPosts = await getCollection("posts");
+const allPosts = (await getCollection("posts")).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 
-import BaseHead from '../../components/BaseHead.astro';
-import BasicHeader from '../../components/BasicHeader.astro';
-import Toggle from '../../components/Toggle.astro';
-// import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
+import Basic from '../../layouts/Basic.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/social-card.png' />
-	</head>
-	<body>
-    <BasicHeader />
-    <main>
-      <ul>
-        {
-          allPosts.map((post) => (
-            <li>
-              <a href={"/basic/posts/" + post.slug}>{post.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-    <footer><Toggle /></footer>
-  </body>
-</html>
+<Basic title="Web Log" page="blog" />
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li>
+          <a href={"/basic/posts/" + post.slug}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Basic>
