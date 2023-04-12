@@ -71,7 +71,7 @@ if (contrastMode) {
 }
 
 // check for color-scheme, if not set, then...
-if (colorScheme.content === "light dark") {
+if (colorScheme.content === "dark light") {
   // ..if user OS is in dark mode...
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // ..add dark-mode class to html element
@@ -89,7 +89,7 @@ if (!htmlRoot.classList.contains("high-contrast")) {
 
 function toggleMode() {
   // check for color-scheme, if not set, then...
-  if (colorScheme.content === "light dark") {
+  if (colorScheme.content === "dark light") {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       switchLight();
     } else {
@@ -114,7 +114,7 @@ function toggleContrast() {
 // event listener in case our user flips the OS mode
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   // only run if the html element color-scheme is not set
-  if (colorScheme.content === "light dark") {
+  if (colorScheme.content === "dark light") {
     // add/remove dark mode to match OS setting
     if(event.matches) {
       htmlRoot.classList.add("dark-mode");
