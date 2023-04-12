@@ -19,10 +19,10 @@ const {
 	<body>
     <BasicHeader />
     <main class={page}>
+      {page === "home" && 
+      <img id="avatar-big" src="/images/sara-big.png" alt="avatar">}
       <h1 class="fancy">{title}</h1>
-
       <slot />
-
     </main>
     <footer><Toggle /></footer>
   </body>

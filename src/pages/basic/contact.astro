@@ -20,7 +20,7 @@ const entries = await getGuestEntries();
 import Basic from '../../layouts/Basic.astro';
 ---
 
-<Basic title="Contact" page="contact" />
+<Basic title="Contact" page="contact">
 <h2>Email me</h2>
 <form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
   <input type="hidden" name="form-name" value="contact" />
