@@ -20,7 +20,31 @@ const entries = await getGuestEntries();
 import Basic from '../../layouts/Basic.astro';
 ---
 
-<Basic title="Guest Book" page="book" />
+<Basic title="Contact" page="contact" />
+<h2>Email me</h2>
+<form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+  <input type="hidden" name="form-name" value="contact" />
+  <p>
+    <label
+      >Name:
+      <br /><input type="text" name="name" required /></label
+    >
+  </p>
+  <p>
+    <label
+      >Email address:
+      <br /><input type="email" name="email" required /></label
+    >
+  </p>
+  <p>
+    <label class="message">Message:<br /><textarea name="message" required /></label>
+  </p>
+  <p>
+    <button type="submit"><b>Send</b></button>
+  </p>
+</form>
+
+<h2>Guestbook</h2>
 {!tooManySubs && 
   <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
