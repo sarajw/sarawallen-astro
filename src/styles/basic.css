@@ -106,10 +106,20 @@ main > *:not(.fancy) {
 	font-size: min(20rem, 20vw);
 	letter-spacing: -0.15em;
 	text-align: center;
+	
 }
 .home .fancy {font-size: min(30rem, 30vw)}
-/* .short .fancy {font-size: min(20rem, 20vw)}
-.blog .fancy {font-size: min(30rem, 30vw)} */
+.fancy:hover {
+  letter-spacing: 0;
+  scale: 0.85;
+  transition: scale 0.5s ease-in-out,  letter-spacing 0.5s ease-in-out;
+}
+@media (hover: none) {
+  .fancy {
+    letter-spacing: 0;
+    scale: 0.85;
+  }
+}
 
 .now_before {
 	display: none;
