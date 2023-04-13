@@ -80,11 +80,12 @@ nav ul {
 	margin: 0;
 	list-style-type: none;
 	padding-inline-start: 0;
+		justify-content: space-around;
 }
 
 @media (max-width: 400px) {
 	header {
-		justify-content: center;
+		display: revert;
 	}
 	#avatar {display: none}
 	#avatar-big {
