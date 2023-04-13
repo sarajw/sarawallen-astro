@@ -111,13 +111,13 @@ main > *:not(.fancy) {
 .home .fancy {font-size: min(30rem, 30vw)}
 .fancy:hover {
   letter-spacing: 0;
-  scale: 0.85;
+  scale: 0.8;
   transition: scale 0.5s ease-in-out,  letter-spacing 0.5s ease-in-out;
 }
 @media (hover: none) {
   .fancy {
     letter-spacing: 0;
-    scale: 0.85;
+    scale: 0.8;
   }
 }
 
