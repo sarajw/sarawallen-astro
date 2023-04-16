@@ -7,6 +7,7 @@ const allPosts = (await getCollection("short")).sort(
 import BaseHead from '../../components/BaseHead.astro';
 import BasicHeader from '../../components/BasicHeader.astro';
 import Toggle from '../../components/Toggle.astro';
+import Thort from '../../components/Thort.astro';
 // import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 ---
@@ -21,19 +22,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
     <main class="short">
       <h1 class="fancy">Short Thorts</h1>
       <ul>
-        {
-          allPosts.map((thort) => {
-            async () => {
-              const {Content} = await thort.render();
-              return (
-                <li>
-                  <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
-                  <Content />
-                </li>
-              )
-            }
-          })
-        }
+        {allPosts.map((thort) => (
+          <li>
+            <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
+            <Thort slug={thort.slug} />
+          </li>
+        ))}
       </ul>
     </main>
     <footer><Toggle /></footer>

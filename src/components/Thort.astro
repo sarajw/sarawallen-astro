@@ -1,0 +1,7 @@
+---
+import { getEntryBySlug } from 'astro:content';
+const { slug } = Astro.props;
+const entry = await getEntryBySlug('short', slug);
+const { Content } = await entry.render();
+---
+<Content />
