@@ -20,37 +20,37 @@
 
 	/* colours */
 	
-  --base: 0, 0%;
-  --pop1: 190, 35%;
-  --pop2: 325, 35%;
+	--base: 0, 0%;
+	--pop1: 190, 35%;
+	--pop2: 325, 35%;
 
-  --text: hsl(var(--base), 15%);
-  --background: hsl(var(--pop1), 75%);
+	--text: hsl(var(--base), 15%);
+	--background: hsl(var(--pop1), 75%);
 
 	--link: hsl(var(--pop2), 25%);
 	--vlink: hsl(var(--pop1), 25%);
 }
 :root.dark-mode {
-  --text: hsl(var(--base), 85%);
-  --background: hsl(var(--pop2), 18%);
+	--text: hsl(var(--base), 85%);
+	--background: hsl(var(--pop2), 18%);
 
 	--link: hsl(var(--pop1), 75%);
 	--vlink: hsl(var(--pop2), 75%);
 }
 :root.high-contrast {
-  --text: hsl(var(--base), 5%);
-  --background: hsl(var(--base), 95%);
+	--text: hsl(var(--base), 5%);
+	--background: hsl(var(--base), 95%);
 }
 :root.dark-mode.high-contrast {
-  --text: hsl(var(--base), 95%);
-  --background: hsl(var(--base), 5%);
+	--text: hsl(var(--base), 95%);
+	--background: hsl(var(--base), 5%);
 }
 
 body {
-  font-family: Karla, sans-serif;
+	font-family: Karla, sans-serif;
 	font-size: 18px;
-  color: var(--text);
-  background-color: var(--background);
+	color: var(--text);
+	background-color: var(--background);
 }
 
 a {
@@ -110,16 +110,16 @@ main > *:not(.fancy) {
   	transition: font-size 0.5s ease-in-out,  letter-spacing 0.5s ease-in-out;
 }
 .fancy:hover {
-  letter-spacing: 0;
+	letter-spacing: 0;
 }
 .home .fancy {font-size: min(30rem, 30vw)}
 .home .fancy:hover {font-size: min(25rem, 25vw)}
 
 @media (hover: none) {
-  .fancy {
-    letter-spacing: 0;
-  }
-  .home .fancy {font-size: min(25rem, 25vw)}
+	.fancy {
+		letter-spacing: 0;
+	}
+	.home .fancy {font-size: min(25rem, 25vw)}
 }
 
 .now_before {
@@ -136,6 +136,10 @@ main.short li {
 	margin-block: 2em;
 }
 main.short li p {
+	white-space: pre-line;
+}
+
+main.contact .entry p {
 	white-space: pre-line;
 }
 

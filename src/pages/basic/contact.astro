@@ -1,23 +1,12 @@
 ---
-let lastMonth = new Date();
-lastMonth.setMonth(lastMonth.getMonth() - 1);
-
-async function getAllEntries() {
-  const response = await fetch(new Request(`https://api.netlify.com/api/v1/sites/${import.meta.env.WEBSITE_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
-  return response.json();
-}
-const allSubs = await getAllEntries();
-const subsLastMonth = allSubs.filter((sub) => (new Date(sub.created_at) > new Date(lastMonth)));
-const tooManySubs = subsLastMonth.length >= 95;
-
+import Basic from '../../layouts/Basic.astro';
 async function getGuestEntries() {
-  const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
+  const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}}));
   return response.json();
 }
 const entries = await getGuestEntries();
 
 // import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
-import Basic from '../../layouts/Basic.astro';
 ---
 
 <Basic title="Contact" page="contact">
@@ -44,8 +33,7 @@ import Basic from '../../layouts/Basic.astro';
   </p>
 </form>
 
-<h2>Guestbook</h2>
-{!tooManySubs && 
+<h2>Sign the Guestbook</h2>
   <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
     <p>
@@ -63,7 +51,7 @@ import Basic from '../../layouts/Basic.astro';
     <p>
       <label
         >URL <small>(optional, linked from Name)</small>
-        <br /><input type="url" name="url" placeholder="https://example.com" pattern="https://.*" /></label
+        <br /><input type="url" name="url" placeholder="https://example.com" pattern="https://*" /></label
       >
     </p>
     <p>
@@ -72,12 +60,9 @@ import Basic from '../../layouts/Basic.astro';
     <p>
       <button type="submit"><b>Send</b></button>
     </p>
-  </form>}
-  
-  {tooManySubs &&
-    <p><em>Can't see a form? That's because I've had too many submissions this month - please check back another day, or find me via my <a href="/#find">socials</a>.</em></p>
-  }
-  {entries.map((entry) =>(
+  </form>
+
+  {entries.map((entry: any) =>(
     <article class="entry">
       <h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>
       <p>{entry.body}</p>

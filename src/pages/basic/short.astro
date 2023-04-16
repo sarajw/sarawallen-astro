@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-const allPosts = await getCollection("short");
+const allPosts = (await getCollection("short")).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 
 import BaseHead from '../../components/BaseHead.astro';
 import BasicHeader from '../../components/BasicHeader.astro';
@@ -20,12 +22,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
       <h1 class="fancy">Short Thorts</h1>
       <ul>
         {
-          allPosts.map((thort) => (
-            <li>
-              <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
-              <p>{thort.body}</p>
-            </li>
-          ))
+          allPosts.map((thort) => {
+            async () => {
+              const {Content} = await thort.render();
+              return (
+                <li>
+                  <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
+                  <Content />
+                </li>
+              )
+            }
+          })
         }
       </ul>
     </main>

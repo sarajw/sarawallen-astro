@@ -9,19 +9,8 @@ const alt = "Colourful speech bubbbles in watercolours";
 const title = "Guestbook";
 const description = "Please sign my guestbook!";
 
-let lastMonth = new Date();
-lastMonth.setMonth(lastMonth.getMonth() - 1);
-
-async function getAllEntries() {
-  const response = await fetch(new Request(`https://api.netlify.com/api/v1/sites/${import.meta.env.WEBSITE_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
-  return response.json();
-}
-const allSubs = await getAllEntries();
-const subsLastMonth = allSubs.filter((sub) => (new Date(sub.created_at) > new Date(lastMonth)));
-const tooManySubs = subsLastMonth.length >= 95;
-
 async function getGuestEntries() {
-  const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}, 'Accept':'application/json'}));
+  const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}}));
   return response.json();
 }
 const entries = await getGuestEntries();
@@ -51,7 +40,7 @@ const entries = await getGuestEntries();
             In the spirit of a (welcome, and overdue!) resurgence of nostalgia for the old, decentralised web, where many of us bashed out our own personal homepages and filled them with whimsical, social stuff not only intended to make us look good for prospective clients or employers, I've built myself a this little guestbook.
           </p>
 					<p>Don't expect instant updates, new messages will be moderated, and added when I next deploy my site :)</p>
-					{!tooManySubs && 
+					
 					<form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
 						<input type="hidden" name="form-name" value="guestbook" />
 						<p>
@@ -78,12 +67,9 @@ const entries = await getGuestEntries();
 						<p>
 							<button type="submit"><b>Send</b></button>
 						</p>
-					</form>}
+					</form>
           <PrivacyPolicy />
-					{tooManySubs &&
-						<p><em>Can't see a form? That's because I've had too many submissions this month - please check back another day, or find me via my <a href="/#find">socials</a>.</em></p>
-					}
-					{entries.map((entry) =>(
+					{entries.map((entry:any) =>(
 						<article class="entry">
 							<h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>
 							<p>{entry.body}</p>
