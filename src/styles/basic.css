@@ -102,10 +102,10 @@ nav ul {
 }
 
 main > *:not(.fancy) {
-	max-width: 50rem;
-	margin: 0 auto;
+	max-width: 40rem;
+	margin-inline: auto;
 }
-main img {
+main img:not(.backtotop img) {
 	display:block;
 	max-width: 100%;
 	margin: 0 auto;
@@ -118,7 +118,7 @@ main img {
 	font-family: Urbanist, sans-serif;
 	font-weight: 200;
 	font-size: min(20rem, 20vw);
-	letter-spacing: -0.15em;
+	letter-spacing: -0.125em;
 	text-align: center;
   transition: font-size 0.5s ease-in-out,  letter-spacing 0.5s ease-in-out;
 }
@@ -144,13 +144,16 @@ main img {
 /* ---------- blog styles ---------- */
 
 .backtotop {
-	position: fixed;
+	position: sticky;
 	z-index: 20;
 	border: 0;
 	filter: invert(0%);
 	scale: 1.25;
 	left: min(5vw,2rem);
-	bottom: min(5vw,2rem);
+	top: calc(100svh - min(5vw,3rem));
+}
+.back {
+	text-align: center;
 }
 
 /* ---------- short styles ---------- */

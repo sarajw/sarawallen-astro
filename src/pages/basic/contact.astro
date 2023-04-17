@@ -62,6 +62,7 @@ const entries = await getGuestEntries();
     </p>
   </form>
 
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   {entries.map((entry: any) =>(
     <article class="entry">
       <h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>

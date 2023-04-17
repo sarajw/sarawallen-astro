@@ -1,7 +1,7 @@
 ---
 import Basic from '../../../layouts/Basic.astro';
-
 import { getCollection } from 'astro:content';
+
 export async function getStaticPaths() {
   const shortEntries = await getCollection('short');
   return shortEntries.map(entry => ({
@@ -13,19 +13,17 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Basic title={entry.data.title} noFancy description="A Short Thought" page="thort">
-	<article>
-		<h1 class="title">{entry.data.title}</h1>
-		{entry.data.pubDate && <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})}</time>}
-		{entry.data.updatedDate && <div>Last updated on <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})}</time></div>}
-    <Content />
-		<a class="back" href="/basic/short">&larr; back to {"thorts"} index</a>
-	</article>
+  <h1 class="title">{entry.data.title}</h1>
+  {entry.data.pubDate && <p><time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}</time></p>}
+  {entry.data.updatedDate && <p>Last updated on <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}</time></p>}
+  <Content />
+  <p class="back"><a href="/basic/short">&larr; back to {"thorts"} index</a></p>
 </Basic>

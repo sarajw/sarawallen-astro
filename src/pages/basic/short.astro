@@ -4,32 +4,20 @@ const allPosts = (await getCollection("short")).sort(
 	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
 
-import BaseHead from '../../components/BaseHead.astro';
-import BasicHeader from '../../components/BasicHeader.astro';
-import Toggle from '../../components/Toggle.astro';
+import Basic from '../../layouts/Basic.astro';
 import ThortBody from '../../components/ThortBody.astro';
-// import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/photo.png' />
-	</head>
-	<body>
-    <BasicHeader />
-    <main class="short">
-      <h1 class="fancy">Short Thorts</h1>
-      <ul>
-        {allPosts.map((thort) => (
-          <li>
-            <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
-            <ThortBody slug={thort.slug} />
-          </li>
-        ))}
-      </ul>
-    </main>
-    <footer><Toggle /></footer>
-  </body>
-</html>
+<Basic title="Short Thorts" page="short">
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+  <ul>
+    {allPosts.map((thort) => (
+      <li>
+        <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
+        <ThortBody slug={thort.slug} />
+      </li>
+    ))}
+  </ul>
+
+  <p class="back"><a href="/basic/blog">&larr; back to {"blog"} index</a></p>
+</Basic>

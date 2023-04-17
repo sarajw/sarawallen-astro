@@ -1,6 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
 import Basic from '../../../layouts/Basic.astro';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts');
@@ -13,39 +13,37 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 <Basic title={entry.data.title} noFancy description={entry.data.description} page="post">
-	<article>
-    {entry.data.heroImage && (
-      <figure>
-        <img
-          src={entry.data.heroImage}
-          alt={entry.data.caption}
-        />
-        <figcaption class="caption">{entry.data.caption}</figcaption>
-      </figure>
-    )}
-		<h1 class="title">{entry.data.title}</h1>
-		{entry.data.pubDate && <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})}</time>}
-		{entry.data.updatedDate && <div>Last updated on <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})}</time></div>}
-    {headings.length > 0 &&
-      <details id="toc">
-        <summary><b>Table of Contents</b></summary>
-        <ul>
-          {headings.map((heading: any) => (
-            <li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
-          ))}
-        </ul>
-      </details>
-    }
-    <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
-    <Content />
-		<a class="back" href="/basic/blog">&larr; back to {"blog"} index</a>
-	</article>
+  {entry.data.heroImage && (
+    <figure>
+      <img
+        src={entry.data.heroImage}
+        alt={entry.data.caption}
+      />
+      <figcaption class="caption">{entry.data.caption}</figcaption>
+    </figure>
+  )}
+  <h1 class="title">{entry.data.title}</h1>
+  {entry.data.pubDate && <p><time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}</time></p>}
+  {entry.data.updatedDate && <p>Last updated on <time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}</time></p>}
+  {headings.length > 0 &&
+    <details id="toc">
+      <summary><b>Table of Contents</b></summary>
+      <ul>
+        {headings.map((heading: any) => (
+          <li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
+        ))}
+      </ul>
+    </details>
+  }
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+  <Content />
+  <p class="back"><a href="/basic/blog">&larr; back to {"blog"} index</a></p>
 </Basic>

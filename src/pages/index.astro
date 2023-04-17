@@ -179,7 +179,21 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					</section>
 				
 					<section class="container box2">
-						<div class="smsq1" id="a2"></div>
+            <StuffModal
+              buttonClass="smsq1"
+              buttonImg="../sara-big.png"
+              title="Basic"
+              modalId="a2"
+              modalImg="../sara-big.png"
+              alt="An 'AI' Generated picture I rewrote prompts for many times until it looked a bit like me."
+              url="/basic/">
+              <p>
+                I got an itch to start redoing my website in a more basic, elegant way.
+              </p>
+              <p>
+                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
+              </p>
+            </StuffModal>
             
             <StuffModal
               buttonClass="bigsq"
