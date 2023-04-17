@@ -42,13 +42,13 @@ const {
 						<details id="toc">
 							<summary><b>Table of Contents</b></summary>
 							<ul>
-								{headings.map((heading) => (
+								{headings.map((heading: any) => (
 									<li class={`d${heading.depth}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>
 								))}
 							</ul>
 						</details>
 					}
-				  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					<slot />
 					<a class="back" href="/basic/blog">&larr; back to {"blog"} index</a>
 				</article>

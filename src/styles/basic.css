@@ -46,6 +46,12 @@
 	--background: hsl(var(--base), 5%);
 }
 
+@media not (prefers-reduced-motion) {
+	:root {
+		scroll-behavior: smooth;
+	}
+}
+
 body {
 	font-family: Karla, sans-serif;
 	font-size: 18px;
@@ -99,6 +105,13 @@ main > *:not(.fancy) {
 	max-width: 50rem;
 	margin: 0 auto;
 }
+main img {
+	display:block;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 0.5rem;
+}
+
 
 .fancy {
 	margin: 0 0 0.15em;
@@ -113,24 +126,35 @@ main > *:not(.fancy) {
 	letter-spacing: 0;
 }
 .home .fancy {font-size: min(30rem, 30vw)}
-.home .fancy:hover {font-size: min(25rem, 25vw)}
-.short .fancy:hover {font-size: min(15rem, 15vw)}
+.home .fancy:hover {font-size: min(24rem, 24vw)}
+.short .fancy:hover {font-size: min(16rem, 16vw)}
 
 @media (hover: none), (prefers-reduced-motion) {
 	.fancy {
 		letter-spacing: 0;
 	}
 	.home .fancy {font-size: min(25rem, 25vw)}
-	.short .fancy {font-size: min(15rem, 15vw)}
+	.short .fancy {font-size: min(17rem, 17vw)}
 }
 
 .now_before {
 	display: none;
 }
 
+/* ---------- blog styles ---------- */
+
+.backtotop {
+	position: fixed;
+	z-index: 20;
+	border: 0;
+	filter: invert(0%);
+	scale: 1.25;
+	left: min(5vw,2rem);
+	bottom: min(5vw,2rem);
+}
+
 /* ---------- short styles ---------- */
 main.short > ul {
-	max-width: 60ch;
 	list-style-type: none;
 	padding-inline-start: 0;
 }

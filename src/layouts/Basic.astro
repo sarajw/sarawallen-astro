@@ -6,7 +6,7 @@ import Toggle from "../components/Toggle.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 const {
-	title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/images/photo.png", page
+	title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/images/photo.png", page, noFancy
 } = Astro.props;
 
 ---
@@ -21,7 +21,7 @@ const {
     <main class={page}>
       {page === "home" && 
       <img id="avatar-big" src="/images/sara-big.png" alt="avatar">}
-      <h1 class="fancy">{title}</h1>
+      {!noFancy && <h1 class="fancy">{title}</h1>}
       <slot />
     </main>
     <footer><Toggle /></footer>
