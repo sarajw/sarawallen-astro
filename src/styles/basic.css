@@ -150,7 +150,7 @@ main img:not(.backtotop img) {
 	filter: invert(0%);
 	scale: 1.25;
 	left: min(5vw,2rem);
-	top: calc(100svh - min(12vw,3rem));
+	top: calc(100dvh - min(12vw,3rem));
 }
 .dark-mode .backtotop {
 	filter: invert(100%);
