@@ -2,15 +2,20 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import Toggle from "../../../components/Toggle.astro";
+import ThortBody from '../../../components/ThortBody.astro';
 
 const image = "/images/blog/short-thorts.jpg";
 const alt = "Colourful speech and thought bubbbles in watercolours";
 const title = "Short Thorts";
 const description = "Shought Thoughts from the jelly between Sara's ears.";
 
-const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-);
+// const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
+// 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// );
+import { getCollection } from "astro:content";
+const shorts = (await getCollection("short")).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 ---
 
 <html lang="en">
@@ -32,17 +37,18 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 					/>
 					<h1>{title}</h1>
 					<p>{description}</p>
+					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					{shorts.map((short) => (
 						<article class="short">
-							<h3><a href={short.url}>{short.frontmatter.title}</a></h3>
-							<time datetime={short.frontmatter.pubDate}>
-								{new Date(short.frontmatter.pubDate).toLocaleDateString('en-gb', {
+							<h3><a href={"short/" + short.slug}>{short.data.title}</a></h3>
+							<time datetime={short.data.pubDate}>
+								{new Date(short.data.pubDate).toLocaleDateString('en-gb', {
 									year: 'numeric',
 									month: 'short',
 									day: 'numeric',
 								})}
 							</time>
-							<div set:html={short.compiledContent()}></div>
+       				<ThortBody slug={short.slug} />
 						</article>
 					))}
 					<a class="back" href="/#goblog">&larr; back to blog index</a>
@@ -78,6 +84,11 @@ const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
 		display: block;
 		width: fit-content;
 		margin: 0 0 3vmin auto;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
 	}
 
 </style>

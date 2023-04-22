@@ -4,13 +4,14 @@ import Header from "../components/Header.astro";
 import Toggle from "../components/Toggle.astro";
 
 const {
-	frontmatter, headings
+	content: { short, title, description, pubDate, updatedDate, heroImage, caption },
+	headings,
 } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={frontmatter.title} description={frontmatter.short ? "Short thoughts from between Sara's ears" : frontmatter.description} image={frontmatter.short ? "/images/blog/short-thorts.jpg" : frontmatter.heroImage} />
+		<BaseHead title={title} description={short ? "Short thoughts from between Sara's ears" : description} image={short ? "/images/blog/short-thorts.jpg" : heroImage} />
 	</head>
 
 	<body>
@@ -21,17 +22,17 @@ const {
 			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
 			<div class="post">
 				<article>
-					{!frontmatter.short && frontmatter.heroImage && (
+					{!short && heroImage && (
 						<figure>
 							<img
-								src={frontmatter.heroImage}
-								alt={frontmatter.caption}
+								src={heroImage}
+								alt={caption}
 							/>
-							<figcaption class="caption">{frontmatter.caption}</figcaption>
+							<figcaption class="caption">{caption}</figcaption>
 						</figure>
 					)}
-					<h1 class="title">{frontmatter.title}</h1>
-					{frontmatter.pubDate && <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
+					<h1 class="title">{title}</h1>
+					{pubDate && <time>{new Date(pubDate).toLocaleDateString('en-gb', {
 						year: 'numeric',
 						month: 'short',
 						day: 'numeric',
@@ -46,14 +47,14 @@ const {
 							</ul>
 						</details>
 					}
-					{frontmatter.updatedDate && <div>Last updated on <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
+					{updatedDate && <div>Last updated on <time>{new Date(pubDate).toLocaleDateString('en-gb', {
 						year: 'numeric',
 						month: 'short',
 						day: 'numeric',
 					})}</time></div>}
 				  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					<slot />
-					<a class="back" href={frontmatter.short ? "../" : "/#goblog"}>&larr; back to {frontmatter.short ? "shorts" : "blog"} index</a>
+					<a class="back" href={short ? "../" : "/#goblog"}>&larr; back to {short ? "shorts" : "blog"} index</a>
 				</article>
 			</div>
 		</main>

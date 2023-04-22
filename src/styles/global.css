@@ -318,11 +318,11 @@ section > article ul:not(.now_content ul) {
 	place-content: center;
 	place-items: center;
 	position: absolute;
+	bottom: 2rem;
+	left: calc(50% - 1rem);
 	height: 2rem;
 	width: 2rem;
 	padding-bottom: 0.2rem;
-	bottom: 2rem;
-	left: calc(50% - 1rem);
 	border-radius: 50%;
 	background-color: var(--b2top);
 	transition: transform 0.2s ease;
