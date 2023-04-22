@@ -40,7 +40,7 @@ const shorts = (await getCollection("short")).sort(
 					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					{shorts.map((short) => (
 						<article class="short">
-							<h3><a href={"short/" + short.slug}>{short.data.title}</a></h3>
+							<h3><a href={"/blog/short/" + short.slug}>{short.data.title}</a></h3>
 							<time datetime={short.data.pubDate}>
 								{new Date(short.data.pubDate).toLocaleDateString('en-gb', {
 									year: 'numeric',
