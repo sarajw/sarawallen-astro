@@ -1,19 +1,21 @@
 import rss from '@astrojs/rss';
+import getAllCollections from '../utils/getAllCollections.js';
+// import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-const postImportResult = import.meta.glob('./blog/**/*.md', { eager: true }); 
-const posts = Object.values(postImportResult);
-
-export const get = () =>
-	rss({
-		title: SITE_TITLE+" | long",
+export async function get() {
+  const posts = await getAllCollections();
+	return rss({
+		title: SITE_TITLE+" | content",
 		description: SITE_DESCRIPTION,
 		site: import.meta.env.SITE,
 		items: posts.map((post) => ({
-			link: post.url,
-			title: post.frontmatter.title,
-			pubDate: post.frontmatter.pubDate,
-			content: sanitizeHtml(post.compiledContent()),
-		}))
+			title: post.data.title,
+			pubDate: post.data.pubDate,
+			description: post.data.description ?? "",
+			content: sanitizeHtml(post.body),
+			link: `/blog/${post.slug}/`,
+		})),
 	});
+}
