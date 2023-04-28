@@ -13,14 +13,16 @@ import ThortBody from '../../components/ThortBody.astro';
   <ul>
     {allPosts.map((thort) => (
       <li>
-        <a href={"/basic/short/" + thort.slug}><h2>{thort.data.title}</h2></a>
-							<time datetime={thort.data.pubDate}>
-								{new Date(thort.data.pubDate).toLocaleDateString('en-gb', {
-									year: 'numeric',
-									month: 'short',
-									day: 'numeric',
-								})}
-							</time>
+        <a href={"/basic/short/" + thort.slug}>
+          <h2>{thort.data.title}</h2>
+        </a>
+        <time datetime={thort.data.pubDate}>
+          {new Date(thort.data.pubDate).toLocaleDateString('en-gb', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </time>
         <ThortBody slug={thort.slug} />
       </li>
     ))}

@@ -1,6 +1,9 @@
 ---
 import { SITE_TITLE } from '../config';
 
+const currentPage = Astro.url.pathname;
+console.log(currentPage)
+
 // Import the global.css file here so that it is included on
 // all pages through the use of the <Header /> component.
 import '../styles/basic.css';
@@ -14,6 +17,23 @@ import '../styles/basic.css';
 				<li><a href="/basic/blog">blog</a></li>
 				<li><a href="/basic/stuff">stuff</a></li>
 				<li><a href="/basic/contact">contact</a></li>
+				<li class="flex-break"></li>
+				{(currentPage.endsWith("/basic/") || currentPage.endsWith("/basic"))  &&
+					<li><a href="/basic/#now">now</a></li>
+				}
+				{currentPage.includes("stuff") &&
+					<li><a href="/basic/stuff/#uses">uses</a></li>
+					<li><a href="/basic/stuff/#links">links</a></li>
+					<li><a href="/basic/stuff/#webrings">webrings</a></li>
+				}
+				{currentPage.includes("blog") &&
+					<li><a href="/basic/short">short</a></li>
+				}
+				{currentPage.includes("contact") &&
+					<li><a href="/basic/contact/#email">email</a></li>
+					<li><a href="/basic/contact/#socials">socials</a></li>
+					<li><a href="/basic/contact/#guestbook">guestbook</a></li>
+				}
 			</ul>
 		</nav>
 		<img id="avatar" src="/images/sara.png" alt="home">
