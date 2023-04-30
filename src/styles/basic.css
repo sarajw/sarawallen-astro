@@ -34,13 +34,14 @@
 	/* --background: hsl(var(--pop1), 75%); */
 
 	--background: linear-gradient(
-		341deg in oklch longer hue, 
-		oklch(80% 0.1 0) 0%, oklch(90% 0.05 291) 100%
+		160deg in hsl longer hue, 
+		hsl(199, 100%, 90%) 0%, hsl(200, 100%, 90%) 100%
 	);
 
 	--link: hsl(var(--pop2), 25%);
 	--vlink: hsl(var(--pop1), 25%);
 }
+
 :root.dark-mode {
 	--text: hsl(var(--base), 85%);
 	--background: hsl(var(--base), 18%);
@@ -97,17 +98,19 @@ a:hover, a:active, a:focus-visible {
 }
 a:visited {color: var(--vlink)}
 
+h2 a, h2 a:visited {color: inherit}
+
 .dark-mode :is(.now_after h3:nth-of-type(7n + 1), .rainbow > *:nth-of-type(7n + 1) > :first-child) { color: var(--rred) }
 .dark-mode :is(.now_after h3:nth-of-type(7n + 2), .rainbow > *:nth-of-type(7n + 2) > :first-child) { color: var(--oran) }
 .dark-mode :is(.now_after h3:nth-of-type(7n + 3), .rainbow > *:nth-of-type(7n + 3) > :first-child) { color: var(--yell) }
 .dark-mode :is(.now_after h3:nth-of-type(7n + 4), .rainbow > *:nth-of-type(7n + 4) > :first-child) { color: var(--gree) }
 .dark-mode :is(.now_after h3:nth-of-type(7n + 5), .rainbow > *:nth-of-type(7n + 5) > :first-child) { color: var(--blue) }
 .dark-mode :is(.now_after h3:nth-of-type(7n + 6), .rainbow > *:nth-of-type(7n + 6) > :first-child) { color: var(--purp) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--pink) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--rose) }
 
 header {
 	display: flex;
-	gap: 0.75em;
+	gap: 0.5em;
 	font-size: clamp(1rem, 0.75rem + 2vw, 1.5rem);
 	justify-content: space-between;
 }
@@ -119,10 +122,12 @@ header .sub-menu {font-weight: 300}
 }
 #avatar-big {display: none}
 nav ul {
+	/* outline: 1px dashed; */
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 25ch;
 	column-gap: 1em;
-	row-gap: 0.25em;
+	row-gap: 0.4em;
 	margin: 0;
 	list-style-type: none;
 	padding-inline-start: 0;
@@ -133,7 +138,7 @@ nav ul {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 	header {
 		display: revert;
 	}
@@ -142,9 +147,6 @@ nav ul {
 		display: block;
 		width: min(80%, 300px);
 		margin: 0 auto;
-	}
-	nav ul {
-		justify-content: space-around;
 	}
 }
 
@@ -177,9 +179,9 @@ main img:not(.backtotop img) {
 .short .fancy:hover {font-size: min(16rem, 16vw)}
 
 .dark-mode .fancy {
-	background:  linear-gradient(
-		315deg in oklch longer hue, 
-		oklch(80% 0.1 0) 0%, oklch(90% 0.05 291) 100%
+	background: linear-gradient(
+		160deg in hsl longer hue, 
+		hsl(200, 80%, 75%) 0%, hsl(199, 80%, 75%) 100%
 	);
 	background-clip: text;
   -webkit-background-clip: text;
@@ -200,6 +202,12 @@ main img:not(.backtotop img) {
 
 /* ---------- blog styles ---------- */
 
+.blog ul {
+	list-style-type: none;
+}
+.blog h2 {
+	margin-bottom: 0.5em;
+}
 .backtotop {
 	position: sticky;
 	z-index: 20;

@@ -10,7 +10,7 @@ const entries = await getGuestEntries();
 ---
 
 <Basic title="Contact" page="contact">
-<h2>Email me</h2>
+<h2 style="color: var(--purp)">Email me</h2>
 <form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
   <input type="hidden" name="form-name" value="contact" />
   <p>
@@ -32,8 +32,7 @@ const entries = await getGuestEntries();
     <button type="submit"><b>Send</b></button>
   </p>
 </form>
-
-<h2>Sign the Guestbook</h2>
+<h2 style="color: var(--rose)">Sign the Guestbook</h2>
   <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
     <p>
@@ -63,15 +62,17 @@ const entries = await getGuestEntries();
   </form>
 
   <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
-  {entries.map((entry: any) =>(
-    <article class="entry">
-      <h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>
-      <p>{entry.body}</p>
-      <time>{new Date(entry.created_at).toLocaleDateString('en-gb', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-      })}</time>
-    </article>
-  ))}
+  <div class="rainbow">
+    {entries.map((entry: any) =>(
+      <article class="entry">
+        <h2>{entry.human_fields.Url && <a href={entry.human_fields.Url}>{entry.name}</a>}{!entry.human_fields.Url && entry.name}</h2>
+        <p>{entry.body}</p>
+        <time>{new Date(entry.created_at).toLocaleDateString('en-gb', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })}</time>
+      </article>
+    ))}
+  </div>
 </Basic>
