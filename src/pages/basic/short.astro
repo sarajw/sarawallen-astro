@@ -10,7 +10,7 @@ import ThortBody from '../../components/ThortBody.astro';
 
 <Basic title="Short Thorts" page="short">
   <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
-  <ul>
+  <ul class="rainbow">
     {allPosts.map((thort) => (
       <li>
         <a href={"/basic/short/" + thort.slug}>

@@ -16,7 +16,13 @@
 		url('/fonts/urbanist.woff2') format('woff2-variations');
 }
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
+	/* set 1rem: */
+	font-size: 18px;
 
 	/* colours */
 	
@@ -37,19 +43,21 @@
 }
 :root.dark-mode {
 	--text: hsl(var(--base), 85%);
-	--background: hsl(var(--pop2), 18%);
+	--background: hsl(var(--base), 18%);
 
 	--link: hsl(var(--pop1), 75%);
 	--vlink: hsl(var(--pop2), 75%);
 
 	/* rainbow */
 	--rred: hsl(0, 50%, 75%);
+	--oran: hsl(30, 50%, 75%);
 	--yell: hsl(60, 50%, 75%);
 	--lime: hsl(90, 50%, 75%);
 	--gree: hsl(120, 50%, 75%);
-	--oran: hsl(30, 50%, 75%);
 	--turq: hsl(150, 50%, 75%);
+	--teal: hsl(180, 50%, 75%);
 	--blue: hsl(210, 50%, 75%);
+	--indi: hsl(240, 50%, 75%);
 	--purp: hsl(270, 50%, 75%);
 	--pink: hsl(300, 50%, 75%);
 	--rose: hsl(330, 50%, 75%);
@@ -70,10 +78,12 @@
 }
 
 body {
+	margin: 0;
+	padding: 3vw;
 	font-family: Karla, sans-serif;
-	font-size: 18px;
 	color: var(--text);
 	background: var(--background);
+	min-height: 100dvh;
 }
 
 a {
@@ -87,22 +97,23 @@ a:hover, a:active, a:focus-visible {
 }
 a:visited {color: var(--vlink)}
 
-.dark-mode nav li:nth-of-type(7n + 1) a { color: var(--rred) }
-.dark-mode nav li:nth-of-type(7n + 2) a { color: var(--oran) }
-.dark-mode nav li:nth-of-type(7n + 3) a { color: var(--yell) }
-.dark-mode nav li:nth-of-type(7n + 4) a { color: var(--gree) }
-.dark-mode nav li:nth-of-type(7n + 5) a { color: var(--turq) }
-.dark-mode nav li:nth-of-type(7n + 6) a { color: var(--blue) }
-.dark-mode nav li:nth-of-type(7n + 7) a { color: var(--purp) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 1), .rainbow > *:nth-of-type(7n + 1) > :first-child) { color: var(--rred) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 2), .rainbow > *:nth-of-type(7n + 2) > :first-child) { color: var(--oran) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 3), .rainbow > *:nth-of-type(7n + 3) > :first-child) { color: var(--yell) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 4), .rainbow > *:nth-of-type(7n + 4) > :first-child) { color: var(--gree) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 5), .rainbow > *:nth-of-type(7n + 5) > :first-child) { color: var(--blue) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 6), .rainbow > *:nth-of-type(7n + 6) > :first-child) { color: var(--purp) }
+.dark-mode :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--pink) }
 
 header {
 	display: flex;
 	gap: 0.75em;
-	padding: 1vw;
-	font-size: clamp(1.1rem, 1rem + 1.2vw, 1.5rem);
+	font-size: clamp(1rem, 0.75rem + 2vw, 1.5rem);
 	justify-content: space-between;
 }
 header a {text-decoration: none}
+header .main-menu {font-weight: 600}
+header .sub-menu {font-weight: 300}
 #avatar {
 	width: clamp(3em, 10vw, 128px);
 }
@@ -164,6 +175,16 @@ main img:not(.backtotop img) {
 .home .fancy {font-size: min(30rem, 30vw)}
 .home .fancy:hover {font-size: min(24rem, 24vw)}
 .short .fancy:hover {font-size: min(16rem, 16vw)}
+
+.dark-mode .fancy {
+	background:  linear-gradient(
+		315deg in oklch longer hue, 
+		oklch(80% 0.1 0) 0%, oklch(90% 0.05 291) 100%
+	);
+	background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 @media (hover: none), (prefers-reduced-motion) {
 	.fancy {

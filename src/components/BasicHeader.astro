@@ -12,27 +12,26 @@ import '../styles/basic.css';
 <header>
 		<!-- <a id="skiplink" href="#gosara">Skip to Content</a> -->
 		<nav>
-			<ul>
-				<li><a href="/basic/">about</a></li>
-				<li><a href="/basic/blog">blog</a></li>
-				<li><a href="/basic/stuff">stuff</a></li>
-				<li><a href="/basic/contact">contact</a></li>
-				<li class="flex-break"></li>
+			<ul class="rainbow">
+				<li><a class="main-menu" href="/basic/">about</a></li>
+				<li><a class="main-menu" href="/basic/blog">blog</a></li>
+				<li><a class="main-menu" href="/basic/stuff">stuff</a></li>
+				<li><a class="main-menu" href="/basic/contact">contact</a></li>
 				{(currentPage.endsWith("/basic/") || currentPage.endsWith("/basic"))  &&
-					<li><a href="/basic/#now">now</a></li>
+					<li><a class="sub-menu" href="/basic/#now">now</a></li>
 				}
 				{currentPage.includes("stuff") &&
-					<li><a href="/basic/stuff/#uses">uses</a></li>
-					<li><a href="/basic/stuff/#links">links</a></li>
-					<li><a href="/basic/stuff/#webrings">webrings</a></li>
+					<li><a class="sub-menu" href="/basic/stuff/#uses">uses</a></li>
+					<li><a class="sub-menu" href="/basic/stuff/#links">links</a></li>
+					<li><a class="sub-menu" href="/basic/stuff/#webrings">webrings</a></li>
 				}
 				{currentPage.includes("blog") &&
-					<li><a href="/basic/short">short</a></li>
+					<li><a class="sub-menu" href="/basic/short">short</a></li>
 				}
 				{currentPage.includes("contact") &&
-					<li><a href="/basic/contact/#email">email</a></li>
-					<li><a href="/basic/contact/#socials">socials</a></li>
-					<li><a href="/basic/contact/#guestbook">guestbook</a></li>
+					<li><a class="sub-menu" href="/basic/contact/#email">email</a></li>
+					<li><a class="sub-menu" href="/basic/contact/#socials">socials</a></li>
+					<li><a class="sub-menu" href="/basic/contact/#guestbook">guestbook</a></li>
 				}
 			</ul>
 		</nav>
