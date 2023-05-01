@@ -774,7 +774,6 @@ pre.ascii-art {
 	font-size: var(--h4);
 }
 #feeds {
-	width: max-content;
 	margin: 5vmin auto;
 	text-align: center;
 }
