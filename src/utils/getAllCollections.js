@@ -5,5 +5,10 @@ export default async function getAllCollections() {
   const allPosts = await Promise.all(
     Object.keys(collections).map((name) => getCollection(name))
   );
-  return allPosts.flat();
+
+  const sortedPosts = allPosts.flat().sort(
+    (a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+
+  return sortedPosts;
 }
