@@ -38,8 +38,8 @@
 		hsl(199, 100%, 90%) 0%, hsl(200, 100%, 90%) 100%
 	);
 
-	--link: hsl(var(--pop2), 25%);
-	--vlink: hsl(var(--pop1), 25%);
+	--link: hsl(var(--pop1), 30%);
+	--vlink: hsl(var(--pop2), 30%);
 }
 
 :root.dark-mode {
@@ -100,13 +100,13 @@ a:visited {color: var(--vlink)}
 
 h2 a, h2 a:visited {color: inherit}
 
-.dark-mode :is(.now_after h3:nth-of-type(7n + 1), .rainbow > *:nth-of-type(7n + 1) > :first-child) { color: var(--rred) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 2), .rainbow > *:nth-of-type(7n + 2) > :first-child) { color: var(--oran) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 3), .rainbow > *:nth-of-type(7n + 3) > :first-child) { color: var(--yell) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 4), .rainbow > *:nth-of-type(7n + 4) > :first-child) { color: var(--gree) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 5), .rainbow > *:nth-of-type(7n + 5) > :first-child) { color: var(--blue) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 6), .rainbow > *:nth-of-type(7n + 6) > :first-child) { color: var(--purp) }
-.dark-mode :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--rose) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 1), .rainbow > *:nth-of-type(7n + 1) > :first-child) { color: var(--rred) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 2), .rainbow > *:nth-of-type(7n + 2) > :first-child) { color: var(--oran) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 3), .rainbow > *:nth-of-type(7n + 3) > :first-child) { color: var(--yell) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 4), .rainbow > *:nth-of-type(7n + 4) > :first-child) { color: var(--gree) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 5), .rainbow > *:nth-of-type(7n + 5) > :first-child) { color: var(--blue) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 6), .rainbow > *:nth-of-type(7n + 6) > :first-child) { color: var(--purp) }
+.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--rose) }
 
 header {
 	display: flex;
@@ -114,7 +114,7 @@ header {
 	font-size: min(0.75rem + 2vw, 1.5rem);
 	justify-content: space-between;
 }
-header a {text-decoration: none}
+header a:not(:hover) {text-decoration: none}
 header .main-menu {font-weight: 600}
 header .sub-menu {font-weight: 300}
 #avatar {
@@ -132,11 +132,7 @@ nav ul {
 	list-style-type: none;
 	padding-inline-start: 0;
 }
-.flex-break {
-	width:100%;
-	height: 0px;
-
-}
+:not(.dark-mode) header :is(a, a:visited) {color: inherit}
 
 @media (max-width: 420px) {
 	header {
