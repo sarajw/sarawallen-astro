@@ -267,6 +267,13 @@ declare module 'astro:content' {
   collection: "short",
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] },
+"coding-rollercoaster.md": {
+  id: "coding-rollercoaster.md",
+  slug: "coding-rollercoaster",
+  body: string,
+  collection: "short",
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] },
 "developing-developer.md": {
   id: "developing-developer.md",
   slug: "developing-developer",
@@ -302,6 +309,13 @@ declare module 'astro:content' {
   collection: "short",
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] },
+"legitimate-interest.md": {
+  id: "legitimate-interest.md",
+  slug: "legitimate-interest",
+  body: string,
+  collection: "short",
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] },
 "little-lives-limerick.md": {
   id: "little-lives-limerick.md",
   slug: "little-lives-limerick",
@@ -309,9 +323,30 @@ declare module 'astro:content' {
   collection: "short",
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] },
+"reading-book-ux-ui.md": {
+  id: "reading-book-ux-ui.md",
+  slug: "reading-book-ux-ui",
+  body: string,
+  collection: "short",
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] },
+"refreshing.md": {
+  id: "refreshing.md",
+  slug: "refreshing",
+  body: string,
+  collection: "short",
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] },
 "tired-kids.md": {
   id: "tired-kids.md",
   slug: "tired-kids",
+  body: string,
+  collection: "short",
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] },
+"we-both-posted-our-luch.md": {
+  id: "we-both-posted-our-luch.md",
+  slug: "we-both-posted-our-luch",
   body: string,
   collection: "short",
   data: InferEntrySchema<"short">
