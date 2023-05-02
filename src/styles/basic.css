@@ -235,9 +235,6 @@ main.short > ul {
 main.short > ul > li {
 	margin-block: 2em;
 }
-main.short > ul > li p {
-	white-space: pre-line;
-}
 
 main.contact .entry p {
 	white-space: pre-line;
