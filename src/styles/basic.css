@@ -80,7 +80,7 @@
 
 body {
 	margin: 0;
-	padding: 3vw;
+	padding: 2.2vw 3vw;
 	font-family: Karla, sans-serif;
 	color: var(--text);
 	background: var(--background);
@@ -110,9 +110,10 @@ h2 a, h2 a:visited {color: inherit}
 
 header {
 	display: flex;
-	gap: 0.5em;
-	font-size: min(0.75rem + 2vw, 1.5rem);
+	gap: 0.4em;
+	font-size: min(1rem + 1.2vw, 2rem);
 	justify-content: space-between;
+	margin-block-end: 0.5rem;
 }
 header a:not(:hover) {text-decoration: none}
 header .main-menu {font-weight: 600}
@@ -139,6 +140,9 @@ nav ul {
 		display: revert;
 		font-size: max(1rem, 6.75vw);
 	}
+	nav ul {
+		justify-content: center;
+	}
 	#avatar {display: none}
 	#avatar-big {
 		display: block;
@@ -160,7 +164,7 @@ main img:not(.backtotop img) {
 
 
 .fancy {
-	margin: 0.15em 0;
+	margin: 0 0 0.15em;
 	font-family: Urbanist, sans-serif;
 	font-weight: 200;
 	font-size: min(20rem, 20vw);
@@ -189,8 +193,8 @@ main img:not(.backtotop img) {
 	.fancy {
 		letter-spacing: 0;
 	}
-	.home .fancy {font-size: min(25rem, 25vw)}
-	.short .fancy {font-size: min(17rem, 17vw)}
+	.home .fancy {font-size: min(24rem, 24vw)}
+	.short .fancy {font-size: min(16rem, 16vw)}
 }
 
 .now_before {
