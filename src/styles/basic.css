@@ -111,7 +111,7 @@ h2 a, h2 a:visited {color: inherit}
 header {
 	display: flex;
 	gap: 0.5em;
-	font-size: clamp(1rem, 0.75rem + 2vw, 1.5rem);
+	font-size: min(0.75rem + 2vw, 1.5rem);
 	justify-content: space-between;
 }
 header a {text-decoration: none}
@@ -141,6 +141,7 @@ nav ul {
 @media (max-width: 420px) {
 	header {
 		display: revert;
+		font-size: max(1rem, 6.75vw);
 	}
 	#avatar {display: none}
 	#avatar-big {
