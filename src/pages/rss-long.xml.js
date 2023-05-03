@@ -15,7 +15,7 @@ export async function get() {
 			pubDate: post.data.pubDate,
 			description: post.data.description ?? "",
 			content: sanitizeHtml(post.body),
-			link: `/blog/${post.slug}/`,
+			link: post.data.short ? "/blog/short/" + post.slug : "/blog/" + post.slug,
 		})),
 	});
 }
