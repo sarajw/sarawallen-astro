@@ -1,15 +1,11 @@
 prose:
-  rooturl: 'src/pages/blog'
+  rooturl: "src/content/short"
   metadata:
-    src/pages/blog/short:
+    src/content/short:
       - name: "short"
         field:
           element: "hidden"
           value: true
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "../../../layouts/BlogPost.astro"
       - name: "title"
         field:
           element: "text"
