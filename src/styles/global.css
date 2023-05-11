@@ -80,7 +80,7 @@
   box-sizing: border-box;
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .blogPost, .guestbookIndex) {
+.high-contrast :is(main > section, main .post, .shortIndex, .blogPost, .guestbookIndex, .nowPage) {
 	border-inline: var(--border);
 }
 .high-contrast .tab h2, 
@@ -414,24 +414,24 @@ section > article ul:not(.now_content ul) {
 /* ============================= omg.lol stuff ============================= */
 
 .statuslol_container {
-  width: fit-content;
-  padding: 0;
-  margin: 1.5rem 0;
+	width: fit-content;
+	padding: 0;
+	margin: 1.5rem 0;
 }
 .statuslol {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 0;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin: 0;
 }
 .statuslol, .now_content {
-  padding: 1rem;
-  background-color: var(--header);
-  border-radius: var(--border-radii);
+	padding: 1rem;
+	background-color: var(--header);
+	border-radius: var(--border-radii);
 	box-shadow: 0.1rem 0.1rem 0.5rem -0.25rem var(--shadow);
 }
 .statuslol_emoji {
-  margin: 0 auto;
+	margin: 0 auto;
 	min-width: 3.5em;
 }
 .statuslol p {
@@ -451,11 +451,11 @@ section > article ul:not(.now_content ul) {
 	filter: invert(0.5);
 }
 #nowPage {
-  margin: 1vmin auto 8vmin;
+	margin: 1vmin auto 8vmin;
 	width: fit-content;
 }
 #nowPage summary {
-  margin: 0 auto 1vmin;
+	margin: 0 auto 1vmin;
 	width: fit-content;
 	cursor: pointer;
 }
@@ -468,6 +468,13 @@ section > article ul:not(.now_content ul) {
 .now_after li {
   font-size: var(--p);
 	margin-bottom: 0.4em;
+}
+
+main.nowPage {
+	padding: var(--tabheight) 3vmin 3vmin;
+}
+main.nowPage :is(.statuslol, .now_content) {
+	background-color: var(--sara);
 }
 
 /* =========================== end omg.lol stuff =========================== */

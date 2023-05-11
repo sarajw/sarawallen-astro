@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+import ThortBody from '../components/ThortBody.astro';
+
+const image = "/images/placeholder.png";
+const alt = "";
+const title = "/now page";
+const description = "Want to catch up? Here's what's going on with me.";
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="nowPage">
+            <h1>What's new /now?</h1>
+            <h2>Status</h2>
+            <script is:inline src="https://status.lol/sara.js?time&link&fluent&monochrome" />
+            <h2>Tell me more?</h2>
+            <script is:inline src="https://omgnow.rknight.me/now.js?a=sara" />
+		</main>
+		<Toggle />
+	</body>
+</html>

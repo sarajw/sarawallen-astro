@@ -1,8 +1,8 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Toggle from "../../components/Toggle.astro";
-import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+import PrivacyPolicy from '../components/PrivacyPolicy.astro';
 
 const image = "/images/guestbook.jpg";
 const alt = "Colourful speech bubbbles in watercolours";
@@ -114,7 +114,7 @@ const entries = await getGuestEntries();
 	article {
 		max-width: 80ch;
 		margin: 0 auto;
-		padding: 5.5vmin;
+		padding: 6vmin 5.5vmin 5.5vmin;
 	}
 	img {
 		margin-inline: auto;
