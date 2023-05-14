@@ -395,12 +395,8 @@ section > article ul:not(.now_content ul) {
 	align-items: center;
 	gap: 1rem;
 }
-.welcome .blurb {
-	flex: 3;
-}
 .welcome > img {
 	max-width: 80%;
-	max-height: 16rem;
 	aspect-ratio: 1;
 	margin: 0 auto;
 	border-radius: 50%;

@@ -35,7 +35,7 @@
 
 	--background: linear-gradient(
 		160deg in hsl longer hue, 
-		hsl(199, 100%, 90%) 0%, hsl(200, 100%, 90%) 100%
+		hsl(199, 35%, 85%) 0%, hsl(200, 35%, 85%) 100%
 	);
 
 	--link: hsl(var(--pop1), 30%);
@@ -49,7 +49,7 @@
 	--link: hsl(var(--pop1), 75%);
 	--vlink: hsl(var(--pop2), 75%);
 
-	/* rainbow */
+	/* rainbow colors */
 	--rred: hsl(0, 50%, 75%);
 	--oran: hsl(30, 50%, 75%);
 	--yell: hsl(60, 50%, 75%);
@@ -65,7 +65,7 @@
 }
 :root.high-contrast {
 	--text: hsl(var(--base), 5%);
-	--background: hsl(var(--base), 95%);
+	--background: hsl(var(--base), 97.5%);
 }
 :root.dark-mode.high-contrast {
 	--text: hsl(var(--base), 95%);
@@ -98,15 +98,31 @@ a:hover, a:active, a:focus-visible {
 }
 a:visited {color: var(--vlink)}
 
+main > *:not(.fancy) {
+	max-width: 40rem;
+	margin-inline: auto;
+}
+main img:not(.backtotop img) {
+	display:block;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 0.5rem;
+}
+
 h2 a, h2 a:visited {color: inherit}
 
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 1), .rainbow > *:nth-of-type(7n + 1) > :first-child) { color: var(--rred) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 2), .rainbow > *:nth-of-type(7n + 2) > :first-child) { color: var(--oran) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 3), .rainbow > *:nth-of-type(7n + 3) > :first-child) { color: var(--yell) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 4), .rainbow > *:nth-of-type(7n + 4) > :first-child) { color: var(--gree) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 5), .rainbow > *:nth-of-type(7n + 5) > :first-child) { color: var(--blue) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 6), .rainbow > *:nth-of-type(7n + 6) > :first-child) { color: var(--purp) }
-.dark-mode:not(.high-contrast) :is(.now_after h3:nth-of-type(7n + 7), .rainbow > *:nth-of-type(7n + 7) > :first-child) { color: var(--rose) }
+/* ---------- rainbow headings ---------- */
+
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 1) > :first-child, .now_after h3:nth-of-type(7n + 1)) { color: var(--rred) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 2) > :first-child, .now_after h3:nth-of-type(7n + 2)) { color: var(--oran) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 3) > :first-child, .now_after h3:nth-of-type(7n + 3)) { color: var(--yell) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 4) > :first-child, .now_after h3:nth-of-type(7n + 4)) { color: var(--gree) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 5) > :first-child, .now_after h3:nth-of-type(7n + 5)) { color: var(--blue) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 6) > :first-child, .now_after h3:nth-of-type(7n + 6)) { color: var(--purp) }
+.dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 7) > :first-child, .now_after h3:nth-of-type(7n + 7)) { color: var(--rose) }
+
+
+/* ---------- header & avatar styles ---------- */
 
 header {
 	display: flex;
@@ -151,17 +167,7 @@ nav ul {
 	}
 }
 
-main > *:not(.fancy) {
-	max-width: 40rem;
-	margin-inline: auto;
-}
-main img:not(.backtotop img) {
-	display:block;
-	max-width: 100%;
-	margin: 0 auto;
-	border-radius: 0.5rem;
-}
-
+/* ---------- title styles ---------- */
 
 .fancy {
 	margin: 0 0 0.15em;
@@ -197,6 +203,56 @@ main img:not(.backtotop img) {
 	.short .fancy {font-size: min(16rem, 16vw)}
 }
 
+.dark-mode:not(.high-contrast) .home h2:first-of-type {
+	color: var(--pink)
+}
+.dark-mode:not(.high-contrast) .contact h2:first-of-type {
+	color: var(--purp)
+}
+.dark-mode:not(.high-contrast) .contact h2:nth-of-type(2) {
+	color: var(--rose)
+}
+
+/* ---------- omg.lol styles ---------- */
+
+.statuslol_container {
+	width: fit-content;
+	padding: 0;
+	margin: 1.5rem 0;
+}
+.statuslol {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin: 0;
+}
+.statuslol{
+	padding: 1rem;
+	background-color: Canvas;
+	border-radius: 0.5rem;
+	/* border: 0.1rem solid hsla(0, 0%, 50%, 0.2); */
+	box-shadow: 0.25rem 0.25rem 4rem -3rem black;
+}
+.statuslol_emoji {
+	margin: 0 auto;
+	min-width: 3.5em;
+}
+.statuslol p {
+  margin-block: 0 0.25em;
+}
+.statuslol_time {
+	margin-right: 2.5em;
+}
+.statuslol_time a:last-child::after {
+	content: "on";
+	position: absolute;
+	width: 2.5em;
+	height: 1.25em;
+	margin-inline: 0.25em;
+	background: right / contain no-repeat url("/images/icons/mastodon.svg");
+	filter: invert(0.5);
+}
+
 .now_before {
 	display: none;
 }
@@ -229,6 +285,7 @@ main img:not(.backtotop img) {
 }
 
 /* ---------- short styles ---------- */
+
 main.short > ul {
 	list-style-type: none;
 	padding-inline-start: 0;
@@ -243,6 +300,7 @@ main.contact .entry p {
 
 
 /* ---------- toggle styles ---------- */
+
 .toggle {
 	position: fixed;
 	z-index: 20;
