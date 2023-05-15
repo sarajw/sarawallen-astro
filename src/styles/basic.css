@@ -199,43 +199,12 @@ nav ul {
 
 /* ---------- omg.lol styles ---------- */
 
-.statuslol_container {
-	width: fit-content;
-	padding: 0;
-	margin: 1.5rem 0;
-}
 .statuslol {
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-	margin: 0;
-}
-.statuslol{
-	padding: 1rem;
-	background-color: Canvas;
+	padding: 1.5rem;
 	border-radius: 0.5rem;
-	box-shadow: 0.25rem 0.25rem 4rem -3rem black;
+	background-color: Canvas;
+	box-shadow: 0 0 4rem -3rem black;
 }
-.statuslol_emoji {
-	margin: 0 auto;
-	min-width: 3.5em;
-}
-.statuslol p {
-  margin-block: 0 0.25em;
-}
-.statuslol_time {
-	margin-right: 2.5em;
-}
-.statuslol_time a:last-child::after {
-	content: "on";
-	position: absolute;
-	width: 2.5em;
-	height: 1.25em;
-	margin-inline: 0.25em;
-	background: right / contain no-repeat url("/images/icons/mastodon.svg");
-	filter: invert(0.5);
-}
-
 
 /* ---------- blog styles ---------- */
 

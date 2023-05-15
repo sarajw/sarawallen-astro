@@ -12,18 +12,14 @@
   box-sizing: border-box;
 }
 
-html {
-	scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth}
 @media (prefers-reduced-motion) {
-  html {
-		scroll-behavior: auto;
-  }
+  html {scroll-behavior: auto}
 }
 			
 body {
 	color: var(--text);
-	background-color: var(--background);
+	background: var(--background);
 	font-family: Karla, 'Open Sans', sans-serif;
 }
 
@@ -106,12 +102,6 @@ p, li {
 	gap: 1rem;
 	align-items: center;
 	margin: 0;
-}
-.statuslol, .now_content {
-	padding: 1rem;
-	background-color: var(--header);
-	border-radius: var(--border-radii);
-	box-shadow: 0.25rem 0.25rem 4rem -3rem black;
 }
 .statuslol_emoji {
 	margin: 0 auto;

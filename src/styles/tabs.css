@@ -313,6 +313,12 @@ section > article ul:not(.now_content ul) {
 
 /* ============================= omg.lol stuff ============================= */
 
+.statuslol, .now_content {
+	padding: 1rem;
+	background-color: var(--header);
+	border-radius: 0.4rem;
+	box-shadow: 0.1rem 0.1rem 1rem -0.5rem var(--shadow);
+}
 #nowPage {
 	margin: 1vmin auto 8vmin;
 	width: fit-content;
