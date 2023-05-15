@@ -1,23 +1,10 @@
 @font-face {
-	font-family: 'Karla';
-	font-weight: 200 800;
-	font-display: swap;
-	src:
-		url('/fonts/karla.woff2') format('woff2 supports variations'),
-		url('/fonts/karla.woff2') format('woff2-variations');
-}
-
-@font-face {
 	font-family: 'Urbanist';
 	font-weight: 100;
 	font-display: swap;
 	src:
 		url('/fonts/urbanist.woff2') format('woff2 supports variations'),
 		url('/fonts/urbanist.woff2') format('woff2-variations');
-}
-
-* {
-	box-sizing: border-box;
 }
 
 :root {
@@ -81,9 +68,6 @@
 body {
 	margin: 0;
 	padding: 2.2vw 3vw;
-	font-family: Karla, sans-serif;
-	color: var(--text);
-	background: var(--background);
 	min-height: 100dvh;
 }
 
@@ -230,7 +214,6 @@ nav ul {
 	padding: 1rem;
 	background-color: Canvas;
 	border-radius: 0.5rem;
-	/* border: 0.1rem solid hsla(0, 0%, 50%, 0.2); */
 	box-shadow: 0.25rem 0.25rem 4rem -3rem black;
 }
 .statuslol_emoji {
@@ -253,9 +236,6 @@ nav ul {
 	filter: invert(0.5);
 }
 
-.now_before {
-	display: none;
-}
 
 /* ---------- blog styles ---------- */
 
@@ -296,70 +276,4 @@ main.short > ul > li {
 
 main.contact .entry p {
 	white-space: pre-line;
-}
-
-
-/* ---------- toggle styles ---------- */
-
-.toggle {
-	position: fixed;
-	z-index: 20;
-	opacity: 0.75;
-	border: 0;
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: contain;
-	filter: invert(0%);
-}
-#toggleLED {
-	width: calc(1.5rem + 0.75vw);
-	height: calc(2rem + 1vw);
-	right: min(5vw,2rem);
-	bottom: min(3vw,2rem);
-	background-image: url('/images/led-on.svg');
-}
-#toggleContrast {
-	width: calc(1.5rem + 0.75vw);
-	height: calc(1rem + 0.5vw);
-	right: min(5vw,2rem);
-	bottom: calc(min(3vw,2rem) + (3rem + 1vw));
-	background-image: url('/images/contrast.svg');
-}
-
-.toggle:focus-visible {
-	opacity: 1;
-}
-
-.dark-mode .toggle {
-	filter: invert(100%);
-}
-
-.dark-mode #toggleLED {
-	background-image: url('/images/led-off.svg');
-}
-.high-contrast #toggleContrast {
-	rotate: 180deg;
-}
-
-@media (hover: hover) {
-	.toggle {
-		opacity: 0.50;
-		transition: opacity 0.25s, background-image 0.5s, rotate 1s;
-	}
-	.toggle:hover {
-		opacity: 0.75;
-	}
-	.dark-mode #toggleLED:hover {
-		background-image: url('/images/led-on.svg');
-	}
-	#toggleLED:hover {
-		background-image: url('/images/led-off.svg');
-	}
-	.high-contrast #toggleContrast:hover {
-		rotate: 0deg;
-	}
-	#toggleContrast:hover {
-		rotate: 180deg;
-	}
 }
