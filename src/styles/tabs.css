@@ -685,30 +685,16 @@ img.social:is(:hover,:active,:focus-visible) {
 	opacity: 0.6;
 }
 
-form {
-	width: min-content;
-	margin: 0 auto 5vmin;
-}
 input,
 textarea {
 	border: 1px solid var(--links);
 	background-color: var(--stuff);
 	border-radius: calc(var(--border-radii) / 2);
-	width: clamp(28ch, 60vw, 30rem);
-	padding: 0.25rem 0.5rem;
-}
-textarea {
-	height: 9.5rem;
-	resize: vertical;
 }
 form button {
-	display: block;
-	padding: 0.5rem 1rem;
-	border: 0;
 	border-radius: calc(var(--border-radii) / 2);
 	color: var(--header);
 	background-color: var(--links);
-	margin: 0 auto;
 }
 form button:hover,
 form button:focus,

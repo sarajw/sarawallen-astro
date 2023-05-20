@@ -90,7 +90,6 @@ main img:not(.backtotop img) {
 	display:block;
 	max-width: 100%;
 	margin: 0 auto;
-	border-radius: 0.5rem;
 }
 
 h2 a, h2 a:visited {color: inherit}
@@ -187,20 +186,20 @@ nav ul {
 	.short .fancy {font-size: min(16rem, 16vw)}
 }
 
-.dark-mode:not(.high-contrast) .home h2:first-of-type {
-	color: var(--pink)
+.dark-mode:not(.high-contrast) :is(.home, .contact) h2:first-of-type {
+	color: var(--blue)
 }
-.dark-mode:not(.high-contrast) .contact h2:first-of-type {
+.dark-mode:not(.high-contrast) :is(.home, .contact) h2:nth-of-type(2) {
 	color: var(--purp)
 }
-.dark-mode:not(.high-contrast) .contact h2:nth-of-type(2) {
+.dark-mode:not(.high-contrast) :is(.home, .contact) h2:nth-of-type(3) {
 	color: var(--rose)
 }
 
 /* ---------- omg.lol styles ---------- */
 
 .statuslol {
-	padding: 1.5rem;
+	padding: 1rem 1rem 1.2rem;
 	border-radius: 0.5rem;
 	background-color: Canvas;
 	box-shadow: 0 0 4rem -3rem black;
@@ -208,6 +207,9 @@ nav ul {
 
 /* ---------- blog styles ---------- */
 
+.post img {
+	border-radius: 0.5rem;
+}
 .blog ul {
 	list-style-type: none;
 }
@@ -242,7 +244,27 @@ main.short > ul {
 main.short > ul > li {
 	margin-block: 2em;
 }
-
 main.contact .entry p {
 	white-space: pre-line;
+}
+
+
+/* ---------- contact styles ---------- */
+
+.contact ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3vmin;
+	justify-content: space-around;
+	list-style-type: none;
+	margin-block: 0;
+	padding-inline-start: 0;
+}
+.contact ul img {
+	height: clamp(32px, 10vw, 64px);
+	filter: invert(20%);
+}
+
+.dark-mode .contact ul img:not([alt="omg.lol"]) {
+	filter: invert(80%);
 }

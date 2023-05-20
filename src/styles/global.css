@@ -27,6 +27,26 @@ p, li {
 	line-height: 1.4em;
 }
 
+form {
+	width: min-content;
+	margin: 0 auto 5vmin;
+}
+input,
+textarea {
+	width: clamp(28ch, 60vw, 30rem);
+	padding: 0.25rem 0.5rem;
+}
+textarea {
+	height: 9.5rem;
+	resize: vertical;
+}
+form button {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin: 0 auto;
+}
+
 .toggle {
 	position: fixed;
 	z-index: 20;
@@ -95,7 +115,7 @@ p, li {
 .statuslol_container {
 	width: fit-content;
 	padding: 0;
-	margin: 1.5rem 0;
+	margin: 1.5rem auto;
 }
 .statuslol {
 	display: flex;

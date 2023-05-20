@@ -10,7 +10,7 @@ const entries = await getGuestEntries();
 ---
 
 <Basic title="Contact" page="contact">
-<h2>Email me</h2>
+<h2 id="email">Email me</h2>
 <form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
   <input type="hidden" name="form-name" value="contact" />
   <p>
@@ -32,7 +32,52 @@ const entries = await getGuestEntries();
     <button type="submit"><b>Send</b></button>
   </p>
 </form>
-<h2>Sign the Guestbook</h2>
+<h2 id="socials">Social Media</h2>
+<ul>
+  <li>
+    <a rel="me" href="https://front-end.social/@sarajw">
+      <img src="/images/icons/mastodon.svg" alt="Mastodon" title="Mastodon">
+      @sarajw
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/sarajw" rel="me authn">
+      <img src="/images/icons/github.svg" alt="GitHub" title="GitHub">
+      /sarajw
+    </a>
+  </li>
+  <li>
+    <a href="https://codepen.io/sarajw">
+      <img src="/images/icons/codepen-icon.svg" alt="CodePen" title="CodePen">
+      /sarajw
+    </a>
+  </li>
+  <li>
+    <a href="https://sara.omg.lol">
+      <img src="/images/icons/prami.svg" alt="omg.lol" title="omg.lol">
+      sara.omg.lol
+    </a>
+  </li>
+  <li>
+    <a href="https://sarajw.hashnode.dev/">
+      <img src="/images/icons/hashnode-icon.svg" alt="hashnode" title="hashnode">
+      sarajw.
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/sarawallen/">
+      <img src="/images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn">
+      /sarawallen
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/sarajoydev">
+      <img src="/images/icons/twitter.svg" alt="Twitter" title="Twitter">
+      @sarajoydev
+    </a>
+  </li>
+</ul>
+<h2 id="guestbook">Sign the Guestbook</h2>
   <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
     <p>
