@@ -20,9 +20,14 @@
 	--text: hsl(var(--base), 15%);
 	/* --background: hsl(var(--pop1), 75%); */
 
-	--background: linear-gradient(
+	/* --background: linear-gradient(
 		160deg in hsl longer hue, 
 		hsl(199, 35%, 85%) 0%, hsl(200, 35%, 85%) 100%
+	); */
+
+	--background-image: radial-gradient(
+		farthest-corner circle at 0% 0% in hsl longer hue, 
+		hsl(333 100% 95%) 30% 0%, hsl(333 100% 95%) 100%
 	);
 
 	--link: hsl(var(--pop1), 30%);
@@ -32,6 +37,9 @@
 :root.dark-mode {
 	--text: hsl(var(--base), 85%);
 	--background: hsl(var(--base), 18%);
+	--background-image: none;
+	--text-background: 160deg in hsl longer hue, 
+		hsl(200, 80%, 75%) 0%, hsl(199, 80%, 75%) 100%;
 
 	--link: hsl(var(--pop1), 75%);
 	--vlink: hsl(var(--pop2), 75%);
@@ -53,6 +61,7 @@
 :root.high-contrast {
 	--text: hsl(var(--base), 5%);
 	--background: hsl(var(--base), 97.5%);
+	--background-image: none;
 }
 :root.dark-mode.high-contrast {
 	--text: hsl(var(--base), 95%);
@@ -69,6 +78,7 @@ body {
 	margin: 0;
 	padding: 2.2vw 3vw;
 	min-height: 100dvh;
+	background-image: var(--background-image);
 }
 
 a {
@@ -169,10 +179,10 @@ nav ul {
 .short .fancy:hover {font-size: min(16rem, 16vw)}
 
 .dark-mode .fancy {
-	background: linear-gradient(
-		160deg in hsl longer hue, 
-		hsl(200, 80%, 75%) 0%, hsl(199, 80%, 75%) 100%
-	);
+	background-image: -webkit-linear-gradient(var(--text-background));
+	background-image: -moz-linear-gradient(var(--text-background));
+	background-image: -o-linear-gradient(var(--text-background));
+	background-image: linear-gradient(var(--text-background));
 	background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
