@@ -185,6 +185,7 @@ nav ul {
 	background-image: linear-gradient(var(--text-background));
 	background-clip: text;
   -webkit-background-clip: text;
+	-moz-background-clip: text;
   color: transparent;
 }
 
