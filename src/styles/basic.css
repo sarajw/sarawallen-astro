@@ -179,10 +179,10 @@ nav ul {
 	/* background-image: -webkit-linear-gradient(var(--text-background));
 	background-image: -moz-linear-gradient(var(--text-background));
 	background-image: -o-linear-gradient(var(--text-background)); */
-	background-image:	var(--text-background);
+	background:	var(--text-background);
 	background-clip: text;
-  /* -webkit-background-clip: text;
-	-moz-background-clip: text; */
+  -webkit-background-clip: text;
+	/* -moz-background-clip: text; */
   color: transparent;
 }
 
