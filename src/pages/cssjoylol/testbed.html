@@ -29,7 +29,10 @@
       width: 30%;
       container-type: inline-size;
   ">
-    <h2 id="skwunch">Biggish Title Text</h2>
+    <h2 id="skwunch" contenteditable="true">Biggish Title Text</h2>
+    <p>
+      You can edit the title! Change it and then click here: <button onclick="resizeFont()">Resize Heading</button>
+    </p>
     <p>
       Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
     </p>
@@ -39,8 +42,11 @@
   <a href="/">Back to CS.Sjoy.lol</a>
 </body>
 <script>
-  const heading = document.getElementById('skwunch');
-  const fontSize = (100 / heading.innerText.length) * 2;
-  heading.style = `font-size: ${fontSize}cqi`;
+  function resizeFont() {
+    const heading = document.getElementById('skwunch');
+    const fontSize = (100 / heading.innerText.length) * 2;
+    heading.style = `font-size: ${fontSize}cqi`;
+  }
+  resizeFont();
 </script>
 </html>
