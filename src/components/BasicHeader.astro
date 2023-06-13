@@ -18,7 +18,8 @@ import '../styles/basic.css';
 				<li><a class="main-menu" href="/basic/stuff">stuff</a></li>
 				<li><a class="main-menu" href="/basic/contact">contact</a></li>
 				{(currentPage.endsWith("/basic/") || currentPage.endsWith("/basic"))  &&
-					<li><a class="sub-menu" href="/basic/#now">now</a></li>
+					<li><a class="sub-menu" href="/basic/#status">status</a></li>
+					<li><a class="sub-menu" href="/basic/#now">/now</a></li>
 				}
 				{currentPage.includes("stuff") &&
 					<li><a class="sub-menu" href="/basic/stuff/#uses">uses</a></li>
