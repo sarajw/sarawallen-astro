@@ -697,9 +697,12 @@ form button {
 	background-color: var(--links);
 }
 form button:hover,
-form button:focus,
-form button:active {
+form button:focus {
 	background-color: var(--hover);
+}
+form button:active {
+	color: var(--text);
+	background-color: var(--background);
 }
 
 .links-out {

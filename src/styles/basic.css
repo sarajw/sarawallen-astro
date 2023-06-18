@@ -264,6 +264,20 @@ main.contact .entry p {
 
 /* ---------- contact styles ---------- */
 
+form button {
+	border-radius: 0.5rem;
+	box-shadow: 0 0 4rem -3rem black;
+}
+form button:hover,
+form button:focus {
+	color: Canvas;
+	background-color: var(--link);
+}
+form button:active {
+	background-color: var(--vlink);
+	translate: 1px 1px;
+}
+
 .contact ul {
 	display: flex;
 	flex-wrap: wrap;
