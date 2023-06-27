@@ -3,8 +3,8 @@ import Basic from '../../../layouts/Basic.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const shortEntries = await getCollection('short');
-  return shortEntries.map(entry => ({
+  const notesEntries = await getCollection('notes');
+  return notesEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
 }
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<Basic title={entry.data.title} noFancy description="A Short Thought" page="thort">
+<Basic title={entry.data.title} noFancy description="A Weak Note" page="note">
   <h1 class="title">{entry.data.title}</h1>
   {entry.data.pubDate && <p><time>{new Date(entry.data.pubDate).toLocaleDateString('en-gb', {
     year: 'numeric',
@@ -25,5 +25,5 @@ const { Content } = await entry.render();
     day: 'numeric',
   })}</time></p>}
   <Content />
-  <p class="back"><a href="/basic/short">&larr; back to thorts index</a></p>
+  <p class="back"><a href="/basic/notes">&larr; back to notes index</a></p>
 </Basic>

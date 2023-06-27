@@ -304,13 +304,13 @@ so they never get big enough to overflow the viewport */
 
 /* [some other CSS here...] */
 
-/* 1st of 3 tabs is just under two --tabwidths from right */
+/* 1st of 3 tabs is just under 2 --tabwidths from right */
 .intro h2 {
   background-color: hsl(200, 15%, 25%);
   right: calc(1.8 * var(--tabwidth));
 }
 
-/* penultimate tab is just under one --tabwidth from right */
+/* penultimate tab is just under 1 --tabwidth from right */
 .stuff h2 {
   background-color: hsl(200, 15%, 30%);
   right: calc(0.9 * var(--tabwidth));
@@ -334,7 +334,7 @@ The last thing to do here is to change the `scroll-margin-top` for each card, as
 }
 ```
 
-I think it was a happy accident, that doing all this leads to the tab for the next card kist peeking up, when you click a link for the tab under it! This happens because it is positioned above the top of its section, and therefore also above its anchor element.
+I think it was a happy accident, that doing all this leads to the tab for the next card just peeking up, when you click a link for the tab under it! This happens because it is positioned above the top of its section, and therefore also above its anchor element.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyQpZoO" data-user="sarajw" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/sarajw/pen/dyQpZoO">

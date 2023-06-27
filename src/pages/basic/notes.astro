@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+const allPosts = (await getCollection("notes")).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+
+import Basic from '../../layouts/Basic.astro';
+import NoteBody from '../../components/NoteBody.astro';
+---
+
+<Basic title="Weak Notes" page="notes">
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+  <ul class="rainbow">
+    {allPosts.map((note) => (
+      <li>
+        <a href={"/basic/notes/" + note.slug}>
+          <h2>{note.data.title}</h2>
+        </a>
+        <NoteBody slug={note.slug} />
+      </li>
+    ))}
+  </ul>
+
+  <p class="back"><a href="/basic/blog">&larr; back to blog index</a></p>
+</Basic>
