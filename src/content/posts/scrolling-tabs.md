@@ -1,6 +1,6 @@
 ---
-title: "Building sliding cards with position: sticky"
-description: "How I got the tabs to scroll on sarajoy.dev"
+title: "Building sliding cards with position: sticky;"
+description: "How I got the tabs to scroll on sarajoy.dev - a work in progress"
 pubDate: "2023-06-27"
 heroImage: "/images/blog/scrollytabs.png"
 caption: "A screenshot of the top of sarajoy.dev, scrolled until the BLOG tab is nearly at the top."
@@ -292,15 +292,49 @@ That piles all the tabs up like so:
 
 ![Now the tabs really are on top of each other. Only the Contact tab is visible, and the name/logo of the website is hidden underneath.](/images/blog/tabs-1.png)
 
-So we need to go back into the individual tab styles and shift them along.
+So we need to go back into the individual tab styles and shift them along. This is something to play with - the widths, where they first come up, which side they align to, whether they overlap or not - absolutely ripe for experimentation:
 
-## Todo:
+```css
+/* in the :root I've made the --tabwidth more responsive,
+so they never get big enough to overflow the viewport */
+:root {
+  --tabheight: 3rem;
+  --tabwidth: min(10ch, calc(100% / 3));
+}
 
-Code for moving tabs across
+/* [some other CSS here...] */
 
-Scroll margin can move out of separate invisible divs into one declaration for them all
+/* 1st of 3 tabs is just under two --tabwidths from right */
+.intro h2 {
+  background-color: hsl(200, 15%, 25%);
+  right: calc(1.8 * var(--tabwidth));
+}
 
-Third pass codepen:
+/* penultimate tab is just under one --tabwidth from right */
+.stuff h2 {
+  background-color: hsl(200, 15%, 30%);
+  right: calc(0.9 * var(--tabwidth));
+}
+
+/* last tab sticks to the right of its containing element */
+.contact h2 {
+  background-color: hsl(200, 15%, 35%);
+  right: 0;
+}
+```
+
+The last thing to do here is to change the `scroll-margin-top` for each card, as they're now all the same distance from the top of the viewport - so we can do them all with just one declaration:
+
+```css
+#intro,
+#stuff,
+#contact {
+  /* separate scroll margins no longer needed */
+  scroll-margin-top: calc(5px + (1 * var(--tabheight)));
+}
+```
+
+I think it was a happy accident, that doing all this leads to the tab for the next card kist peeking up, when you click a link for the tab under it! This happens because it is positioned above the top of its section, and therefore also above its anchor element.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyQpZoO" data-user="sarajw" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/sarajw/pen/dyQpZoO">
@@ -308,6 +342,11 @@ Third pass codepen:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<br />
+<br />
+
+...coming soon...
 
 ## Limited to viewport height
 
