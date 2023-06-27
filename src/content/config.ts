@@ -11,15 +11,24 @@ const postsCollection = defineCollection({
   })
 });
 const shortCollection = defineCollection({
-    schema: z.object({
-      title: z.string(),
-      short: z.boolean(),
-      pubDate: z.string(),
-      published: z.boolean().optional(),
-    })
+  schema: z.object({
+    title: z.string(),
+    short: z.boolean(),
+    pubDate: z.string(),
+    published: z.boolean().optional(),
+  })
+});
+const notesCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    notes: z.boolean(),
+    pubDate: z.string(),
+    published: z.boolean().optional(),
+  })
 });
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   'posts': postsCollection,
   'short': shortCollection,
+  'notes': notesCollection,
 };

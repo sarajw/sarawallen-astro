@@ -11,7 +11,7 @@ export async function get() {
 		items: posts.map((post) => ({
 			title: post.data.title,
 			pubDate: post.data.pubDate,
-			description: post.data.description ?? "A short thort",
+			description: post.data.short ? "A short thort" : post.data.notes ? "A weak note" : post.data.description,
 			link: post.data.short ? "/blog/short/" + post.slug : "/blog/" + post.slug,
 		})),
 	});

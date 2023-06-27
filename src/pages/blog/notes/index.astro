@@ -1,0 +1,103 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import Toggle from "../../../components/Toggle.astro";
+import NoteBody from '../../../components/NoteBody.astro';
+
+const image = "/images/blog/notes.jpg";
+const alt = "/Users/sarajoy/Downloads/_a8e4b1c5-24ca-404d-8389-64d27673246f.jpg";
+const title = "Weak Notes";
+const description = "Weak notes are like #weekNotes but less regular.";
+
+// const shorts = (await Astro.glob('./*.{md,mdx}')).sort(
+// 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// );
+import { getCollection } from "astro:content";
+const shorts = (await getCollection("notes")).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="notesIndex">
+			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
+			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
+			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
+			<div class="post">
+				<article>
+					<img
+						src={image}
+						alt={alt}
+					/>
+					<h1>{title}</h1>
+					<p>{description}</p>
+					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+					{shorts.map((note, index) => (
+						<>
+						{index < 10 &&
+							<article class="notes">
+								<details open={index < 3}>
+									<summary><h3>{note.data.title}</h3></summary>
+									<NoteBody slug={note.slug} />
+									<a class="permalink" href={"/blog/notes/" + note.slug}>Permalink</a>
+								</details>
+							</article>
+						}
+						{index >= 10 &&
+							<a href={"/blog/notes/" + note.slug}><h3>{index} {note.data.title}</h3></a>
+						}
+						</>
+					))}
+					<a class="back" href="/#goblog">&larr; back to blog index</a>
+				</article>
+			</div>
+		</main>
+		<Toggle />
+	</body>
+</html>
+
+<style>
+	main {
+		background-color: var(--header);
+		margin-top: var(--tabheight);
+	}
+	.tab {
+		position: fixed !important;
+		width: calc(100% - 0.5rem);
+	}
+	.post > article {
+		max-width: 80ch;
+		margin-inline: auto;
+		padding: 6vmin 5.5vmin 5.5vmin;
+	}
+	article.notes {
+		margin-block: 8vmin;
+	}
+	.permalink {
+		display: block;
+		text-align :right;
+	}
+	summary h3 {
+		display: inline;
+	}
+	details summary::-webkit-details-marker,
+	details summary::marker {
+		font-size: var(--h3);
+		color: var(--hover);
+	}
+	h1, h3 {
+		margin-bottom: 0;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+	}
+
+</style>

@@ -1,0 +1,17 @@
+---
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const shortEntries = await getCollection('notes');
+  return shortEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<BlogPost title={entry.data.title} description="A weak notes" frontmatter={entry.data}>
+  <Content />
+</BlogPost>

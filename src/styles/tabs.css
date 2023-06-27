@@ -66,7 +66,7 @@
 	--border: 0.2rem solid CanvasText;
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .blogPost, .guestbookIndex, .nowPage) {
+.high-contrast :is(main > section, main .post, .shortIndex, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
 	border-inline: var(--border);
 }
 .high-contrast .tab h2, 
@@ -75,13 +75,13 @@
 	border-top: var(--border);
 	border-inline: var(--border);
 }
-.high-contrast :is(.blogPost, .shortIndex, .guestbookIndex) .tab {
+.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .tab {
 	width: calc(100% - 0.85rem);
 }
-.high-contrast :is(.blogPost, .shortIndex .guestbookIndex) .post {
+.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .post {
 	margin: 0 0.1rem;
 }
-.high-contrast :is(.blogPost, .shortIndex .guestbookIndex) .tab::after {
+.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
 .high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .entry, pre) {
@@ -134,7 +134,7 @@ a:focus-visible {
 	border-radius: var(--border-radii);
 }
 
-img:not(.social,.logo) {
+img:not(.social, .logo, .icon) {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -483,7 +483,7 @@ main.nowPage :is(.statuslol, .now_content) {
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
-	font-size: clamp(1rem, calc(1rem + 10cqi), 3rem);
+	font-size: clamp(1rem, calc(1rem + 8cqi), 3rem);
 	font-weight: bold;
 }
 .container button:hover .caption,

@@ -53,7 +53,7 @@ const {
 					})}</time></div>}
 				  {!frontmatter.short && <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>}
 					<slot />
-					<a class="back" href={frontmatter.short ? "/blog/short/" : "/#goblog"}>&larr; back to {frontmatter.short ? "shorts" : "blog"} index</a>
+					<a class="back" href={frontmatter.short ? "/blog/short/" : frontmatter.notes ? "/blog/notes/" : "/#goblog"}>&larr; back to {frontmatter.short ? "shorts" : frontmatter.notes ? "notes" : "blog"} index</a>
 				</article>
 			</div>
 		</main>
