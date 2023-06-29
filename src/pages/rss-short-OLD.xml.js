@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
 import getAllCollections from '../utils/getAllCollections.js';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config.js';
 
 export async function get() {
   const posts = await getAllCollections();

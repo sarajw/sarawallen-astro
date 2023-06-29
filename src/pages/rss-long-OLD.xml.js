@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import getAllCollections from '../utils/getAllCollections.js';
 // import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config.js';
 
 export async function get() {
   const posts = await getAllCollections();
