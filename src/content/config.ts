@@ -7,7 +7,8 @@ const postsCollection = defineCollection({
     description: z.string(),
     pubDate: z.string(),
     heroImage: z.string(),
-    caption: z.string()
+    caption: z.string(),
+    draft: z.boolean().optional(),
   })
 });
 const shortCollection = defineCollection({
@@ -24,6 +25,7 @@ const notesCollection = defineCollection({
     notes: z.boolean(),
     pubDate: z.string(),
     published: z.boolean().optional(),
+    draft: z.boolean().optional(),
   })
 });
 // Export a single `collections` object to register your collection(s)

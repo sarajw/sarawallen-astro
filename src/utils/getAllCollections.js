@@ -6,7 +6,7 @@ export default async function getAllCollections() {
     Object.keys(collections).map((name) => getCollection(name))
   );
 
-  const sortedPosts = allPosts.flat().sort(
+  const sortedPosts = allPosts.flat().filter((post) => post.data.draft !== true).sort(
     (a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
 

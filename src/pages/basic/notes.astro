@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-const allPosts = (await getCollection("notes")).sort(
+const allPosts = (await getCollection("notes")).filter((post) => post.data.draft !== true).sort(
 	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
 

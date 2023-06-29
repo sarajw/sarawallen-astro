@@ -22,12 +22,14 @@ import '../styles/basic.css';
 					<li><a class="sub-menu" href="/basic/#now">/now</a></li>
 				}
 				{currentPage.includes("stuff") &&
+					<li><a class="sub-menu" href="/basic/stuff/#makes">makes</a></li>
 					<li><a class="sub-menu" href="/basic/stuff/#uses">uses</a></li>
 					<li><a class="sub-menu" href="/basic/stuff/#links">links</a></li>
-					<li><a class="sub-menu" href="/basic/stuff/#webrings">webrings</a></li>
+					<li><a class="sub-menu" href="/basic/stuff/#webrings">rings</a></li>
 				}
-				{currentPage.includes("blog") &&
+				{(currentPage.includes("blog") || currentPage.includes("notes") || currentPage.includes("short")) &&
 					<li><a class="sub-menu" href="/basic/short">short</a></li>
+					<li><a class="sub-menu" href="/basic/notes">weak</a></li>
 				}
 				{currentPage.includes("contact") &&
 					<li><a class="sub-menu" href="/basic/contact/#email">email</a></li>
