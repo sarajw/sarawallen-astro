@@ -266,7 +266,8 @@ main.contact .entry p {
 
 form button {
 	border-radius: 0.5rem;
-	box-shadow: 0 0 4rem -3rem black;
+	box-shadow: 0 0 3rem -2rem black;
+	border: 1px solid CanvasText;
 }
 form button:hover,
 form button:focus {
