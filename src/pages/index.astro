@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Toggle from '../components/Toggle.astro';
 import StuffModal from '../components/StuffModal.astro';
 import PrivacyPolicy from '../components/PrivacyPolicy.astro';
+import A11YStatement from '../components/A11yStatement.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import '../styles/art.css';
 
@@ -767,7 +768,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             <br><br>
           </p>
 					<h3>Find me elsewhere:</h3>
-						<ul>
+						<ul class="socials">
 							<li>
 								<a class="img" rel="me" href="https://front-end.social/@sarajw">
                   <img class="social" src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon"><br>@sarajw
@@ -826,7 +827,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
           <h3>Or, find others!</h3>
           <div class="links-out">
             <div id="webring">
-              <a href="https://cs.sjoy.lol">CS.Sjoy.lol</a> webring
+              <h4><a href="https://cs.sjoy.lol">CS.Sjoy.lol</a> webring</h4>
               <div class="webring-nav">
                 <a href="https://webri.ng/webring/cssjoy/previous?via=https%3A%2F%2Fsarajoy.dev%2F%23webring">← Prev</a>
                   &centerdot;
@@ -835,20 +836,32 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 <a href="https://webri.ng/webring/cssjoy/next?via=https%3A%2F%2Fsarajoy.dev%2F%23webring">Next →</a>
               </div>
             </div>
+            <nav class="a11y-webring-club" aria-labelledby="a11y-webring-club">
+              <h4 id="a11y-webring-club">a11y-webring.club</h4>
+              <p>This site is a member of the <a rel="external" href="https://a11y-webring.club/">a11y-webring.club</a>.</p>
+              <ul>
+                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">Previous website</a></li>
+                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Random website</a></li>
+                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Next website</a></li>
+              </ul>
+            </nav>
             <div id="indieWeb">
-              <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/previous">←</a>
-              &nbsp;An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
-              <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next">→</a>
+              <h4>
+                <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/previous">←</a>
+                &nbsp;An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
+                <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next">→</a>
+              </h4>
             </div>
             <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
             <details>
-              <summary>The Claw 🦋 Webring</summary>
+              <summary><h4>The Claw 🦋 Webring</h4></summary>
               <the-claw-webring-widget id="theClaw" />
             </details>
-            <a href="https://blogroll.org/">Ye Olde Blogroll</a>
-            <a href="https://personalsit.es/">PERSONALSIT.ES</a>
+            <h4><a href="https://blogroll.org/">Ye Olde Blogroll</a></h4>
+            <h4><a href="https://personalsit.es/">PERSONALSIT.ES</a></h4>
           </div>
           <PrivacyPolicy />
+          <A11YStatement />
 				</article>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>

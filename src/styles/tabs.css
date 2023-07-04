@@ -664,16 +664,16 @@ pre.ascii-art {
 #find > article {
 	max-width: 80ch;
 }
-#find ul {
+#find ul.socials {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 5vmin;
 	padding-block-end: 5vmin;
 }
-#find li {
+#find ul.socials li {
 	text-align: center;
 }
-#find li a {
+#find ul.socials li a {
 	font-size: var(--sml);
 }
 img.social {
@@ -706,15 +706,28 @@ form button:active {
 }
 
 .links-out {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
-	gap: 1.25rem;
-	font-size: clamp(0.9rem, 5vw, 1.5rem);
+}
+.links-out * {
+	margin: 0;
+}
+
+.links-out h4 {
+	margin-block: 1.5em 0.25em;
+}
+
+.links-out .a11y-webring-club ul {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
 }
 
 .links-out details {
+	width: fit-content;
 	margin-inline: auto;
+}
+.links-out summary h4 {
+	display: inline-block;
 }
 
 #indieWeb a:nth-child(odd) {
