@@ -713,6 +713,10 @@ form button:active {
 	font-size: clamp(0.9rem, 5vw, 1.5rem);
 }
 
+.links-out details {
+	margin-inline: auto;
+}
+
 #indieWeb a:nth-child(odd) {
 	text-decoration: none;
 }
