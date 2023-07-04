@@ -216,6 +216,12 @@ nav ul {
 	background-color: Canvas;
 	box-shadow: 0 0 4rem -3rem black;
 }
+.statuslol_emoji_container {
+	font-size: 3rem;
+}
+.statuslol_time {
+	font-size: small;
+}
 
 /* ---------- blog styles ---------- */
 
