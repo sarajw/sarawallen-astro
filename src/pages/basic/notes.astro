@@ -10,16 +10,21 @@ import NoteBody from '../../components/NoteBody.astro';
 
 <Basic title="Weak Notes" page="notes">
   <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
-  <ul class="rainbow">
-    {allPosts.map((note) => (
-      <li>
-        <a href={"/basic/notes/" + note.slug}>
-          <h2>{note.data.title}</h2>
-        </a>
-        <NoteBody slug={note.slug} />
-      </li>
+  <div class="rainbow">
+    {allPosts.map((note, index) => (
+      <>
+      {index < 10 &&
+        <details class="note" open={index === 0}>
+          <summary><h2>{note.data.title}</h2></summary>
+          <NoteBody slug={note.slug} />
+          <p class="permalink"><a href={"/basic/notes/" + note.slug}>Permalink</a></p>
+        </details>
+      }
+      {index >= 10 &&
+        <h2><a href={"/basic/notes/" + note.slug}>{index} {note.data.title}</a></h2>
+      }
+      </>
     ))}
-  </ul>
-
+  </div>
   <p class="back"><a href="/basic/blog">&larr; back to blog index</a></p>
 </Basic>

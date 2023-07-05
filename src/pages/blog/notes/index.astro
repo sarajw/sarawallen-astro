@@ -41,16 +41,14 @@ const shorts = (await getCollection("notes")).filter((post) => post.data.draft !
 					{shorts.map((note, index) => (
 						<>
 						{index < 10 &&
-							<article class="notes">
-								<details open={index < 3}>
-									<summary><h3>{note.data.title}</h3></summary>
-									<NoteBody slug={note.slug} />
-									<a class="permalink" href={"/blog/notes/" + note.slug}>Permalink</a>
-								</details>
-							</article>
+							<details class="note" open={index === 0}>
+								<summary><h2>{note.data.title}</h2></summary>
+								<NoteBody slug={note.slug} />
+								<a class="permalink" href={"/blog/notes/" + note.slug}>Permalink</a>
+							</details>
 						}
 						{index >= 10 &&
-							<a href={"/blog/notes/" + note.slug}><h3>{index} {note.data.title}</h3></a>
+							<h2><a href={"/blog/notes/" + note.slug}>{index} {note.data.title}</a></h2>
 						}
 						</>
 					))}
@@ -76,14 +74,14 @@ const shorts = (await getCollection("notes")).filter((post) => post.data.draft !
 		margin-inline: auto;
 		padding: 6vmin 5.5vmin 5.5vmin;
 	}
-	article.notes {
-		margin-block: 8vmin;
+	details.note {
+		margin-block: 2rem;
 	}
 	.permalink {
 		display: block;
 		text-align :right;
 	}
-	summary h3 {
+	summary h2 {
 		display: inline;
 	}
 	details summary::-webkit-details-marker,

@@ -101,6 +101,15 @@ main img:not(.backtotop img) {
 
 h2 a, h2 a:visited {color: inherit}
 
+ul:not(.note ul, .now_content ul) {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+summary > * {
+	display: inline;
+}
+
 /* ---------- rainbow headings ---------- */
 
 .dark-mode:not(.high-contrast) :is(.rainbow > *:nth-of-type(7n + 1) > :first-child, .now_after h3:nth-of-type(7n + 1)) { color: var(--rred) }
@@ -136,8 +145,6 @@ nav ul {
 	column-gap: 1em;
 	row-gap: 0.4em;
 	margin: 0;
-	list-style-type: none;
-	padding-inline-start: 0;
 }
 :not(.dark-mode) header :is(a, a:visited) {color: inherit}
 
@@ -228,10 +235,6 @@ nav ul {
 .post img {
 	border-radius: 0.5rem;
 }
-.blog ul {
-	list-style-type: none;
-	padding-inline-start: 0;
-}
 .blog h2, .entry h2 {
 	margin-block-end: 0.5em;
 }
@@ -256,10 +259,6 @@ nav ul {
 
 /* ---------- short styles ---------- */
 
-main.short > ul {
-	list-style-type: none;
-	padding-inline-start: 0;
-}
 main.short > ul > li {
 	margin-block: 2em;
 }
@@ -267,6 +266,20 @@ main.contact .entry p {
 	white-space: pre-line;
 }
 
+/* ---------- note styles ---------- */
+
+details.note {
+	margin-block: 2rem;
+}
+.permalink {
+	text-align: right;
+}
+.note li {
+	margin-block: 0.5rem;
+}
+.note h3 {
+	margin-block-start: 1.5em;
+}
 
 /* ---------- contact styles ---------- */
 
@@ -290,8 +303,6 @@ form button:active {
 	flex-wrap: wrap;
 	gap: 3vmin;
 	justify-content: space-around;
-	list-style-type: none;
-	padding-inline-start: 0;
 	margin-block-end: 5em;
 }
 .contact ul img {

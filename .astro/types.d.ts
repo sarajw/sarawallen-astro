@@ -196,9 +196,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: InferEntrySchema<"notes">
 } & { render(): Render[".md"] };
-"20230XXX.md": {
-	id: "20230XXX.md";
-  slug: "20230xxx";
+"20230705.md": {
+	id: "20230705.md";
+  slug: "20230705";
   body: string;
   collection: "notes";
   data: InferEntrySchema<"notes">
