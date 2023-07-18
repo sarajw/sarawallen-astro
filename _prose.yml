@@ -1,5 +1,5 @@
 prose:
-  rooturl: "src/content/short"
+  rooturl: "src/content"
   metadata:
     src/content/short:
       - name: "short"
@@ -16,3 +16,24 @@ prose:
           element: "text"
           label: "Date published"
           value: CURRENT_DATETIME
+
+    src/content/notes:
+      - name: "notes"
+        field:
+          element: "hidden"
+          value: true
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "pubDate"
+        field:
+          element: "text"
+          label: "Date published"
+          value: CURRENT_DATETIME
+      - name: "draft"
+        field:
+          element: "button"
+          on: true
+          off: false
