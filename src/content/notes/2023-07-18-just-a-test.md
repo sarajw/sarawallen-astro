@@ -1,9 +1,9 @@
 ---
 notes: true
 pubDate: '2023-07-18 09:48 +0200'
-draft: false
+draft: true
 published: false
-title: Just a test
+title: Weaknote 2023-0X-XX
 ---
 ## A New Post
 
