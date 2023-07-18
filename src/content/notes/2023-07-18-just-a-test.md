@@ -1,7 +1,7 @@
 ---
 notes: true
 pubDate: '2023-07-18 09:48 +0200'
-draft: true
+draft: false
 published: false
 title: Just a test
 ---
