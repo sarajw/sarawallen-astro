@@ -5,7 +5,8 @@
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
-      <link rel="stylesheet" href="/styles/xml.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/xml.css"/>
       </head>
       <body>
         <header>
