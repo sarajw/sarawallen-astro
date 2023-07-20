@@ -8,17 +8,41 @@
       <link rel="stylesheet" href="/styles/xml.css"/>
       </head>
       <body>
-        <h1>Sitemap</h1>
-        <xsl:for-each select="/sitemap:urlset/sitemap:url">
-          <p>
-            <a>
-              <xsl:attribute name="href">
-                <xsl:value-of select="sitemap:loc"/>
-              </xsl:attribute>
-              <xsl:value-of select="substring-after(sitemap:loc, '.dev')"/>
-            </a>
-          </p>
-        </xsl:for-each>
+        <header>
+          <h1>Sitemap</h1>
+        </header>
+        <main>
+          <div>
+            <h2>Main</h2>
+            <xsl:for-each select="/sitemap:urlset/sitemap:url">
+              <xsl:if test="not(contains(sitemap:loc, 'basic'))">
+                <p>
+                  <a>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="sitemap:loc"/>
+                    </xsl:attribute>
+                    <xsl:value-of select="substring-after(sitemap:loc, '.dev')"/>
+                  </a>
+                </p>
+              </xsl:if>
+            </xsl:for-each>
+          </div>
+          <div>
+            <h2>Basic</h2>
+            <xsl:for-each select="/sitemap:urlset/sitemap:url">
+              <xsl:if test="contains(sitemap:loc, 'basic')">
+                <p>
+                  <a>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="sitemap:loc"/>
+                    </xsl:attribute>
+                    <xsl:value-of select="substring-after(sitemap:loc, '.dev')"/>
+                  </a>
+                </p>
+              </xsl:if>
+            </xsl:for-each>
+          </div>
+        </main>
       </body>
     </html>
   </xsl:template>

@@ -10,3 +10,13 @@
 	font-family: Karla, 'Open Sans', sans-serif;
     color-scheme: light dark;
 }
+main {
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+}
