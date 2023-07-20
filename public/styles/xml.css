@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Karla';
+	font-weight: 200 800;
+	font-display: swap;
+	src: local('Karla'),
+		url('/fonts/karla.woff2') format('woff2 supports variations'),
+		url('/fonts/karla.woff2') format('woff2-variations');
+}
+:root {
+	font-family: Karla, 'Open Sans', sans-serif;
+    color-scheme: light dark;
+}
