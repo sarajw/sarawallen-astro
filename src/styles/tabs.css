@@ -121,7 +121,7 @@ a:hover, a:active, a:focus {
 	text-decoration-style: wavy;
 	text-underline-offset: 0.15ex;
 }
-:is(header, footer, .tab, .tabDummy) a {
+:is(header, .tab, .tabDummy) a {
 	text-decoration: none;
 	border-bottom: 0;
 	font-weight: unset;
@@ -210,6 +210,17 @@ section > article ul:not(.now_content ul) {
 	list-style-type: none;
 	margin-block: 0;
 	padding-inline-start: 0;
+}
+
+footer {margin-block-start: 8vmin;}
+footer > * {
+	display: block;
+	margin: 1rem auto 0;
+	width: fit-content;
+}
+footer summary {
+	width: fit-content;
+	margin-inline: auto;
 }
 
 .anchor {
