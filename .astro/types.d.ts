@@ -189,13 +189,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"notes": {
-"2023-07-18-just-a-test.md": {
-	id: "2023-07-18-just-a-test.md";
-  slug: "2023-07-18-just-a-test";
-  body: string;
-  collection: "notes";
-  data: InferEntrySchema<"notes">
-} & { render(): Render[".md"] };
 "20230627.md": {
 	id: "20230627.md";
   slug: "20230627";
@@ -213,6 +206,13 @@ declare module 'astro:content' {
 "20230717.md": {
 	id: "20230717.md";
   slug: "20230717";
+  body: string;
+  collection: "notes";
+  data: InferEntrySchema<"notes">
+} & { render(): Render[".md"] };
+"20230728.md": {
+	id: "20230728.md";
+  slug: "20230728";
   body: string;
   collection: "notes";
   data: InferEntrySchema<"notes">
