@@ -41,7 +41,7 @@ const entries = await getGuestEntries();
           </p>
 					<p>Don't expect instant updates, new messages will be moderated, and added when I next deploy my site :)</p>
 					
-					<form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+					<form name="guestbook" method="POST" data-netlify="true" data-netlify-recaptcha="true Content-Type="application/x-www-form-urlencoded">
 						<input type="hidden" name="form-name" value="guestbook" />
 						<p>
 							<label
@@ -64,6 +64,7 @@ const entries = await getGuestEntries();
 						<p>
 							<label class="message">Message<br /><textarea name="message" required /></label>
 						</p>
+<div data-netlify-recaptcha="true"></div>
 						<p>
 							<button type="submit"><b>Send</b></button>
 						</p>
