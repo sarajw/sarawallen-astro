@@ -261,6 +261,13 @@ nav ul {
 	text-align: center;
 }
 
+.toot {
+	padding: 0 1em;
+	margin-block: 1em;
+	border: 1px solid;
+	border-radius: 0.5em;
+}
+
 /* ---------- short styles ---------- */
 
 main.short > ul > li {
