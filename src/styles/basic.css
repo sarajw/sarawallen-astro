@@ -78,6 +78,10 @@ body {
 	min-height: 100dvh;
 }
 
+p, li {
+	line-height: 1.4em;
+}
+
 a {
 	color: var(--link);
 	text-underline-offset: 0.15em;

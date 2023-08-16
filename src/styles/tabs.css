@@ -84,7 +84,7 @@
 .high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
-.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .entry, pre) {
+.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
 	border: var(--border);
 }
 .high-contrast .posts {
@@ -847,19 +847,19 @@ form button:active {
   padding: 0 0.2em 0.1em;
   border-radius: var(--border-radii);
 }
-.post :is(.short, .tweet, .entry, pre) {
+.post :is(.short, .tweet, .toot, .entry, pre) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
 }
-.post .short, .post .tweet {
+.post .short, .post .tweet, .post .toot {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
-:is(.tweet, .short, .entry) > *:first-child {margin-top: 0}
-:is(.tweet, .short > div, .entry) > *:last-child {margin-bottom: 0}
+:is(.tweet, .short, .toot, .entry) > *:first-child {margin-top: 0}
+:is(.tweet, .toot, .short > div, .entry) > *:last-child {margin-bottom: 0}
 
-.post :is(.tweet, .short) pre {
+.post :is(.tweet, .short, .toot) pre {
   background-color: var(--header);
 }
 

@@ -23,10 +23,6 @@ body {
 	font-family: Karla, 'Open Sans', sans-serif;
 }
 
-p, li {
-	line-height: 1.4em;
-}
-
 form {
 	width: min-content;
 	margin: 0 auto 5vmin;

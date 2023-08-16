@@ -289,6 +289,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"what-screens-want.md": {
+	id: "what-screens-want.md";
+  slug: "what-screens-want";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 };
 "short": {
 "2022-in-review.md": {
@@ -455,6 +462,13 @@ declare module 'astro:content' {
 "little-lives-limerick.md": {
 	id: "little-lives-limerick.md";
   slug: "little-lives-limerick";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
+"meat-sacks.md": {
+	id: "meat-sacks.md";
+  slug: "meat-sacks";
   body: string;
   collection: "short";
   data: InferEntrySchema<"short">
