@@ -4,7 +4,6 @@ description: "A classic web design article was posted on Mastodon. I reacted."
 pubDate: "2023-08-16"
 heroImage: "/images/blog/the-horse-in-motion.jpg"
 caption: "A grid showing 12 images of a horse galloping: 'Sallie Gardner', owned by Leland Stanford; ridden by G. Domm, running at a 1.40 gait over the Palo Alto track, 19th June, 1878"
-draft: true
 ---
 
 [Joe Lanman](https://front-end.social/@joelanman@hachyderm.io) [posted](https://hachyderm.io/@joelanman/110894705584842635):
@@ -59,6 +58,6 @@ I'm finding myself somewhat distracted by the lack of ALT text on the images. In
 
 Blind people don't even need a monitor, let alone view transitions. They've no need for that form of aspirin-padding.
 
-Are we missing out on amazing other ways of navigating the web because we're stuck on visuals and screens (or little screens strapped to our faces, or our wrists). What sleek little devices could we have and interact with if we didn't have to strap a honking great fondleslab onto each one? Are we unable to think outside the box because that's all we're doing, staring at boxes?
+Are we missing out on other amazing ways of navigating the web because we're stuck on visuals and screens (or little screens strapped to our faces, or our wrists). What sleek little devices could we have and interact with if we didn't have to strap a honking great fondleslab onto each one? Are we unable to think outside the box because that's all we're doing, staring at boxes?
 
 Maybe the map we are looking at is the screen.
