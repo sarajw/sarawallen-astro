@@ -6,6 +6,8 @@ import Toggle from "../components/Toggle.astro";
 const {
 	frontmatter, headings
 } = Astro.props;
+
+const headingsNum = headings.length
 ---
 
 <html lang="en">
@@ -36,7 +38,7 @@ const {
 						month: 'short',
 						day: 'numeric',
 					})}</time>}
-					{headings.length != undefined &&
+					{headingsNum > 0 &&
 						<details id="toc">
 							<summary><h2>Table of Contents</h2></summary>
 							<ul>
