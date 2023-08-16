@@ -38,7 +38,7 @@ const headingsNum = headings.length
 						month: 'short',
 						day: 'numeric',
 					})}</time>}
-					{headingsNum > 0 &&
+					{headings && headingsNum > 0 &&
 						<details id="toc">
 							<summary><h2>Table of Contents</h2></summary>
 							<ul>
