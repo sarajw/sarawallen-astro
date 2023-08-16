@@ -7,7 +7,10 @@ const {
 	frontmatter, headings
 } = Astro.props;
 
-const headingsNum = headings.length
+let headingsNum = 0;
+if (headings !== undefined) {
+	headingsNum = headings.length;
+} 
 ---
 
 <html lang="en">
@@ -38,7 +41,7 @@ const headingsNum = headings.length
 						month: 'short',
 						day: 'numeric',
 					})}</time>}
-					{headings && headingsNum > 0 &&
+					{headingsNum > 0 &&
 						<details id="toc">
 							<summary><h2>Table of Contents</h2></summary>
 							<ul>
