@@ -11,7 +11,7 @@ const entries = await getGuestEntries();
 
 <Basic title="Contact" page="contact">
 <h2 id="email">Email me</h2>
-<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" Content-Type="application/x-www-form-urlencoded">
+<form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
   <input type="hidden" name="form-name" value="contact" />
   <p>
     <label
@@ -28,7 +28,7 @@ const entries = await getGuestEntries();
   <p>
     <label class="message">Message:<br /><textarea name="message" required /></label>
   </p>
-<div data-netlify-recaptcha="true"></div>  <p>
+  <p>
     <button type="submit"><b>Send Email</b></button>
   </p>
 </form>
@@ -78,7 +78,7 @@ const entries = await getGuestEntries();
   </li> -->
 </ul>
 <h2 id="guestbook">Sign the Guestbook</h2>
-  <form name="guestbook" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+  <form name="guestbook" method="POST" data-netlify="true" data-netlify-recaptcha="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
     <p>
       <label
@@ -101,6 +101,7 @@ const entries = await getGuestEntries();
     <p>
       <label class="message">Message<br /><textarea name="message" required /></label>
     </p>
+    <div data-netlify-recaptcha="true"></div>
     <p>
       <button type="submit"><b>Sign Guestbook</b></button>
     </p>
