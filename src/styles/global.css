@@ -46,6 +46,9 @@ form button {
 form:has(input[name="bot-field"]:not(:placeholder-shown)) button {
 	display: none;
 }
+input[name="bot-field"]:placeholder-shown + small {
+	display:none;
+}
 
 .entry p {
 	white-space: pre-line;
