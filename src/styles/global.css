@@ -29,6 +29,7 @@ form {
 }
 input,
 textarea {
+	font-family: Karla, 'Open Sans', sans-serif;
 	width: clamp(28ch, 60vw, 30rem);
 	padding: 0.25rem 0.5rem;
 }
@@ -41,6 +42,15 @@ form button {
 	padding: 0.5rem 1rem;
 	border: 0;
 	margin: 0 auto;
+}
+form:has(input[name="bot-field"]:not(:placeholder-shown)) button {
+	display: none;
+}
+
+.entry p {
+	white-space: pre-line;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .toggle {

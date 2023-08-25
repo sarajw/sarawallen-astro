@@ -802,7 +802,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						</ul>
 					<h3>Email me:</h3>
 					
-          <form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label
@@ -817,10 +817,15 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               >
             </p>
             <p>
+              <label>Subject <small>(no captcha - skip this field if you're real)</small>
+                <input type="text" name="bot-field" placeholder="Typing here removes button!" />
+              </label>
+            </p>
+            <p>
               <label class="message">Message:<br /><textarea name="message" required /></label>
             </p>
             <p>
-              <button type="submit"><b>Send</b></button>
+              <button type="submit"><b>Send Email</b></button>
             </p>
           </form>
 

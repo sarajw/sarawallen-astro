@@ -41,34 +41,38 @@ const entries = await getGuestEntries();
           </p>
 					<p>Don't expect instant updates, new messages will be moderated, and added when I next deploy my site :)</p>
 					
-					<form name="guestbook" method="POST" data-netlify="true" data-netlify-recaptcha="true" Content-Type="application/x-www-form-urlencoded">
+					<form name="guestbook" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
 						<input type="hidden" name="form-name" value="guestbook" />
 						<p>
-							<label
-								>Name
-								<br /><input type="text" name="name" required /></label
-							>
+						  <label
+							>Name
+							<br /><input type="text" name="name" required /></label
+						  >
 						</p>
 						<p>
-							<label
-								>Email <small>(optional, not published)</small>
-								<br /><input type="email" name="email" placeholder="placeholder@example.com" /></label
-							>
+						  <label
+							>Email <small>(optional, not published)</small>
+							<br /><input type="email" name="email" /></label
+						  >
 						</p>
 						<p>
-							<label
-								>URL <small>(optional, linked from Name)</small>
-								<br /><input type="url" name="url" placeholder="https://example.com" pattern="https://.*" /></label
-							>
+						  <label
+							>URL <small>(optional, linked from Name)</small>
+							<br /><input type="url" name="url" placeholder="https://example.com" pattern="https://.*" /></label
+						  >
 						</p>
 						<p>
-							<label class="message">Message<br /><textarea name="message" required /></label>
+						  <label>Subject <small>(no captcha - skip this field if you're real)</small>
+							 <input type="text" name="bot-field" placeholder="Typing here removes button!" />
+						  </label>
 						</p>
-<div data-netlify-recaptcha="true"></div>
 						<p>
-							<button type="submit"><b>Send</b></button>
+						  <label class="message">Message<br /><textarea name="message" required /></label>
 						</p>
-					</form>
+						<p>
+						  <button type="submit"><b>Sign Guestbook</b></button>
+						</p>
+					  </form>
           <PrivacyPolicy />
 					{entries.map((entry:any) =>(
 						<article class="entry">
@@ -86,12 +90,6 @@ const entries = await getGuestEntries();
 			</div>
 		</main>
 		<Toggle />
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', (event) => {
-			const recaptcha = document.querySelector('.g-recaptcha');
-			recaptcha.setAttribute("data-theme", "dark");
-			});
-		</script>
 	</body>
 </html>
 

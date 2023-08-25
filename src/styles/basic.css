@@ -273,8 +273,9 @@ nav ul {
 main.short > ul > li {
 	margin-block: 2em;
 }
-main.contact .entry p {
-	white-space: pre-line;
+
+.entry {
+	margin-block: 5vmin;
 }
 
 /* ---------- note styles ---------- */
@@ -325,6 +326,5 @@ form button:active {
 	filter: invert(80%);
 }
 
-.entry {
-	margin-block: 5vmin;
+main.contact .entry p {
 }

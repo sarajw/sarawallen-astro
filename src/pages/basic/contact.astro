@@ -11,7 +11,7 @@ const entries = await getGuestEntries();
 
 <Basic title="Contact" page="contact">
 <h2 id="email">Email me</h2>
-<form name="contact" method="POST" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
   <input type="hidden" name="form-name" value="contact" />
   <p>
     <label
@@ -24,6 +24,11 @@ const entries = await getGuestEntries();
       >Email address:
       <br /><input type="email" name="email" required /></label
     >
+  </p>
+  <p>
+    <label>Subject <small>(no captcha - skip this field if you're real)</small>
+       <input type="text" name="bot-field" placeholder="Typing here removes button!" />
+    </label>
   </p>
   <p>
     <label class="message">Message:<br /><textarea name="message" required /></label>
@@ -78,7 +83,7 @@ const entries = await getGuestEntries();
   </li> -->
 </ul>
 <h2 id="guestbook">Sign the Guestbook</h2>
-  <form name="guestbook" method="POST" data-netlify="true" data-netlify-recaptcha="true" Content-Type="application/x-www-form-urlencoded">
+  <form name="guestbook" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
     <input type="hidden" name="form-name" value="guestbook" />
     <p>
       <label
@@ -89,7 +94,7 @@ const entries = await getGuestEntries();
     <p>
       <label
         >Email <small>(optional, not published)</small>
-        <br /><input type="email" name="email" placeholder="placeholder@example.com" /></label
+        <br /><input type="email" name="email" /></label
       >
     </p>
     <p>
@@ -99,9 +104,13 @@ const entries = await getGuestEntries();
       >
     </p>
     <p>
+      <label>Subject <small>(no captcha - skip this field if you're real)</small>
+         <input type="text" name="bot-field" placeholder="Typing here removes button!" />
+      </label>
+    </p>
+    <p>
       <label class="message">Message<br /><textarea name="message" required /></label>
     </p>
-    <div data-netlify-recaptcha="true"></div>
     <p>
       <button type="submit"><b>Sign Guestbook</b></button>
     </p>
@@ -121,11 +130,4 @@ const entries = await getGuestEntries();
       </article>
     ))}
   </div>
-
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', (event) => {
-    const recaptcha = document.querySelector('.g-recaptcha');
-    recaptcha.setAttribute("data-theme", "dark");
-    });
-  </script>
 </Basic>
