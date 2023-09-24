@@ -89,3 +89,14 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     }
   }
 });
+window.matchMedia('(prefers-contrast: more)').addEventListener('change', event => {
+  // only run if the contrastMode is not set
+  if (!contrastMode) {
+    // add/remove contrastMode to match OS setting
+    if(event.matches) {
+      htmlRoot.classList.add("high-contrast");
+    } else {
+      htmlRoot.classList.remove("high-contrast");
+    }
+  }
+});
