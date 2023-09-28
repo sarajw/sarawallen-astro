@@ -14,7 +14,7 @@ And websites were suddenly... slower. Or so it felt. Because there was this new 
 
 and they all started using up tons of memory and making the computer chug (before browsers started putting tabs to sleep)
 
-And that's when I learned of the existance of (or when they started building) task managers just for the browser
+And that's when I learned of the existence of (or when they started building) task managers just for the browser
 
 Now like, it's a shift - there used to be an obvious loading 'throbber' in browsers (yes, that's what they're called - like the lovely Netscape comets), and you'd watch that until the page loaded, then you'd see the page progressively load down the screen
 
