@@ -5,7 +5,7 @@ draft: false
 published: false
 title: The web changed.
 description: Was it React? I don't know. But we're still waiting.
-caption: Placeholder image
+caption: Placeholder image. Pretend it's shimmering.
 ---
 
 I remember quite clearly (not the date thereof, but the experience) the time when suddenly the loading skeletons appeared
