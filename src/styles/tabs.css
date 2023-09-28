@@ -798,7 +798,7 @@ form button:active {
 	margin: 0 auto;
 	max-width: 100%;
 	border-radius: var(--border-radii);
-	box-shadow: 1px 1px 15px -12px black;
+	/* box-shadow: 1px 1px 15px -12px black; */
 }
 .post p>img {
 	margin-top: 0.5rem;
