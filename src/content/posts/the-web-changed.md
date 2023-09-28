@@ -1,5 +1,5 @@
 ---
-pubDate: '2023-09-28 11:48 +0200'
+pubDate: "2023-09-28 11:48 +0200"
 heroImage: /images/blog/placeholder.png
 draft: false
 published: false
@@ -7,6 +7,7 @@ title: The web changed.
 description: Was it React? I don't know. But we're still waiting.
 caption: Placeholder image
 ---
+
 I remember quite clearly (not the date thereof, but the experience) the time when suddenly the loading skeletons appeared
 
 And websites were suddenly... slower. Or so it felt. Because there was this new limbo state
@@ -17,10 +18,8 @@ And that's when I learned of the existance of (or when they started building) ta
 
 Now like, it's a shift - there used to be an obvious loading 'throbber' in browsers (yes, that's what they're called - like the lovely Netscape comets), and you'd watch that until the page loaded, then you'd see the page progressively load down the screen
 
-Now, it feels wrong, like it's broken, if the page skeleton doesn't pop up immediately. And the throbbers are just... gone? 
+Now, it feels wrong, like it's broken, if the page skeleton doesn't pop up immediately. And the throbbers are just... gone?
 
-But we're still waiting.
+But we're still waiting...
 
-...
-
-![A loading shimmer. Nothing is coming.](/images/blog/shimmer.gif)
+<img src="/images/blog/shimmer.gif" style="mix-blend-mode: multiply">
