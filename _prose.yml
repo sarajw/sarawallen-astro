@@ -56,7 +56,7 @@ prose:
         field:
           element: "text"
           label: "Hero Image relative URL"
-          value: "/images/blog/placeholder.png"
+          value: "/images/placeholder.png"
       - name: "caption"
         field:
           element: "text"

@@ -1,6 +1,6 @@
 ---
 pubDate: "2023-09-28 11:48 +0200"
-heroImage: /images/blog/placeholder.png
+heroImage: /images/placeholder.png
 draft: false
 published: false
 title: The web changed.
