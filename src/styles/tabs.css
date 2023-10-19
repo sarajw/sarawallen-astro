@@ -539,10 +539,12 @@ dialog::backdrop {
 	-webkit-backdrop-filter: blur(0.25rem);
 					backdrop-filter: blur(0.25rem);
 }
-dialog button:not(.inline) {
+dialog form {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
+}
+dialog button:not(.inline) {
 	width: calc(1.5rem + 1vw);
 	aspect-ratio: 1;
 	padding: 0;

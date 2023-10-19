@@ -6,7 +6,9 @@ const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.pro
   <span class="caption">{title}</span>
 </button>
 <dialog id={modalId}>
-  <button title="Close" onclick={`window.${modalId}.close()`}>×</button>
+  <form method="dialog">
+    <button>×</button>
+  </form>
   <div>
     {modalImg && <img src={'/images/stuff/'+modalImg} alt={alt} loading="lazy" />}
     <div>
@@ -23,13 +25,3 @@ const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.pro
     </div>
   </div>
 </dialog>
-
-<script is:inline define:vars={{ modalId }}>
-  const modal = document.getElementById(modalId);
-
-  window.addEventListener('click', function (event) {
-    if (event.target === modal) {
-      modal.close(); 
-    }
-  });
-</script>
