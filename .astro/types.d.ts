@@ -224,6 +224,13 @@ declare module 'astro:content' {
   collection: "notes";
   data: InferEntrySchema<"notes">
 } & { render(): Render[".md"] };
+"20231022.md": {
+	id: "20231022.md";
+  slug: "20231022";
+  body: string;
+  collection: "notes";
+  data: InferEntrySchema<"notes">
+} & { render(): Render[".md"] };
 };
 "posts": {
 "100days.md": {
