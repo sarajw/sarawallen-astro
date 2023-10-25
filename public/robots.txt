@@ -1,3 +1,15 @@
-User-agent: *
-Disallow: 
+# Blocking OpenAI
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+
+# Blocking Google AI (Bard and Vertex AI generative APIs)
+User-agent: Google-Extended
+Disallow: /
+
+# Blocking commoncrawl (CCBot)
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://sarajoy.dev/sitemap.xml
