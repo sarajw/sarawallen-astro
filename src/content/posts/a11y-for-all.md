@@ -4,6 +4,7 @@ description: "A general musing on accessibility (a.k.a. a11y), online and offlin
 pubDate: "May 21 2022"
 heroImage: "/images/blog/accessibility.png"
 caption: "Accessibility/a11y icon: a stylised human body inside a circle"
+featured: downplay
 ---
 
 ## Accessibility on the web (a.k.a. a11y)

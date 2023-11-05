@@ -13,7 +13,13 @@ import '../styles/art.css';
 // 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 // );
 import { getCollection } from "astro:content";
-const posts = (await getCollection("posts")).filter((post) => post.data.draft !== true).sort(
+const featured = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'featured').sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+const posts = (await getCollection("posts")).filter((post) => post.data.draft !== true && !post.data.featured).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+const downplay = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'downplay').sort(
 	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
 
@@ -759,9 +765,41 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 <time datetime="2022">2022++;</time>
               </div>
             </li>
-						{posts.map((post) => (
-							<li class=`posts ${post.data.featured??''}`>
+						{featured.map((post) => (
+							<li class='posts featured'>
 								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+								<div>
+									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
+									{post.data.description && <p>{post.data.description}</p>}
+									<time datetime={post.data.pubDate}>
+										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+										})}
+									</time>
+								</div>
+							</li>
+						))}
+						{posts.map((post) => (
+							<li class='posts'>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+								<div>
+									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
+									{post.data.description && <p>{post.data.description}</p>}
+									<time datetime={post.data.pubDate}>
+										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+										})}
+									</time>
+								</div>
+							</li>
+						))}
+						{downplay.map((post) => (
+							<li class='posts downplay'>
+								<a href={"/blog/" + post.slug}><div class="thumb" style=`background-image: url(${post.data.heroImage??"/images/placeholder.png"})`></div></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
 									{post.data.description && <p>{post.data.description}</p>}
