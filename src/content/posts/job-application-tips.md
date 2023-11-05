@@ -4,6 +4,7 @@ description: "How to get the first interview, and smash it!"
 pubDate: "Sep 09 2022"
 heroImage: "/images/blog/passionfeet.jpg"
 caption: "Two pairs of shoed feet standing on pavement slabs, on which the words PASSION LED US HERE are painted in red."
+featured: downplay
 ---
 
 _(Photo by [Ian Schneider](https://unsplash.com/ja/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-application?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText))_

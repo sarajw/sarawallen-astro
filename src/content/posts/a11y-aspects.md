@@ -4,6 +4,7 @@ description: "It's a lot. It's tempting to pretend we didn't read that very conf
 pubDate: "Jun 07 2022"
 heroImage: "/images/blog/a11yAspects-sml.jpg"
 caption: "Somewhat semantic HTML, fading from harsh colours to a more serene state."
+featured: featured
 ---
 
 A caveat - I am learning while writing. My own homepage & portfolio need work too!

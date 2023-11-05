@@ -6,6 +6,7 @@ published: false
 title: The web changed.
 description: Was it React? I don't know. But we're still waiting.
 caption: Placeholder image. Pretend it's shimmering.
+featured: downplay
 ---
 
 I remember quite clearly (not the date thereof, but the experience) the time when suddenly the loading skeletons appeared

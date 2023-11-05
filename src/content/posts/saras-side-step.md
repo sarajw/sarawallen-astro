@@ -4,6 +4,7 @@ description: "from Childhood to Techy Generalist to Mother to Front End Develope
 pubDate: "Jan 20 2023"
 heroImage: "/images/blog/webplatform.jpg"
 caption: "A small banner with a bunch of web development related and other badges, pinning a rainbow-holographic sticker saying 'WEB PLATFORM' in the middle."
+featured: featured
 ---
 
 ## Introduction

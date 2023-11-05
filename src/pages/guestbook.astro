@@ -30,11 +30,11 @@ const entries = await getGuestEntries();
 			<div class="tab find"><h2><a href="/#find">find</a></h2></div>
 			<div class="post guestbook">
 				<article>
-					<img
+					<img style="view-transition-name: guestbook-image"
 						src={image}
 						alt={alt}
 					/>
-					<h1>{title}</h1>
+					<h1 style="view-transition-name: guestbook-title">{title}</h1>
 					<p>{description}</p>
 					<p>
             In the spirit of a (welcome, and overdue!) resurgence of nostalgia for the old, decentralised web, where many of us bashed out our own personal homepages and filled them with whimsical, social stuff not only intended to make us look good for prospective clients or employers, I've built myself a this little guestbook.

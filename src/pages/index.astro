@@ -743,15 +743,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<section id="blog">
 				<article>
 					<ul>
-            <li class="posts">
-              <a href="blog/short"><img src="/images/blog/short-thorts.jpg" alt="Colourful speech and thought bubbbles in watercolours"></a>
-              <div>
-                <h3><a href="blog/short">Short Thorts</a></h3>
-                <p>A collection of shorter posts not big enough for their own article. Very likely also posted to <a href="https://front-end.social/@sarajw">Mastodon</a>.</p>
-                <time datetime="2022">2022++;</time>
-              </div>
-            </li>
-            <li class="posts">
+            <li class="posts featured">
               <a href="blog/notes"><img src="/images/blog/notes.jpg" alt="Colourful stack of papers in watercolours"></a>
               <div>
                 <h3><a href="blog/notes">Weak Notes</a></h3>
@@ -759,8 +751,16 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 <time datetime="2023">2023++;</time>
               </div>
             </li>
+            <li class="posts featured">
+              <a href="blog/short"><img src="/images/blog/short-thorts.jpg" alt="Colourful speech and thought bubbbles in watercolours"></a>
+              <div>
+                <h3><a href="blog/short">Short Thorts</a></h3>
+                <p>A collection of shorter posts not big enough for their own article. Very likely also posted to <a href="https://front-end.social/@sarajw">Mastodon</a>.</p>
+                <time datetime="2022">2022++;</time>
+              </div>
+            </li>
 						{posts.map((post) => (
-							<li class="posts">
+							<li class=`posts ${post.data.featured??''}`>
 								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
@@ -785,11 +785,15 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
 			<section id="find">
 				<article>
-          <h3>Sign my <a href="/guestbook">Guestbook</a>!</h3>
-          <p>
-            I'm not tracking, running analytics, or feeding anyone cookies - I don't need to know a lot of data about my visitors. But for those of you wanting to tell me something about this website, please feel free to <a href="/guestbook">sign it</a>!
-            <br><br>
-          </p>
+          <div class="posts">
+            <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours"></a>
+            <div>
+              <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>
+              <p>
+                I'm not tracking, running analytics, or feeding anyone cookies - I don't need to know a lot of data about my visitors. But for those of you wanting to tell me something about this website, please feel free to <a href="/guestbook">sign it</a>!
+              </p>
+            </div>
+          </div>
 					<h3>Find me elsewhere:</h3>
 						<ul class="socials">
 							<li>

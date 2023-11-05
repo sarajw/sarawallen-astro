@@ -4,6 +4,7 @@ description: "A classic web design article was posted on Mastodon. I reacted."
 pubDate: "2023-08-16"
 heroImage: "/images/blog/the-horse-in-motion.jpg"
 caption: "A grid showing 12 images of a horse galloping: 'Sallie Gardner', owned by Leland Stanford; ridden by G. Domm, running at a 1.40 gait over the Palo Alto track, 19th June, 1878"
+featured: downplay
 ---
 
 [Joe Lanman](https://front-end.social/@joelanman@hachyderm.io) [posted](https://hachyderm.io/@joelanman/110894705584842635):

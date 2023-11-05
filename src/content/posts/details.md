@@ -4,6 +4,7 @@ description: "Natively right out of the box, HTML provides us with a way to open
 pubDate: "Mar 27 2022"
 heroImage: "/images/blog/details.png"
 caption: "Screenshot of menu made using <details> tag"
+featured: downplay
 ---
 
 ## `<details>` ?

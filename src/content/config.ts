@@ -9,6 +9,7 @@ const postsCollection = defineCollection({
     heroImage: z.string(),
     caption: z.string(),
     draft: z.boolean().optional(),
+    featured: z.string().optional(),
   })
 });
 const shortCollection = defineCollection({
