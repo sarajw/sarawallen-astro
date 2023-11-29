@@ -1,11 +1,26 @@
-@font-face {
+/* @font-face {
 	font-family: 'Urbanist';
 	font-weight: 100;
 	font-display: swap;
-	src:
+	src: local('Urbanist'),
 		url('/fonts/urbanist.woff2') format('woff2 supports variations'),
 		url('/fonts/urbanist.woff2') format('woff2-variations');
+} */
+
+@font-face {
+	font-family: 'Ships Whistle Italic';
+	src:
+	url('/fonts/ShipsWhistle-Italic.woff2') format('woff2 supports variations'),
+	url('/fonts/ShipsWhistle-Italic.woff2') format('woff2-variations');
 }
+
+@font-face {
+	font-family: 'Ships Whistle';
+	src:
+	url('/fonts/ShipsWhistle-Regular.woff2') format('woff2 supports variations'),
+	url('/fonts/ShipsWhistle-Regular.woff2') format('woff2-variations');
+}
+
 
 :root {
 	/* set 1rem: */
@@ -85,7 +100,7 @@ p, li {
 a {
 	color: var(--link);
 	text-underline-offset: 0.15em;
-	text-decoration-thickness: 0.1em;
+	text-decoration-thickness: 0.075em;
 }
 a:hover, a:active, a:focus-visible {
 	text-underline-offset: 0.1em;
@@ -135,17 +150,21 @@ header {
 	margin-block-end: 0.5rem;
 }
 header a:not(:hover) {text-decoration: none}
-header .main-menu {font-weight: 600}
-header .sub-menu {font-weight: 300}
+/* header .main-menu {font-weight: 600}
+header .sub-menu {font-weight: 300} */
 #avatar {
 	width: clamp(3em, 10vw, 128px);
 }
 #avatar-big {display: none}
+nav, h1, h2, h3, h4, h5 {
+	font-family: 'Ships Whistle', sans-serif;
+	font-weight: normal;
+}
 nav ul {
 	/* outline: 1px dashed; */
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 25ch;
+	max-width: 20ch;
 	column-gap: 1em;
 	row-gap: 0.4em;
 	margin: 0;
@@ -171,24 +190,30 @@ nav ul {
 /* ---------- title styles ---------- */
 
 .fancy {
-	margin: 0;
-	font-family: Urbanist, sans-serif;
-	font-weight: 200;
-	font-size: min(20rem, 20vw);
-	height: min(24rem, 24vw);
-	letter-spacing: -0.125em;
+	margin: 0 0 0 -0.2ch;
+	font-family: 'Ships Whistle Italic', sans-serif;
+	font-weight: normal;
+	font-size: min(15rem, 19vw);
+	letter-spacing: -0.1ch;
 	text-align: center;
   transition: font-size 0.5s ease-in-out,  letter-spacing 0.5s ease-in-out;
 }
+.fancy::first-letter {
+	font-feature-settings: 'ss01';
+}
 .fancy:hover {
-	letter-spacing: 0;
+	letter-spacing: -0.05ch;
 }
 .home .fancy {
-	font-size: min(30rem, 30vw);
-	height: min(30rem, 30vw);
+	font-size: min(18rem, 25vw);
+	font-feature-settings: 'ss02';
 }
-.home .fancy:hover {font-size: min(24rem, 24vw)}
-.short .fancy:hover {font-size: min(16rem, 16vw)}
+/* .home .fancy {
+	font-size: min(30rem, 30vw);
+	height: min(35rem, 35vw);
+} */
+/* .home .fancy:hover {font-size: min(24rem, 24vw)}
+.short .fancy:hover {font-size: min(16rem, 16vw)} */
 
 .dark-mode .fancy {
 	/* background-image: -webkit-linear-gradient(var(--text-background));
@@ -201,13 +226,13 @@ nav ul {
   color: transparent;
 }
 
-@media (hover: none), (prefers-reduced-motion) {
+/* @media (hover: none), (prefers-reduced-motion) {
 	.fancy {
 		letter-spacing: 0;
 	}
 	.home .fancy {font-size: min(24rem, 24vw)}
 	.short .fancy {font-size: min(16rem, 16vw)}
-}
+} */
 
 .dark-mode:not(.high-contrast) :is(.home, .contact) h2:first-of-type {
 	color: var(--blue)
@@ -243,16 +268,13 @@ nav ul {
 	margin-block-end: 0.5em;
 }
 .backtotop {
-	position: sticky;
+	position: fixed;
 	z-index: 20;
 	border: 0;
 	filter: invert(0%);
 	scale: 1.25;
 	left: min(5vw,2rem);
 	top: calc(100dvh - min(12vw,3rem));
-}
-.short .backtotop {
-	position: fixed;
 }
 .dark-mode .backtotop {
 	filter: invert(100%);
@@ -324,7 +346,4 @@ form button:active {
 
 .dark-mode .contact ul img:not([alt="omg.lol"]) {
 	filter: invert(80%);
-}
-
-main.contact .entry p {
 }

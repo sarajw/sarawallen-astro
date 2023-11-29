@@ -9,7 +9,6 @@ import NoteBody from '../../components/NoteBody.astro';
 ---
 
 <Basic title="Weak Notes" page="notes">
-  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   <div class="rainbow">
     {allPosts.map((note, index) => (
       <>
@@ -26,5 +25,6 @@ import NoteBody from '../../components/NoteBody.astro';
       </>
     ))}
   </div>
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   <p class="back"><a href="/basic/blog">&larr; back to blog index</a></p>
 </Basic>

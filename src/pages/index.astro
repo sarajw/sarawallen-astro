@@ -799,10 +799,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						))}
 						{downplay.map((post) => (
 							<li class='posts downplay'>
-								<a href={"/blog/" + post.slug}><div class="thumb" style=`background-image: url(${post.data.heroImage??"/images/placeholder.png"})`></div></a>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></div></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
-									{post.data.description && <p>{post.data.description}</p>}
 									<time datetime={post.data.pubDate}>
 										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
 											year: 'numeric',
@@ -823,7 +822,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
 			<section id="find">
 				<article>
-          <div class="posts">
+          <div class="featured posts">
             <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours"></a>
             <div>
               <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>

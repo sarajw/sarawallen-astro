@@ -9,13 +9,12 @@ import ThortBody from '../../components/ThortBody.astro';
 ---
 
 <Basic title="Short Thorts" page="short">
-  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   <ul class="rainbow">
     {allPosts.map((thort) => (
       <li>
-        <a href={"/basic/short/" + thort.slug}>
-          <h2>{thort.data.title}</h2>
-        </a>
+        <h2>
+          <a href={"/basic/short/" + thort.slug}>{thort.data.title}</a>
+        </h2>
         <time datetime={thort.data.pubDate}>
           {new Date(thort.data.pubDate).toLocaleDateString('en-gb', {
             year: 'numeric',
@@ -27,6 +26,6 @@ import ThortBody from '../../components/ThortBody.astro';
       </li>
     ))}
   </ul>
-
+  <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   <p class="back"><a href="/basic/blog">&larr; back to {"blog"} index</a></p>
 </Basic>

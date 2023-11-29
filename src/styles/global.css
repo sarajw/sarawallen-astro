@@ -20,7 +20,7 @@ html {scroll-behavior: smooth}
 body {
 	color: var(--text);
 	background: var(--background);
-	font-family: Karla, 'Open Sans', sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form {
