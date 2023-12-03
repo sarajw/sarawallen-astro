@@ -174,10 +174,11 @@ nav ul {
 @media (max-width: 420px) {
 	header {
 		display: revert;
-		font-size: max(1rem, 6.75vw);
+		font-size: min(1rem + 2vw, 2rem);
 	}
 	nav ul {
-		justify-content: center;
+		justify-content: space-evenly;
+		max-width: 100%;
 	}
 	#avatar {display: none}
 	#avatar-big {
