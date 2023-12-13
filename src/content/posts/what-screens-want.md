@@ -1,5 +1,5 @@
 ---
-title: "Musings on 'What Screens Want' by Frank Chimero (2013)"
+title: "Musings on 'What Screens Want'"
 description: "A classic web design article was posted on Mastodon. I reacted."
 pubDate: "2023-08-16"
 heroImage: "/images/blog/the-horse-in-motion.jpg"
@@ -11,7 +11,7 @@ featured: downplay
 
 <div class="toot">
 
-What Screens Want is a classic
+What Screens Want is a classic by Frank Chimero (written in 2013)
 
 [frankchimero.com/blog/2013/wha...](https://frankchimero.com/blog/2013/what-screens-want/)
 
