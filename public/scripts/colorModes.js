@@ -48,7 +48,7 @@ if (colorScheme.content === "dark light") {
 if (!htmlRoot.classList.contains("high-contrast")) {
   // ..if user OS is in high contrast mode...
   if (window.matchMedia && window.matchMedia('(prefers-contrast: more)').matches) {
-    // ..add dark-mode class to html element
+    // ..add high-contrast class to html element
     htmlRoot.classList.add("high-contrast");
   }
 }
