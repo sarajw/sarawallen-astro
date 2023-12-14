@@ -3,17 +3,27 @@
 	/* colours */
 	
   /* --base: 0, 0%; /* grey */
-  /* --pop: 170, 35%; /* greenish-turquoise */
-  /* --2nd: 325, 35%; /* dusky pink */
+  /* --theme: 170, 35%; /* greenish-turquoise */
+  /* --pop: 325, 35%; /* dusky pink */
 
-  --base:  230, 20%; /* midnight blue */
-  --pop: 200, 40%; /* petrol-teal */
-  --2nd: 260, 25%; /* lilac */
+  /* --base:  230, 20%; /* midnight blue */
+  /* --theme: 200, 40%; /* petrol-teal */
+  /* --pop: 260, 25%; /* lilac */
 
-	--background: hsl(var(--2nd), 50%);
+	--hue1: 200; /* petrol-teal */
+	--hue2: 260; /* lilac */
+
+  --base: calc(var(--hue2, 0) - 30), 15%; /*  */
+  --theme: var(--hue1, 0), 40%; /*  */
+  --pop: var(--hue2, 0), 30%; /*  */
+
+	--art: var(--theme);
+	--artHover: hsl(var(--pop), 50%);
+
+	--background: hsl(var(--pop), 50%);
 	--text: hsl(var(--base), 20%);
-	--links: hsl(var(--pop), 35%);
-	--hover: hsl(var(--2nd), 40%);
+	--links: hsl(var(--theme), 35%);
+	--hover: hsl(var(--pop), 40%);
 	--shadow: hsla(var(--base), 0%, 0.25);
 
   --header: hsl(var(--base), 100%);
@@ -43,10 +53,10 @@
 :root.dark-mode {
 
 	/* colours */
-	--background: hsl(var(--2nd), 35%);
+	--background: hsl(var(--pop), 35%);
 	--text: hsl(var(--base), 80%);
-	--links: hsl(var(--pop), 60%);
-	--hover: hsl(var(--2nd), 60%);
+	--links: hsl(var(--theme), 60%);
+	--hover: hsl(var(--pop), 60%);
 	--shadow: hsla(var(--base), 0%, 0.5);
 
   --header: hsl(var(--base), 0%);
@@ -284,14 +294,14 @@ footer summary {
 	text-align: center;
 }
 #hero div, #hero div::before, #hero div::after {
-	outline: 0 solid var(--background);
+	outline: 0 solid var(--artHover);
   transition: scale ease 0.25s, outline ease 0.5s;
 }
 #hero div:hover {
 	scale: 1.05;
 }
 #hero div:hover, #hero div:hover::before, #hero div:hover::after {
-	outline: 0.2em solid var(--background);
+	outline-width: 0.2em;
 }
 
 .sara {
@@ -619,16 +629,16 @@ pre.ascii-art {
 	/* margin-block-end: 5vmin; */
 }
 .posts:hover {
-	background-color: hsla(var(--2nd), 50%, 25%);
+	background-color: hsla(var(--theme), 50%, 25%);
 	transform: translate(1px, 1px);
 	box-shadow: 2px 2px 10px -9px black;
 }
-section:not(#find) .posts > a {
+.posts > a {
 	flex: none;
 }
 .posts img {
 	display: block;
-	height: 100%;
+	height: 25vmin;
 	aspect-ratio: 1;
 	object-fit: cover;
 }
@@ -649,6 +659,9 @@ section:not(#find) .posts > a {
 .posts:not(.featured, .downplay) {
 	max-height: 17.5vmin;
 }
+.posts:not(.featured, .downplay) img {
+	height: 17.5vmin;
+}
 .posts:not(.featured) p {
 	margin-block: 0.5em;
 }
@@ -657,6 +670,9 @@ section:not(#find) .posts > a {
 }
 .posts.downplay {
 	max-height: 10vmin;
+}
+.posts.downplay img {
+	height: 10vmin;
 }
 .posts.downplay div {
 	padding: 2vmin 3vmin;
@@ -691,12 +707,18 @@ section:not(#find) .posts > a {
 		overflow: hidden;
 	}
 	.posts.downplay {
-		max-height: 20vmin;
+		max-height: 12.5vmin;
+	}
+	.posts.downplay h3 {
+		-webkit-line-clamp: 1;
 	}
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 	.posts.downplay {
 		max-height: none;
+	}
+	.posts.downplay h3 {
+		display: block;
 	}
 	.posts.downplay img {
 		display: none;
