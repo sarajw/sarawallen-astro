@@ -4,6 +4,7 @@ description: "Copying and pasting my tweets on the matter as I slowly make my wa
 pubDate: "Jan 08 2023"
 heroImage: "/images/blog/twitter.jpg"
 caption: "Profile picture of my twitter account"
+featured: downplay
 ---
 
 Want to see more?  

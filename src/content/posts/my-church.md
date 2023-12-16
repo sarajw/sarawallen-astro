@@ -1,10 +1,10 @@
 ---
 title: "This Is My Church."
 description: "I used to be part of a church. Maybe I still am, just not a Christian one."
-# heroImage: ""
-# caption: ""
+heroImage: "/images/blog/church.jpg"
+caption: "A view towards the back of a light and airy church with sunlight glowing through the windows."
 pubDate: "Dec 16 2023"
-draft: true
+# draft: true
 ---
 
 I've found myself in a few churches in my life.
