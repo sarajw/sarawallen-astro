@@ -1,26 +1,28 @@
 :root {
 
+  --hart: var(--art, 0, 0%);
+
 	/* colours light */
-  --lighter: hsl(var(--art), 100%);
-  --light: hsl(var(--art), 90%);
-  --lightmed: hsl(var(--art), 85%);
-  --medium: hsl(var(--art), 80%);
+  --lighter: hsl(var(--hart), 100%);
+  --light: hsl(var(--hart), 90%);
+  --lightmed: hsl(var(--hart), 85%);
+  --medium: hsl(var(--hart), 80%);
   
 }
 
 :root.dark-mode {
   /* colours dark */
-  --lighter: hsl(var(--art), 0%);
-  --light: hsl(var(--art), 15%);
-  --lightmed: hsl(var(--art), 25%);
-  --medium: hsl(var(--art), 35%);
+  --lighter: hsl(var(--hart), 0%);
+  --light: hsl(var(--hart), 15%);
+  --lightmed: hsl(var(--hart), 25%);
+  --medium: hsl(var(--hart), 35%);
 }
 
 :root.high-contrast {
   /* colours mid */
-  --light: hsl(var(--art), 70%);
-  --lightmed: hsl(var(--art), 50%);
-  --medium: hsl(var(--art), 30%);
+  --light: hsl(var(--hart), 70%);
+  --lightmed: hsl(var(--hart), 50%);
+  --medium: hsl(var(--hart), 30%);
 }
     
 
