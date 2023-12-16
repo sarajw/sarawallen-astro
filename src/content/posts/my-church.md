@@ -11,7 +11,7 @@ I've found myself in a few churches in my life.
 
 ## Christian
 
-I grew up in Christian schools and churches. My maternal grandparents were very very active in theirs (my grandpa played the organ in the little Folly chapel for 70 years), my grandmother was the social hub, laying on frequent coffee mornings, and my mother has also always ended up deep in the organisational bowels of any church she has been part of.
+I grew up in Christian schools and churches. My maternal grandparents were very very active in theirs - my grandpa played the organ in the little Folly chapel for 70 years, my grandmother was the social hub, laying on frequent coffee mornings, and my mother has also always ended up deep in the organisational bowels of any church she has been part of.
 
 I went to sunday schools, junior church, senior church, youth fellowship, and had to attend the school chapel too. I went to religious festivals spanning long weekends full of music and celebrations. I joined the youth preaching team, touring the local Methodist circuit on Sundays and doing monologues and sketches (rarely sermons, who were we as teenagers to give a sermon?) to tiny, ageing congregations in some beautiful little chapels.
 
@@ -39,7 +39,7 @@ Anyway. At some point I decided to be free. Why did I need to continue feeling b
 
 ## Geeks
 
-I looked for other communities. I was a student of course, and I found a local geek squad, but that life revolved around drinking and parties and after a while my body started to get pissed off at me for being pissed too often.
+I looked for other communities. I was a student, and I found a local geek squad, but that life revolved around drinking and parties and after a while my body started to get pissed off at me for being pissed too often.
 
 ![A group of young people posing comically in a student bar. At the time they were saying STEEEELLLL! and holding their hands out like claws. No, I don't remember why.](/images/blog/steeeel.jpg)
 
