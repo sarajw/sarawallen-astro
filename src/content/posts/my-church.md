@@ -55,6 +55,8 @@ The first non-church community that I decided was my new church, was the one I f
 
 In short, the community, learning, physicality, and joy of the dance and its scene fulfilled me. I felt like a real central part of my local scenes (when I moved country I just slotted into the new one - boom, new country, new friends, no problem), I got so much out of it. It gave me a social life, a purpose to my leisure time, and I became much more connected to my own body and how it moves.
 
+I went to beginner classes, intermediate, advanced, lindy hop, balboa, collegiate shag and authentic jazz classes. I went to workshops, exchanges and dance camps spanning long weekends or whole weeks full of music and parties. I joined a swing dance teaching team, touring local nightclubs, museums and pubs giving charleston crash courses to eager and initially unco-ordinated couples.
+
 ![A group of people of all ages, smiling and waving at the camera, taken at a birthday tea dance.](/images/blog/swing-dance-party.jpg)
 
 The last line of the [post](/blog/dance) says _"I keep dancing because to stop dancing would tear a hole in my heart."_ ...Oof.
