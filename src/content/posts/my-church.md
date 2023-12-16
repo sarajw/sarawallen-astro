@@ -9,7 +9,7 @@ pubDate: "Dec 16 2023"
 
 I've found myself in a few churches in my life.
 
-## Christian
+## Christianity
 
 I grew up in Christian schools and churches. My maternal grandparents were very very active in theirs - my grandpa played the organ in the little Folly chapel for 70 years, my grandmother was the social hub, laying on frequent coffee mornings, and my mother has also always ended up deep in the organisational bowels of any church she has been part of.
 
