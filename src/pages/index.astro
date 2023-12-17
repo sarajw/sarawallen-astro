@@ -954,25 +954,33 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			</section>
 		</main>
     <script is:inline>
-	const tabTopSettingPlugin = ( () => {
+      const tabTopSettingPlugin = ( () => {
+        const tabTopSetting = () => {
+          const sections = document.querySelectorAll("main > section:not(#hero)");
+          for (const section of sections) {
+            let sectionHeight = section.offsetHeight;
+            section.style.top = `calc(100vh - ${sectionHeight}px)`;
+          }		
+        }
 
-		const tabTopSetting = () => {
-			const sections = document.querySelectorAll("main > section:not(#hero)");
-			for (const section of sections) {
-				let sectionHeight = section.offsetHeight;
-				section.style.top = `calc(100vh - ${sectionHeight}px)`;
-			}		
-		}
+        document.onreadystatechange = () => {
+          if (document.readyState === 'complete') {
+            tabTopSetting();
+          }
+        }
 
-		document.onreadystatechange = () => {
-			if (document.readyState === 'complete') {
-				tabTopSetting();
-			}
-		}
+        window.addEventListener("resize", tabTopSetting);
+        document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
+      })();
 
-		window.addEventListener("resize", tabTopSetting);
-		document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
-	})();
+      const modalLightDismiss = ( () => {
+        const dialogs = document.querySelectorAll('dialog');
+        for (const dialog of dialogs) {
+          dialog.addEventListener('click', (event) => {
+            if (event.target === dialog) dialog.close()
+          });
+        }
+      })();
 	    
     </script>
 		<Toggle />
