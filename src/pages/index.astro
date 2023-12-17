@@ -138,36 +138,30 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 
             <StuffModal
               buttonClass="bigrow"
-              buttonImg="2022tabs.png"
-              title="tabs 2022"
+              buttonImg="color-scheme.jpg"
+              title="Dark Mode with color-scheme"
               modalId="a1"
-              modalImg="2022tabs_large.png"
-              alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: 'Hi! Welcome :)' and STUFF: 'Web Development & Design' tabs in view"
-              url="https://2022tabs.sarajoy.dev">
+              modalImg="color-scheme_large.jpg"
+              alt="Title card still frame from a talk on YouTube: Easy Dark Mode with color-scheme. It's just black and white. But should it be? 🤔"
+              url="https://www.youtube.com/watch?v=Lye56NHGtLA">
               <p>
-                I had an idea about using the behaviour of the CSS property
-                "position: sticky" to make a stack of cards that would land on top
-                of each other when scrolling. Well, I made it and immediately
-                applied it to my landing page :)
-              </p>
-              <p>
-                First written in Notepad++ in HTML and CSS only!
+                I had already written a <a href="/blog/color-scheme/">blog post about color-scheme</a>, and another which had a <a href="/blog/a11y-aspects/#contrast-levels">section on contrast levels</a> and what they mean for different people - in this talk I smash those together into something hopefully coherent about how easily you can cater to lots of people at once :)
               </p>
             </StuffModal>
             
             <StuffModal
               buttonClass="bigsq"
-              buttonImg="yasmin_sqthumb.jpg"
-              title="Yasmin Brinkmann"
+              buttonImg="bendickson_sq.jpg"
+              title="Benjamin Dickson"
               modalId="b1"
-              modalImg="yasmin_large.jpg"
-              alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer."
-              url="https://yasmin-brinkmann.de">
+              modalImg="bendickson.jpg"
+              alt="Benjamin Dickson, Comics Writer & Artist desktop website screenshot. His four most recent comic covers are displayed in a row under the title."
+              url="https://bendickson.co.uk/">
               <p>
-                A friend from swing dancing needed a new landing page, and gracefully agreed to my coding it from scratch as a learning exercise.
+                My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not responsive at all. I love building sites with such interesting content!
               </p>
               <p>
-                Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
+                I built this site with <a href="https://astro.build">Astro</a>.
               </p>
             </StuffModal>
 
@@ -207,17 +201,20 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
             
             <StuffModal
               buttonClass="bigsq"
-              buttonImg="bendickson_sq.jpg"
-              title="Benjamin Dickson"
+              buttonImg="2022tabs_sq.jpg"
+              title="tabs 2022"
               modalId="b2"
-              modalImg="bendickson.jpg"
-              alt="Benjamin Dickson, Comics Writer & Artist desktop website screenshot. His four most recent comic covers are displayed in a row under the title."
-              url="https://bendickson.co.uk/">
+              modalImg="2022tabs_large.png"
+              alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: 'Hi! Welcome :)' and STUFF: 'Web Development & Design' tabs in view"
+              url="https://2022tabs.sarajoy.dev">
               <p>
-                My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not responsive at all. I love building sites with such interesting content!
+                I had an idea about using the behaviour of the CSS property
+                "position: sticky" to make a stack of cards that would land on top
+                of each other when scrolling. Well, I made it and immediately
+                applied it to my landing page :)
               </p>
               <p>
-                I built this site with <a href="https://astro.build">Astro</a>.
+                First written in Notepad++ in HTML and CSS only!
               </p>
             </StuffModal>
             
@@ -681,7 +678,22 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               </p>
             </StuffModal>
 						
-						<div class="smsq2" id="d3"></div>
+						<StuffModal
+              buttonClass="smsq2"
+              buttonImg="yasmin_sqthumb.jpg"
+              title="Yasmin Brink​mann"
+              modalId="d3"
+              modalImg="yasmin_large.jpg"
+              alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer."
+              url="https://yasmin-brinkmann.de">
+              <p>
+                A friend from swing dancing needed a new landing page, and gracefully agreed to my coding it from scratch as a learning exercise.
+              </p>
+              <p>
+                Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
+              </p>
+            </StuffModal>
+            
 						<div class="smsq3" id="e3"></div>
 					</section>
 				
