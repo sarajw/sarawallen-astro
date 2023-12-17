@@ -185,25 +185,9 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 					<section class="container box2">
             <StuffModal
               buttonClass="smsq1"
-              buttonImg="../cartoon.png"
-              title="Basic"
-              modalId="a2"
-              modalImg="../cartoon.png"
-              alt="An avatar of me, commissioned from Andy Carolan"
-              url="/basic/">
-              <p>
-                I got an itch to start redoing my website in a more basic, elegant way.
-              </p>
-              <p>
-                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
-              </p>
-            </StuffModal>
-            
-            <StuffModal
-              buttonClass="bigsq"
               buttonImg="2022tabs_sq.jpg"
               title="tabs 2022"
-              modalId="b2"
+              modalId="a2"
               modalImg="2022tabs_large.png"
               alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: 'Hi! Welcome :)' and STUFF: 'Web Development & Design' tabs in view"
               url="https://2022tabs.sarajoy.dev">
@@ -215,6 +199,22 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
               </p>
               <p>
                 First written in Notepad++ in HTML and CSS only!
+              </p>
+            </StuffModal>
+
+            <StuffModal
+              buttonClass="bigsq"
+              buttonImg="../cartoon.png"
+              title="Basic"
+              modalId="b2"
+              modalImg="../cartoon.png"
+              alt="An avatar of me, commissioned from Andy Carolan"
+              url="/basic/">
+              <p>
+                I got an itch to start redoing my website in a more basic, elegant way.
+              </p>
+              <p>
+                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
               </p>
             </StuffModal>
             
@@ -627,27 +627,11 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 					</section>
 				
 					<section class="container box3">
-						<StuffModal
-              buttonClass="bigsq"
-              buttonImg="blogolio_sq.jpg"
-              title="Blogolio"
-              modalId="a3"
-              modalImg="blogolio.jpg"
-              alt="A screenshot of the front page of the blog featuring my head and shoulders. I have glasses on my head and a purple top and grey cardigan on."
-              url="https://2022blog.sarajoy.dev">
-              <p>
-                I built this blog to introduce myself to the world of frameworks, and I started with SvelteKit via this article: <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog">Let's learn SvelteKit by building a static Markdown blog from scratch</a>
-              </p>
-              <p>
-                I then spent lots of time making up the modal components in this portfolio, and I'm quite proud of it - however! Now using &lt;dialog&gt; elements makes this rather easier...
-              </p>
-            </StuffModal>
-						
             <StuffModal
-              buttonClass="smsq1"
-              buttonImg="mega-zine-sml.png"
+              buttonClass="bigsq"
+              buttonImg="mega-zine.png"
               title="Mega-Zine"
-              modalId="b3"
+              modalId="a3"
               modalImg="mega-zine.png"
               alt="Mega-zine teletext mock-up - pixellated neon letters and blocky image with a tongue sticking out on a black background"
               url="https://mega-zine.netlify.app/">
@@ -659,6 +643,22 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 With thanks to <a href="https://zinemuseum.co.uk/">The Mega-zine Museum</a>
                 and <a href="https://teletextart.tumblr.com/">teletext art</a> for the
                 great quality almost-source materials I could copy!
+              </p>
+            </StuffModal>
+
+						<StuffModal
+              buttonClass="smsq1"
+              buttonImg="blogolio_sq.jpg"
+              title="Blogolio"
+              modalId="b3"
+              modalImg="blogolio.jpg"
+              alt="A screenshot of the front page of the blog featuring my head and shoulders. I have glasses on my head and a purple top and grey cardigan on."
+              url="https://2022blog.sarajoy.dev">
+              <p>
+                I built this blog to introduce myself to the world of frameworks, and I started with SvelteKit via this article: <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog">Let's learn SvelteKit by building a static Markdown blog from scratch</a>
+              </p>
+              <p>
+                I then spent lots of time making up the modal components in this portfolio, and I'm quite proud of it - however! Now using &lt;dialog&gt; elements makes this rather easier...
               </p>
             </StuffModal>
 						
