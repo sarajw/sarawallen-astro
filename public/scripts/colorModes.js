@@ -82,7 +82,7 @@ function toggleContrast() {
 
 function cycleColours() {
   // colourMode = sessionStorage.getItem("colourMode");
-  const additionalModes = 7;
+  const additionalModes = 8;
   if (!colourMode) {
     htmlRoot.classList.add("mode" + 1);
     sessionStorage.setItem("colourMode", 1);
