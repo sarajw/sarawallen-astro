@@ -63,26 +63,27 @@ input[name="bot-field"]:placeholder-shown + small {
 	border: 0;
 	background-color: transparent;
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center center;
 	background-size: contain;
 	filter: invert(0%) drop-shadow(0 0 0.1rem Canvas);
 
-	width: calc(1.5rem + 0.75vw);
-	right: min(5vw,2rem);
+	width: calc(1.5rem + 0.1vw);
+	height: calc(1rem + 0.5vh);
+	right: min(5vw, 2rem);
 }
 #toggleLED {
-	height: calc(2rem + 1vw);
+	height: calc(2rem + 1vh);
 	bottom: min(3vw,2rem);
 	background-image: url('/images/led-on.svg');
 }
 #toggleContrast {
-	height: calc(1rem + 0.5vw);
+	/* height: calc(1rem + 0.5vw); */
 	bottom: calc(min(3vw,2rem) + (3.5rem + 1vw));
 	background-image: url('/images/contrast.svg');
 }
 #cycleColours {
 	outline: 1px red;
-	height: calc(1rem + 0.5vw);
+	/* height: calc(1rem + 0.5vw); */
 	bottom: calc(min(3vw,2rem) + (3.5rem + 1vw) + (2.5rem + 1vw));
 	background-image: url('/images/rainbow.svg');
 }
