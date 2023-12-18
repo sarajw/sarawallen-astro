@@ -66,20 +66,25 @@ input[name="bot-field"]:placeholder-shown + small {
 	background-position: center bottom;
 	background-size: contain;
 	filter: invert(0%) drop-shadow(0 0 0.1rem Canvas);
+
+	width: calc(1.5rem + 0.75vw);
+	right: min(5vw,2rem);
 }
 #toggleLED {
-	width: calc(1.5rem + 0.75vw);
 	height: calc(2rem + 1vw);
-	right: min(5vw,2rem);
 	bottom: min(3vw,2rem);
 	background-image: url('/images/led-on.svg');
 }
 #toggleContrast {
-	width: calc(1.5rem + 0.75vw);
 	height: calc(1rem + 0.5vw);
-	right: min(5vw,2rem);
-	bottom: calc(min(3vw,2rem) + (3rem + 1vw));
+	bottom: calc(min(3vw,2rem) + (3.5rem + 1vw));
 	background-image: url('/images/contrast.svg');
+}
+#cycleColours {
+	outline: 1px red;
+	height: calc(1rem + 0.5vw);
+	bottom: calc(min(3vw,2rem) + (3.5rem + 1vw) + (2.5rem + 1vw));
+	background-image: url('/images/rainbow.svg');
 }
 
 .toggle:focus-visible {
@@ -100,7 +105,7 @@ input[name="bot-field"]:placeholder-shown + small {
 @media (hover: hover) {
 	.toggle {
 		opacity: 0.50;
-		transition: opacity 0.25s, background-image 0.5s, rotate 1s;
+		transition: opacity 0.25s, background-image 0.5s, rotate 0.5s;
 	}
 	.toggle:hover {
 		opacity: 0.75;
@@ -116,6 +121,30 @@ input[name="bot-field"]:placeholder-shown + small {
 	}
 	#toggleContrast:hover {
 		rotate: 180deg;
+	}
+	#cycleColours:hover {
+		animation: wobble-horizontal-bottom .5s linear both;
+	}
+	@keyframes wobble-horizontal-bottom {
+		0%,100% {
+			transform:translateX(0);
+			transform-origin:50% 50%;
+		}
+		15% {
+			transform:translateX(-3px) rotate(-6deg)
+		}
+		30% { 
+			transform:translateX(1.5px) rotate(6deg)
+		}
+		45% {
+			transform:translateX(-1.5px) rotate(-3.6deg)
+		}
+		60% {
+			transform:translateX(1px) rotate(2.4deg)
+		}
+		75% {
+			transform:translateX(-0.5px) rotate(-1.2deg)
+		}
 	}
 }
 

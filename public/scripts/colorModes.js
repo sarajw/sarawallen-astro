@@ -3,6 +3,7 @@ const htmlRoot = document.querySelector("html");
 const colorScheme = document.querySelector('meta[name="color-scheme"]');
 const mode = sessionStorage.getItem("mode");
 const contrastMode = sessionStorage.getItem("contrastMode");
+let colourMode = sessionStorage.getItem("colourMode");
 
 // set color-scheme to dark
 function switchDark() {
@@ -34,6 +35,9 @@ if (mode) {
 }
 if (contrastMode) {
   if (contrastMode) {switchHigh();}
+}
+if (colourMode) {
+  htmlRoot.classList.add("mode" + colourMode);
 }
 
 // check for color-scheme, if not set, then...
@@ -73,6 +77,30 @@ function toggleContrast() {
     switchNormal();
   } else {
     switchHigh();
+  }
+}
+
+function cycleColours() {
+  // colourMode = sessionStorage.getItem("colourMode");
+  const additionalModes = 7;
+  if (!colourMode) {
+    htmlRoot.classList.add("mode" + 1);
+    sessionStorage.setItem("colourMode", 1);
+    colourMode++;
+    return;
+  }
+  if (colourMode == additionalModes) {
+    htmlRoot.classList.remove("mode" + colourMode);
+    sessionStorage.removeItem("colourMode");
+    colourMode = 0;
+    return;
+  }
+  if (colourMode >= 1) {
+    htmlRoot.classList.remove("mode" + colourMode);
+    colourMode++;
+    htmlRoot.classList.add("mode" + colourMode);
+    sessionStorage.setItem("colourMode", colourMode);
+    return;
   }
 }
 

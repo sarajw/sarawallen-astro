@@ -80,6 +80,35 @@
 	--border: 0.2rem solid CanvasText;
 }
 
+:root.mode1 {
+	--hue1: 170;
+	--hue2: 325;
+}
+:root.mode2 {
+	--hue1: 350;
+	--hue2: var(--hue1);
+}
+:root.mode3 {
+	--hue1: 30;
+	--hue2: var(--hue1);
+}
+:root.mode4 {
+	--hue1: 80;
+	--hue2: var(--hue1);
+}
+:root.mode5 {
+	--hue1: 180;
+	--hue2: var(--hue1);
+}
+:root.mode6 {
+	--hue1: 230;
+	--hue2: var(--hue1);
+}
+:root.mode7 {
+	--hue1: 300;
+	--hue2: var(--hue1);
+}
+
 .high-contrast :is(main > section, main .post, .shortIndex, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
 	border-inline: var(--border);
 }
