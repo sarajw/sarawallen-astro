@@ -13,7 +13,7 @@
 	--hue1: 200; /* petrol-teal */
 	--hue2: 260; /* lilac */
 
-  --base: calc(var(--hue2, 0) - 30), 15%; /*  */
+  --base: var(--hue3, var(--hue2, 0)), var(--sat3, 15%); /*  */
   --theme: var(--hue1, 0), 40%; /*  */
   --pop: var(--hue2, 0), 30%; /*  */
 
@@ -83,6 +83,7 @@
 :root.mode1 {
 	--hue1: 170;
 	--hue2: 325;
+	--sat3: 0%;
 }
 :root.mode2 {
 	--hue1: 350;
