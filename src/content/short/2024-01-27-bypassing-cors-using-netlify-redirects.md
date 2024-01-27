@@ -14,6 +14,10 @@ Anything after the `/rewrite/` is now fetched by Netlify's servers, acting like 
 
 Now anything in your HTML that was trying to, say, fetch from another server which was bringing up a CORS error, can instead look like it's fetching something local:
 ```
-const response = await fetch("https://example.com"); // not this
-const response = await fetch("/rewrite/example.com"); // this!
+// not this:
+const response = await fetch("https://example.com");
+
+// this!:
+const response = await fetch("/rewrite/example.com");
 ```
+More info at [Rewrites and proxies | Netlify Docs](https://docs.netlify.com/routing/redirects/rewrites-proxies/).
