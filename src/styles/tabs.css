@@ -952,7 +952,7 @@ form button:active {
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
 }
-.post .short, .sheet, .post .tweet, .post .toot {
+.post :is(.short, .sheet, .tweet, .toot) {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
