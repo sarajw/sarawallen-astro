@@ -4,7 +4,7 @@ import Header from "../../../components/Header.astro";
 import Toggle from "../../../components/Toggle.astro";
 import ThortBody from '../../../components/ThortBody.astro';
 
-const image = "/images/blog/blogroll.webp";
+const image = "/images/blog/blogroll-transparent.webp";
 const alt = "A toilet roll with a friendly placeholder face painted onto it.";
 const title = "BlogRoll";
 const description = "My favourite other blogs for your perusal, in alphabetical order.";
@@ -24,7 +24,7 @@ const description = "My favourite other blogs for your perusal, in alphabetical 
 			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
 			<div class="post">
 				<article>
-					<img
+					<img class="title-img"
 						src={image}
 						alt={alt}
 					/>

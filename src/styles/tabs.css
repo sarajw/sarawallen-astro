@@ -969,3 +969,7 @@ form button:active {
 	margin: 3em auto 0;
 	font-weight: bold;
 }
+
+.rollIndex .title-img {
+	filter: drop-shadow(0.5rem 1rem 1rem var(--shadow));
+}
