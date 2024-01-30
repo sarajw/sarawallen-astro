@@ -114,7 +114,7 @@
 	--sat3: var(--sat1);
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
+.high-contrast :is(main > section, main .post, .shortIndex, .rollIndex, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
 	border-inline: var(--border);
 }
 .high-contrast .tab h2, 
@@ -123,13 +123,13 @@
 	border-top: var(--border);
 	border-inline: var(--border);
 }
-.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .tab {
+.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .tab {
 	width: calc(100% - 0.85rem);
 }
-.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .post {
+.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .post {
 	margin: 0 0.1rem;
 }
-.high-contrast :is(.blogPost, .shortIndex, .notesIndex, .guestbookIndex) .tab::after {
+.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
 .high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
@@ -194,7 +194,7 @@ img:is(.logo, .social) {
 	max-width: calc(1.5 * var(--icons));
 	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
-.dark-mode :is(.social, [title="PHP"], [title="Next.js"], [alt="RSS"],
+.dark-mode :is(.social, [title="PHP"], [title="Next.js"],
 [title="Astro"], [title="Prisma"], [title="PowerShell"]) {
 	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
@@ -760,8 +760,20 @@ pre.ascii-art {
 }
 
 #feeds {
-	margin: 5vmin auto;
+	display: flex;
+	justify-content: center;
+	margin-block: 5vmin;
+	gap: max(2vmin, 1rem);
+}
+#feeds a {
 	text-align: center;
+}
+.high-contrast:not(.dark-mode) #feeds img[alt="BlogRoll"] {
+	filter: 
+	drop-shadow( 2px  0px 0px black) 
+	drop-shadow(-2px  0px 0px black)
+	drop-shadow( 0px  2px 0px black) 
+	drop-shadow( 0px -2px 0px black);
 }
 
 .tab.find {
@@ -935,19 +947,19 @@ form button:active {
   padding: 0 0.2em 0.1em;
   border-radius: var(--border-radii);
 }
-.post :is(.short, .tweet, .toot, .entry, pre) {
+.post :is(.short, .sheet, .tweet, .toot, .entry, pre) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
 }
-.post .short, .post .tweet, .post .toot {
+.post .short, .sheet, .post .tweet, .post .toot {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
-:is(.tweet, .short, .toot, .entry) > *:first-child {margin-top: 0}
-:is(.tweet, .toot, .short > div, .entry) > *:last-child {margin-bottom: 0}
+:is(.tweet, .short, .sheet, .toot, .entry) > *:first-child {margin-top: 0}
+:is(.tweet, .toot, .short, .sheet > div, .entry) > *:last-child {margin-bottom: 0}
 
-.post :is(.tweet, .short, .toot) pre {
+.post :is(.tweet, .short, .sheet, .toot) pre {
   background-color: var(--header);
 }
 
