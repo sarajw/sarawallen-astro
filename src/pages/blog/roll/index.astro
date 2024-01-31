@@ -1,4 +1,5 @@
 ---
+import { Code } from "astro:components";
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import Toggle from "../../../components/Toggle.astro";
@@ -6,7 +7,7 @@ import Toggle from "../../../components/Toggle.astro";
 const image = "/images/blog/blogroll-transparent.webp";
 const alt = "A toilet roll with a friendly placeholder face painted onto it.";
 const title = "BlogRoll";
-const description = "My favourite other blogs for your perusal, in alphabetical order.";
+const description = "A bunch of blogs, digital gardens and newsletters for your perusal.";
 
 const response = await fetch("https://webri.ng/webring/cssjoy/sites");
 let sitesData = await response.json();
@@ -39,27 +40,40 @@ sitesData = sitesData.sort((a, b) => {
 					<h1>{title}</h1>
 					<p>{description}</p>
 					<p>Incidentally, if you're wondering about the picture of a roll of toilet paper, do enjoy reading the <a href="https://front-end.social/@sarajw/111844033582141045">conversation about it</a> on Mastodon!</p>
+					<p>A note before we begin, I'm actually finding it very hard to choose which links to put here. One side of me wants to link to all my friends, and those who have already put a link to this site in their blogrolls (thank you! 🙏). The other side of me actually wants to avoid listing exactly those people, as I'll forever be worried that I've missed someone out...</p>
+					<p>..So if you're surprised you're not listed, it's exactly because I like you and your blog very much!</p>
 					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					<article class="sheet">
-						<h2>Not strictly blogs?</h2>
+						<h2>Blogs</h2>
+						<h3><a href="https://brucelawson.co.uk/">Bruce Lawson</a></h3>
+						<p>A wonderful character with his huge heart in exactly the right place. Read for accessibility and open web content.</p>
+						<h3><a href="https://localghost.dev/">Localghost</a></h3>
+						<p>Sophie is an advocate for bringing the personal and the weird back to the web.</p>
+						<h3><a href="https://catvalente.substack.com/">Catherynne M. Valente</a></h3>
+						<p>Read for some very satisfying righteous anger.</p>
+						<h3><a href="https://erinkissane.com/">Erin Kissane</a></h3>
+						<p>Long, thoughtful, very well researched work on often difficult topics. Read <a href="https://erinkissane.com/meta-in-myanmar-full-series">Meta in Myanmar</a>.</p>
+					</article>
+					<article class="sheet">
+						<h2>Websites</h2>
 						<h3><a href="https://thehtml.review/">the html review</a></h3>
 						<p>Issue 02, from spring 2023 - really worth a browse! It has lots of interesting pages and articles from different contributors.</p>
 						<p>See also the previous edition:</p>
 						<h3><a href="https://thehtml.review/01/">the html review 01</a></h3>
 						<p>Issue 01, from spring 2022. I am looking forward to 2024 edition!</p>
+						<h3><a href="https://strange.website/">Strange.Website</a></h3>
+						<p>henry ✷ makes such <a href="https://stillness.digital/">thoughtful</a> and <a href="https://henry.codes/">elegant</a> sites.</p>
 					</article>
 					<article class="sheet">
 						<h2>Newsletters</h2>
-						<h3>Newsletter</h3>
-						<p>Watch this space :)</p>
-						<h3>Newsletter</h3>
-						<p>Watch this space :)</p>
-						<h3>Newsletter</h3>
-						<p>Watch this space :)</p>
+						<p>I'm usually a little allergic to signing up to newsletters. But I like these.</p>
+						<h3><a href="https://robinrendle.com/the-cascade/">The Cascade</a></h3>
+						<h3><a href="https://buttondown.email/ownyourweb/archive/">Own Your Web</a></h3>
+						<h3><a href="https://goodenoughnews.substack.com/">A Good Enough Newsletter</a></h3>
 					</article>
 					<article class="sheet">
-						<h3>All the <a href="https://cs.sjoy.lol">CSS JOY Webring</a> Sites</h3>
-						<p>Most of which are also blogs or digital gardens:</p>
+						<h2>All the <a href="https://cs.sjoy.lol">CSS JOY Webring</a> Sites</h2>
+						<p>Most of which are blogs or digital gardens:</p>
 						<ul id="webring-sites">{sitesData.map((link) => (
 							<li><a href={link.url}>{link.name}</a></li>
 							)
