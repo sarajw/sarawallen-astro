@@ -891,6 +891,8 @@ form button:active {
 /* ---------------------- blog posts ------------------------ */
 .post {
 	background-color: var(--blog);
+}
+.post, .work {
 	margin: 0 0.25rem;
 }
 .post img {
@@ -947,29 +949,36 @@ form button:active {
   padding: 0 0.2em 0.1em;
   border-radius: var(--border-radii);
 }
-.post :is(.short, .sheet, .tweet, .toot, .entry, pre) {
+:is(.post, .work) :is(.short, .sheet, .tweet, .toot, .entry, pre) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
 }
-.post :is(.short, .sheet, .tweet, .toot) {
+:is(.post, .work) :is(.short, .sheet, .tweet, .toot) {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
 :is(.tweet, .short, .sheet, .toot, .entry) > *:first-child {margin-top: 0}
 :is(.tweet, .toot, .short, .sheet > div, .entry) > *:last-child {margin-bottom: 0}
 
-.post :is(.tweet, .short, .sheet, .toot) pre {
+:is(.post, .work) :is(.tweet, .short, .sheet, .toot) pre {
   background-color: var(--header);
 }
 
-.post a.back {
+:is(.post, .work) a.back {
 	display: block;
 	width: fit-content;
 	margin: 3em auto 0;
 	font-weight: bold;
 }
 
+
+/* ---------------------- other pages ------------------------ */
+
 .rollIndex .title-img {
 	filter: drop-shadow(0.5rem 1rem 1rem var(--shadow));
+}
+
+.work {
+	background-color: var(--stuff);
 }

@@ -1,0 +1,78 @@
+---
+import { Code } from "astro:components";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Toggle from "../../components/Toggle.astro";
+
+const image = "/images/placeholder.png";
+const alt = "";
+const title = "Works in Progress";
+const description = "A list of enthusiastically started and carelessly discarded projects.";
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="rollIndex">
+			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
+			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
+			<div class="work">
+				<article>
+					<img class="title-img"
+						src={image}
+						alt={alt}
+					/>
+					<h1>{title}</h1>
+					<p>{description}</p>
+					<p>I very easily jump on new project ideas! But I very rarely finish them...</p>
+					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+					<article class="sheet">
+						<h2>Project or idea Name</h2>
+						<h3><a href="https://codepen.io/sarajw">Link to it</a></h3>
+						<p>Some blurb about it!</p>
+						<h3>To add:</h3>
+						<p>No class CSS</p>
+						<p>Slide deck</p>
+						<p>Copyable websites</p>
+						<p>There's totes more...</p>
+						<h3>Actually maybe finished?</h3>
+						<p>RSS Joy</p>
+					</article>
+					<a class="back" href="/#gostuff">&larr; back to stuff index</a>
+				</article>
+			</div>
+		</main>
+		<Toggle />
+	</body>
+</html>
+
+<style>
+	main {
+		background-color: var(--header);
+		margin-top: var(--tabheight);
+	}
+	.tab {
+		position: fixed !important;
+		width: calc(100% - 0.5rem);
+	}
+	article {
+		max-width: 80ch;
+		margin: 0 auto;
+		padding: 6vmin 5.5vmin 5.5vmin;
+	}
+	
+	h1, h3 {
+		margin-bottom: 0;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+	}
+
+</style>
