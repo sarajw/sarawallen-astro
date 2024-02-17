@@ -452,6 +452,13 @@ declare module 'astro:content' {
   collection: "short";
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] };
+"2024-02-12-his-majesty-s-passport-office.md": {
+	id: "2024-02-12-his-majesty-s-passport-office.md";
+  slug: "2024-02-12-his-majesty-s-passport-office";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
 "allyship.md": {
 	id: "allyship.md";
   slug: "allyship";

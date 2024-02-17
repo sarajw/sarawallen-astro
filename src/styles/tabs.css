@@ -959,7 +959,7 @@ form button:active {
 	margin: 5vmin 0;
 }
 :is(.tweet, .short, .sheet, .toot, .entry) > *:first-child {margin-top: 0}
-:is(.tweet, .toot, .short, .sheet > div, .entry) > *:last-child {margin-bottom: 0}
+:is(.tweet, .toot, .sheet, .short > div, .entry) > *:last-child {margin-bottom: 0}
 
 :is(.post, .work) :is(.tweet, .short, .sheet, .toot) pre {
   background-color: var(--header);
