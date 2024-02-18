@@ -612,12 +612,21 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						
 						<StuffModal
               buttonClass="bigrow"
-              buttonImg="binnenalster_small.jpg"
-              title="Hamburg"
+              buttonImg="rssjoy_sml.png"
+              title="RSS JOY"
               modalId="d2"
-              modalImg="binnenalster.jpg"
-              alt="A photo of the Hamburg Binnenalster, taken from the north-western corner.">
-              <p>A nice photo I took :)</p>
+              modalImg="rssjoy.png"
+              alt="A screenshot of the RSS JOY rss aggregator."
+              url="https://rs.sjoy.lol">
+              <p>
+                This little RSS aggregator is built with Astro. It outputs a fast, static page.
+              </p>
+              <p>
+                It randomises the list of supplied feed URLs each time it rebuilds, as well as updating the entries. Rebuilds are triggered at least every 6 hours via a Netlify build hook and a GitHub Action.
+              </p>
+              <p>  
+                A slower-loading client-side RSS-parsing version is available at <a href="https://rs.sjoy.lol">/live</a> :)
+              </p>
             </StuffModal>
 					</section>
 				
