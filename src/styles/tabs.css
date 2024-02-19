@@ -949,19 +949,19 @@ form button:active {
   padding: 0 0.2em 0.1em;
   border-radius: var(--border-radii);
 }
-:is(.post, .work) :is(.short, .sheet, .tweet, .toot, .entry, pre) {
+:is(.post, .work) :is(.short, .sheet, .tweet, .toot, .entry, pre), mastodon-post :is(figure, blockquote) {
 	padding: 3vmin;
 	border-radius: var(--border-radii);
 	box-shadow: 1px 1px 15px -12px black;
 }
-:is(.post, .work) :is(.short, .sheet, .tweet, .toot) {
+:is(.post, .work) :is(.short, .sheet, .tweet, .toot), mastodon-post figure {
 	background-color: var(--sara);
 	margin: 5vmin 0;
 }
-:is(.tweet, .short, .sheet, .toot, .entry) > *:first-child {margin-top: 0}
-:is(.tweet, .toot, .sheet, .short > div, .entry) > *:last-child {margin-bottom: 0}
+:is(.tweet, .short, .sheet, .toot, .entry, mastodon-post :is(figure, blockquote)) > *:first-child {margin-top: 0}
+:is(.tweet, .toot, .sheet, .short > div, .entry, mastodon-post :is(figure, figcaption)) > *:last-child {margin-bottom: 0}
 
-:is(.post, .work) :is(.tweet, .short, .sheet, .toot) pre {
+:is(.post, .work) :is(.tweet, .short, .sheet, .toot) pre, mastodon-post :is(blockquote, dd) {
   background-color: var(--header);
 }
 
@@ -970,6 +970,26 @@ form button:active {
 	width: fit-content;
 	margin: 3em auto 0;
 	font-weight: bold;
+}
+mastodon-post :is(figure, blockquote) {
+	max-width: min(100%, 30rem);
+	margin-inline: auto;
+}
+mastodon-post figcaption {
+	text-align: center;
+}
+mastodon-post cite {
+	font-style: normal;
+}
+mastodon-post dl {
+	columns: 3;
+	column-gap: 2rem;
+}
+mastodon-post dd {
+	margin: 0.25rem 0 0;
+	padding: 0.5rem;
+	border-radius: var(--border-radii);
+	box-shadow: 1px 1px 15px -12px black;
 }
 
 

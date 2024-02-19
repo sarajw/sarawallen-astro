@@ -5,6 +5,7 @@ pubDate: "Jan 20 2023"
 heroImage: "/images/blog/webplatform.jpg"
 caption: "A small banner with a bunch of web development related and other badges, pinning a rainbow-holographic sticker saying 'WEB PLATFORM' in the middle."
 featured: featured
+mastoURL: "https://front-end.social/@sarajw/109722179206266415"
 ---
 
 ## Introduction

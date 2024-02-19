@@ -10,7 +10,7 @@ const {
 let headingsNum = 0;
 if (headings !== undefined) {
 	headingsNum = headings.length;
-} 
+}
 ---
 
 <html lang="en">
@@ -58,11 +58,17 @@ if (headings !== undefined) {
 					})}</time></div>}
 				  {!frontmatter.short && <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>}
 					<slot />
+					{frontmatter.mastoURL &&
+						<mastodon-post>
+							<h2><a href={frontmatter.mastoURL}>Discuss on Mastodon</a>:</h2>
+						</mastodon-post>
+					}
 					<a class="back" href={frontmatter.short ? "/blog/short/" : frontmatter.notes ? "/blog/notes/" : "/#goblog"}>&larr; back to {frontmatter.short ? "shorts" : frontmatter.notes ? "notes" : "blog"} index</a>
 				</article>
 			</div>
 		</main>
 		<Toggle />
+		{frontmatter.mastoURL &&<script is:inline src="/scripts/mastodon-post.js"></script>}
 	</body>
 </html>
 
@@ -101,6 +107,11 @@ if (headings !== undefined) {
 		position: fixed;
 		bottom: 1rem;
 		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+	}
+	mastodon-post h2 {
+		font-size: var(--h3);
+		width: fit-content;
+		margin: 10vmin auto 0;
 	}
 	
   .post :global(pre) {

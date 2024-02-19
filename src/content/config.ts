@@ -10,6 +10,7 @@ const postsCollection = defineCollection({
     caption: z.string().optional(),
     draft: z.boolean().optional(),
     featured: z.string().optional(),
+    mastoURL: z.string().optional(),
   })
 });
 const shortCollection = defineCollection({

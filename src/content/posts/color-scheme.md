@@ -5,6 +5,7 @@ pubDate: "Jan 14 2023"
 heroImage: "/images/blog/light-dark-form.png"
 caption: "A simple mock form, in both light and dark mode."
 featured: featured
+mastoURL: "https://front-end.social/@sarajw/109689645208261774"
 ---
 
 Do you know of `color-scheme` yet? If not, I bet you still think you do. It will certainly look familiar, as `prefers-color-scheme` has been around for longer and is clearly related.

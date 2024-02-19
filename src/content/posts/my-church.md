@@ -4,6 +4,7 @@ description: "I used to be part of a church. Maybe I still am, just not a Christ
 heroImage: "/images/blog/church.jpg"
 caption: "A view towards the back of a light and airy church with sunlight glowing through the windows."
 pubDate: "Dec 16 2023"
+mastoURL: "https://front-end.social/@sarajw/111592054719624373"
 # draft: true
 ---
 
