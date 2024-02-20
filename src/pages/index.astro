@@ -87,7 +87,7 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 
 			<div class="anchor" id="gosara"></div>
 			<div class="tab sara"><h2><a href="#gosara">sara</a></h2></div>
-			<section id="sara">
+			<section id="sara" aria-label="About me">
 				<article>
 					<h3>Hi! Welcome :)</h3>
 					<div class="welcome">
@@ -99,7 +99,9 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/">Astro</a>. If it is all a bit much, I'm currently working on a simpler version to be found at <a href="/basic">sarajoy.dev/basic</a></p>
 						</div>
 					</div>
-          <script is:inline src="https://status.lol/sara.js?time&link&fluent"></script>
+          <div aria-label="Current status">
+            <script is:inline src="https://status.lol/sara.js?time&link&fluent"></script>
+          </div>
 					<details id="nowPage">
 						<summary><p style="display:inline">What's new /now?</p></summary>
 						<script is:inline src="https://omgnow.rknight.me/now.js?a=sara"></script>
@@ -132,7 +134,7 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 			
 			<div class="anchor" id="gostuff"></div>
 			<div class="tab stuff"><h2><a href="#gostuff">stuff</a></h2></div>
-			<section id="stuff">
+			<section id="stuff" aria-label="Things I've made">
 				<article>
 					<section class="container box1">
 
@@ -779,7 +781,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			
 			<div class="anchor" id="goblog"></div>
 			<div class="tab blog"><h2><a href="#goblog">blog</a></h2></div>
-			<section id="blog">
+			<section id="blog" aria-label="Notes, thoughts, posts">
 				<article>
 					<ul>
             <li class="posts featured">
@@ -847,16 +849,16 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             ))}
 					</ul>
           <div id="feeds">
-            <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="BlogRoll">
+            <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="">
               <br>Blogroll</a>
-            <a href="rss.xml"><img src="images/icons/rss.svg" class="logo" alt="RSS">
+            <a href="rss.xml"><img src="images/icons/rss.svg" class="logo" alt="">
               <br>RSS</a>
           </div>
 				</article>
 			</section>
 			
 			<div class="tab find"><h2><a href="#find">find</a></h2></div>
-			<section id="find">
+			<section id="find" aria-label="Contact me">
 				<article>
           <div class="posts featured">
             <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours"></a>
