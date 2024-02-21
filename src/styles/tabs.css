@@ -15,7 +15,7 @@
 
 	--background: hsl(var(--pop), 50%);
 	--text: hsl(var(--base), 20%);
-	--links: hsl(var(--theme), 35%);
+	--links: hsl(var(--theme), 30%);
 	--hover: hsl(var(--pop), 40%);
 	--shadow: hsla(var(--base), 0%, 0.25);
 
@@ -70,6 +70,7 @@
   --find: Canvas;
 
 	--text: CanvasText;
+	--links: CanvasText;
 	--border: 0.2rem solid CanvasText;
 }
 
@@ -114,25 +115,25 @@
 	--sat3: var(--sat1);
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .rollIndex, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
+.high-contrast :is(main > section, main .post, .shortIndex, .roll, .wips, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
 	border-inline: var(--border);
 }
-.high-contrast .tab h2, 
+.high-contrast .tab > *, 
 .high-contrast .tab::after, 
 .high-contrast header > div {
 	border-top: var(--border);
 	border-inline: var(--border);
 }
-.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .tab {
+.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab {
 	width: calc(100% - 0.85rem);
 }
-.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .post {
+.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .post {
 	margin: 0 0.1rem;
 }
-.high-contrast :is(.blogPost, .shortIndex, .rollIndex, .notesIndex, .guestbookIndex) .tab::after {
+.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab::after {
 	width: calc(100% - 0.2rem);
 }
-.high-contrast :is(.statuslol, .now_content, .container :is(button, div), li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
+.high-contrast :is(.statuslol, .now_content, .container button, dialog, li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
 	border: var(--border);
 }
 .high-contrast .posts {
@@ -208,7 +209,8 @@ main {
 	top: 0.5rem;
 	pointer-events: none;
 }
-.tab h2 {
+.tab > * {
+	display: block;
 	width: 16%;
 	height: calc(var(--tabheight) - 0.25rem);
 	line-height: calc(var(--tabheight) - 0.25rem);
@@ -341,7 +343,7 @@ footer summary {
 .sara {
 	z-index: 11;
 }
-.sara h2 {
+.sara > * {
 	margin-inline: auto 42%;
 	background-color: var(--sara);
 }
@@ -430,7 +432,7 @@ main.nowPage :is(.statuslol, .now_content) {
 .stuff {
 	z-index: 12;
 }
-.stuff h2 {
+.stuff > * {
 	margin-inline: auto 28%;
 	background-color: var(--stuff);
 }
@@ -636,7 +638,7 @@ pre.ascii-art {
 .blog {
 	z-index: 13;
 }
-.blog h2 {
+.blog > * {
 	margin-inline: auto 14%;
 	background-color: var(--blog);
 }
@@ -779,7 +781,7 @@ pre.ascii-art {
 .tab.find {
 	z-index: 14;
 }
-.tab.find h2 {
+.tab.find > * {
 	margin-inline: auto 0.25rem;
 	background-color: var(--find);
 }

@@ -1,8 +1,7 @@
 ---
-import { Code } from "astro:components";
-import BaseHead from "../../../components/BaseHead.astro";
-import Header from "../../../components/Header.astro";
-import Toggle from "../../../components/Toggle.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Toggle from "../../components/Toggle.astro";
 
 const image = "/images/blog/blogroll-transparent.webp";
 const alt = "A toilet roll with a friendly placeholder face painted onto it.";
@@ -27,10 +26,10 @@ sitesData = sitesData.sort((a, b) => {
 
 	<body>
 		<Header />
-		<main class="rollIndex">
-			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
-			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
-			<div class="tab blog"><h2><a href="/#goblog">blog</a></h2></div>
+		<main class="roll">
+			<div class="tab sara"><a href="/#gosara">sara</a></div>
+			<div class="tab stuff"><a href="/#gostuff">stuff</a></div>
+			<div class="tab blog"><a href="/#goblog">blog</a></div>
 			<div class="post">
 				<article>
 					<img class="title-img"

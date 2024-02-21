@@ -1,8 +1,7 @@
 ---
-import { Code } from "astro:components";
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Toggle from "../../components/Toggle.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
 
 const image = "/images/placeholder.png";
 const alt = "";
@@ -18,9 +17,9 @@ const description = "A list of enthusiastically started and carelessly discarded
 
 	<body>
 		<Header />
-		<main class="rollIndex">
-			<div class="tab sara"><h2><a href="/#gosara">sara</a></h2></div>
-			<div class="tab stuff"><h2><a href="/#gostuff">stuff</a></h2></div>
+		<main class="wips">
+			<div class="tab sara"><a href="/#gosara">sara</a></div>
+			<div class="tab stuff"><a href="/#gostuff">stuff</a></div>
 			<div class="work">
 				<article>
 					<img class="title-img"

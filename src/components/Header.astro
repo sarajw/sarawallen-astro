@@ -1,6 +1,8 @@
 ---
 import { SITE_TITLE } from '../config';
 
+const { root = false } = Astro.props;
+
 // Import the tabs.css file here so that it is included on
 // all pages through the use of the <Header /> component.
 import '../styles/tabs.css';
@@ -9,7 +11,8 @@ import '../styles/tabs.css';
 <header>
 	<div>
 		<a id="skiplink" href="#gosara">Skip to Content</a>
-		<a id="site-title" href="/#">{SITE_TITLE}</a>
+		{!root && <a id="site-title" href="/#">{SITE_TITLE}</a>}
+		{root && <h1 id="site-title"><a href="/#">{SITE_TITLE}</a></h1>}
 		<nav>
 			<ul>
 				<li><a href="/#gosara">sara</a></li>
