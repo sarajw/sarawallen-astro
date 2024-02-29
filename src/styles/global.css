@@ -190,3 +190,16 @@ input[name="bot-field"]:placeholder-shown + small {
 .now_before { display: none }
 
 /* =========================== end omg.lol stuff =========================== */
+
+#not-a-bot {
+	width: 88px;
+	height: 31px;
+	margin-block-start: 3rem;
+	background-image: url("/images/MadeByAHuman_04.svg");
+}
+#not-a-bot:hover {
+	background-image: url("/images/IAmNotARobot_04.svg");
+}
+#not-a-bot:active {
+	background-image: url("/images/HumanContent_04_pressed.svg");
+}
