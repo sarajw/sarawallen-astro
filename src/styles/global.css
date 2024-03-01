@@ -192,14 +192,21 @@ input[name="bot-field"]:placeholder-shown + small {
 /* =========================== end omg.lol stuff =========================== */
 
 #not-a-bot {
-	width: 88px;
-	height: 31px;
-	margin-block-start: 3rem;
-	background-image: url("/images/MadeByAHuman_04.svg");
+	max-width: 18rem;
+	margin: 3rem auto 0;
+	text-align: center;
 }
-#not-a-bot:hover {
-	background-image: url("/images/IAmNotARobot_04.svg");
+#not-a-bot summary {
+	margin-block-end: 0.5rem;
 }
-#not-a-bot:active {
-	background-image: url("/images/HumanContent_04_pressed.svg");
+#not-a-bot summary::-webkit-details-marker,
+#not-a-bot summary::marker {
+	content: '';
+}
+#not-a-bot summary:hover img,
+#not-a-bot summary:focus img {
+	content: url("/images/IAmNotARobot_04.svg");
+}
+#not-a-bot summary:active img{
+	content: url("/images/HumanContent_04_pressed.svg");
 }
