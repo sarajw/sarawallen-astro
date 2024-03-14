@@ -6,7 +6,7 @@ import StuffModal from '../components/StuffModal.astro';
 import PrivacyPolicy from '../components/PrivacyPolicy.astro';
 import A11YStatement from '../components/A11yStatement.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import '../styles/art.css';
+// import '../styles/art.css'; CSS Naked day
 
 // Use getCollection to fetch all posts, and then sort them by date.
 // const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
@@ -785,7 +785,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 				<article>
 					<ul>
             <li class="posts featured">
-              <a href="blog/notes"><img src="/images/blog/notes.jpg" alt="Colourful stack of papers in watercolours"></a>
+              <a href="blog/notes"><img src="/images/blog/notes.jpg" alt="Colourful stack of papers in watercolours" height="400"></a>
               <div>
                 <h3><a href="blog/notes">Weak Notes</a></h3>
                 <p>Weak notes are like <a href="https://indieweb.org/week_note">#weekNotes</a> but less regular.</p>
@@ -793,7 +793,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               </div>
             </li>
             <li class="posts featured">
-              <a href="blog/short"><img src="/images/blog/short-thorts.jpg" alt="Colourful thought bubbbles in watercolours"></a>
+              <a href="blog/short"><img src="/images/blog/short-thorts.jpg" alt="Colourful thought bubbbles in watercolours" height="400"></a>
               <div>
                 <h3><a href="blog/short">Short Thorts</a></h3>
                 <p>A collection of shorter posts not big enough for their own article. Very likely also posted to <a href="https://front-end.social/@sarajw">Mastodon</a>.</p>
@@ -802,7 +802,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </li>
 						{featured.map((post) => (
 							<li class='posts featured'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"} height="400"></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
 									{post.data.description && <p>{post.data.description}</p>}
@@ -818,7 +818,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						))}
 						{posts.map((post) => (
 							<li class='posts'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"} height="300"></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
 									{post.data.description && <p>{post.data.description}</p>}
@@ -834,7 +834,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						))}
 						{downplay.map((post) => (
 							<li class='posts downplay'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></div></a>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"} height="200"></div></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
 									<time datetime={post.data.pubDate}>
@@ -849,9 +849,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             ))}
 					</ul>
           <div id="feeds">
-            <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="">
+            <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="" height="64">
               <br>Blogroll</a>
-            <a href="rss.xml"><img src="images/icons/rss.svg" class="logo" alt="">
+            <a href="rss.xml"><img src="images/icons/rss.svg" class="logo" alt="" height="64">
               <br>RSS</a>
           </div>
 				</article>
@@ -861,7 +861,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 			<section id="find" aria-label="Contact me">
 				<article>
           <div class="posts featured">
-            <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours"></a>
+            <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours" height="400"></a>
             <div>
               <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>
               <p>
@@ -875,32 +875,32 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						<ul class="socials">
 							<li>
 								<a class="img" rel="me" href="https://front-end.social/@sarajw">
-                  <img class="social" src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon"><br>@sarajw
+                  <img class="social" src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon" height="64"><br>@sarajw
                 </a>
               </li>
 							<li>
 								<a class="img" href="https://github.com/sarajw" rel="me authn">
-                  <img class="social" src="images/icons/github.svg" alt="GitHub" title="GitHub"><br>/sarajw
+                  <img class="social" src="images/icons/github.svg" alt="GitHub" title="GitHub" height="64"><br>/sarajw
                 </a>
               </li>
 							<li>
 								<a class="img" href="https://codepen.io/sarajw">
-                  <img class="social" src="images/icons/codepen-icon.svg" alt="CodePen" title="CodePen"><br>/sarajw
+                  <img class="social" src="images/icons/codepen-icon.svg" alt="CodePen" title="CodePen" height="64"><br>/sarajw
                 </a>
               </li>
 							<li>
 								<a class="img" href="https://sarajw.hashnode.dev/">
-                  <img class="social" src="images/icons/hashnode-icon.svg" alt="hashnode" title="hashnode"><br>sarajw.
+                  <img class="social" src="images/icons/hashnode-icon.svg" alt="hashnode" title="hashnode" height="64"><br>sarajw.
                 </a>
               </li>
 							<li>
 								<a class="img" href="https://www.linkedin.com/in/sarajw/">
-                  <img class="social" src="images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn"><br>/sarajw
+                  <img class="social" src="images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" height="64"><br>/sarajw
                 </a>
               </li>
 							<li>
 								<a class="img" href="https://twitter.com/sarajoydev">
-                  <img class="social" src="images/icons/twitter.svg" alt="Twitter" title="Twitter"><br>@sarajoydev
+                  <img class="social" src="images/icons/twitter.svg" alt="Twitter" title="Twitter" height="64"><br>@sarajoydev
                 </a>
               </li>
 						</ul>

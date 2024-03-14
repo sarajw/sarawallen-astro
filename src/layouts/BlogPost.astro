@@ -72,111 +72,111 @@ if (headings !== undefined) {
 	</body>
 </html>
 
-<style>
-	main {
-		background-color: var(--header);
-		margin-top: var(--tabheight);
-	}
-	.tab {
-		position: fixed !important;
-		top: 0.5rem;
-		pointer-events: none;
-		margin-top: 0 !important;
-		width: calc(100% - 0.5rem);
-	}
-	.tab::after {
-	}
-	article {
-		max-width: 80ch;
-		margin: 0 auto;
-		padding: 5.5vmin;
-	}
-	figure {
-		margin-inline: auto;
-		margin-block: 0 3vmin;
-	}
-	h1 {
-		margin-bottom: 0;
-	}
-	time {
-		display: block;
-		width: fit-content;
-		margin: 0 0 3rem auto;
-	}
-	.backtotop {
-		position: fixed;
-		bottom: 1rem;
-		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
-	}
-	mastodon-post h2 {
-		font-size: var(--h3);
-		width: fit-content;
-		margin: 10vmin auto 0;
-	}
+// <style>
+// 	main {
+// 		background-color: var(--header);
+// 		margin-top: var(--tabheight);
+// 	}
+// 	.tab {
+// 		position: fixed !important;
+// 		top: 0.5rem;
+// 		pointer-events: none;
+// 		margin-top: 0 !important;
+// 		width: calc(100% - 0.5rem);
+// 	}
+// 	.tab::after {
+// 	}
+// 	article {
+// 		max-width: 80ch;
+// 		margin: 0 auto;
+// 		padding: 5.5vmin;
+// 	}
+// 	figure {
+// 		margin-inline: auto;
+// 		margin-block: 0 3vmin;
+// 	}
+// 	h1 {
+// 		margin-bottom: 0;
+// 	}
+// 	time {
+// 		display: block;
+// 		width: fit-content;
+// 		margin: 0 0 3rem auto;
+// 	}
+// 	.backtotop {
+// 		position: fixed;
+// 		bottom: 1rem;
+// 		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+// 	}
+// 	mastodon-post h2 {
+// 		font-size: var(--h3);
+// 		width: fit-content;
+// 		margin: 10vmin auto 0;
+// 	}
 	
-  .post :global(pre) {
-		font-size: var(--sml);
-		line-height: 1.25em;
-    background-color: var(--sara);
-    white-space: pre-wrap;
-    max-width: 100%;
-    overflow-x: auto;
-  }
+//   .post :global(pre) {
+// 		font-size: var(--sml);
+// 		line-height: 1.25em;
+//     background-color: var(--sara);
+//     white-space: pre-wrap;
+//     max-width: 100%;
+//     overflow-x: auto;
+//   }
 
-  .post :global(table) {
-    margin-block: 1rem;
-    font-size: var(--sml);
-  }
-  .post :global(:is(td, th)) {
-    padding: 0.5ch 1ch;
-  }
-  .post :global(thead) {
-    border: 2px solid black;
-  }
+//   .post :global(table) {
+//     margin-block: 1rem;
+//     font-size: var(--sml);
+//   }
+//   .post :global(:is(td, th)) {
+//     padding: 0.5ch 1ch;
+//   }
+//   .post :global(thead) {
+//     border: 2px solid black;
+//   }
 
-	:root {
-    --pink: mediumvioletred;
-    --green: teal;
-    --blue: slateblue;
-    --yellow: darkgoldenrod;
-    --orange: chocolate;
-  }
+// 	:root {
+//     --pink: mediumvioletred;
+//     --green: teal;
+//     --blue: slateblue;
+//     --yellow: darkgoldenrod;
+//     --orange: chocolate;
+//   }
 
-	:root.dark-mode {
-		--pink: hotpink;
-		--green: springgreen;
-		--blue: cyan;
-		--yellow: gold;
-		--orange: lightsalmon;
-	}
+// 	:root.dark-mode {
+// 		--pink: hotpink;
+// 		--green: springgreen;
+// 		--blue: cyan;
+// 		--yellow: gold;
+// 		--orange: lightsalmon;
+// 	}
 
-  .post :global(code .comment) {
-    color: var(--orange);
-  }
-  .post :global(code .tag),
-  .post :global(code .keyword),
-  .post :global(code .selector),
-  .post :global(code .operator) {
-    color: var(--blue);
-  }
-  .post :global(code .punctuation),
-  .post :global(code .parameter) {
-    color: var(--pink);
-  }
-  .post :global(code .attr-name),
-  .post :global(code .function) {
-    color: var(--yellow);
-  }
-  .post :global(code .attr-value),
-  .post :global(code .property),
-  .post :global(code .string) {
-    color: var(--green);
-  }
+//   .post :global(code .comment) {
+//     color: var(--orange);
+//   }
+//   .post :global(code .tag),
+//   .post :global(code .keyword),
+//   .post :global(code .selector),
+//   .post :global(code .operator) {
+//     color: var(--blue);
+//   }
+//   .post :global(code .punctuation),
+//   .post :global(code .parameter) {
+//     color: var(--pink);
+//   }
+//   .post :global(code .attr-name),
+//   .post :global(code .function) {
+//     color: var(--yellow);
+//   }
+//   .post :global(code .attr-value),
+//   .post :global(code .property),
+//   .post :global(code .string) {
+//     color: var(--green);
+//   }
 
-	a.back {
-		display: block;
-		width: fit-content;
-		margin: 3em auto 0;
-		font-weight: bold;
-	}
-</style>
+// 	a.back {
+// 		display: block;
+// 		width: fit-content;
+// 		margin: 3em auto 0;
+// 		font-weight: bold;
+// 	}
+// </style>

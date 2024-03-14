@@ -2,7 +2,9 @@
 const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.props;
 ---
 
-<button class={buttonClass} style={`background-image: url("/images/stuff/${buttonImg}")`} onclick={`window.${modalId}.showModal()`}>
+<!-- <button class={buttonClass} style={`background-image: url("/images/stuff/${buttonImg}")`} onclick={`window.${modalId}.showModal()`}> -->
+  <button class={buttonClass} onclick={`window.${modalId}.showModal()`}>
+
   <span class="caption">{title}</span>
 </button>
 <dialog id={modalId}>
