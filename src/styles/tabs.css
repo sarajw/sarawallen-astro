@@ -257,6 +257,10 @@ main > section:is(#sara, #blog) > article {
 	max-width: 900px;
 }
 
+#page-title {
+	scroll-margin-top: calc(var(--tabheight) + 5vmin);
+}
+
 section > article ul:not(.now_content ul) {
 	list-style-type: none;
 	margin-block: 0;

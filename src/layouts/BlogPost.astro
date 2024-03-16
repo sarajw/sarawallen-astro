@@ -35,7 +35,7 @@ if (headings !== undefined) {
 							<figcaption class="caption">{frontmatter.caption}</figcaption>
 						</figure>
 					)}
-					<h1 class="title">{frontmatter.title}</h1>
+					<h1 class="title" id="page-title">{frontmatter.title}</h1>
 					{frontmatter.pubDate && <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
 						year: 'numeric',
 						month: 'short',

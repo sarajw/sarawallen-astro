@@ -10,7 +10,7 @@ import '../styles/tabs.css';
 
 <header>
 	<div>
-		<a id="skiplink" href="#gosara">Skip to Content</a>
+		<a id="skiplink" href={root ? "#gosara" : "#page-title"}>Skip to Content</a>
 		{!root && <a id="site-title" href="/#">{SITE_TITLE}</a>}
 		{root && <h1 id="site-title"><a href="/#">{SITE_TITLE}</a></h1>}
 		<nav>
