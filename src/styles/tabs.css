@@ -1004,3 +1004,8 @@ mastodon-post dd {
 .work {
 	background-color: var(--stuff);
 }
+
+.guestbook summary {
+	margin-inline: auto;
+	width: fit-content;
+}
