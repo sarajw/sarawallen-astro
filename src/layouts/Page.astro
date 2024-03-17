@@ -65,14 +65,6 @@ const { className, image, alt, title, description } = Astro.props;
 						<h3><a href="https://buttondown.email/ownyourweb/archive/">Own Your Web</a></h3>
 						<h3><a href="https://goodenoughnews.substack.com/">A Good Enough Newsletter</a></h3>
 					</article>
-					<article class="sheet">
-						<h2>All the <a href="https://cs.sjoy.lol">CSS JOY Webring</a> Sites</h2>
-						<p>Most of which are blogs or digital gardens:</p>
-						<ul id="webring-sites">{sitesData.map((link) => (
-							<li><a href={link.url}>{link.name}</a></li>
-							)
-						)}</ul>
-					</article>
 					<a class="back" href="/#goblog">&larr; back to blog index</a>
 				</article>
 			</div>
