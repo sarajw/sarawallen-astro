@@ -1,0 +1,113 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+
+const { className, image, alt, title, description } = Astro.props;
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class={className}>
+			<div class="tab sara"><a href="/#gosara">sara</a></div>
+			<div class="tab stuff"><a href="/#gostuff">stuff</a></div>
+			<div class="tab blog"><a href="/#goblog">blog</a></div>
+			<div class="post">
+				<article>
+					<img class="title-img"
+						src={image}
+						alt={alt}
+					/>
+					<h1 id="page-title">{title}</h1>
+					<p>{description}</p>
+					<p>Incidentally, if you're wondering about the picture of a roll of toilet paper, do enjoy reading the <a href="https://front-end.social/@sarajw/111844033582141045">conversation about it</a> on Mastodon!</p>
+					<p>A note before we begin, I'm actually finding it very hard to choose which links to put here. One side of me wants to link to all my friends, and those who have already put a link to this site in their blogrolls (thank you! 🙏). The other side of me actually wants to avoid listing exactly those people, as I'll forever be worried that I've missed someone out...</p>
+					<p>..So if you're surprised you're not listed, it's exactly because I like you and your blog very much!</p>
+					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
+					<article class="sheet">
+						<h2>Blogs</h2>
+						<h3><a href="https://localghost.dev/">Localghost</a></h3>
+						<p>Sophie is an advocate for bringing the personal and the weird back to the web.</p>
+						<h3><a href="https://erinkissane.com/">Erin Kissane</a></h3>
+						<p>Long, thoughtful, very well researched work on often difficult topics. Read <a href="https://erinkissane.com/meta-in-myanmar-full-series">Meta in Myanmar</a>.</p>
+						<h3><a href="https://brucelawson.co.uk/">Bruce Lawson</a></h3>
+						<p>A wonderful character with his huge heart in exactly the right place. Read for accessibility and open web content.</p>
+						<h3><a href="https://catvalente.substack.com/">Catherynne M. Valente</a></h3>
+						<p>Read for some very satisfying righteous anger.</p>
+					</article>
+					<article class="sheet">
+						<h2>RSS Joy</h2>
+						<h3><a href="https://rs.sjoy.lol/">RS.SJoy.lol</a></h3>
+						<p>I made this RSS aggregation site that updates 4 times a day, full of front-end dev and dev-adjacent blogs that have RSS feeds.</p>
+					</article>
+					<article class="sheet">
+						<h2>Websites</h2>
+						<h3><a href="https://briefs.video/">Webbed Briefs</a></h3>
+						<p>Delightfully unhinged videos about the web by Heydon.</p>
+						<h3><a href="https://colorandcontrast.com/">Color & Contrast.com</a></h3>
+						<p>Nate made this beautiful site <q>for designers to learn about color, contrast, and how it can affect experiences of a user interface.</q></p>
+						<h3><a href="https://thehtml.review/">the html review</a></h3>
+						<p>Issue 02, from spring 2023 - really worth a browse! It has lots of interesting pages and articles from different contributors.</p>
+						<p>See also issue 01: <a href="https://thehtml.review/01/">the html review 01</a> from spring 2022. I am looking forward to the 2024 edition!</p>
+						<h3><a href="https://strange.website/">Strange.Website</a></h3>
+						<p>henry ✷ makes such <a href="https://stillness.digital/">thoughtful</a> and <a href="https://henry.codes/">elegant</a> sites.</p>
+					</article>
+					<article class="sheet">
+						<h2>Newsletters</h2>
+						<p>I'm usually a little allergic to signing up to newsletters. But I like these.</p>
+						<h3><a href="https://robinrendle.com/the-cascade/">The Cascade</a></h3>
+						<h3><a href="https://buttondown.email/ownyourweb/archive/">Own Your Web</a></h3>
+						<h3><a href="https://goodenoughnews.substack.com/">A Good Enough Newsletter</a></h3>
+					</article>
+					<article class="sheet">
+						<h2>All the <a href="https://cs.sjoy.lol">CSS JOY Webring</a> Sites</h2>
+						<p>Most of which are blogs or digital gardens:</p>
+						<ul id="webring-sites">{sitesData.map((link) => (
+							<li><a href={link.url}>{link.name}</a></li>
+							)
+						)}</ul>
+					</article>
+					<a class="back" href="/#goblog">&larr; back to blog index</a>
+				</article>
+			</div>
+		</main>
+		<Toggle />
+	</body>
+</html>
+
+<style>
+	main {
+		background-color: var(--header);
+		margin-top: var(--tabheight);
+	}
+	.tab {
+		position: fixed !important;
+		width: calc(100% - 0.5rem);
+	}
+	article {
+		max-width: 80ch;
+		margin: 0 auto;
+		padding: 6vmin 5.5vmin 5.5vmin;
+	}
+	
+	h1, h3 {
+		margin-bottom: 0;
+	}
+	.backtotop {
+		position: fixed;
+		bottom: 1rem;
+		left: calc(50% - min(38ch, calc(50% - 1.25rem)));
+	}
+	@media (min-width: 500px) {
+		#webring-sites {
+				columns: 2;
+		}
+	}
+
+</style>
