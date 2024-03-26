@@ -427,6 +427,13 @@ declare module 'astro:content' {
   collection: "short";
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] };
+"2024-03-18-people-blogs-guestbooks.md": {
+	id: "2024-03-18-people-blogs-guestbooks.md";
+  slug: "2024-03-18-people-blogs-guestbooks";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
 "allyship.md": {
 	id: "allyship.md";
   slug: "allyship";

@@ -865,9 +865,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             <div>
               <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>
               <p>
-                I'm not tracking, running analytics, or feeding anyone cookies.
+                I'm not tracking, analyzing, or feeding you cookies.
                 <br><br>
-                But if you want to tell me something about this website, please <a href="/guestbook">sign</a>!
+                If you want to tell me something about this website, please <a href="/guestbook">sign</a>!
               </p>
             </div>
           </div>
@@ -906,7 +906,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						</ul>
 					<h3>Email me:</h3>
 					
-          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+          <form id="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label
@@ -928,6 +928,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </p>
             <p>
               <label class="message">Message<br /><textarea name="message" required /></label>
+            </p>
+            <p>
+              <label class="consent"><input type="checkbox" required><small>I consent to <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> receiving this message and passing it through <a href="https://akismet.com/">Akismet</a> spam filtering. <a href="#privacy-policy">Privacy policy.</a></small></label>
             </p>
             <p>
               <button type="submit"><b>Send Email</b></button>
@@ -1012,6 +1015,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
       })();
 	    
     </script>
+    <script src="/scripts/openDetails.js" is:inline></script>
 		<Toggle />
 	</body>
 

@@ -150,7 +150,7 @@ body {
 	font-family: Karla;
 }
 
-p {font-size: var(--p)}
+p, details {font-size: var(--p)}
 h4 {font-size: var(--h4)}
 h3 {font-size: var(--h3)}
 h2 {font-size: var(--h2)}
@@ -823,11 +823,18 @@ img.social:is(:hover,:active,:focus-visible) {
 	opacity: 0.6;
 }
 
+#form {
+	scroll-margin-top: calc(2 * var(--tabheight));
+	accent-color: var(--links);
+}
 input,
 textarea {
 	border: 1px solid var(--links);
 	background-color: var(--stuff);
 	border-radius: calc(var(--border-radii) / 2);
+}
+input[type="checkbox"] {
+	width: var(--h1);
 }
 form button {
 	border-radius: calc(var(--border-radii) / 2);
@@ -866,6 +873,13 @@ form button:active {
 }
 .links-out summary h4 {
 	display: inline-block;
+}
+#privacy-policy {
+	scroll-margin-top: calc(2 * var(--tabheight));
+}
+#privacy-policy-details > a {
+	display: block;
+	text-align: center;
 }
 
 #indieWeb a:nth-child(odd) {

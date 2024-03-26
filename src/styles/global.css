@@ -27,9 +27,10 @@ form {
 	width: min-content;
 	margin: 0 auto 5vmin;
 }
-input,
+input:not([type="checkbox"]),
 textarea {
-	font-family: Karla, 'Open Sans', sans-serif;
+	font-family: inherit;
+	font-size: inherit;
 	width: clamp(28ch, 60vw, 30rem);
 	padding: 0.25rem 0.5rem;
 }
@@ -48,6 +49,10 @@ form:has(input[name="bot-field"]:not(:placeholder-shown)) button {
 }
 input[name="bot-field"]:placeholder-shown + small {
 	display:none;
+}
+form .consent {
+	display: flex;
+	gap: 0.5em;
 }
 
 .entry p {

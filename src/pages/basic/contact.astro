@@ -1,4 +1,5 @@
 ---
+import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
 import Basic from '../../layouts/Basic.astro';
 async function getGuestEntries() {
   const response = await fetch(new Request(`https://api.netlify.com/api/v1/forms/${import.meta.env.GUESTBOOK_ID}/submissions`, {method: 'GET', headers: {'Authorization': `Bearer ${import.meta.env.NETLIFY_ACCESS}`}}));
@@ -33,6 +34,9 @@ const entries = await getGuestEntries();
   </p>
   <p>
     <label class="message">Message:<br /><textarea name="message" required /></label>
+  </p>
+  <p>
+    <label class="consent"><input type="checkbox" required><small>I consent to <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> receiving this message and passing it through <a href="https://akismet.com/">Akismet</a> spam filtering. <a href="#privacy-policy">Privacy policy.</a></small></label>
   </p>
   <p>
     <button type="submit"><b>Send Email</b></button>
@@ -114,9 +118,14 @@ const entries = await getGuestEntries();
       <label class="message">Message<br /><textarea name="message" required /></label>
     </p>
     <p>
+      <label class="consent"><input type="checkbox" required><small>I consent to <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> receiving this message and passing it through <a href="https://akismet.com/">Akismet</a> spam filtering. <a href="#privacy-policy">Privacy policy.</a></small></label>
+    </p>
+    <p>
       <button type="submit"><b>Sign Guestbook</b></button>
     </p>
   </form>
+
+  <PrivacyPolicy />
 
   <a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
   <div class="rainbow">
