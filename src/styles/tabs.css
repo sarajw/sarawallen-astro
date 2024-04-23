@@ -43,35 +43,69 @@
 	--heavy: 500;
 }
 
-:root.dark-mode {
+@media (prefers-color-scheme: dark) {
+	:root {
 
-	/* colours */
-	--background: hsl(var(--pop), 35%);
-	--text: hsl(var(--base), 80%);
-	--links: hsl(var(--theme), 60%);
-	--hover: hsl(var(--pop), 60%);
-	--shadow: hsla(var(--base), 0%, 0.5);
+		/* colours */
+		--background: hsl(var(--pop), 35%);
+		--text: hsl(var(--base), 80%);
+		--links: hsl(var(--theme), 60%);
+		--hover: hsl(var(--pop), 60%);
+		--shadow: hsla(var(--base), 0%, 0.5);
 
-  --header: hsl(var(--base), 0%);
-  --sara: hsl(var(--base), 15%);
-  --stuff: hsl(var(--base), 20%);
-  --blog: hsl(var(--base), 25%);
-  --find: hsl(var(--base), 30%);
+		--header: hsl(var(--base), 0%);
+		--sara: hsl(var(--base), 15%);
+		--stuff: hsl(var(--base), 20%);
+		--blog: hsl(var(--base), 25%);
+		--find: hsl(var(--base), 30%);
 
-	--b2top: hsl(var(--base), 40%);
+		--b2top: hsl(var(--base), 40%);
+	}
+	
+	:is(.social, [title="PHP"], [title="Next.js"],
+	[title="Astro"], [title="Prisma"], [title="PowerShell"]) {
+		filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
+	}
 }
 
-:root.high-contrast {
+@media (prefers-contrast: more) {
+	:root{
 
-  --header: Canvas;
-  --sara: Canvas;
-  --stuff: Canvas;
-  --blog: Canvas;
-  --find: Canvas;
+		--header: Canvas;
+		--sara: Canvas;
+		--stuff: Canvas;
+		--blog: Canvas;
+		--find: Canvas;
 
-	--text: CanvasText;
-	--links: CanvasText;
-	--border: 0.2rem solid CanvasText;
+		--text: CanvasText;
+		--links: CanvasText;
+		--border: 0.2rem solid CanvasText;
+	}
+
+	:is(main > section, main .post, .shortIndex, .roll, .wips, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
+		border-inline: var(--border);
+	}
+	.tab > *, 
+	.tab::after, 
+	header > div {
+		border-top: var(--border);
+		border-inline: var(--border);
+	}
+	:is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab {
+		width: calc(100% - 0.85rem);
+	}
+	:is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .post {
+		margin: 0 0.1rem;
+	}
+	:is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab::after {
+		width: calc(100% - 0.2rem);
+	}
+	:is(.statuslol, .now_content, .container button, dialog, li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
+		border: var(--border);
+	}
+	.posts {
+		background-color: transparent;
+	}
 }
 
 :root.mode1 {
@@ -115,30 +149,7 @@
 	--sat3: var(--sat1);
 }
 
-.high-contrast :is(main > section, main .post, .shortIndex, .roll, .wips, .notesIndex, .blogPost, .guestbookIndex, .nowPage) {
-	border-inline: var(--border);
-}
-.high-contrast .tab > *, 
-.high-contrast .tab::after, 
-.high-contrast header > div {
-	border-top: var(--border);
-	border-inline: var(--border);
-}
-.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab {
-	width: calc(100% - 0.85rem);
-}
-.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .post {
-	margin: 0 0.1rem;
-}
-.high-contrast :is(.blogPost, .shortIndex, .roll, .wips, .notesIndex, .guestbookIndex) .tab::after {
-	width: calc(100% - 0.2rem);
-}
-.high-contrast :is(.statuslol, .now_content, .container button, dialog, li.posts, input, textarea, .post .short, .tweet, .toot, .entry, pre) {
-	border: var(--border);
-}
-.high-contrast .posts {
-	background-color: transparent;
-}
+
 
 html {
 	background-color: var(--background);
@@ -194,10 +205,6 @@ img:is(.logo, .social) {
 	height: var(--icons);
 	max-width: calc(1.5 * var(--icons));
 	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
-}
-.dark-mode :is(.social, [title="PHP"], [title="Next.js"],
-[title="Astro"], [title="Prisma"], [title="PowerShell"]) {
-	filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 
 main {

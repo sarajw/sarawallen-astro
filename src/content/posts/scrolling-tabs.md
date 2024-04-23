@@ -33,7 +33,7 @@ This is a tidied-up version of my first pass with this idea:
   Sticky Cards: First Pass</a> by Sara (<a href="https://codepen.io/sarajw">@sarajw</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<!-- <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> -->
 
 Have a click around and you might find some of the limitations. This truly was just the first pass, it doesn't work quite right just yet...
 
@@ -176,7 +176,7 @@ To get past this issue, we need to have some invisible elements with anchors tha
   Sticky Cards: Second Pass</a> by Sara (<a href="https://codepen.io/sarajw">@sarajw</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<!-- <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> -->
 
 The `id="tabname"` now moves into a div added above the corresponding section. The sections now have classes, instead. The navigation can be left as it is.
 
@@ -341,7 +341,7 @@ I think it was a happy accident, that doing all this leads to the tab for the ne
   Sticky Cards: Third Pass WIP</a> by Sara (<a href="https://codepen.io/sarajw">@sarajw</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<!-- <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> -->
 
 <br />
 <br />

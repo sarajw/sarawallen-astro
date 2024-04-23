@@ -90,9 +90,11 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 			<section id="sara" aria-label="About me">
 				<article>
 					<h3>Hi! Welcome :)</h3>
-          <h4><a href="https://js-naked-day.org/">It's JS Naked Day!</a></h4>
+          <div class="now_content" style="padding: 0.1rem 2rem 0.5rem; margin-bottom: 1rem; max-width: 50ch; margin-inline: auto;">
+            <h4><a href="https://js-naked-day.org/">It's JS Naked Day!</a></h4>
             <p>Come on in! Some things might not work quite right...</p>
-            <p>Especially the dark and high contrast modes, which is sad 😓</p>
+            <p>Otherwise hopefully your light/dark mode and contrast levels are being respected, even if you can't manually toggle them :)</p>
+          </div>
 					<div class="welcome">
 						<img src="images/cartoon.png" alt="A picture of me!" width="303" height="303">
 						<div class="blurb">
@@ -966,10 +968,6 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next">→</a>
               </h4>
             </div>
-            <details>
-              <summary><h4>The Claw 🦋 Webring</h4></summary>
-              <the-claw-webring-widget id="theClaw" />
-            </details>
             <h4><a href="https://ooh.directory/">ooh.directory</a></h4>
             <h4><a href="https://personalsit.es/">PERSONALSIT.ES</a></h4>
           </div>
@@ -986,7 +984,6 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
 		</main>
-		<Toggle />
 	</body>
 
 </html>

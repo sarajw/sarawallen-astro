@@ -10,21 +10,24 @@
   
 }
 
-:root.dark-mode {
-  /* colours dark */
-  --lighter: hsl(var(--hart), 0%);
-  --light: hsl(var(--hart), 15%);
-  --lightmed: hsl(var(--hart), 25%);
-  --medium: hsl(var(--hart), 35%);
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* colours dark */
+    --lighter: hsl(var(--hart), 0%);
+    --light: hsl(var(--hart), 15%);
+    --lightmed: hsl(var(--hart), 25%);
+    --medium: hsl(var(--hart), 35%);
+  }
 }
 
-:root.high-contrast {
-  /* colours mid */
-  --light: hsl(var(--hart), 70%);
-  --lightmed: hsl(var(--hart), 50%);
-  --medium: hsl(var(--hart), 30%);
-}
-    
+@media (prefers-contrast: more) {
+  :root{
+    /* colours mid */
+    --light: hsl(var(--hart), 70%);
+    --lightmed: hsl(var(--hart), 50%);
+    --medium: hsl(var(--hart), 30%);
+  }
+} 
 
 .heart {
   position: absolute;
