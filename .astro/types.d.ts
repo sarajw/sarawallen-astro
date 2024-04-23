@@ -434,6 +434,13 @@ declare module 'astro:content' {
   collection: "short";
   data: InferEntrySchema<"short">
 } & { render(): Render[".md"] };
+"2024-04-07-tasty-water.md": {
+	id: "2024-04-07-tasty-water.md";
+  slug: "2024-04-07-tasty-water";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
 "allyship.md": {
 	id: "allyship.md";
   slug: "allyship";

@@ -90,6 +90,9 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 			<section id="sara" aria-label="About me">
 				<article>
 					<h3>Hi! Welcome :)</h3>
+          <h4><a href="https://js-naked-day.org/">It's JS Naked Day!</a></h4>
+            <p>Come on in! Some things might not work quite right...</p>
+            <p>Especially the dark and high contrast modes, which is sad 😓</p>
 					<div class="welcome">
 						<img src="images/cartoon.png" alt="A picture of me!" width="303" height="303">
 						<div class="blurb">
@@ -100,11 +103,10 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 						</div>
 					</div>
           <div aria-label="Current status">
-            <script is:inline src="https://status.lol/sara.js?time&link&fluent"></script>
           </div>
 					<details id="nowPage">
 						<summary><p style="display:inline">What's new /now?</p></summary>
-						<script is:inline src="https://omgnow.rknight.me/now.js?a=sara"></script>
+            Check out my <a href="https://sara.omg.lol/now">/now</a> page!
 					</details>
 					
 					<h3>Code Skills</h3>
@@ -964,7 +966,6 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next">→</a>
               </h4>
             </div>
-            <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
             <details>
               <summary><h4>The Claw 🦋 Webring</h4></summary>
               <the-claw-webring-widget id="theClaw" />
@@ -985,37 +986,6 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 			</section>
 		</main>
-    <script is:inline>
-      const tabTopSettingPlugin = ( () => {
-        const tabTopSetting = () => {
-          const sections = document.querySelectorAll("main > section:not(#hero)");
-          for (const section of sections) {
-            let sectionHeight = section.offsetHeight;
-            section.style.top = `calc(100vh - ${sectionHeight}px)`;
-          }		
-        }
-
-        document.onreadystatechange = () => {
-          if (document.readyState === 'complete') {
-            tabTopSetting();
-          }
-        }
-
-        window.addEventListener("resize", tabTopSetting);
-        document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
-      })();
-
-      const modalLightDismiss = ( () => {
-        const dialogs = document.querySelectorAll('dialog');
-        for (const dialog of dialogs) {
-          dialog.addEventListener('click', (event) => {
-            if (event.target === dialog) dialog.close()
-          });
-        }
-      })();
-	    
-    </script>
-    <script src="/scripts/openDetails.js" is:inline></script>
 		<Toggle />
 	</body>
 
