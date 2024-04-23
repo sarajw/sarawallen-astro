@@ -61,11 +61,6 @@
 
 		--b2top: hsl(var(--base), 40%);
 	}
-	
-	:is(.social, [title="PHP"], [title="Next.js"],
-	[title="Astro"], [title="Prisma"], [title="PowerShell"]) {
-		filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
-	}
 }
 
 @media (prefers-contrast: more) {
@@ -205,6 +200,13 @@ img:is(.logo, .social) {
 	height: var(--icons);
 	max-width: calc(1.5 * var(--icons));
 	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
+}
+
+@media (prefers-color-scheme: dark) {
+	:is(img.social, [title="PHP"], [title="Next.js"],
+	[title="Astro"], [title="Prisma"], [title="PowerShell"]) {
+		filter: invert(80%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
+	}
 }
 
 main {
@@ -781,12 +783,14 @@ pre.ascii-art {
 #feeds a {
 	text-align: center;
 }
-.high-contrast:not(.dark-mode) #feeds img[alt="BlogRoll"] {
-	filter: 
-	drop-shadow( 2px  0px 0px black) 
-	drop-shadow(-2px  0px 0px black)
-	drop-shadow( 0px  2px 0px black) 
-	drop-shadow( 0px -2px 0px black);
+@media (prefers-color-scheme: light) and (prefers-contrast: more) {
+	#feeds img[src="images/icons/tp-roll.svg"] {
+		filter: 
+		drop-shadow( 2px  0px 0px black) 
+		drop-shadow(-2px  0px 0px black)
+		drop-shadow( 0px  2px 0px black) 
+		drop-shadow( 0px -2px 0px black);
+	}
 }
 
 .tab.find {
