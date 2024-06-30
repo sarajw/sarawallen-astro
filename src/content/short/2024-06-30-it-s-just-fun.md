@@ -11,7 +11,7 @@ Someone on Mastodon asked Kev Quirk why people build personal websites, when soc
 
 I'm like, it's just fun!
 
-I've been extremely online since 1998/9. In that time I've made my own websites, closed them down and retreated into a more private web (was safest while I was a teacher of teenagers for a period), used the likes of blogger and tumblr, and finally in 2020/1 started building up my very own public web presence again.
+I've been extremely online since 1998/9. In that time I've made my own websites, closed them down and retreated into a more private web (was safest while I was a teacher of teenagers for a period), used the likes of blogger and tumblr, and finally in 2020/1 started rebuilding my very own public web presence.
 
 I started building again to aid my getting a job in web development, but it's since become much more personal and a lot less like an online portfolio.
 
