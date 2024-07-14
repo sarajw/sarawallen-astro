@@ -164,7 +164,7 @@ nav ul {
 	/* outline: 1px dashed; */
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 20ch;
+	max-width: 16ch;
 	column-gap: 1em;
 	row-gap: 0.4em;
 	margin: 0;
