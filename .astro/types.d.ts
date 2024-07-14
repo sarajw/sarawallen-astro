@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "notes";
   data: InferEntrySchema<"notes">
 } & { render(): Render[".md"] };
+"2024-05-12-weaknote-2024-05-12.md": {
+	id: "2024-05-12-weaknote-2024-05-12.md";
+  slug: "2024-05-12-weaknote-2024-05-12";
+  body: string;
+  collection: "notes";
+  data: InferEntrySchema<"notes">
+} & { render(): Render[".md"] };
 "20240130.md": {
 	id: "20240130.md";
   slug: "20240130";
@@ -430,6 +437,27 @@ declare module 'astro:content' {
 "2024-03-18-people-blogs-guestbooks.md": {
 	id: "2024-03-18-people-blogs-guestbooks.md";
   slug: "2024-03-18-people-blogs-guestbooks";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
+"2024-04-07-tasty-water.md": {
+	id: "2024-04-07-tasty-water.md";
+  slug: "2024-04-07-tasty-water";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
+"2024-05-18-good-box.md": {
+	id: "2024-05-18-good-box.md";
+  slug: "2024-05-18-good-box";
+  body: string;
+  collection: "short";
+  data: InferEntrySchema<"short">
+} & { render(): Render[".md"] };
+"2024-06-30-it-s-just-fun.md": {
+	id: "2024-06-30-it-s-just-fun.md";
+  slug: "2024-06-30-it-s-just-fun";
   body: string;
   collection: "short";
   data: InferEntrySchema<"short">

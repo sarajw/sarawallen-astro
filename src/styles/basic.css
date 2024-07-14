@@ -145,7 +145,7 @@ summary > * {
 header {
 	display: flex;
 	gap: 0.4em;
-	font-size: min(1rem + 1.2vw, 2rem);
+	font-size: min(1rem + 2vw, 2rem);
 	justify-content: space-between;
 	margin-block-end: 0.5rem;
 }
@@ -171,14 +171,14 @@ nav ul {
 }
 :not(.dark-mode) header :is(a, a:visited) {color: inherit}
 
-@media (max-width: 420px) {
+@media (max-width: 320px) {
 	header {
 		display: revert;
-		font-size: min(1rem + 2vw, 2rem);
 	}
 	nav ul {
 		justify-content: space-evenly;
 		max-width: 100%;
+		padding-inline: 0.5em;
 	}
 	#avatar {display: none}
 	#avatar-big {
