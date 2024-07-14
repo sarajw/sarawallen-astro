@@ -426,11 +426,12 @@ main.nowPage :is(.statuslol, .now_content) {
 .stack {
 	margin-inline: auto;
 	padding-inline: 3vmin;
-	gap: 2vmin;
+	gap: min(2vmin, 20px);
 	place-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	max-width: 750px;
 }
 
 .stuff {
@@ -720,7 +721,8 @@ pre.ascii-art {
 .posts.downplay h3 {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+	line-clamp: 2;
+		-webkit-line-clamp: 2;
 	overflow: hidden;
 }
 
@@ -743,6 +745,7 @@ pre.ascii-art {
 	.posts:not(.featured, .downplay) p {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
+		line-clamp: 2;
 		-webkit-line-clamp: 2;
 		overflow: hidden;
 	}
@@ -750,6 +753,7 @@ pre.ascii-art {
 		max-height: 12.5vmin;
 	}
 	.posts.downplay h3 {
+		line-clamp: 1;
 		-webkit-line-clamp: 1;
 	}
 }

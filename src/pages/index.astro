@@ -116,14 +116,12 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 						<img class="logo" height="64" src="images/icons/typescript-icon.svg" alt="TypeScript" title="TypeScript">
 						<img class="logo" height="64" src="images/icons/php-alt.svg" alt="PHP" title="PHP">
 						<img class="logo" height="64" src="images/icons/react.svg" alt="React" title="React">
-						<!-- <img class="logo" height="64" src="images/icons/nextjs-icon.svg" alt="Next.js" title="Next.js"> -->
-						<img class="logo" height="64" src="images/icons/astro.svg" alt="Astro" title="Astro">
 						<img class="logo" height="64" src="images/icons/svelte-icon.svg" alt="Svelte" title="Svelte">
-						<!-- <img class="logo" height="64" src="images/icons/prisma.svg" alt="Prisma" title="Prisma"> -->
+						<img class="logo" height="64" src="images/icons/astro.svg" alt="Astro" title="Astro">
+						<img class="logo" height="64" src="images/icons/11ty.svg" alt="11ty" title="11ty">
 						<img class="logo" height="64" src="images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS">
 						<img class="logo" height="64" src="images/icons/emotion.png" alt="Emotion CSS" title="Emotion CSS">
 						<img class="logo" height="64" src="images/icons/git-icon.svg" alt="Git" title="Git">
-						<!-- <img class="logo" height="64" src="images/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL"> -->
 						<img class="logo" height="64" src="images/icons/mysql-icon.svg" alt="MySQL" title="MySQL">
 						<img class="logo" height="64" src="images/icons/powershell.svg" alt="PowerShell" title="PowerShell">
 						<img class="logo" height="64" src="images/icons/bash-icon.svg" alt="Bash" title="Bash">
@@ -150,7 +148,7 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
                 I had already written a <a href="/blog/color-scheme/">blog post about color-scheme</a>, and another which had a <a href="/blog/a11y-aspects/#contrast-levels">section on contrast levels</a> and what they mean for different people - in this talk I smash those together into something hopefully coherent about how easily you can cater to lots of people at once :)
               </p>
               <p>
-                Another shorter version of this talk can also be found <a href=https://www.youtube.com/watch?v=iZ4XjLeaKH4">on youtube</a> as part of the <a href="https://conf.11ty.dev/">11ty International Symposium on Making Web Sites Real Good</a>
+                Another shorter version of this talk can also be found <a href=https://www.youtube.com/watch?v=iZ4XjLeaKH4">on youtube</a> as part of the <a href="https://conf.11ty.dev/">11ty conference</a> in 2024 - see also the janky <a href="https://saraslides.netlify.app/">online slide deck</a>.
               </p>
             </StuffModal>
             
@@ -195,7 +193,7 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
               title="W.I.P."
               modalId="a2"
               modalImg="../placeholder.png"
-              alt=""
+              alt="A placeholder image with my initials."
               url="/wips">
               <p>
                 I have many works in progress going on...
@@ -204,17 +202,17 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 
             <StuffModal
               buttonClass="bigsq"
-              buttonImg="basic_sq.png"
-              title="Basic version"
+              buttonImg="whimsica11y-sq.webp"
+              title="Whimsic​a11y"
               modalId="b2"
-              modalImg="basic.jpg"
-              alt="A website in dark mode "
-              url="/basic/">
+              modalImg="whimsica11y-big.jpg"
+              alt="A screenshot of the Whimsica11y website in dark mode - a video is embedded: The Greatest, by Apple."
+              url="https://whimsica11y.net/">
               <p>
-                I got an itch to start redoing my website in a more basic, elegant way.
+                Via my <a href="https://cs.sjoy.lol">CSS webring</a>, I've come across a whole new world of hobbyist websites, and they're just wonderful!
               </p>
               <p>
-                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
+                A lot of them are however not very accessible. I'm not going to call anyone out - because this is people building their own stuff fun, not as a service for people to use. But, many of them actually do want to be more inclusive, while also finding themselves bewildered by the advice and resources available out there. This is my attempt to be helpful. Very much a work in progress!
               </p>
             </StuffModal>
             
@@ -655,19 +653,19 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               </p>
             </StuffModal>
 
-						<StuffModal
+            <StuffModal
               buttonClass="smsq1"
-              buttonImg="blogolio_sq.jpg"
-              title="Blog​olio"
+              buttonImg="basic_sq.png"
+              title="/basic"
               modalId="b3"
-              modalImg="blogolio.jpg"
-              alt="A screenshot of the front page of the blog featuring my head and shoulders. I have glasses on my head and a purple top and grey cardigan on."
-              url="https://2022blog.sarajoy.dev">
+              modalImg="basic.jpg"
+              alt="A website in dark mode "
+              url="/basic/">
               <p>
-                I built this blog to introduce myself to the world of frameworks, and I started with SvelteKit via this article: <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog">Let's learn SvelteKit by building a static Markdown blog from scratch</a>
+                I got an itch to start redoing my website in a more basic, elegant way.
               </p>
               <p>
-                I then spent lots of time making up the modal components in this portfolio, and I'm quite proud of it - however! Now using &lt;dialog&gt; elements makes this rather easier...
+                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
               </p>
             </StuffModal>
 						
