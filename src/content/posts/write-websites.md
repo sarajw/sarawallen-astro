@@ -4,6 +4,7 @@ description: "My rewrite of Baz Luhrmann's hit, for the revival and indie web."
 pubDate: "2024-07-16"
 heroImage: "/images/placeholder.png"
 caption: ""
+mastoURL: "https://front-end.social/@sarajw/112796033187553095"
 ---
 
 Enbies and gentlefolk of the class of '24:
