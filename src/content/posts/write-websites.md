@@ -26,7 +26,7 @@ Don't waste time on shiny new frameworks; sometimes they're helpful, sometimes t
 
 Remember the guestbook entries you receive; forget the spam. If you succeed in doing this well, tell me how.
 
-Keep your old site designs. Throw away your old nested <div>s.
+Keep your old site designs. Throw away your old nested &lt;div&gt;s.
 
 Flex.
 
@@ -43,7 +43,7 @@ Maybe you'll sell that little project and hate what the buyers do with it.
 
 Whatever you do, don't congratulate yourself too much, or berate yourself either. Your code is half spaghetti; so is everybody else's.
 
-Enjoy your <body>. Style it every way you can. Don't be afraid of CSS, or what other people think of it. It's the greatest design tool you'll ever learn.
+Enjoy your &lt;body&gt;. Style it every way you can. Don't be afraid of CSS, or what other people think of it. It's the greatest design tool you'll ever learn.
 
 Animate, even if you only try it out in your local IDE or CodePen.
 
