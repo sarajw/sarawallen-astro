@@ -1,6 +1,6 @@
 ---
 title: "Everybody's Free (To Write Websites)"
-description: "My rewrite of Baz Luhrmann's hit, for the revival web."
+description: "My rewrite of Baz Luhrmann's hit, for the revival and indie web."
 pubDate: "2024-07-16"
 heroImage: "/images/placeholder.png"
 caption: ""
