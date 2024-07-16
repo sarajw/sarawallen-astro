@@ -9,7 +9,9 @@ mastoURL: "https://front-end.social/@sarajw/112796033187553095"
 
 Enbies and gentlefolk of the class of '24:
 
-Write websites. If I could offer you only one tip for the future, coding would be it. The long term benefits of coding websites remains unproved by scientists, however the rest of my advice has a basis in the joy of the indie web community's experiences. I will dispense this advice now:
+Write websites.
+
+If I could offer you only one tip for the future, coding would be it. The long term benefits of coding websites remains unproved by scientists, however the rest of my advice has a basis in the joy of the indie web community's experiences. I will dispense this advice now:
 
 Enjoy the power and beauty of PHP; or never mind. You will not understand the power and beauty of PHP until your stack is completely jammed. But trust me, in 20 years you'll look back at your old sites and recall in a way you can't grasp now, how much possibility lay before you and how simple and fast they were. JS is not as blazingly fast as you imagine.
 
