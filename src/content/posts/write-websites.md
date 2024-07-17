@@ -2,8 +2,8 @@
 title: "Everybody's Free (To Write Websites)"
 description: "My rewrite of Baz Luhrmann's hit, for the revival and indie web."
 pubDate: "2024-07-16"
-heroImage: "/images/placeholder.png"
-caption: ""
+heroImage: "/images/blog/websites.jpg"
+caption: "A watery blue background and the word WEBSITES with a solar flare."
 mastoURL: "https://front-end.social/@sarajw/112796033187553095"
 ---
 
