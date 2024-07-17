@@ -82,3 +82,9 @@ Be careful whose advice you buy, but be patient with those who supply it.
 The old web is a form of nostalgia. Rebuilding it needs to be more than fishing the past from the disposal, painting over the inaccessible parts and recycling it for more than it's worth.
 
 But trust me on the websites.
+
+&nbsp;
+
+---
+
+For the uninitiated - this text is not all my own doing, it is heavily based on [Everybody's Free (To Wear Sunscreen) (YouTube link)](https://www.youtube.com/watch?v=OXX5OKZejzg) by Baz Luhrmann from 1999 - which in turn was based on an [essay by Mary Schmich](https://en.wikipedia.org/wiki/Wear_Sunscreen) (there is an [original Chicago Tribune link](https://www.chicagotribune.com/columns/chi-schmich-sunscreen-column-column.html) for this, but I can't access it from my region, maybe you'll have more luck!)
