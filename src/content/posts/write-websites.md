@@ -7,6 +7,8 @@ caption: ""
 mastoURL: "https://front-end.social/@sarajw/112796033187553095"
 ---
 
+<iframe width="560" height="315" style="max-width: 100%" src="https://www.youtube-nocookie.com/embed/v5UsuZ4DS_Q?si=4TA9iLCcsK7L6jVt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Enbies and gentlefolk of the class of '24:
 
 Write websites.
@@ -87,4 +89,4 @@ But trust me on the websites.
 
 ---
 
-For the uninitiated - this text is not all my own doing, it is heavily based on [Everybody's Free (To Wear Sunscreen) (YouTube link)](https://www.youtube.com/watch?v=OXX5OKZejzg) by Baz Luhrmann from 1999 - which in turn was based on an [essay by Mary Schmich](https://en.wikipedia.org/wiki/Wear_Sunscreen) (there is an [original Chicago Tribune link](https://www.chicagotribune.com/columns/chi-schmich-sunscreen-column-column.html) for this. If like me, you can't access it from yout region, [here it is via a US proxy](https://us1.proxysite.com/process.php?d=cxKlKcDfVAsm3o%2FOQZWhYud1upBtXAqHYFaDPVPRIUviedzBpVUGSVBYo5lFp2mC91P6pZA%2FDZnCBMgB%2BNo2VopVrWHSFeMqLplSyatmGLIcyTroER2WP9Y3uKc%3D&b=1)).
+For the uninitiated - this text is not all my own doing, it is heavily based on [Everybody's Free (To Wear Sunscreen) (YouTube link)](https://www.youtube.com/watch?v=OXX5OKZejzg) by Baz Luhrmann from 1999 - which in turn was based on an [essay by Mary Schmich](https://en.wikipedia.org/wiki/Wear_Sunscreen) (there is an [original Chicago Tribune link](https://www.chicagotribune.com/columns/chi-schmich-sunscreen-column-column.html) for this. If like me, you can't access it from your region, [here it is via a US proxy](https://us1.proxysite.com/process.php?d=cxKlKcDfVAsm3o%2FOQZWhYud1upBtXAqHYFaDPVPRIUviedzBpVUGSVBYo5lFp2mC91P6pZA%2FDZnCBMgB%2BNo2VopVrWHSFeMqLplSyatmGLIcyTroER2WP9Y3uKc%3D&b=1)).
