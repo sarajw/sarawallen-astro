@@ -138,7 +138,7 @@ When using MacOS as standard, something will make you need to shift away from th
 
 For those who are sighted and easily able to use a pointing device, fine. A person new to MacOS might grumble a bit to begin with, but get used to it. They might not even consider that there is something in the preferences that can change this behavior. This is not necessarily wrong -- as we've seen, the Macs are fully intended to be used this way.
 
-A person's usual behavior while using other machines might even change slightly away from commands and shortcuts. Maybe it even changes to be more see-and-point while navigating the web, too.
+A person's usual behavior while using other machines might even change slightly away from the keyboard. Maybe it even changes to be more see-and-point while navigating the web, too.
 
 ### Keyboard Navigation and Full Keyboard Access
 
@@ -219,7 +219,7 @@ What if a whole app has already been built with multiple different kinds of cont
 
 No wonder people are put off. No surprises that devs start asking whether they can somehow sniff out a user not able to use a pointing device, in order to just plop a native control in there instead. Unfortunately this is a breach of user privacy -- no one should have to disclose a disability.
 
-Ideally, we use the native controls from the start. Find ways to display the needed information and shiny stuff\* differently, so that the controls can remajn native, and work for everyone no matter the operating system or hardware involved. This will probably require more to and fro with designers.
+Ideally, we use the native controls from the start. Find ways to display the needed information and shiny stuff\* differently, so that the controls can remain native, and work for everyone no matter the operating system or hardware involved. This will probably require more to and fro with designers.
 
 (\* I'm not here to diss the shiny stuff. I love styling and I love me some shiny!)
 
