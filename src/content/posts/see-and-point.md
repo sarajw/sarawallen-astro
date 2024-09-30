@@ -5,7 +5,6 @@ pubDate: "Sept 30 2024"
 heroImage: "/images/blog/doug-engelbart.jpg"
 caption: "A grainy black-and-white photo of electical engineer Douglas Engelbart practising for his big demo."
 featured: featured
-draft: true
 ---
 
 ## Accessibility whack-a-mole
@@ -215,7 +214,7 @@ Of course, most of us have never experienced using a sip-puff switch or an eye t
 
 The native elements have been implemented in so many operating systems, in so many different ways, and through those they are interacted with by so many different kinds of human-interface hardware, be that assistive tech or the many permutations of mice and keyboards, joysticks and who knows what else. Trying to code all of that up from scratch on top of a set of nested \<div\>s is a Sisyphean task.
 
-What if a whole app has already been built with multiple different kinds of controls that only respond to clicks. Each component needs rebuilding.
+What if a whole app has already been built with multiple different kinds of controls that only respond to clicks? Each component needs rebuilding.
 
 No wonder people are put off. No surprises that devs start asking whether they can somehow sniff out a user not able to use a pointing device, in order to just plop a native control in there instead. Unfortunately this is a breach of user privacy -- no one should have to disclose a disability.
 
