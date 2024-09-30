@@ -229,6 +229,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"2024-09-10-uses.md": {
+	id: "2024-09-10-uses.md";
+  slug: "2024-09-10-uses";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "a11y-aspects.md": {
 	id: "a11y-aspects.md";
   slug: "a11y-aspects";
@@ -288,6 +295,13 @@ declare module 'astro:content' {
 "scrolling-tabs.md": {
 	id: "scrolling-tabs.md";
   slug: "scrolling-tabs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"see-and-point.md": {
+	id: "see-and-point.md";
+  slug: "see-and-point";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

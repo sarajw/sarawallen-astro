@@ -39,7 +39,7 @@
 	--icons: clamp(32px, 10vw, 64px);
 	
 	/* fonts */
-	--normal: 300;
+	--normal: 400;
 	--heavy: 500;
 }
 
@@ -59,6 +59,10 @@
   --find: hsl(var(--base), 30%);
 
 	--b2top: hsl(var(--base), 40%);
+	
+	/* fonts */
+	--normal: 300;
+	--heavy: 500;
 }
 
 :root.high-contrast {
@@ -148,6 +152,9 @@ body {
 	margin: 0 0.25rem 0;
 	overscroll-behavior: none;
 	font-family: Karla;
+  font-optical-sizing: auto;
+  font-weight: var(--normal);
+  font-style: normal;
 }
 
 p, details {font-size: var(--p)}
@@ -929,10 +936,12 @@ form button:active {
 .post p>img {
 	margin-top: 0.5rem;
 }
+.post :is(.caption, blockquote) {
+	font-style: italic;
+}
 .post .caption {
 	text-align: center;
 	font-size: var(--sml);
-	font-style: italic;
 }
 .post li {
 	font-size: var(--p);
