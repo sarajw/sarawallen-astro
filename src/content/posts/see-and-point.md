@@ -199,7 +199,7 @@ It's marginally easier to style a generic \<div\> than it is to restyle a button
 
 Where we *can* look for expected keyboard interaction is within the WAI-ARIA Authoring Practices Guide (APG) patterns. Here we can call up the relevant page for a component that is equivalent to an HTML native select -- [a select-only combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/).
 
-Here is an example of just the JavaScript needed for such a component: https://www.w3.org/WAI/content-assets/wai-aria-practices/patterns/combobox/examples/js/select-only.js
+Just the [JavaScript needed](https://www.w3.org/WAI/content-assets/wai-aria-practices/patterns/combobox/examples/js/select-only.js) for such a component is already rather complicated.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VwovVBr" data-pen-title="Example from WAI-ARIA APG Select-Only Combobox" data-editable="true" data-user="sarajw" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/sarajw/pen/VwovVBr">
