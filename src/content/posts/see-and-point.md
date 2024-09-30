@@ -5,6 +5,7 @@ pubDate: "Sept 30 2024"
 heroImage: "/images/blog/doug-engelbart.jpg"
 caption: "A grainy black-and-white photo of electical engineer Douglas Engelbart practising for his big demo."
 featured: featured
+mastoURL: https://front-end.social/@sarajw/113227616215677127
 ---
 
 ## Accessibility whack-a-mole
