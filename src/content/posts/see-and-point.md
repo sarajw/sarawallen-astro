@@ -263,5 +263,3 @@ Thank you to the following fine people for helping me to:
 - Steer the tone of this post towards the warm inclusiveness that I had first intended: [Matt Stein](https://mattstein.com/)
 - Get the facts right with regards what is now and was then available in MacOS: [Curtis Wilcox](https://c.im/@cwilcox808)
 - Get just enough information to form this whole pet theory and blurt out this post: Every person who graciously answered me on Mastodon!
-
-<script is:inline src="/scripts/mastodon-post.js"></script>
