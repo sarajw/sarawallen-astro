@@ -1,8 +1,8 @@
 ---
 pubDate: '2024-09-10 16:30 +0200'
-heroImage: /images/placeholder.png
+heroImage: /images/blog/desktop.jpg
 draft: false
-title: Uses
+title: Sara Uses
 description: A list of some of the things I use at my desk.
 ---
 Here's a list of a bunch of things I use at my desk. Pictures still to come :)

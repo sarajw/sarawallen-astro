@@ -22,6 +22,9 @@ const posts = (await getCollection("posts")).filter((post) => post.data.draft !=
 const downplay = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'downplay').sort(
 	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
+const other = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'other').sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 
 ---
 
@@ -868,7 +871,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 						))}
 						{downplay.map((post) => (
 							<li class='posts downplay'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></div></a>
+								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
 								<div>
 									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
 									<time datetime={post.data.pubDate}>
@@ -882,6 +885,26 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 							</li>
             ))}
 					</ul>
+          <details id="blog-other">
+            <summary><h3>Other posts...</h3></summary>
+              <ul>
+						    {other.map((post) => (
+                <li class='posts downplay'>
+                  <a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+                  <div>
+                    <h4><a href={"/blog/" + post.slug}>{post.data.title}</a></h4>
+                    <time datetime={post.data.pubDate}>
+                      {new Date(post.data.pubDate).toLocaleDateString('en-gb', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                      })}
+                    </time>
+                  </div>
+                </li>
+                ))}
+              </ul>
+            </details>
           <div id="feeds">
             <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="">
               <br>Blogroll</a>
@@ -1027,6 +1050,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 
         window.addEventListener("resize", tabTopSetting);
         document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
+        document.querySelector("#blog-other").addEventListener("toggle", tabTopSetting);
       })();
 
       const modalLightDismiss = ( () => {

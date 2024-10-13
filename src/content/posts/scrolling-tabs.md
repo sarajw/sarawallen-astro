@@ -4,6 +4,7 @@ description: "How I got the tabs to scroll on sarajoy.dev - a work in progress"
 pubDate: "2023-06-27"
 heroImage: "/images/blog/scrollytabs.png"
 caption: "A screenshot of the top of sarajoy.dev, scrolled until the BLOG tab is nearly at the top."
+featured: "downplay"
 ---
 
 _NB! This post is a work in progress - like #BuildInPublic I've decided to #WriteInPublic! I post to my [Mastodon account](https://front-end.social/@sarajw) when I update it._

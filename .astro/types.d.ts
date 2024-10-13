@@ -229,13 +229,6 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
-"2024-09-10-uses.md": {
-	id: "2024-09-10-uses.md";
-  slug: "2024-09-10-uses";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
 "a11y-aspects.md": {
 	id: "a11y-aspects.md";
   slug: "a11y-aspects";
@@ -309,6 +302,13 @@ declare module 'astro:content' {
 "the-web-changed.md": {
 	id: "the-web-changed.md";
   slug: "the-web-changed";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uses.md": {
+	id: "uses.md";
+  slug: "uses";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
