@@ -819,9 +819,7 @@ pre.ascii-art {
 }
 #find ul.socials {
 	display: flex;
- /*
-	grid-template-columns: repeat(4, 1fr);
- */
+ flex-wrap: wrap;
 	gap: 5vmin;
  text-wrap: balance;
 	padding-block-end: 5vmin;
