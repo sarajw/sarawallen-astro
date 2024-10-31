@@ -818,14 +818,15 @@ pre.ascii-art {
 	max-width: 80ch;
 }
 #find ul.socials {
-	/* display: grid;
+	display: flex;
+ /*
 	grid-template-columns: repeat(4, 1fr);
-	gap: 5vmin; */
+ */
+	gap: 5vmin;
  text-wrap: balance;
 	padding-block-end: 5vmin;
 }
 #find ul.socials li {
- display: inline-block;
 	text-align: center;
 }
 #find ul.socials li a {
