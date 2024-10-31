@@ -3,8 +3,7 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 720 720" style="enable-background:new 0 0 720 720;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#1D4ED8;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#1D4ED8;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;}
 </style>
 <rect x="402.8" y="425" class="st0" width="302.2" height="259.9"/>
 <circle vector-effect="non-scaling-stroke" class="st0" cx="553.9" cy="429.9" r="151.1"/>
