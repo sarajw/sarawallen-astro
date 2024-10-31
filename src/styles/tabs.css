@@ -825,6 +825,7 @@ pre.ascii-art {
 	padding-block-end: 5vmin;
 }
 #find ul.socials li {
+ display: inline-block;
 	text-align: center;
 }
 #find ul.socials li a {
