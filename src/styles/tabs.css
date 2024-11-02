@@ -431,14 +431,11 @@ main.nowPage :is(.statuslol, .now_content) {
 	margin-bottom: 0;
 }
 .stack {
-	margin-inline: auto;
-	padding-inline: 3vmin;
-	gap: min(2vmin, 20px);
-	place-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	max-width: 750px;
+	text-align: center;
+	text-wrap: balance;
+}
+.stack img {
+	margin: min(1vmin, 10px);
 }
 
 .stuff {
