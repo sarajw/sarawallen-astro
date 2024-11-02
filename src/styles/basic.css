@@ -334,17 +334,20 @@ form button:active {
 }
 
 .contact ul {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3vmin;
-	justify-content: space-around;
+	text-wrap: balance;
+	text-align: center;
 	margin-block-end: 5em;
+}
+.contact ul li {
+	display: inline-block;
+	margin: 2.5vmin;
+	text-align: center;
 }
 .contact ul img {
 	height: clamp(32px, 10vw, 64px);
 	filter: invert(20%);
 }
 
-.dark-mode .contact ul img:not([alt="omg.lol"]) {
+.dark-mode .contact ul img {
 	filter: invert(80%);
 }

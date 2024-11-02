@@ -199,7 +199,7 @@ img:not(.social, .logo, .icon) {
 
 img:is(.logo, .social) {
 	height: var(--icons);
-	max-width: calc(1.5 * var(--icons));
+	max-width: calc(1.25 * var(--icons));
 	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 .dark-mode :is(.social, [title="PHP"], [title="Next.js"],
@@ -818,13 +818,13 @@ pre.ascii-art {
 	max-width: 80ch;
 }
 #find ul.socials {
- text-wrap: balance;
- text-align: center;
+	text-wrap: balance;
+	text-align: center;
 	padding-block-end: 5vmin;
 }
 #find ul.socials li {
- display: inline-block;
- margin: 2.5vmin;
+	display: inline-block;
+	margin: 2.5vmin;
 	text-align: center;
 }
 #find ul.socials li a {
