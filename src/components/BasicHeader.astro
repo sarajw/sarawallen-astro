@@ -15,17 +15,10 @@ import '../styles/basic.css';
 			<ul class="rainbow">
 				<li><a class="main-menu" href="/basic/">about</a></li>
 				<li><a class="main-menu" href="/basic/blog">blog</a></li>
-				<li><a class="main-menu" href="/basic/stuff">stuff</a></li>
 				<li><a class="main-menu" href="/basic/contact">contact</a></li>
 				{(currentPage.endsWith("/basic/") || currentPage.endsWith("/basic"))  &&
 					<li><a class="sub-menu" href="/basic/#status">status</a></li>
 					<li><a class="sub-menu" href="/basic/#now">/now</a></li>
-				}
-				{currentPage.includes("stuff") &&
-					<li><a class="sub-menu" href="/basic/stuff/#makes">makes</a></li>
-					<li><a class="sub-menu" href="/basic/stuff/#uses">uses</a></li>
-					<li><a class="sub-menu" href="/basic/stuff/#links">links</a></li>
-					<li><a class="sub-menu" href="/basic/stuff/#webrings">rings</a></li>
 				}
 				{(currentPage.includes("blog") || currentPage.includes("notes") || currentPage.includes("short")) &&
 					<li><a class="sub-menu" href="/basic/short">short</a></li>

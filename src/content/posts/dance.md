@@ -4,6 +4,7 @@ description: "I began dancing in January 2007 (first, leroc, then I discovered s
 pubDate: "Nov 28 2012"
 heroImage: "/images/blog/dancing.jpg"
 caption: "Performing with Swing Dance Bristol (image credit Christopher Allen)"
+featured: "other"
 ---
 
 ## Preface, 2022

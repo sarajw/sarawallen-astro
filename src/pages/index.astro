@@ -22,6 +22,9 @@ const posts = (await getCollection("posts")).filter((post) => post.data.draft !=
 const downplay = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'downplay').sort(
 	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
   );
+const other = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'other').sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 
 ---
 
@@ -29,10 +32,43 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/cartoon.png' />
+    <link rel="prefetch" href="/images/MadeByAHuman_04.svg">
+    <link rel="prefetch" href="/images/IAmNotARobot_04.svg">
+    <link rel="prefetch" href="/images/HumanContent_04_pressed.svg">
 	</head>
 	<body>
 		<Header root />	
-		
+<!--
+
+You found the source code! Steal whatever you like :)
+
+Credit me if you want, but there's no need to.
+
+Welcome to the personal web, you belong here <3
+
+NB/ Some of this code is totally spaghetti, sorry :D
+Any questions? Ask away!
+
+The rest of this comment block is ASCII-art of my cartoony avatar, original image by Andy Carolan. It has sideswept short hair, rectangular-framed glasses, happy closed eyes, and a sideways smile.
+
+              ______)\
+         .--""        )_
+      .'                ""-.
+    .'                      `.
+   /                          \
+  :                            :
+  |                  /\        |
+  :      .     /   .'  \ :\    :
+  \    .'/   .'/ .'     '  \  /
+   \.-' /_.-'  '            )/
+ .- /"""""""""\ _ /"""""""""\ -.
+(   |  /""\   /"""\   /""\  |   )
+ 'oq\________/     \________/p-'
+     \              ,      /
+      '.      -----"     .'
+        '-._         _.-'
+             ` --- `     sjw
+-->
 		<main id="content">
 			<section id="hero">
 				<article>
@@ -97,34 +133,32 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 							<p>I am a techy, creative person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
 							<p>I'm learning everything I can about Web Accessibility (a.k.a. a11y), because the internet is for *everyone*.</p>
 							<p>
-								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/">Astro</a>. If it is all a bit much, I'm currently working on a simpler version to be found at <a href="/basic">sarajoy.dev/basic</a></p>
+								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/">Astro</a>. If it is all a bit much, there is a simpler version to be found at <a href="/basic">sarajoy.dev/basic</a></p>
 						</div>
 					</div>
           <div aria-label="Current status">
-            <script is:inline src="https://status.lol/sara.js?time&link&fluent"></script>
+            <script is:inline defer src="https://status.lol/sara.js?time&link&fluent"></script>
           </div>
 					<details id="nowPage">
 						<summary><p style="display:inline">What's new /now?</p></summary>
-						<script is:inline src="https://omgnow.rknight.me/now.js?a=sara"></script>
+						<script is:inline defer src="https://omgnow.rknight.me/now.js?a=sara"></script>
 					</details>
 					
 					<h3>Code Skills</h3>
           <p>I have varying experience using:</p>
 					<div class="stack">
 						<img class="logo" height="64" src="images/icons/html-5.svg" alt="HTML5" title="HTML5">
-						<img class="logo" height="64" src="images/icons/css-3.svg" alt="CSS3" title="CSS3">
+						<img class="logo" height="64" src="images/icons/css.svg" alt="CSS" title="CSS">
 						<img class="logo" height="64" src="images/icons/javascript.svg" alt="JavaScript" title="JavaScript">
 						<img class="logo" height="64" src="images/icons/typescript-icon.svg" alt="TypeScript" title="TypeScript">
 						<img class="logo" height="64" src="images/icons/php-alt.svg" alt="PHP" title="PHP">
 						<img class="logo" height="64" src="images/icons/react.svg" alt="React" title="React">
-						<!-- <img class="logo" height="64" src="images/icons/nextjs-icon.svg" alt="Next.js" title="Next.js"> -->
-						<img class="logo" height="64" src="images/icons/astro.svg" alt="Astro" title="Astro">
 						<img class="logo" height="64" src="images/icons/svelte-icon.svg" alt="Svelte" title="Svelte">
-						<!-- <img class="logo" height="64" src="images/icons/prisma.svg" alt="Prisma" title="Prisma"> -->
+						<img class="logo" height="64" src="images/icons/astro.svg" alt="Astro" title="Astro">
+						<img class="logo" height="64" src="images/icons/11ty.svg" alt="11ty" title="11ty">
 						<img class="logo" height="64" src="images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS">
 						<img class="logo" height="64" src="images/icons/emotion.png" alt="Emotion CSS" title="Emotion CSS">
 						<img class="logo" height="64" src="images/icons/git-icon.svg" alt="Git" title="Git">
-						<!-- <img class="logo" height="64" src="images/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL"> -->
 						<img class="logo" height="64" src="images/icons/mysql-icon.svg" alt="MySQL" title="MySQL">
 						<img class="logo" height="64" src="images/icons/powershell.svg" alt="PowerShell" title="PowerShell">
 						<img class="logo" height="64" src="images/icons/bash-icon.svg" alt="Bash" title="Bash">
@@ -149,6 +183,9 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
               url="https://www.youtube.com/watch?v=Lye56NHGtLA">
               <p>
                 I had already written a <a href="/blog/color-scheme/">blog post about color-scheme</a>, and another which had a <a href="/blog/a11y-aspects/#contrast-levels">section on contrast levels</a> and what they mean for different people - in this talk I smash those together into something hopefully coherent about how easily you can cater to lots of people at once :)
+              </p>
+              <p>
+                Another shorter version of this talk can also be found <a href=https://www.youtube.com/watch?v=iZ4XjLeaKH4">on youtube</a> as part of the <a href="https://conf.11ty.dev/">11ty conference</a> in 2024 - see also the janky <a href="https://saraslides.netlify.app/">online slide deck</a>.
               </p>
             </StuffModal>
             
@@ -193,7 +230,7 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
               title="W.I.P."
               modalId="a2"
               modalImg="../placeholder.png"
-              alt=""
+              alt="A placeholder image with my initials."
               url="/wips">
               <p>
                 I have many works in progress going on...
@@ -202,17 +239,17 @@ const downplay = (await getCollection("posts")).filter((post) => post.data.draft
 
             <StuffModal
               buttonClass="bigsq"
-              buttonImg="basic_sq.png"
-              title="Basic version"
+              buttonImg="whimsica11y-sq.webp"
+              title="Whimsic​a11y"
               modalId="b2"
-              modalImg="basic.jpg"
-              alt="A website in dark mode "
-              url="/basic/">
+              modalImg="whimsica11y-big.jpg"
+              alt="A screenshot of the Whimsica11y website in dark mode - a video is embedded: The Greatest, by Apple."
+              url="https://whimsica11y.net/">
               <p>
-                I got an itch to start redoing my website in a more basic, elegant way.
+                Via my <a href="https://cs.sjoy.lol">CSS webring</a>, I've come across a whole new world of hobbyist websites, and they're just wonderful!
               </p>
               <p>
-                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
+                A lot of them are however not very accessible. I'm not going to call anyone out - because this is people building their own stuff fun, not as a service for people to use. But, many of them actually do want to be more inclusive, while also finding themselves bewildered by the advice and resources available out there. This is my attempt to be helpful. Very much a work in progress!
               </p>
             </StuffModal>
             
@@ -653,19 +690,19 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
               </p>
             </StuffModal>
 
-						<StuffModal
+            <StuffModal
               buttonClass="smsq1"
-              buttonImg="blogolio_sq.jpg"
-              title="Blog​olio"
+              buttonImg="basic_sq.png"
+              title="/basic"
               modalId="b3"
-              modalImg="blogolio.jpg"
-              alt="A screenshot of the front page of the blog featuring my head and shoulders. I have glasses on my head and a purple top and grey cardigan on."
-              url="https://2022blog.sarajoy.dev">
+              modalImg="basic.jpg"
+              alt="A website in dark mode "
+              url="/basic/">
               <p>
-                I built this blog to introduce myself to the world of frameworks, and I started with SvelteKit via this article: <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog">Let's learn SvelteKit by building a static Markdown blog from scratch</a>
+                I got an itch to start redoing my website in a more basic, elegant way.
               </p>
               <p>
-                I then spent lots of time making up the modal components in this portfolio, and I'm quite proud of it - however! Now using &lt;dialog&gt; elements makes this rather easier...
+                I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
               </p>
             </StuffModal>
 						
@@ -849,6 +886,26 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 							</li>
             ))}
 					</ul>
+          <details id="blog-other">
+            <summary><h3>Other posts...</h3></summary>
+              <ul>
+						    {other.map((post) => (
+                <li class='posts downplay'>
+                  <a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+                  <div>
+                    <h4><a href={"/blog/" + post.slug}>{post.data.title}</a></h4>
+                    <time datetime={post.data.pubDate}>
+                      {new Date(post.data.pubDate).toLocaleDateString('en-gb', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                      })}
+                    </time>
+                  </div>
+                </li>
+                ))}
+              </ul>
+            </details>
           <div id="feeds">
             <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="" height="64">
               <br>Blogroll</a>
@@ -866,9 +923,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             <div>
               <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>
               <p>
-                I'm not tracking, running analytics, or feeding anyone cookies.
+                I'm not tracking, analyzing, or feeding you cookies.
                 <br><br>
-                But if you want to tell me something about this website, please <a href="/guestbook">sign</a>!
+                If you want to tell me something about this website, please <a href="/guestbook">sign</a>!
               </p>
             </div>
           </div>
@@ -877,6 +934,26 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 							<li>
 								<a class="img" rel="me" href="https://front-end.social/@sarajw">
                   <img class="social" src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon" height="64"><br>@sarajw
+                </a>
+              </li>
+							<li>
+								<a class="img" href="https://bsky.app/profile/sjoy.lol">
+                  <img class="social" src="images/icons/Bluesky_Logo.svg" alt="Bluesky" title="Bluesky" height="64"><br>@sjoy.lol
+                </a>
+              </li>
+							<li>
+								<a class="img" href="https://discord.com/users/537249425261723679">
+                  <img class="social" src="images/icons/discord.svg" alt="Discord" title="Discord" height="64"><br>sarajoy
+                </a>
+              </li>
+							<li>
+								<a class="img" href="https://spacehey.com/sarajw">
+                  <img class="social" src="images/icons/spacehey_icon.svg" alt="SpaceHey" title="SpaceHey" height="64"><br>/sarajw
+                </a>
+              </li>
+              <li>
+                <a class="img" href="https://sara.omg.lol">
+                  <img class="social" src="/images/icons/prami-mono.svg" alt="omg.lol" title="omg.lol" height="64"><br>sara.omg.lol
                 </a>
               </li>
 							<li>
@@ -890,24 +967,14 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
                 </a>
               </li>
 							<li>
-								<a class="img" href="https://sarajw.hashnode.dev/">
-                  <img class="social" src="images/icons/hashnode-icon.svg" alt="hashnode" title="hashnode" height="64"><br>sarajw.
-                </a>
-              </li>
-							<li>
 								<a class="img" href="https://www.linkedin.com/in/sarajw/">
                   <img class="social" src="images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" height="64"><br>/sarajw
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://twitter.com/sarajoydev">
-                  <img class="social" src="images/icons/twitter.svg" alt="Twitter" title="Twitter" height="64"><br>@sarajoydev
                 </a>
               </li>
 						</ul>
 					<h3>Email me:</h3>
 					
-          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+          <form id="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label
@@ -929,6 +996,9 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </p>
             <p>
               <label class="message">Message<br /><textarea name="message" required /></label>
+            </p>
+            <p>
+              <label class="consent"><input type="checkbox" required><small>I consent to <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> receiving this message and passing it through <a href="https://akismet.com/">Akismet</a> spam filtering. <a href="#privacy-policy">Privacy policy.</a></small></label>
             </p>
             <p>
               <button type="submit"><b>Send Email</b></button>
@@ -1001,6 +1071,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
 
         window.addEventListener("resize", tabTopSetting);
         document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
+        document.querySelector("#blog-other").addEventListener("toggle", tabTopSetting);
       })();
 
       const modalLightDismiss = ( () => {
@@ -1013,6 +1084,7 @@ sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
       })();
 	    
     </script>
+    <script src="/scripts/openDetails.js" is:inline></script>
 		<Toggle />
 	</body>
 

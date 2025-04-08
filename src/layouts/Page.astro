@@ -1,21 +1,9 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Toggle from "../../components/Toggle.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
 
-const image = "/images/blog/blogroll-transparent.webp";
-const alt = "A toilet roll with a friendly placeholder face painted onto it.";
-const title = "BlogRoll";
-const description = "A bunch of blogs, digital gardens and newsletters for your perusal.";
-
-const response = await fetch("https://webri.ng/webring/cssjoy/sites");
-let sitesData = await response.json();
-
-sitesData = sitesData.sort((a, b) => {
-	if (a.name.toLowerCase() < b.name.toLowerCase()) {
-		return -1;
-	}
-});
+const { className, image, alt, title, description } = Astro.props;
 
 ---
 
@@ -26,7 +14,7 @@ sitesData = sitesData.sort((a, b) => {
 
 	<body>
 		<Header />
-		<main class="roll">
+		<main class={className}>
 			<div class="tab sara"><a href="/#gosara">sara</a></div>
 			<div class="tab stuff"><a href="/#gostuff">stuff</a></div>
 			<div class="tab blog"><a href="/#goblog">blog</a></div>
@@ -65,8 +53,8 @@ sitesData = sitesData.sort((a, b) => {
 						<h3><a href="https://colorandcontrast.com/">Color & Contrast.com</a></h3>
 						<p>Nate made this beautiful site <q>for designers to learn about color, contrast, and how it can affect experiences of a user interface.</q></p>
 						<h3><a href="https://thehtml.review/">the html review</a></h3>
-						<p>Issue 03, from spring 2024 - really worth a browse! It has lots of interesting pages and articles from different contributors.</p>
-						<p>See also <a href="https://thehtml.review/01/">issue 01</a> from 2022, and <a href="https://thehtml.review/03/">issue 02</a> from 2023.</p>
+						<p>Issue 02, from spring 2023 - really worth a browse! It has lots of interesting pages and articles from different contributors.</p>
+						<p>See also issue 01: <a href="https://thehtml.review/01/">the html review 01</a> from spring 2022. I am looking forward to the 2024 edition!</p>
 						<h3><a href="https://strange.website/">Strange.Website</a></h3>
 						<p>henry ✷ makes such <a href="https://stillness.digital/">thoughtful</a> and <a href="https://henry.codes/">elegant</a> sites.</p>
 					</article>
@@ -77,14 +65,6 @@ sitesData = sitesData.sort((a, b) => {
 						<h3><a href="https://buttondown.email/ownyourweb/archive/">Own Your Web</a></h3>
 						<h3><a href="https://goodenoughnews.substack.com/">A Good Enough Newsletter</a></h3>
 					</article>
-					<article class="sheet">
-						<h2>All the <a href="https://cs.sjoy.lol">CSS JOY Webring</a> Sites</h2>
-						<p>Most of which are blogs or digital gardens:</p>
-						<ul id="webring-sites">{sitesData.map((link) => (
-							<li><a href={link.url}>{link.name}</a></li>
-							)
-						)}</ul>
-					</article>
 					<a class="back" href="/#goblog">&larr; back to blog index</a>
 				</article>
 			</div>
@@ -93,7 +73,7 @@ sitesData = sitesData.sort((a, b) => {
 	</body>
 </html>
 
-<!-- <style>
+<style>
 	main {
 		background-color: var(--header);
 		margin-top: var(--tabheight);
@@ -122,4 +102,4 @@ sitesData = sitesData.sort((a, b) => {
 		}
 	}
 
-</style> -->
+</style>

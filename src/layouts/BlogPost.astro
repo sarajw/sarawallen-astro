@@ -16,6 +16,7 @@ if (headings !== undefined) {
 <html lang="en">
 	<head>
 		<BaseHead title={frontmatter.title} description={frontmatter.short ? "Short thoughts from between Sara's ears" : frontmatter.description} image={frontmatter.short ? "/images/blog/short-thorts.jpg" : frontmatter.heroImage} />
+  <meta name="fediverse:creator" content="@sarajw@front-end.social">
 	</head>
 
 	<body>
@@ -35,7 +36,7 @@ if (headings !== undefined) {
 							<figcaption class="caption">{frontmatter.caption}</figcaption>
 						</figure>
 					)}
-					<h1 class="title">{frontmatter.title}</h1>
+					<h1 class="title" id="page-title">{frontmatter.title}</h1>
 					{frontmatter.pubDate && <time>{new Date(frontmatter.pubDate).toLocaleDateString('en-gb', {
 						year: 'numeric',
 						month: 'short',

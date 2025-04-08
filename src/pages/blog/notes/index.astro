@@ -35,7 +35,7 @@ const shorts = (await getCollection("notes")).filter((post) => post.data.draft !
 						src={image}
 						alt={alt}
 					/>
-					<h1>{title}</h1>
+					<h1 id="page-title">{title}</h1>
 					<p>{description}</p>
 					<a href="#" class="backtotop" title="Back to top"><img src="/images/icons/chevron-up.svg" alt="chevron pointing up"></a>
 					{shorts.map((note, index) => (

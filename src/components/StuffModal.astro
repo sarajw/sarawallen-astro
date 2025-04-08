@@ -9,7 +9,7 @@ const { buttonClass, buttonImg, modalId, modalImg, alt, url, title } = Astro.pro
 </button>
 <dialog id={modalId}>
   <form method="dialog">
-    <button>×</button>
+    <button aria-label="close">×</button>
   </form>
   <div>
     {modalImg && <img src={'/images/stuff/'+modalImg} alt={alt} loading="lazy" />}

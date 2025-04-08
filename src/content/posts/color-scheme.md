@@ -4,7 +4,6 @@ description: "It will certainly look familiar, as prefers-color-scheme has been 
 pubDate: "Jan 14 2023"
 heroImage: "/images/blog/light-dark-form.png"
 caption: "A simple mock form, in both light and dark mode."
-featured: featured
 mastoURL: "https://front-end.social/@sarajw/109689645208261774"
 ---
 

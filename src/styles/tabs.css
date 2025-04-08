@@ -39,7 +39,7 @@
 	--icons: clamp(32px, 10vw, 64px);
 	
 	/* fonts */
-	--normal: 300;
+	--normal: 400;
 	--heavy: 500;
 }
 
@@ -59,6 +59,10 @@
   --find: hsl(var(--base), 30%);
 
 	--b2top: hsl(var(--base), 40%);
+	
+	/* fonts */
+	--normal: 300;
+	--heavy: 500;
 }
 
 :root.high-contrast {
@@ -147,10 +151,13 @@ html {
 body {
 	margin: 0 0.25rem 0;
 	overscroll-behavior: none;
-	font-family: Karla;
+	font-family: Karla, 'Open Sans', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--normal);
+  font-style: normal;
 }
 
-p {font-size: var(--p)}
+p, details:not(#blog-other) {font-size: var(--p)}
 h4 {font-size: var(--h4)}
 h3 {font-size: var(--h3)}
 h2 {font-size: var(--h2)}
@@ -174,7 +181,7 @@ a:hover, a:active, a:focus {
 :is(header, .tab, .tabDummy) a {
 	text-decoration: none;
 	border-bottom: 0;
-	font-weight: unset;
+	font-weight: normal;
 }
 :focus-visible {
 	outline: var(--links) solid;
@@ -192,7 +199,7 @@ img:not(.social, .logo, .icon) {
 
 img:is(.logo, .social) {
 	height: var(--icons);
-	max-width: calc(1.5 * var(--icons));
+	max-width: calc(1.25 * var(--icons));
 	filter: invert(0%) drop-shadow(0.1rem 0.1rem 0.25rem var(--shadow));
 }
 .dark-mode :is(.social, [title="PHP"], [title="Next.js"],
@@ -217,6 +224,7 @@ main {
 	padding: 0 0.25em;
 	margin: 0;
 	font-size: clamp(0.9rem, 4.5vw, 2.5rem);
+	font-weight: normal;
 	text-transform: uppercase;
 	text-align: center;
 	border-top-left-radius: var(--border-radii);
@@ -255,6 +263,10 @@ main > section:is(#sara, #blog) > article {
 	overflow: visible;
 	margin: 0 auto;
 	max-width: 900px;
+}
+
+#page-title {
+	scroll-margin-top: calc(var(--tabheight) + 5vmin);
 }
 
 section > article ul:not(.now_content ul) {
@@ -420,13 +432,11 @@ main.nowPage :is(.statuslol, .now_content) {
 	margin-bottom: 0;
 }
 .stack {
-	margin-inline: auto;
-	padding-inline: 3vmin;
-	gap: 2vmin;
-	place-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	text-align: center;
+	text-wrap: balance;
+}
+.stack img {
+	margin: min(1vmin, 10px);
 }
 
 .stuff {
@@ -650,7 +660,7 @@ pre.ascii-art {
 	z-index: 3;
 	background-color: var(--blog);
 }
-#blog article > ul {
+#blog article ul {
 	display: grid;
 	gap: 5vmin;
 }
@@ -685,7 +695,7 @@ pre.ascii-art {
 	justify-content: space-between;
 	padding: 3vmin 4vmin;
 }
-.posts h3 {
+.posts :is(h3, h4) {
 	font-size: var(--h3);
 	margin: 0;
 }
@@ -701,7 +711,7 @@ pre.ascii-art {
 .posts:not(.featured) p {
 	margin-block: 0.5em;
 }
-.posts:not(.featured) h3 {
+.posts:not(.featured) :is(h3, h4) {
 	font-size: var(--h4);
 }
 .posts.downplay {
@@ -713,11 +723,16 @@ pre.ascii-art {
 .posts.downplay div {
 	padding: 2vmin 3vmin;
 }
-.posts.downplay h3 {
+.posts.downplay :is(h3, h4) {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+	line-clamp: 2;
+		-webkit-line-clamp: 2;
 	overflow: hidden;
+}
+
+#blog details h3 {
+	display: inline-block;
 }
 
 @media only screen and (max-width: 720px) {
@@ -739,6 +754,7 @@ pre.ascii-art {
 	.posts:not(.featured, .downplay) p {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
+		line-clamp: 2;
 		-webkit-line-clamp: 2;
 		overflow: hidden;
 	}
@@ -746,6 +762,7 @@ pre.ascii-art {
 		max-height: 12.5vmin;
 	}
 	.posts.downplay h3 {
+		line-clamp: 1;
 		-webkit-line-clamp: 1;
 	}
 }
@@ -799,12 +816,13 @@ pre.ascii-art {
 	max-width: 80ch;
 }
 #find ul.socials {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 5vmin;
+	text-wrap: balance;
+	text-align: center;
 	padding-block-end: 5vmin;
 }
 #find ul.socials li {
+	display: inline-block;
+	margin: 2.5vmin;
 	text-align: center;
 }
 #find ul.socials li a {
@@ -819,11 +837,18 @@ img.social:is(:hover,:active,:focus-visible) {
 	opacity: 0.6;
 }
 
+#form {
+	scroll-margin-top: calc(2 * var(--tabheight));
+	accent-color: var(--links);
+}
 input,
 textarea {
 	border: 1px solid var(--links);
 	background-color: var(--stuff);
 	border-radius: calc(var(--border-radii) / 2);
+}
+input[type="checkbox"] {
+	width: var(--h1);
 }
 form button {
 	border-radius: calc(var(--border-radii) / 2);
@@ -862,6 +887,13 @@ form button:active {
 }
 .links-out summary h4 {
 	display: inline-block;
+}
+#privacy-policy {
+	scroll-margin-top: calc(2 * var(--tabheight));
+}
+#privacy-policy-details > a {
+	display: block;
+	text-align: center;
 }
 
 #indieWeb a:nth-child(odd) {
@@ -907,10 +939,12 @@ form button:active {
 .post p>img {
 	margin-top: 0.5rem;
 }
+.post :is(.caption, blockquote) {
+	font-style: italic;
+}
 .post .caption {
 	text-align: center;
 	font-size: var(--sml);
-	font-style: italic;
 }
 .post li {
 	font-size: var(--p);

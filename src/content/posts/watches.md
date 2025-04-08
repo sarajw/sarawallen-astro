@@ -4,7 +4,7 @@ description: "I have a thing about mechanical watches. I only wear one though, t
 pubDate: "Aug 24 2021"
 heroImage: "/images/blog/hydroconquest.jpg"
 caption: "Longines Hydroconquest Mechanical Watch"
-featured: downplay
+featured: "other"
 ---
 
 I have a thing about mechanical watches. I only wear one though, the engagement watch (I’m not into diamonds\*) that my now husband gave me in 2014.

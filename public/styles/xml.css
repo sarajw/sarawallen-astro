@@ -7,16 +7,16 @@
 		url('/fonts/karla.woff2') format('woff2-variations');
 }
 :root {
-	font-family: Karla, 'Open Sans', sans-serif;
-    color-scheme: light dark;
+	font-family: Karla, 'Open Sans', system-ui, sans-serif;
+	color-scheme: light dark;
 }
 main {
-    display: flex;
-    gap: 2rem;
+	display: flex;
+	gap: 2rem;
 }
 
 @media screen and (max-width: 800px) {
-    main {
-        flex-direction: column;
-    }
+	main {
+			flex-direction: column;
+	}
 }
