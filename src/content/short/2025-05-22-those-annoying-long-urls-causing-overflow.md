@@ -7,4 +7,6 @@ You want `overflow-wrap`.
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
 
+Also useful alongside `white-space: pre-wrap;` in code blocks.
+
 You're welcome!
