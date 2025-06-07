@@ -1,44 +1,43 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Toggle from '../components/Toggle.astro';
-import StuffModal from '../components/StuffModal.astro';
-import PrivacyPolicy from '../components/PrivacyPolicy.astro';
-import A11YStatement from '../components/A11yStatement.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import '../styles/art.css';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+import StuffModal from "../components/StuffModal.astro";
+import PrivacyPolicy from "../components/PrivacyPolicy.astro";
+import A11YStatement from "../components/A11yStatement.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import "../styles/art.css";
 
 // Use getCollection to fetch all posts, and then sort them by date.
 // const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 // 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 // );
 import { getCollection } from "astro:content";
-const featured = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'featured').sort(
-	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-  );
-const posts = (await getCollection("posts")).filter((post) => post.data.draft !== true && !post.data.featured).sort(
-	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-  );
-const downplay = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'downplay').sort(
-	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-  );
-const other = (await getCollection("posts")).filter((post) => post.data.draft !== true && post.data.featured === 'other').sort(
-	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-  );
-
+const featured = (await getCollection("posts"))
+  .filter((post) => post.data.draft !== true && post.data.featured === "featured")
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+const posts = (await getCollection("posts"))
+  .filter((post) => post.data.draft !== true && !post.data.featured)
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+const downplay = (await getCollection("posts"))
+  .filter((post) => post.data.draft !== true && post.data.featured === "downplay")
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+const other = (await getCollection("posts"))
+  .filter((post) => post.data.draft !== true && post.data.featured === "other")
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/cartoon.png' />
-    <link rel="prefetch" href="/images/MadeByAHuman_04.svg">
-    <link rel="prefetch" href="/images/IAmNotARobot_04.svg">
-    <link rel="prefetch" href="/images/HumanContent_04_pressed.svg">
-	</head>
-	<body>
-		<Header root />	
-<!--
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image='/images/cartoon.png' />
+    <link rel='prefetch' href='/images/MadeByAHuman_04.svg' />
+    <link rel='prefetch' href='/images/IAmNotARobot_04.svg' />
+    <link rel='prefetch' href='/images/HumanContent_04_pressed.svg' />
+  </head>
+  <body>
+    <Header root />
+    <!--
 
 You found the source code! Steal whatever you like :)
 
@@ -69,202 +68,238 @@ The rest of this comment block is ASCII-art of my cartoony avatar, original imag
         '-._         _.-'
              ` --- `     sjw
 -->
-		<main id="content">
-			<section id="hero">
-				<article>
-				<div class="big heart" id="heart0"></div>
-				<div class="big heart" id="heart90"></div>
-				<div class="big heart" id="heart180"></div>
-				<div class="big heart" id="heart270"></div>
-				<div class="sml heart" id="heart45"></div>
-				<div class="sml heart" id="heart135"></div>
-				<div class="sml heart" id="heart225"></div>
-				<div class="sml heart" id="heart315"></div>
+    <main id='content'>
+      <section id='hero'>
+        <article>
+          <div class='big heart' id='heart0'></div>
+          <div class='big heart' id='heart90'></div>
+          <div class='big heart' id='heart180'></div>
+          <div class='big heart' id='heart270'></div>
+          <div class='sml heart' id='heart45'></div>
+          <div class='sml heart' id='heart135'></div>
+          <div class='sml heart' id='heart225'></div>
+          <div class='sml heart' id='heart315'></div>
 
-				<div class="sprig" id="sprig0"></div>
-				<div class="sprig" id="sprig90"></div>
-				<div class="sprig" id="sprig180"></div>
-				<div class="sprig" id="sprig270"></div>
+          <div class='sprig' id='sprig0'></div>
+          <div class='sprig' id='sprig90'></div>
+          <div class='sprig' id='sprig180'></div>
+          <div class='sprig' id='sprig270'></div>
 
-				<div class="circle sml" id="circle0a"></div>
-				<div class="circle sml" id="circle90a"></div>
-				<div class="circle sml" id="circle180a"></div>
-				<div class="circle sml" id="circle270a"></div>
+          <div class='circle sml' id='circle0a'></div>
+          <div class='circle sml' id='circle90a'></div>
+          <div class='circle sml' id='circle180a'></div>
+          <div class='circle sml' id='circle270a'></div>
 
-				<div class="circle wee" id="circle0b"></div>
-				<div class="circle wee" id="circle90b"></div>
-				<div class="circle wee" id="circle180b"></div>
-				<div class="circle wee" id="circle270b"></div>
+          <div class='circle wee' id='circle0b'></div>
+          <div class='circle wee' id='circle90b'></div>
+          <div class='circle wee' id='circle180b'></div>
+          <div class='circle wee' id='circle270b'></div>
 
-				<div class="circle tiny" id="circle0c"></div>
-				<div class="circle tiny" id="circle90c"></div>
-				<div class="circle tiny" id="circle180c"></div>
-				<div class="circle tiny" id="circle270c"></div>
+          <div class='circle tiny' id='circle0c'></div>
+          <div class='circle tiny' id='circle90c'></div>
+          <div class='circle tiny' id='circle180c'></div>
+          <div class='circle tiny' id='circle270c'></div>
 
-				<div class="yinyang long" id="yang0"></div>
-				<div class="yinyang short" id="yang1"></div>
-				<div class="yinyang long" id="yang2"></div>
-				<div class="yinyang short" id="yang3"></div>
-				<div class="yinyang long" id="yang4"></div>
-				<div class="yinyang short" id="yang5"></div>
-				<div class="yinyang long" id="yang6"></div>
-				<div class="yinyang short" id="yang7"></div>
+          <div class='yinyang long' id='yang0'></div>
+          <div class='yinyang short' id='yang1'></div>
+          <div class='yinyang long' id='yang2'></div>
+          <div class='yinyang short' id='yang3'></div>
+          <div class='yinyang long' id='yang4'></div>
+          <div class='yinyang short' id='yang5'></div>
+          <div class='yinyang long' id='yang6'></div>
+          <div class='yinyang short' id='yang7'></div>
 
-				<div class="yinyang long" id="yin0"></div>
-				<div class="yinyang short" id="yin1"></div>
-				<div class="yinyang long" id="yin2"></div>
-				<div class="yinyang short" id="yin3"></div>
-				<div class="yinyang long" id="yin4"></div>
-				<div class="yinyang short" id="yin5"></div>
-				<div class="yinyang long" id="yin6"></div>
-				<div class="yinyang short" id="yin7"></div>
-				</article>
-			</section>
+          <div class='yinyang long' id='yin0'></div>
+          <div class='yinyang short' id='yin1'></div>
+          <div class='yinyang long' id='yin2'></div>
+          <div class='yinyang short' id='yin3'></div>
+          <div class='yinyang long' id='yin4'></div>
+          <div class='yinyang short' id='yin5'></div>
+          <div class='yinyang long' id='yin6'></div>
+          <div class='yinyang short' id='yin7'></div>
+        </article>
+      </section>
 
-			<div class="anchor" id="gosara"></div>
-			<div class="tab sara"><h2><a href="#gosara">sara</a></h2></div>
-			<section id="sara" aria-label="About me">
-				<article>
-					<h3>Hi! Welcome :)</h3>
-					<div class="welcome">
-						<img src="images/cartoon.png" alt="A picture of me!" width="303" height="303">
-						<div class="blurb">
-							<p>I am a techy, creative person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
-							<p>I'm learning everything I can about Web Accessibility (a.k.a. a11y), because the internet is for *everyone*.</p>
-							<p>
-								This site is built with vanilla HTML, CSS and just a little JS in <a href="https://astro.build/">Astro</a>. If it is all a bit much, there is a simpler version to be found at <a href="/basic">sarajoy.dev/basic</a></p>
-						</div>
-					</div>
-          <div aria-label="Current status">
-            <script is:inline defer src="https://status.lol/sara.js?time&link&fluent"></script>
+      <div class='anchor' id='gosara'></div>
+      <div class='tab sara'><h2><a href='#gosara'>sara</a></h2></div>
+      <section id='sara' aria-label='About me'>
+        <article>
+          <h3>Hi! Welcome :)</h3>
+          <div class='welcome'>
+            <img src='images/cartoon.png' alt='A picture of me!' width='303' height='303' />
+            <div class='blurb'>
+              <p>I am a techy, creative person with a front end develop&shy;ment 'Schwer&shy;punkt' :)</p>
+              <p>
+                I'm learning everything I can about Web Accessibility (a.k.a. a11y), because the internet is for
+                *everyone*.
+              </p>
+              <p>
+                This site is built with vanilla HTML, CSS and just a little JS in <a href='https://astro.build/'
+                  >Astro</a
+                >.
+              </p>
+            </div>
           </div>
-					<details id="nowPage">
-						<summary><p style="display:inline">What's new /now?</p></summary>
-						<script is:inline defer src="https://omgnow.rknight.me/now.js?a=sara"></script>
-					</details>
-					
-					<h3>Code Skills</h3>
+          <div aria-label='Current status'>
+            <script is:inline defer src='https://status.lol/sara.js?time&link&fluent'></script>
+          </div>
+          <details id='nowPage'>
+            <summary><p style='display:inline'>What's new /now?</p></summary>
+            <script is:inline defer src='https://omgnow.rknight.me/now.js?a=sara'></script>
+          </details>
+
+          <h3>Speaking</h3>
+          <p>I have found myself getting into giving talks within the web development industry.</p>
+          <p>
+            Please find some links to slides and videos at <a href='https://slides.sarajoy.dev'>slides.sarajoy.dev</a>.
+          </p>
+
+          <h3>Code Skills</h3>
           <p>I have varying experience using:</p>
-					<div class="stack">
-						<img class="logo" height="64" src="images/icons/html-5.svg" alt="HTML5" title="HTML5">
-						<img class="logo" height="64" src="images/icons/css.svg" alt="CSS" title="CSS">
-						<img class="logo" height="64" src="images/icons/javascript.svg" alt="JavaScript" title="JavaScript">
-						<img class="logo" height="64" src="images/icons/typescript-icon.svg" alt="TypeScript" title="TypeScript">
-						<img class="logo" height="64" src="images/icons/php-alt.svg" alt="PHP" title="PHP">
-						<img class="logo" height="64" src="images/icons/react.svg" alt="React" title="React">
-						<img class="logo" height="64" src="images/icons/svelte-icon.svg" alt="Svelte" title="Svelte">
-						<img class="logo" height="64" src="images/icons/astro.svg" alt="Astro" title="Astro">
-						<img class="logo" height="64" src="images/icons/11ty.svg" alt="11ty" title="11ty">
-						<img class="logo" height="64" src="images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS">
-						<img class="logo" height="64" src="images/icons/emotion.png" alt="Emotion CSS" title="Emotion CSS">
-						<img class="logo" height="64" src="images/icons/git-icon.svg" alt="Git" title="Git">
-						<img class="logo" height="64" src="images/icons/mysql-icon.svg" alt="MySQL" title="MySQL">
-						<img class="logo" height="64" src="images/icons/powershell.svg" alt="PowerShell" title="PowerShell">
-						<img class="logo" height="64" src="images/icons/bash-icon.svg" alt="Bash" title="Bash">
-						<img class="logo" height="64" src="images/icons/vba.png" alt="VBA" title="VBA">
-					</div>
-				</article>
-			</section>
-			
-			<div class="anchor" id="gostuff"></div>
-			<div class="tab stuff"><h2><a href="#gostuff">stuff</a></h2></div>
-			<section id="stuff" aria-label="Things I've made">
-				<article>
-					<section class="container box1">
+          <div class='stack'>
+            <img class='logo' height='64' src='images/icons/html-5.svg' alt='HTML5' title='HTML5' />
+            <img class='logo' height='64' src='images/icons/css.svg' alt='CSS' title='CSS' />
+            <img class='logo' height='64' src='images/icons/javascript.svg' alt='JavaScript' title='JavaScript' />
+            <img class='logo' height='64' src='images/icons/typescript-icon.svg' alt='TypeScript' title='TypeScript' />
+            <img class='logo' height='64' src='images/icons/php-alt.svg' alt='PHP' title='PHP' />
+            <img class='logo' height='64' src='images/icons/react.svg' alt='React' title='React' />
+            <img class='logo' height='64' src='images/icons/svelte-icon.svg' alt='Svelte' title='Svelte' />
+            <img class='logo' height='64' src='images/icons/astro.svg' alt='Astro' title='Astro' />
+            <img class='logo' height='64' src='images/icons/11ty.svg' alt='11ty' title='11ty' />
+            <img
+              class='logo'
+              height='64'
+              src='images/icons/tailwindcss-icon.svg'
+              alt='Tailwind CSS'
+              title='Tailwind CSS'
+            />
+            <img class='logo' height='64' src='images/icons/emotion.png' alt='Emotion CSS' title='Emotion CSS' />
+            <img class='logo' height='64' src='images/icons/git-icon.svg' alt='Git' title='Git' />
+            <img class='logo' height='64' src='images/icons/mysql-icon.svg' alt='MySQL' title='MySQL' />
+            <img class='logo' height='64' src='images/icons/powershell.svg' alt='PowerShell' title='PowerShell' />
+            <img class='logo' height='64' src='images/icons/bash-icon.svg' alt='Bash' title='Bash' />
+            <img class='logo' height='64' src='images/icons/vba.png' alt='VBA' title='VBA' />
+          </div>
+        </article>
+      </section>
 
+      <div class='anchor' id='gostuff'></div>
+      <div class='tab stuff'><h2><a href='#gostuff'>stuff</a></h2></div>
+      <section id='stuff' aria-label="Things I've made">
+        <article>
+          <section class='container box1'>
             <StuffModal
-              buttonClass="bigrow"
-              buttonImg="color-scheme.jpg"
-              title="color-scheme: dark"
-              modalId="a1"
-              modalImg="color-scheme_large.jpg"
+              buttonClass='bigrow'
+              buttonImg='color-scheme.jpg'
+              title='color-scheme: dark'
+              modalId='a1'
+              modalImg='color-scheme_large.jpg'
               alt="Title card still frame from a talk on YouTube: Easy Dark Mode with color-scheme. It's just black and white. But should it be? 🤔"
-              url="https://www.youtube.com/watch?v=Lye56NHGtLA">
+              url='https://www.youtube.com/watch?v=Lye56NHGtLA'
+            >
               <p>
-                I had already written a <a href="/blog/color-scheme/">blog post about color-scheme</a>, and another which had a <a href="/blog/a11y-aspects/#contrast-levels">section on contrast levels</a> and what they mean for different people - in this talk I smash those together into something hopefully coherent about how easily you can cater to lots of people at once :)
+                I had already written a <a href='/blog/color-scheme/'>blog post about color-scheme</a>, and another
+                which had a <a href='/blog/a11y-aspects/#contrast-levels'>section on contrast levels</a> and what they mean
+                for different people - in this talk I smash those together into something hopefully coherent about how easily
+                you can cater to lots of people at once :)
               </p>
               <p>
-                Another shorter version of this talk can also be found <a href=https://www.youtube.com/watch?v=iZ4XjLeaKH4">on youtube</a> as part of the <a href="https://conf.11ty.dev/">11ty conference</a> in 2024 - see also the janky <a href="https://saraslides.netlify.app/">online slide deck</a>.
-              </p>
-            </StuffModal>
-            
-            <StuffModal
-              buttonClass="bigsq"
-              buttonImg="bendickson_sq.jpg"
-              title="Benjamin Dickson"
-              modalId="b1"
-              modalImg="bendickson.jpg"
-              alt="Benjamin Dickson, Comics Writer & Artist desktop website screenshot. His four most recent comic covers are displayed in a row under the title."
-              url="https://bendickson.co.uk/">
-              <p>
-                My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not responsive at all. I love building sites with such interesting content!
+                Another shorter version of this talk can also be found <a
+                  href='https://www.youtube.com/watch?v=iZ4XjLeaKH4"'>on youtube</a
+                > as part of the <a href='https://conf.11ty.dev/'>11ty conference</a> in 2024 - see also the janky <a
+                  href='https://whynotboth.sarajoy.dev/'>online slide deck</a
+                >, and <a href='https://slides.sarajoy.dev/#light-dark'>later versions with code examples</a> were also given
+                as talks.
               </p>
               <p>
-                I built this site with <a href="https://astro.build">Astro</a>.
+                This whole string of posts and talks ended up wrapped together in a large blog post called <a
+                  href='https://css-tricks.com/come-to-the-light-dark-side/'>Come to the light-dark() Side</a
+                > written for CSS-Tricks in 2024. Enjoy!
               </p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="shcol"
-              buttonImg="card-small.jpg"
-              title="QR Code Card"
-              modalId="c1"
-              modalImg="card-back.png"
-              alt="A very simple web page with a round profile picture and links to twitter, email, website"
-              url="https://card.sarajoy.dev/">
+              buttonClass='bigsq'
+              buttonImg='bendickson_sq.jpg'
+              title='Benjamin Dickson'
+              modalId='b1'
+              modalImg='bendickson.jpg'
+              alt='Benjamin Dickson, Comics Writer & Artist desktop website screenshot. His four most recent comic covers are displayed in a row under the title.'
+              url='https://bendickson.co.uk/'
+            >
               <p>
-                I had an idea to make a digital business card, to use at my very first web-development conference.
+                My friend Ben needed a new responsive website to replace an ageing Wordpress site which was not
+                responsive at all. I love building sites with such interesting content!
               </p>
               <p>
-                In the end, it wasn't really used - but no matter, it was fun to make :)
-              </p>
-            </StuffModal>
-					</section>
-				
-					<section class="container box2">
-
-						<StuffModal
-              buttonClass="smsq1"
-              buttonImg="../placeholder.png"
-              title="W.I.P."
-              modalId="a2"
-              modalImg="../placeholder.png"
-              alt="A placeholder image with my initials."
-              url="/wips">
-              <p>
-                I have many works in progress going on...
+                I built this site with <a href='https://astro.build'>Astro</a>.
               </p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="bigsq"
-              buttonImg="whimsica11y-sq.webp"
-              title="Whimsic​a11y"
-              modalId="b2"
-              modalImg="whimsica11y-big.jpg"
-              alt="A screenshot of the Whimsica11y website in dark mode - a video is embedded: The Greatest, by Apple."
-              url="https://whimsica11y.net/">
+              buttonClass='shcol'
+              buttonImg='card-small.jpg'
+              title='QR Code Card'
+              modalId='c1'
+              modalImg='card-back.png'
+              alt='A very simple web page with a round profile picture and links to twitter, email, website'
+              url='https://card.sarajoy.dev/'
+            >
+              <p>I had an idea to make a digital business card, to use at my very first web-development conference.</p>
+              <p>In the end, it wasn't really used - but no matter, it was fun to make :)</p>
+            </StuffModal>
+          </section>
+
+          <section class='container box2'>
+            <StuffModal
+              buttonClass='smsq1'
+              buttonImg='../placeholder.png'
+              title='W.I.P.'
+              modalId='a2'
+              modalImg='../placeholder.png'
+              alt='A placeholder image with my initials.'
+              url='/wips'
+            >
+              <p>I have many works in progress going on...</p>
+            </StuffModal>
+
+            <StuffModal
+              buttonClass='bigsq'
+              buttonImg='whimsica11y-sq.webp'
+              title='Whimsic​a11y'
+              modalId='b2'
+              modalImg='whimsica11y-big.jpg'
+              alt='A screenshot of the Whimsica11y website in dark mode - a video is embedded: The Greatest, by Apple.'
+              url='https://whimsica11y.net/'
+            >
               <p>
-                Via my <a href="https://cs.sjoy.lol">CSS webring</a>, I've come across a whole new world of hobbyist websites, and they're just wonderful!
+                Via my <a href='https://cs.sjoy.lol'>CSS webring</a>, I've come across a whole new world of hobbyist
+                websites, and they're just wonderful!
               </p>
               <p>
-                A lot of them are however not very accessible. I'm not going to call anyone out - because this is people building their own stuff fun, not as a service for people to use. But, many of them actually do want to be more inclusive, while also finding themselves bewildered by the advice and resources available out there. This is my attempt to be helpful. Very much a work in progress!
+                A number of them are however not very accessible. I'm not calling anyone out - because this is people
+                building their own stuff for fun, not as a service for people to use. But, many of them actually do want
+                to be more inclusive, while also finding themselves bewildered by the advice and resources available out
+                there. This is my attempt to be helpful.
+              </p>
+              <p>
+                This project has indeed stalled out for now - BUT - it's given rise to <a
+                  href='https://slides.sarajoy.dev/#whimsica11y'>a talk also named Whimsica11y</a
+                >. So, all is not lost and I do hope to move forward on this eventually!
               </p>
             </StuffModal>
-            
-            <StuffModal
-              buttonClass="smsq2"
-              buttonImg="ascii.png"
-              title="ASCII Art"
-              modalId="c2">
+
+            <StuffModal buttonClass='smsq2' buttonImg='ascii.png' title='ASCII Art' modalId='c2'>
               <p>
                 When I was 15 or so I frequented several USENET newsgroups,
-                <br>particularly alt.fan.eddie-izzard and alt.ascii-art.
+                <br />particularly alt.fan.eddie-izzard and alt.ascii-art.
               </p>
               <p>
-                If in dark mode, consider switching to <button class="inline" onclick="toggleMode()">light mode</button> to see it properly!
+                If in dark mode, consider switching to <button class='inline' onclick='toggleMode()'>light mode</button>
+                to see it properly!
               </p>
-              <pre class="ascii-art">
+              <pre
+                class='ascii-art'>
                        ______
                 _.-=,-&quot; _... &quot;&quot;&quot;-.,_
               /&quot;  .- &quot;'-.,-- &quot; ' _  \
@@ -648,443 +683,538 @@ sjw   :  :  .'   '.          :   :
  /     /                         /       \                    '-
 sjw/MJP/LS   and a diddle for sunglasses!  \</pre>
             </StuffModal>
-						
-						<StuffModal
-              buttonClass="bigrow"
-              buttonImg="rssjoy_sml.png"
-              title="RSS JOY Aggregator"
-              modalId="d2"
-              modalImg="rssjoy.png"
-              alt="A screenshot of the RSS JOY rss aggregator."
-              url="https://rs.sjoy.lol">
+
+            <StuffModal
+              buttonClass='bigrow'
+              buttonImg='rssjoy_sml.png'
+              title='RSS JOY Aggregator'
+              modalId='d2'
+              modalImg='rssjoy.png'
+              alt='A screenshot of the RSS JOY rss aggregator.'
+              url='https://rs.sjoy.lol'
+            >
+              <p>This little RSS aggregator is built with Astro. It outputs a fast, static page.</p>
               <p>
-                This little RSS aggregator is built with Astro. It outputs a fast, static page.
+                It randomises the list of supplied feed URLs each time it rebuilds, as well as updating the entries.
+                Rebuilds are triggered at least every 6 hours via a Netlify build hook and a GitHub Action.
               </p>
               <p>
-                It randomises the list of supplied feed URLs each time it rebuilds, as well as updating the entries. Rebuilds are triggered at least every 6 hours via a Netlify build hook and a GitHub Action.
-              </p>
-              <p>  
-                A slower-loading client-side RSS-parsing version is available at <a href="https://rs.sjoy.lol">/live</a> :)
+                A slower-loading client-side RSS-parsing version is available at <a href='https://rs.sjoy.lol'>/live</a>
+                :)
               </p>
             </StuffModal>
-					</section>
-				
-					<section class="container box3">
+          </section>
+
+          <section class='container box3'>
             <StuffModal
-              buttonClass="bigsq"
-              buttonImg="mega-zine.png"
-              title="Mega-Zine"
-              modalId="a3"
-              modalImg="mega-zine.png"
-              alt="Mega-zine teletext mock-up - pixellated neon letters and blocky image with a tongue sticking out on a black background"
-              url="https://mega-zine.netlify.app/">
+              buttonClass='bigsq'
+              buttonImg='mega-zine.png'
+              title='Mega-Zine'
+              modalId='a3'
+              modalImg='mega-zine.png'
+              alt='Mega-zine teletext mock-up - pixellated neon letters and blocky image with a tongue sticking out on a black background'
+              url='https://mega-zine.netlify.app/'
+            >
               <p>
-                This is a mock-up in HTML and CSS of an old and slightly strange
-                Channel 4 Teletext page I used to read avidly as a teen, Mega-zine.
+                This is a mock-up in HTML and CSS of an old and slightly strange Channel 4 Teletext page I used to read
+                avidly as a teen, Mega-zine.
               </p>
               <p>
-                With thanks to <a href="https://zinemuseum.co.uk/">The Mega-zine Museum</a>
-                and <a href="https://teletextart.tumblr.com/">teletext art</a> for the
-                great quality almost-source materials I could copy!
+                With thanks to <a href='https://zinemuseum.co.uk/'>The Mega-zine Museum</a>
+                and <a href='https://teletextart.tumblr.com/'>teletext art</a> for the great quality almost-source materials
+                I could copy!
               </p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="smsq1"
-              buttonImg="basic_sq.png"
-              title="/basic"
-              modalId="b3"
-              modalImg="basic.jpg"
-              alt="A website in dark mode "
-              url="/basic/">
-              <p>
-                I got an itch to start redoing my website in a more basic, elegant way.
-              </p>
+              buttonClass='smsq1'
+              buttonImg='basic_sq.png'
+              title='/basic'
+              modalId='b3'
+              modalImg='basic.jpg'
+              alt='A website in dark mode '
+              url='/basic/'
+            >
+              <p>I got an itch to start redoing my website in a more basic, elegant way.</p>
               <p>
                 I'm not sure I'm succeeding with elegant visuals, but either way you can see the work-in-progress here!
               </p>
             </StuffModal>
-						
+
             <StuffModal
-              buttonClass="shrow"
-              buttonImg="tumblr_small.jpg"
-              title="Swing​tänzerin"
-              modalId="c3"
-              modalImg="tumblr.jpg"
-              alt="A wall with stickers reading DER HUSTLE IST HART and DER STRUGGLE SO REAL"
-              url="https://swingtanzerin.tumblr.com">
-              <p>
-                There is a lot of stuff on this old tumblr of mine:
-              </p>
-              <p>
-                Swing dance DJ sets, lindy-hop discussion, photography and crochet projects. Enjoy!
-              </p>
-            </StuffModal>
-						
-						<StuffModal
-              buttonClass="smsq2"
-              buttonImg="yasmin_sqthumb.jpg"
-              title="Yasmin Brink​mann"
-              modalId="d3"
-              modalImg="yasmin_large.jpg"
-              alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer."
-              url="https://yasmin-brinkmann.de">
-              <p>
-                A friend from swing dancing needed a new landing page, and gracefully agreed to my coding it from scratch as a learning exercise.
-              </p>
-              <p>
-                Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)
-              </p>
+              buttonClass='shrow'
+              buttonImg='tumblr_small.jpg'
+              title='Swing​tänzerin'
+              modalId='c3'
+              modalImg='tumblr.jpg'
+              alt='A wall with stickers reading DER HUSTLE IST HART and DER STRUGGLE SO REAL'
+              url='https://swingtanzerin.tumblr.com'
+            >
+              <p>There is a lot of stuff on this old tumblr of mine:</p>
+              <p>Swing dance DJ sets, lindy-hop discussion, photography and crochet projects. Enjoy!</p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="smsq3"
-              buttonImg="2022tabs_sq.jpg"
-              title="tabs 2022"
-              modalId="e3"
-              modalImg="2022tabs_large.png"
-              alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: 'Hi! Welcome :)' and STUFF: 'Web Development & Design' tabs in view"
-              url="https://2022tabs.sarajoy.dev">
+              buttonClass='smsq2'
+              buttonImg='yasmin_sqthumb.jpg'
+              title='Yasmin Brink​mann'
+              modalId='d3'
+              modalImg='yasmin_large.jpg'
+              alt="Yasmin Brinkmann's website - the headline is Praxis für systemische Beratung, Coaching & Biographiearbeit and there is a picture of her with her arms folded wearing a red top and a fetchingly striped blazer."
+              url='https://yasmin-brinkmann.de'
+            >
               <p>
-                I had an idea about using the behaviour of the CSS property
-                "position: sticky" to make a stack of cards that would land on top
-                of each other when scrolling. Well, I made it and immediately
-                applied it to my landing page :)
+                A friend from swing dancing needed a new landing page, and gracefully agreed to my coding it from
+                scratch as a learning exercise.
               </p>
-              <p>
-                First written in Notepad++ in HTML and CSS only!
-              </p>
+              <p>Written in pure "vanilla" HTML, CSS and a smattering of JavaScript :)</p>
             </StuffModal>
-					</section>
-				
-					<section class="container box4">
-						
+
             <StuffModal
-              buttonClass="shcol"
-              buttonImg="cssjoy.png"
-              title="CSS JOY Web​ring"
-              modalId="a4"
-              modalImg="cssjoy.jpg"
-              alt="A screenshot of simple center-aligned text on a landing page"
-              url="https://cs.sjoy.lol">
+              buttonClass='smsq3'
+              buttonImg='2022tabs_sq.jpg'
+              title='tabs 2022'
+              modalId='e3'
+              modalImg='2022tabs_large.png'
+              alt="Sara's main landing page - the screenshot shows the nagivation of the website with the INTRO: 'Hi! Welcome :)' and STUFF: 'Web Development & Design' tabs in view"
+              url='https://2022tabs.sarajoy.dev'
+            >
+              <p>
+                I had an idea about using the behaviour of the CSS property "position: sticky" to make a stack of cards
+                that would land on top of each other when scrolling. Well, I made it and immediately applied it to my
+                landing page :)
+              </p>
+              <p>First written in Notepad++ in HTML and CSS only!</p>
+            </StuffModal>
+          </section>
+
+          <section class='container box4'>
+            <StuffModal
+              buttonClass='shcol'
+              buttonImg='cssjoy.png'
+              title='CSS JOY Web​ring'
+              modalId='a4'
+              modalImg='cssjoy.jpg'
+              alt='A screenshot of simple center-aligned text on a landing page'
+              url='https://cs.sjoy.lol'
+            >
               <p>I set up a webring for people who enjoy CSS!</p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="shrow"
-              buttonImg="mktimelapse_small.jpg"
-              title="MK time​lapse"
-              modalId="b4"
-              modalImg="mktimelapse_large.jpg"
-              alt="MK timelapse GmbH desktop website screenshot. The hero image is a skyscraper under construction."
-              url="https://www.mktimelapse.com/">
+              buttonClass='shrow'
+              buttonImg='mktimelapse_small.jpg'
+              title='MK time​lapse'
+              modalId='b4'
+              modalImg='mktimelapse_large.jpg'
+              alt='MK timelapse GmbH desktop website screenshot. The hero image is a skyscraper under construction.'
+              url='https://www.mktimelapse.com/'
+            >
               <p>
-                I worked for MK timelapse GmbH, which in 2019 really needed an updated
-                website. I hopped on to Wix, chose a template and then modified it
-                heavily to reflect the feel of the new (at the time) MK logo.
+                I worked for MK timelapse GmbH, which in 2019 really needed an updated website. I hopped on to Wix,
+                chose a template and then modified it heavily to reflect the feel of the new (at the time) MK logo.
               </p>
               <p>In its current state it looks like it needs some love!</p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="bigsq"
-              buttonImg="lightdark.png"
-              title="Light​/Dark Mode"
-              modalId="c4"
-              modalImg="lightdark_lrg.png"
-              alt="Screenshot of small explainer site - split into two halves, one light one dark"
-              url="https://color-scheme-light-dark.netlify.app/">
+              buttonClass='bigsq'
+              buttonImg='lightdark.png'
+              title='Light​/Dark Mode'
+              modalId='c4'
+              modalImg='lightdark_lrg.png'
+              alt='Screenshot of small explainer site - split into two halves, one light one dark'
+              url='https://color-scheme-light-dark.netlify.app/'
+            >
               <p>I discovered the CSS property color-scheme and then ran with it.</p>
               <p>
-                People still really don't use it much, so this experimenting of mine has now also morphed into a <a href="/blog/color-scheme">blog post</a> and <a href="https://www.youtube.com/watch?v=Lye56NHGtLA">talk</a>!
+                People still really don't use it much, so this experimenting of mine has now also morphed into a <a
+                  href='/blog/color-scheme'>blog post</a
+                > and <a href='https://www.youtube.com/watch?v=Lye56NHGtLA'>talk</a>!
               </p>
             </StuffModal>
 
             <StuffModal
-              buttonClass="smsq1"
-              buttonImg="blogger_small.jpg"
-              title="Blog​ger"
-              modalId="d4"
-              modalImg="blogger.jpg"
-              alt="A bunch of image tiles showing the most recent (but still very old) posts on my Blogger blog."
-              url="https://sarajoyw.blogspot.com/">
-
+              buttonClass='smsq1'
+              buttonImg='blogger_small.jpg'
+              title='Blog​ger'
+              modalId='d4'
+              modalImg='blogger.jpg'
+              alt='A bunch of image tiles showing the most recent (but still very old) posts on my Blogger blog.'
+              url='https://sarajoyw.blogspot.com/'
+            >
               <p>An even older blog than my Tumblr!</p>
               <p>Feel free to browse. Again, lots of swing dance related content but other stuff too.</p>
             </StuffModal>
-					</section>
-				</article>
-			</section>
-			
-			<div class="anchor" id="goblog"></div>
-			<div class="tab blog"><h2><a href="#goblog">blog</a></h2></div>
-			<section id="blog" aria-label="Notes, thoughts, posts">
-				<article>
-					<ul>
-            <li class="posts featured">
-              <a href="blog/notes"><img src="/images/blog/notes.jpg" alt="Colourful stack of papers in watercolours"></a>
+          </section>
+        </article>
+      </section>
+
+      <div class='anchor' id='goblog'></div>
+      <div class='tab blog'><h2><a href='#goblog'>blog</a></h2></div>
+      <section id='blog' aria-label='Notes, thoughts, posts'>
+        <article>
+          <ul>
+            <li class='posts featured'>
+              <a href='blog/notes'
+                ><img src='/images/blog/notes.jpg' alt='Colourful stack of papers in watercolours' /></a
+              >
               <div>
-                <h3><a href="blog/notes">Weak Notes</a></h3>
-                <p>Weak notes are like <a href="https://indieweb.org/week_note">#weekNotes</a> but less regular.</p>
-                <time datetime="2023">2023++;</time>
+                <h3><a href='blog/notes'>Weak Notes</a></h3>
+                <p>Weak notes are like <a href='https://indieweb.org/week_note'>#weekNotes</a> but less regular.</p>
+                <time datetime='2023'>2023++;</time>
               </div>
             </li>
-            <li class="posts featured">
-              <a href="blog/short"><img src="/images/blog/short-thorts.jpg" alt="Colourful thought bubbbles in watercolours"></a>
+            <li class='posts featured'>
+              <a href='blog/short'
+                ><img src='/images/blog/short-thorts.jpg' alt='Colourful thought bubbbles in watercolours' /></a
+              >
               <div>
-                <h3><a href="blog/short">Short Thorts</a></h3>
-                <p>A collection of shorter posts not big enough for their own article. Very likely also posted to <a href="https://front-end.social/@sarajw">Mastodon</a>.</p>
-                <time datetime="2022">2022++;</time>
+                <h3><a href='blog/short'>Short Thorts</a></h3>
+                <p>
+                  A collection of shorter posts not big enough for their own article. Very likely also posted to <a
+                    href='https://front-end.social/@sarajw'>Mastodon</a
+                  >.
+                </p>
+                <time datetime='2022'>2022++;</time>
               </div>
             </li>
-						{featured.map((post) => (
-							<li class='posts featured'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
-								<div>
-									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
-									{post.data.description && <p>{post.data.description}</p>}
-									<time datetime={post.data.pubDate}>
-										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
-											year: 'numeric',
-											month: 'short',
-											day: 'numeric',
-										})}
-									</time>
-								</div>
-							</li>
-						))}
-						{posts.map((post) => (
-							<li class='posts'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
-								<div>
-									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
-									{post.data.description && <p>{post.data.description}</p>}
-									<time datetime={post.data.pubDate}>
-										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
-											year: 'numeric',
-											month: 'short',
-											day: 'numeric',
-										})}
-									</time>
-								</div>
-							</li>
-						))}
-						{downplay.map((post) => (
-							<li class='posts downplay'>
-								<a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
-								<div>
-									<h3><a href={"/blog/" + post.slug}>{post.data.title}</a></h3>
-									<time datetime={post.data.pubDate}>
-										{new Date(post.data.pubDate).toLocaleDateString('en-gb', {
-											year: 'numeric',
-											month: 'short',
-											day: 'numeric',
-										})}
-									</time>
-								</div>
-							</li>
-            ))}
-					</ul>
-          <details id="blog-other">
-            <summary><h3>Other posts...</h3></summary>
-              <ul>
-						    {other.map((post) => (
-                <li class='posts downplay'>
-                  <a href={"/blog/" + post.slug}><img src={post.data.heroImage??"/images/placeholder.png"} alt={post.data.caption?post.data.caption:"blog post placeholder image"}></a>
+            {
+              featured.map((post) => (
+                <li class='posts featured'>
+                  <a href={"/blog/" + post.slug}>
+                    <img
+                      src={post.data.heroImage ?? "/images/placeholder.png"}
+                      alt={post.data.caption ? post.data.caption : "blog post placeholder image"}
+                    />
+                  </a>
                   <div>
-                    <h4><a href={"/blog/" + post.slug}>{post.data.title}</a></h4>
+                    <h3>
+                      <a href={"/blog/" + post.slug}>{post.data.title}</a>
+                    </h3>
+                    {post.data.description && <p>{post.data.description}</p>}
                     <time datetime={post.data.pubDate}>
-                      {new Date(post.data.pubDate).toLocaleDateString('en-gb', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
+                      {new Date(post.data.pubDate).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
                       })}
                     </time>
                   </div>
                 </li>
-                ))}
-              </ul>
-            </details>
-          <div id="feeds">
-            <a href="/blog/roll/"><img src="images/icons/tp-roll.svg" class="logo" alt="">
-              <br>Blogroll</a>
-            <a href="rss.xml"><img src="images/icons/rss.svg" class="logo" alt="">
-              <br>RSS</a>
+              ))
+            }
+            {
+              posts.map((post) => (
+                <li class='posts'>
+                  <a href={"/blog/" + post.slug}>
+                    <img
+                      src={post.data.heroImage ?? "/images/placeholder.png"}
+                      alt={post.data.caption ? post.data.caption : "blog post placeholder image"}
+                    />
+                  </a>
+                  <div>
+                    <h3>
+                      <a href={"/blog/" + post.slug}>{post.data.title}</a>
+                    </h3>
+                    {post.data.description && <p>{post.data.description}</p>}
+                    <time datetime={post.data.pubDate}>
+                      {new Date(post.data.pubDate).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </div>
+                </li>
+              ))
+            }
+            {
+              downplay.map((post) => (
+                <li class='posts downplay'>
+                  <a href={"/blog/" + post.slug}>
+                    <img
+                      src={post.data.heroImage ?? "/images/placeholder.png"}
+                      alt={post.data.caption ? post.data.caption : "blog post placeholder image"}
+                    />
+                  </a>
+                  <div>
+                    <h3>
+                      <a href={"/blog/" + post.slug}>{post.data.title}</a>
+                    </h3>
+                    <time datetime={post.data.pubDate}>
+                      {new Date(post.data.pubDate).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+          <details id='blog-other'>
+            <summary><h3>Other posts...</h3></summary>
+            <ul>
+              {
+                other.map((post) => (
+                  <li class='posts downplay'>
+                    <a href={"/blog/" + post.slug}>
+                      <img
+                        src={post.data.heroImage ?? "/images/placeholder.png"}
+                        alt={post.data.caption ? post.data.caption : "blog post placeholder image"}
+                      />
+                    </a>
+                    <div>
+                      <h4>
+                        <a href={"/blog/" + post.slug}>{post.data.title}</a>
+                      </h4>
+                      <time datetime={post.data.pubDate}>
+                        {new Date(post.data.pubDate).toLocaleDateString("en-gb", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                    </div>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+          <div id='feeds'>
+            <a href='/blog/roll/'
+              ><img src='images/icons/tp-roll.svg' class='logo' alt='' />
+              <br />Blogroll</a
+            >
+            <a href='rss.xml'
+              ><img src='images/icons/rss.svg' class='logo' alt='' />
+              <br />RSS</a
+            >
           </div>
-				</article>
-			</section>
-			
-			<div class="tab find"><h2><a href="#find">find</a></h2></div>
-			<section id="find" aria-label="Contact me">
-				<article>
-          <div class="posts featured">
-            <a href="/guestbook"><img style="view-transition-name: guestbook-image" src="/images/guestbook.jpg" alt="Guestbook image: Colourful speech bubbbles in watercolours"></a>
+        </article>
+      </section>
+
+      <div class='tab find'><h2><a href='#find'>find</a></h2></div>
+      <section id='find' aria-label='Contact me'>
+        <article>
+          <div class='posts featured'>
+            <a href='/guestbook'
+              ><img
+                style='view-transition-name: guestbook-image'
+                src='/images/guestbook.jpg'
+                alt='Guestbook image: Colourful speech bubbbles in watercolours'
+              /></a
+            >
             <div>
-              <h3>Sign my <a href="/guestbook" style="view-transition-name: guestbook-title">Guestbook</a>!</h3>
+              <h3>Sign my <a href='/guestbook' style='view-transition-name: guestbook-title'>Guestbook</a>!</h3>
               <p>
                 I'm not tracking, analyzing, or feeding you cookies.
-                <br><br>
-                If you want to tell me something about this website, please <a href="/guestbook">sign</a>!
+                <br /><br />
+                If you want to tell me something about this website, please <a href='/guestbook'>sign</a>!
               </p>
             </div>
           </div>
-					<h3>Find me elsewhere:</h3>
-						<ul class="socials">
-							<li>
-								<a class="img" rel="me" href="https://front-end.social/@sarajw">
-                  <img class="social" src="images/icons/mastodon.svg" alt="Mastodon" title="Mastodon"><br>@sarajw
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://bsky.app/profile/sjoy.lol">
-                  <img class="social" src="images/icons/Bluesky_Logo.svg" alt="Bluesky" title="Bluesky"><br>@sjoy.lol
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://discord.com/users/537249425261723679">
-                  <img class="social" src="images/icons/discord.svg" alt="Discord" title="Discord"><br>sarajoy
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://spacehey.com/sarajw">
-                  <img class="social" src="images/icons/spacehey_icon.svg" alt="SpaceHey" title="SpaceHey"><br>/sarajw
-                </a>
-              </li>
-              <li>
-                <a class="img" href="https://sara.omg.lol">
-                  <img class="social" src="/images/icons/prami-mono.svg" alt="omg.lol" title="omg.lol"><br>sara.omg.lol
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://github.com/sarajw" rel="me authn">
-                  <img class="social" src="images/icons/github.svg" alt="GitHub" title="GitHub"><br>/sarajw
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://codepen.io/sarajw">
-                  <img class="social" src="images/icons/codepen-icon.svg" alt="CodePen" title="CodePen"><br>/sarajw
-                </a>
-              </li>
-							<li>
-								<a class="img" href="https://www.linkedin.com/in/sarajw/">
-                  <img class="social" src="images/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn"><br>/sarajw
-                </a>
-              </li>
-						</ul>
-					<h3>Email me:</h3>
-					
-          <form id="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
-            <input type="hidden" name="form-name" value="contact" />
+          <h3>Find me elsewhere:</h3>
+          <ul class='socials'>
+            <li>
+              <a class='img' rel='me' href='https://front-end.social/@sarajw'>
+                <img class='social' src='images/icons/mastodon.svg' alt='Mastodon' title='Mastodon' /><br />@sarajw
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://bsky.app/profile/sjoy.lol'>
+                <img class='social' src='images/icons/Bluesky_Logo.svg' alt='Bluesky' title='Bluesky' /><br />@sjoy.lol
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://discord.com/users/537249425261723679'>
+                <img class='social' src='images/icons/discord.svg' alt='Discord' title='Discord' /><br />sarajoy
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://spacehey.com/sarajw'>
+                <img class='social' src='images/icons/spacehey_icon.svg' alt='SpaceHey' title='SpaceHey' /><br />/sarajw
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://sara.omg.lol'>
+                <img class='social' src='/images/icons/prami-mono.svg' alt='omg.lol' title='omg.lol' /><br
+                />sara.omg.lol
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://github.com/sarajw' rel='me authn'>
+                <img class='social' src='images/icons/github.svg' alt='GitHub' title='GitHub' /><br />/sarajw
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://codepen.io/sarajw'>
+                <img class='social' src='images/icons/codepen-icon.svg' alt='CodePen' title='CodePen' /><br />/sarajw
+              </a>
+            </li>
+            <li>
+              <a class='img' href='https://www.linkedin.com/in/sarajw/'>
+                <img class='social' src='images/icons/linkedin.svg' alt='LinkedIn' title='LinkedIn' /><br />/sarajw
+              </a>
+            </li>
+          </ul>
+          <h3>Email me:</h3>
+
+          <form
+            id='form'
+            name='contact'
+            method='POST'
+            netlify-honeypot='bot-field'
+            data-netlify='true'
+            Content-Type='application/x-www-form-urlencoded'
+          >
+            <input type='hidden' name='form-name' value='contact' />
             <p>
               <label
                 >Name
-                <br /><input type="text" name="name" required /></label
+                <br /><input type='text' name='name' required /></label
               >
             </p>
             <p>
               <label
                 >Email address
-                <br /><input type="email" name="email" required /></label
+                <br /><input type='email' name='email' required /></label
               >
             </p>
             <p>
-              <label>Subject <small>(please skip this field if you're real)</small>
-                <br /><input type="text" name="bot-field" placeholder="Leave me be!" />
+              <label
+                >Subject <small>(please skip this field if you're real)</small>
+                <br /><input type='text' name='bot-field' placeholder='Leave me be!' />
                 <small>Are you sure you want to type in here? I won't get your message!</small>
               </label>
             </p>
             <p>
-              <label class="message">Message<br /><textarea name="message" required /></label>
+              <label class='message'>Message<br /><textarea name='message' required></textarea></label>
             </p>
             <p>
-              <label class="consent"><input type="checkbox" required><small>I consent to <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> receiving this message and passing it through <a href="https://akismet.com/">Akismet</a> spam filtering. <a href="#privacy-policy">Privacy policy.</a></small></label>
+              <label class='consent'
+                ><input type='checkbox' required /><small
+                  >I consent to <a href='https://www.netlify.com/platform/core/forms/'>Netlify Forms</a> receiving this message
+                  and passing it through <a href='https://akismet.com/'>Akismet</a> spam filtering. <a
+                    href='#privacy-policy'>Privacy policy.</a
+                  ></small
+                ></label
+              >
             </p>
             <p>
-              <button type="submit"><b>Send Email</b></button>
+              <button type='submit'><b>Send Email</b></button>
             </p>
           </form>
 
           <h3>Or, find others!</h3>
-          <div class="links-out">
-            <div id="webring">
-              <h4><a href="https://cs.sjoy.lol">CS.Sjoy.lol</a> webring</h4>
-              <div class="webring-nav">
-                <a href="https://webri.ng/webring/cssjoy/previous?via=https%3A%2F%2Fsarajoy.dev%2F%23webring">← Prev</a>
+          <div class='links-out'>
+            <div id='webring'>
+              <h4><a href='https://cs.sjoy.lol'>CS.Sjoy.lol</a> webring</h4>
+              <div class='webring-nav'>
+                <a href='https://webri.ng/webring/cssjoy/previous?via=https%3A%2F%2Fsarajoy.dev%2F%23webring'>← Prev</a>
                 &centerdot;
-                <a href="https://webri.ng/webring/cssjoy/random?via=https%3A%2F%2Fsarajoy.dev%2F%23webring">Random</a>
+                <a href='https://webri.ng/webring/cssjoy/random?via=https%3A%2F%2Fsarajoy.dev%2F%23webring'>Random</a>
                 &centerdot;
-                <a href="https://webri.ng/webring/cssjoy/next?via=https%3A%2F%2Fsarajoy.dev%2F%23webring">Next →</a>
+                <a href='https://webri.ng/webring/cssjoy/next?via=https%3A%2F%2Fsarajoy.dev%2F%23webring'>Next →</a>
               </div>
             </div>
-            <nav class="a11y-webring-club" aria-labelledby="a11y-webring-club">
-              <h4 id="a11y-webring-club"><a rel="external" href="https://a11y-webring.club/">a11y-webring.club</a></h4>
+            <nav class='a11y-webring-club' aria-labelledby='a11y-webring-club'>
+              <h4 id='a11y-webring-club'><a rel='external' href='https://a11y-webring.club/'>a11y-webring.club</a></h4>
               <ul>
-                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">← Prev</a></li>
-                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Random</a></li>
-                <li><a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Next →</a></li>
+                <li>
+                  <a rel='external' referrerpolicy='strict-origin' href='https://a11y-webring.club/prev'>← Prev</a>
+                </li>
+                <li>
+                  <a rel='external' referrerpolicy='strict-origin' href='https://a11y-webring.club/random'>Random</a>
+                </li>
+                <li>
+                  <a rel='external' referrerpolicy='strict-origin' href='https://a11y-webring.club/next'>Next →</a>
+                </li>
               </ul>
             </nav>
-            <div id="indieWeb">
+            <div id='indieWeb'>
               <h4>
-                <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/previous">←</a>
-                &nbsp;An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
-                <a href="https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next">→</a>
+                <a href='https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/previous'>←</a>
+                &nbsp;An <a href='https://xn--sr8hvo.ws'>IndieWeb Webring</a> 🕸💍
+                <a href='https://xn--sr8hvo.ws/%F0%9F%96%8A%F0%9F%97%BE%F0%9F%91%A3/next'>→</a>
               </h4>
             </div>
-            <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
+            <script src='https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs' type='module'
+            ></script>
             <details>
               <summary><h4>The Claw 🦋 Webring</h4></summary>
-              <the-claw-webring-widget id="theClaw" />
+              <the-claw-webring-widget id='theClaw'></the-claw-webring-widget>
             </details>
-            <h4><a href="https://ooh.directory/">ooh.directory</a></h4>
-            <h4><a href="https://personalsit.es/">PERSONALSIT.ES</a></h4>
+            <h4><a href='https://ooh.directory/'>ooh.directory</a></h4>
+            <h4><a href='https://personalsit.es/'>PERSONALSIT.ES</a></h4>
+          </div>
+          <div id='you-are-so-welcome'>
+            <h3>You want to thank me for something?</h3>
+            <p>You mean, in more than just words (because they're enough, honestly)?</p>
+            <p>
+              Then donate a little to your favourite cause, or to <a
+                href='https://www.oxfam.org/en/donate-oxfam-affiliate'>Oxfam</a
+              > on my behalf.
+            </p>
+            <p>
+              If you then <a href='#form'>message me</a> to let me know, I'll get to enjoy some warm and fuzzies 🌞
+            </p>
           </div>
           <footer>
             <PrivacyPolicy />
             <A11YStatement />
-            <a href="/sitemap.xml">Site Map</a>
-            <details id="not-a-bot">
-              <summary><img alt="A badge with a smiley face and text 'made by a human', or 'I am not a robot' on hover or focus, and 'human content' when pressed" src="/images/MadeByAHuman_04.svg"></summary>
-              You can find a whole set of these little anti-AI badges on <a href="https://ko-fi.com/s/4662b19f61">Andy Carolan's Ko-Fi</a> 😊
+            <a href='/sitemap.xml'>Site Map</a>
+            <details id='not-a-bot'>
+              <summary
+                ><img
+                  alt="A badge with a smiley face and text 'made by a human', or 'I am not a robot' on hover or focus, and 'human content' when pressed"
+                  src='/images/MadeByAHuman_04.svg'
+                /></summary
+              >
+              You can find a whole set of these little anti-AI badges on <a href='https://ko-fi.com/s/4662b19f61'
+                >Andy Carolan's Ko-Fi</a
+              > 😊
             </details>
           </footer>
-				</article>
-				<a href="#" class="backtotop" title="Back to top"><img src="images/icons/chevron-up.svg" alt="chevron pointing up"></a>
-			</section>
-		</main>
+        </article>
+        <a href='#' class='backtotop' title='Back to top'
+          ><img src='images/icons/chevron-up.svg' alt='chevron pointing up' /></a
+        >
+      </section>
+    </main>
     <script is:inline>
-      const tabTopSettingPlugin = ( () => {
+      const tabTopSettingPlugin = (() => {
         const tabTopSetting = () => {
           const sections = document.querySelectorAll("main > section:not(#hero)");
           for (const section of sections) {
             let sectionHeight = section.offsetHeight;
             section.style.top = `calc(100vh - ${sectionHeight}px)`;
-          }		
-        }
+          }
+        };
 
         document.onreadystatechange = () => {
-          if (document.readyState === 'complete') {
+          if (document.readyState === "complete") {
             tabTopSetting();
           }
-        }
+        };
 
         window.addEventListener("resize", tabTopSetting);
         document.querySelector("#nowPage").addEventListener("toggle", tabTopSetting);
         document.querySelector("#blog-other").addEventListener("toggle", tabTopSetting);
       })();
 
-      const modalLightDismiss = ( () => {
-        const dialogs = document.querySelectorAll('dialog');
+      const modalLightDismiss = (() => {
+        const dialogs = document.querySelectorAll("dialog");
         for (const dialog of dialogs) {
-          dialog.addEventListener('click', (event) => {
-            if (event.target === dialog) dialog.close()
+          dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) dialog.close();
           });
         }
       })();
-	    
     </script>
-    <script src="/scripts/openDetails.js" is:inline></script>
-		<Toggle />
-	</body>
-
+    <script src='/scripts/openDetails.js' is:inline></script>
+    <Toggle />
+  </body>
 </html>

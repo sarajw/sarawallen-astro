@@ -900,6 +900,14 @@ form button:active {
 	text-decoration: none;
 }
 
+#you-are-so-welcome {
+	margin-block-start: 3em;
+	padding: 1.25rem 1.5rem 0.5rem;
+	background-color: var(--stuff);
+	border-radius: 0.4rem;
+	box-shadow: 0.1rem 0.1rem 1rem -0.5rem var(--shadow);
+}
+
 
 @supports(height: 100dvh) {
 	#find {
