@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+
+const image = "/images/cartoon.png";
+const alt = "";
+const title = "/now page";
+const description = "Hey Anon. Say something.";
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="sayPage">
+            <h1 id="page-title">Say what?</h1>
+            <form name="say" method="POST" netlify>
+  <p>
+    <label>Say something: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+</main>
+		<Toggle />
+	</body>
+</html>
