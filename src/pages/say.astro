@@ -1,0 +1,42 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+
+const image = "/images/cartoon.png";
+const alt = "";
+const title = "/say page";
+const description = "Hey Anon. Say something.";
+
+/*
+            <form name="say" method="POST" netlify>
+  <p>
+    <label>Say something to me: <textarea name="message" required></textarea></label>
+  </p>
+  <p>
+    I would see a reply on
+    <br><label><input type="checkbox" name="masto"> Mastodon</>
+    <br><label><input type="checkbox" name="bsky"> Bluesky</>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+<p>If you ask me a question here, I may reply on <a href="https://front-end.social/@sarajw">Mastodon</a> or <a href="https://bsky.app/profile/sjoy.lol">Bluesky</a>.</p>
+*/
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="sayPage">
+            <h1 id="page-title">Say what?</h1>
+<p>This feature is paused for now!</p>
+<p>Alternatively, post something publicly on the <a href="/guestbook/">Guestbook</a> :)</p>
+</main>
+		<Toggle />
+	</body>
+</html>

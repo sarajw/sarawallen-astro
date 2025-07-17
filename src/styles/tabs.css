@@ -412,7 +412,7 @@ footer summary {
 	margin-bottom: 0.4em;
 }
 
-main.nowPage {
+main.nowPage, main.sayPage {
 	padding: var(--tabheight) 3vmin 3vmin;
 }
 main.nowPage :is(.statuslol, .now_content) {
