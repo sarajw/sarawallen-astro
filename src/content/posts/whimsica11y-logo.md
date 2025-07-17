@@ -5,7 +5,7 @@ pubDate: "July 17 2025"
 heroImage: "/images/blog/whimsica11y.svg"
 caption: "In bubbly cartoonish style letters, 'whimsic' is written in uppercase in a curved rainbow shape. Underneath is the numeronym 'a11y'. The 'whimsic' curve has bands across it like a rainbow, using the colours from the diagonal of the Disability Pride flag."
 featured: featured
-mastoURL: ""
+mastoURL: "https://front-end.social/@sarajw/114870774466315805"
 ---
 
 I'll admit it, some of the graphics on this site are AI-generated.
