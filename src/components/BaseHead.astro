@@ -1,42 +1,43 @@
 ---
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const { title, description, image } = Astro.props;
 
 // Import the global.css file here so that it is included on
 // all pages through the use of the <Header /> component.
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="generator" content={Astro.generator} />
-<meta name="color-scheme" content="dark light">
-<meta name="view-transition" content="same-origin" />
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<meta name='generator' content={Astro.generator} />
+<meta name='color-scheme' content='dark light' />
+<meta name='view-transition' content='same-origin' />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="me" href="https://front-end.social/@sarajw">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="alternate" type="application/rss+xml" title="Sara Joy" href="https://sarajoy.dev/rss.xml" />
-<link rel="preload" href="/fonts/karla.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+<link rel='me' href='https://front-end.social/@sarajw' />
+<meta name='fediverse:creator' content='@sarajw@front-end.social' />
+<link rel='manifest' href='/site.webmanifest' />
+<link rel='alternate' type='application/rss+xml' title='Sara Joy' href='https://sarajoy.dev/rss.xml' />
+<link rel='preload' href='/fonts/karla.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<meta name='title' content={title} />
+<meta name='description' content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property='og:type' content='website' />
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={new URL(image, Astro.url)} />
 
-<script is:inline src="/scripts/colorModes.js" ></script>
+<script is:inline src='/scripts/colorModes.js'></script>
