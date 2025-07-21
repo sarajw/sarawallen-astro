@@ -20,10 +20,10 @@ Fits well into a 24 cm or 9 inch diameter round cake form, making a shallow-ish 
 
 ## Ingredients 
 
-ml: millilitres 
-tsp: tea spoon 
-dsp: dinner or table spoon 
-g: grams 
+ml: millilitres  
+tsp: tea spoon  
+dsp: dinner or table spoon  
+g: grams  
 
 ### Original 
 
