@@ -66,7 +66,7 @@ Not too complicated! And yes it is a very runny cake batter. Adding so much wate
 - Mix dry ingredients
 - Add butter
 - Whisk eggs & mix in
-- Add water
+- Add water and stir with a whisk until even and smooth
 - 175°C for ~40 minutes
 
 Re: The oven - don't turn on the fan unless you want the cake crust to come out a little wonky.
