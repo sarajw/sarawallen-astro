@@ -1,6 +1,7 @@
 ---
 pubDate: '2025-07-21 17:42 +0200'
-heroImage: /images/placeholder.png
+heroImage: /images/blog/chokladkaka.jpg
+caption: "A round, dark brown chocolate cake seen from above. The top of the cake shows some gently bumpy texture. It is decorated with gold and silver piped stars or sparkles."
 draft: false
 title: Farmors Chokladkaka
 description: >-
