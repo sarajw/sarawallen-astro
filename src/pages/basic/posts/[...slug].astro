@@ -19,7 +19,7 @@ const { Content, headings } = await entry.render();
         src={entry.data.heroImage}
         alt={entry.data.caption}
       />
-      <figcaption class="caption">{entry.data.caption}</figcaption>
+      <figcaption class="caption" aria-hidden="true">{entry.data.caption}</figcaption>
     </figure>
   )}
   <h1 class="title">{entry.data.title}</h1>
