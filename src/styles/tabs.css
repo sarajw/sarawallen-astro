@@ -971,7 +971,7 @@ form button:active {
 .post aside {
 	text-align: center;
 	text-wrap: balance;
-	font-size: 150%;
+	font-size: 125%;
 	font-style: italic;
 	font-weight: 500;
 	max-width: min(50%, 20ch);
