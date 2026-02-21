@@ -978,10 +978,10 @@ form button:active {
 	padding: 0.5em;
 	margin-inline: auto;
 	&::before {
-		content: '🙶'
+		content: '❝'
 	}
 	&::after {
-		content: '🙷'
+		content: '❞'
 	}
 	&[data-left] {
 		float: left;
