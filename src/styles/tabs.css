@@ -967,6 +967,30 @@ form button:active {
 .post :is(h2, h3, h4) {
 	scroll-margin-top: calc(2 * var(--tabheight));
 }
+
+.post aside {
+	text-align: center;
+	text-wrap: balance;
+	font-size: 150%;
+	font-style: italic;
+	font-weight: 500;
+	max-width: 20ch;
+	padding: 0.5em;
+	margin-inline: auto;
+	&::before {
+		content: '🙶'
+	}
+	&::after {
+		content: '🙷'
+	}
+	&[data-left] {
+		float: left;
+	}
+	&[data-right] {
+		float: right;
+	}
+}
+
 #toc {
 	width: fit-content;
 	margin: 0 auto 5vmin;
