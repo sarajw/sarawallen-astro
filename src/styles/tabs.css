@@ -974,7 +974,7 @@ form button:active {
 	font-size: 150%;
 	font-style: italic;
 	font-weight: 500;
-	max-width: 20ch;
+	max-width: min(50%, 20ch);
 	padding: 0.5em;
 	margin-inline: auto;
 	&::before {
