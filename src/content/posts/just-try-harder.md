@@ -4,6 +4,7 @@ heroImage: /images/blog/lizard-brain.jpg
 caption: "Several post-it notes are stuck on a wooden surface. In the centre, a drawing of a brain has arrows drawn within, tracing a figure of eight. Seen in part, two other notes detail: a 'Controller' with 'status report' and a list of hormones (dopamine, serotonin, oxitocin, adrenalin), and a 'CEO' which also has a list below it (creativity, calmness, options, decisions, vision)."
 title: "Just Try Harder"
 description: "How apparently minor differences can be compounded by our intense world."
+mastoURL: "https://front-end.social/@sarajw/116110502444218025"
 featured: featured
 ---
 
